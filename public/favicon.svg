@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Anti-Fascist Art Exhibition">
+  <rect width="64" height="64" rx="12" fill="#171717"/>
+  <path d="M14 45V19h36v8H24v6h21v8H24v4h26v8H14z" fill="#f4f0e8"/>
+  <path d="M14 45 50 19v10L24 45H14z" fill="#d92525"/>
+</svg>

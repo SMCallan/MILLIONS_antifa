@@ -1,0 +1,36 @@
+---
+import { navLinks, site } from "@/data/site";
+
+const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+---
+
+<header class="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
+  <div class="container-page flex min-h-16 items-center justify-between gap-4 py-3">
+    <a href="/" class="flex items-center gap-3" aria-label={`${site.name} home`}>
+      <span class="grid size-10 place-items-center rounded-md bg-foreground text-background">
+        <span class="text-sm font-bold">{site.shortName}</span>
+      </span>
+      <span class="hidden max-w-44 text-sm font-semibold leading-tight sm:block">{site.name}</span>
+    </a>
+
+    <nav class="flex flex-wrap items-center justify-end gap-1 text-sm" aria-label="Main navigation">
+      {
+        navLinks.map((link) => {
+          const active = link.href === "/" ? pathname === "/" : pathname === link.href;
+          return (
+            <a
+              href={link.href}
+              class:list={[
+                "rounded-md px-3 py-2 font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                active ? "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground" : "text-muted-foreground",
+              ]}
+              aria-current={active ? "page" : undefined}
+            >
+              {link.label}
+            </a>
+          );
+        })
+      }
+    </nav>
+  </div>
+</header>

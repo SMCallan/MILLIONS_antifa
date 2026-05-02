@@ -1,0 +1,45 @@
+{
+  "name": "anti-fascist-exhibition",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "deploy:pages": "npm run build && wrangler pages deploy dist --project-name millions-antifa",
+    "preview:pages": "npm run build && wrangler pages dev dist",
+    "preview": "astro preview",
+    "check": "astro check",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "latest",
+    "@radix-ui/react-slot": "latest",
+    "@react-three/fiber": "^9.6.1",
+    "@tailwindcss/vite": "latest",
+    "astro": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "framer-motion": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwind-merge": "latest",
+    "tailwindcss": "latest",
+    "three": "^0.184.0",
+    "tw-animate-css": "latest"
+  },
+  "devDependencies": {
+    "@astrojs/check": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@types/three": "^0.184.0",
+    "typescript": "latest",
+    "wrangler": "^4.87.0"
+  },
+  "overrides": {
+    "vite": "^7.3.0",
+    "yaml": "^2.8.3"
+  }
+}

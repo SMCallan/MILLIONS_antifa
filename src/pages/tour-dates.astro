@@ -1,0 +1,79 @@
+---
+import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
+
+import { SignalFieldHero } from "@/components/SignalFieldHero";
+import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { tourDates } from "@/data/site";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="Exhibition and Tour Dates"
+  description="See upcoming dates, venues, and open hosting slots for the Anti-Fascist Art Exhibition."
+>
+  <SignalFieldHero
+    client:load
+    compact
+    headline="World tour route and host slots."
+    subtitle="Confirmed dates will appear alongside open route slots for centres, galleries, libraries, unions, colleges, and community venues interested in hosting the anti-fascist exhibition."
+    primaryCta={{ label: "View route", href: "#route" }}
+    secondaryCta={{ label: "Book a host slot", href: "/booking" }}
+    badges={["2026 route", "Host slots", "Community venues", "Libraries", "Unions", "Schools", "World tour"]}
+    statusLines={[
+      "New route dates are being added through 2026",
+      "The tour is being built for civic, cultural, and community spaces",
+    ]}
+  />
+
+  <section id="route" class="section-y bg-background">
+    <div class="container-page">
+      <div class="grid gap-4">
+        {
+          tourDates.map((event, index) => (
+            <Card className="overflow-hidden py-0">
+              <CardContent className="grid gap-6 p-6 md:grid-cols-[8rem_1fr_auto] md:items-center">
+                <div>
+                  <p class="text-sm text-muted-foreground">Stop {index + 1}</p>
+                  <p class="mt-1 text-xl font-black">{event.date}</p>
+                </div>
+
+                <div>
+                  <h2 class="text-2xl font-black">{event.city}</h2>
+                  <p class="mt-2 flex items-center gap-2 text-muted-foreground">
+                    <MapPin className="size-4" aria-hidden="true" />
+                    {event.venue}
+                  </p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 md:justify-end">
+                  <Badge variant={event.status === "Confirmed" ? "default" : "outline"}>{event.status}</Badge>
+                  <Badge variant="secondary">{event.format}</Badge>
+                </div>
+              </CardContent>
+            </Card>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-foreground py-16 text-background">
+    <div class="container-page flex flex-col justify-between gap-6 md:flex-row md:items-center">
+      <div>
+        <p class="flex items-center gap-2 text-sm text-background/75">
+          <CalendarDays className="size-4" aria-hidden="true" />
+          New route dates are being added through 2026
+        </p>
+        <h2 class="mt-3 max-w-2xl text-3xl font-black leading-tight">
+          Interested in adding your venue to the route?
+        </h2>
+      </div>
+      <a class={buttonVariants({ variant: "secondary", size: "lg" })} href="/booking">
+        Start a booking enquiry
+        <ArrowRight className="size-4" aria-hidden="true" />
+      </a>
+    </div>
+  </section>
+</Layout>

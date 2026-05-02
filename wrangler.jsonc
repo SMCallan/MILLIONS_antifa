@@ -1,0 +1,17 @@
+{
+  "name": "millions-antifa",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-05-02"
+
+  // Optional but recommended for live form storage:
+  // 1. Create an R2 bucket, for example `millions-antifa-submissions`.
+  // 2. Add this binding in Cloudflare Pages project settings or uncomment below
+  //    after the bucket exists.
+  //
+  // "r2_buckets": [
+  //   {
+  //     "binding": "SUBMISSIONS",
+  //     "bucket_name": "millions-antifa-submissions"
+  //   }
+  // ]
+}

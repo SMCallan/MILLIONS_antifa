@@ -1,0 +1,176 @@
+---
+import { Upload } from "lucide-react";
+
+import { SignalFieldHero } from "@/components/SignalFieldHero";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { submissionGuidelines } from "@/data/site";
+import Layout from "@/layouts/Layout.astro";
+
+const selectClass =
+  "border-input focus-visible:border-ring focus-visible:ring-ring/50 dark:bg-input/30 h-10 w-full rounded-md border bg-transparent px-3 text-sm shadow-xs outline-none focus-visible:ring-[3px]";
+---
+
+<Layout
+  title="Submit Artwork"
+  description="Submit artwork, archive material, or documentation for the Anti-Fascist Art Exhibition open call."
+>
+  <SignalFieldHero
+    client:load
+    compact
+    headline="Submit artwork or archive material."
+    subtitle="Artists, collectives, educators, and organisers can submit work for review as the anti-fascist exhibition grows toward its world tour. Share the work, its context, and what it needs to travel."
+    primaryCta={{ label: "Start submission", href: "#artwork-form" }}
+    secondaryCta={{ label: "Tour dates", href: "/tour-dates" }}
+    badges={["Open call", "Artwork upload", "Archive material", "Thousands of works", "A thousand words", "Tour-ready pieces"]}
+    statusLines={[
+      "More submission guidance is being prepared",
+      "Selected work may be considered for touring, publication, and public programmes",
+    ]}
+  />
+
+  <section id="artwork-form" class="section-y bg-background">
+    <div class="container-page grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+      <aside class="space-y-5">
+        <h2 class="text-2xl font-black">Submission notes</h2>
+        <div class="grid gap-4">
+          {
+            submissionGuidelines.map((item) => (
+              <p class="border-l-4 border-primary pl-4 text-sm leading-7 text-muted-foreground">{item}</p>
+            ))
+          }
+        </div>
+      </aside>
+
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl">Artwork submission form</CardTitle>
+          <CardDescription>
+            Required fields are marked with an asterisk. Uploads are saved with the submission when
+            the Astro Node server is running.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div data-form-status="success" hidden class="mb-6 rounded-md border border-secondary bg-secondary/35 p-4 text-sm font-medium text-secondary-foreground" role="status">
+            Submission received. The files and form details have been saved for review.
+          </div>
+          <div data-form-status="storage" hidden class="mb-6 rounded-md border border-accent bg-accent/25 p-4 text-sm font-medium text-accent-foreground" role="status">
+            Submission received in preview mode, but the Cloudflare R2 storage binding is not configured yet.
+          </div>
+          <div data-form-status="file-size" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            One or more files are over the 15MB limit.
+          </div>
+          <div data-form-status="missing" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Please complete the required fields before submitting.
+          </div>
+
+          <script is:inline>
+            const params = new URLSearchParams(window.location.search);
+            const status = params.get("storage") === "unconfigured"
+              ? "storage"
+              : params.get("submitted") === "1"
+                ? "success"
+                : params.get("error");
+
+            if (status) {
+              document.querySelector(`[data-form-status="${status}"]`)?.removeAttribute("hidden");
+            }
+          </script>
+
+          <form action="/api/artwork" method="post" enctype="multipart/form-data" class="grid gap-6">
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="grid gap-2">
+                <Label htmlFor="artistName">Artist or collective name *</Label>
+                <Input id="artistName" name="artistName" required autoComplete="name" />
+              </div>
+              <div class="grid gap-2">
+                <Label htmlFor="email">Email *</Label>
+                <Input id="email" name="email" type="email" required autoComplete="email" />
+              </div>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div class="grid gap-2">
+                <Label htmlFor="location">Location</Label>
+                <Input id="location" name="location" autoComplete="address-level2" />
+              </div>
+              <div class="grid gap-2">
+                <Label htmlFor="medium">Medium</Label>
+                <select id="medium" name="medium" class={selectClass}>
+                  <option value="">Select medium</option>
+                  <option>Painting or drawing</option>
+                  <option>Print or poster</option>
+                  <option>Photography</option>
+                  <option>Textile</option>
+                  <option>Audio or moving image</option>
+                  <option>Archive or documentation</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid gap-5 sm:grid-cols-[1fr_10rem]">
+              <div class="grid gap-2">
+                <Label htmlFor="title">Artwork title *</Label>
+                <Input id="title" name="title" required />
+              </div>
+              <div class="grid gap-2">
+                <Label htmlFor="year">Year</Label>
+                <Input id="year" name="year" inputMode="numeric" />
+              </div>
+            </div>
+
+            <div class="grid gap-2">
+              <Label htmlFor="statement">Work statement *</Label>
+              <Textarea
+                id="statement"
+                name="statement"
+                required
+                rows={6}
+                placeholder="Share the context, story, and why the work belongs in this exhibition."
+              />
+            </div>
+
+            <div class="grid gap-2">
+              <Label htmlFor="installationNotes">Installation or access notes</Label>
+              <Textarea
+                id="installationNotes"
+                name="installationNotes"
+                rows={4}
+                placeholder="Size, duration, display requirements, captions, permissions, or travel limits."
+              />
+            </div>
+
+            <div class="grid gap-2">
+              <Label htmlFor="artworkFiles">Upload files</Label>
+              <Input
+                id="artworkFiles"
+                name="artworkFiles"
+                type="file"
+                multiple
+                accept="image/*,.pdf,.mp3,.wav,.mp4,.mov"
+                className="min-h-12 py-2"
+              />
+            </div>
+
+            <label class="flex gap-3 rounded-md border p-4 text-sm leading-6">
+              <input type="checkbox" name="consent" required class="mt-1 size-4 accent-primary" />
+              <span>
+                I confirm I have the rights to submit this work and may be contacted about exhibition
+                suitability, captions, access, and display permissions.
+              </span>
+            </label>
+
+            <Button type="submit" size="lg" className="w-full sm:w-fit">
+              <Upload aria-hidden="true" />
+              Send artwork submission
+            </Button>
+          </form>
+        </CardContent>
+      </Card>
+    </div>
+  </section>
+</Layout>
