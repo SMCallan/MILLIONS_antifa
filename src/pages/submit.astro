@@ -1,56 +1,31 @@
 ---
-import { Upload } from "lucide-react";
+import { Mail } from "lucide-react";
 
 import { SignalFieldHero } from "@/components/SignalFieldHero";
+import TurnstileWidget from "@/components/TurnstileWidget.astro";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import TurnstileWidget from "@/components/TurnstileWidget.astro";
 import { submissionGuidelines } from "@/data/site";
 import Layout from "@/layouts/Layout.astro";
-import {
-  ACCEPTED_FILE_TYPES,
-  ALLOWED_EXTENSIONS,
-  ALLOWED_MIME_TYPES,
-  MAX_FILES,
-  MAX_FILE_SIZE_BYTES,
-  MAX_TOTAL_UPLOAD_BYTES,
-  formatUploadBytes,
-} from "@/lib/submissionPolicy";
-
-const selectClass =
-  "border-input focus-visible:border-ring focus-visible:ring-ring/50 dark:bg-input/30 h-10 w-full rounded-md border bg-transparent px-3 text-sm shadow-xs outline-none focus-visible:ring-[3px]";
-
-const fileSizeLabel = formatUploadBytes(MAX_FILE_SIZE_BYTES);
-const totalUploadLabel = formatUploadBytes(MAX_TOTAL_UPLOAD_BYTES);
-const uploadPolicy = {
-  allowedExtensions: ALLOWED_EXTENSIONS,
-  allowedMimeTypes: ALLOWED_MIME_TYPES,
-  maxFiles: MAX_FILES,
-  maxFileSizeBytes: MAX_FILE_SIZE_BYTES,
-  maxTotalUploadBytes: MAX_TOTAL_UPLOAD_BYTES,
-  maxFileSizeLabel: fileSizeLabel,
-  maxTotalUploadLabel: totalUploadLabel,
-};
 ---
 
 <Layout
   title="Submit Artwork"
-  description="Submit preview files, links, archive material, or documentation for the Anti-Fascist Art Exhibition open call."
+  description="Request a secure submission link for preview files, archive material, or documentation for the Anti-Fascist Art Exhibition open call."
 >
   <SignalFieldHero
     client:load
     compact
     headline="Submit artwork or archive material."
-    subtitle="Artists, collectives, educators, and organisers can submit preview material for review as the anti-fascist exhibition grows toward its world tour. Share the work, its context, and what it needs to travel."
-    primaryCta={{ label: "Start submission", href: "#artwork-form" }}
+    subtitle="Artists, collectives, educators, and organisers can request a secure email link, return to one active submission, and update preview material while the open call is live."
+    primaryCta={{ label: "Request link", href: "#artwork-form" }}
     secondaryCta={{ label: "Tour dates", href: "/tour-dates" }}
-    badges={["Open call", "Artwork upload", "Archive material", "Thousands of works", "A thousand words", "Tour-ready pieces"]}
+    badges={["Open call", "Verified email", "Preview files", "Archive material", "Tour-ready pieces"]}
     statusLines={[
-      "More submission guidance is being prepared",
-      "Selected work may be considered for touring, publication, and public programmes",
+      "Preview files only through the public flow",
+      "Selected artists may be contacted later for production-ready originals",
     ]}
   />
 
@@ -69,58 +44,30 @@ const uploadPolicy = {
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Artwork submission form</CardTitle>
+          <CardTitle className="text-2xl">Request a secure submission link</CardTitle>
           <CardDescription>
-            Required fields are marked with an asterisk. Send preview files only: selected artists
-            may be contacted later for high-resolution, print-ready, layered, audio-master, or
-            video-master originals.
+            Enter the email address you want attached to the submission. The link lets you create
+            or update one active preview submission for the open call.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <div data-form-status="success" hidden class="mb-6 rounded-md border border-secondary bg-secondary/35 p-4 text-sm font-medium text-secondary-foreground" role="status">
-            Submission received. The files and form details have been saved for review.
-          </div>
-          <div data-form-status="storage" hidden class="mb-6 rounded-md border border-accent bg-accent/25 p-4 text-sm font-medium text-accent-foreground" role="status">
-            The submission was valid, but it was not stored because the Cloudflare R2 storage binding is not configured yet.
-          </div>
-          <div data-form-status="file-size" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            One or more files are over the {fileSizeLabel} preview limit.
-          </div>
-          <div data-form-status="file-count" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Upload no more than {MAX_FILES} preview files.
-          </div>
-          <div data-form-status="total-size" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Keep the total upload below {totalUploadLabel}.
-          </div>
-          <div data-form-status="file-type" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Use preview files only: JPG, JPEG, PNG, WebP, PDF, MP3, M4A, or WAV.
-          </div>
-          <div data-form-status="empty-file" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            One of the selected files is empty. Remove it or choose another preview file.
-          </div>
-          <div data-form-status="missing-preview" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Add at least one preview file or a preview, portfolio, video, or file-transfer link.
-          </div>
-          <div data-form-status="missing" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Please complete the required fields before submitting.
+          <div data-form-status="link-sent" hidden class="mb-6 rounded-md border border-secondary bg-secondary/35 p-4 text-sm font-medium text-secondary-foreground" role="status">
+            If the address can receive submissions, a secure link has been sent. Check your inbox and spam folder.
           </div>
           <div data-form-status="invalid-email" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
             Please enter a valid email address.
           </div>
-          <div data-form-status="invalid-url" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Please enter a valid http or https link.
+          <div data-form-status="database-unconfigured" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Submission storage is not configured yet.
           </div>
-          <div data-form-status="too-long" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            One or more answers is too long. Please shorten it and submit again.
+          <div data-form-status="magic-link-unconfigured" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Secure submission links are not configured yet.
           </div>
-          <div data-form-status="storage-error" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            The submission could not be saved. Please try again later.
-          </div>
-          <div data-form-status="invalid" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            The submission could not be read. Please check the form and try again.
+          <div data-form-status="verified-link-required" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Artwork submissions now require a secure email link.
           </div>
           <div data-form-status="turnstile-missing" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Please complete the verification challenge before submitting.
+            Please complete the verification challenge before requesting a link.
           </div>
           <div data-form-status="turnstile-invalid" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
             Verification failed. Please complete the challenge and try again.
@@ -134,222 +81,26 @@ const uploadPolicy = {
 
           <script is:inline>
             const params = new URLSearchParams(window.location.search);
-            const status = params.get("storage") === "unconfigured"
-              ? "storage"
-              : params.get("submitted") === "1"
-                ? "success"
-                : params.get("error");
+            const status = params.get("link") === "sent" ? "link-sent" : params.get("error");
 
             if (status && /^[a-z-]+$/.test(status)) {
               document.querySelector(`[data-form-status="${status}"]`)?.removeAttribute("hidden");
             }
           </script>
 
-          <form action="/api/artwork" method="post" enctype="multipart/form-data" class="grid gap-6" data-artwork-form>
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div class="grid gap-2">
-                <Label htmlFor="artistName">Artist or collective name *</Label>
-                <Input id="artistName" name="artistName" required autoComplete="name" maxLength={120} />
-              </div>
-              <div class="grid gap-2">
-                <Label htmlFor="email">Email *</Label>
-                <Input id="email" name="email" type="email" required autoComplete="email" maxLength={254} />
-              </div>
-            </div>
-
-            <div class="grid gap-5 sm:grid-cols-2">
-              <div class="grid gap-2">
-                <Label htmlFor="location">Location</Label>
-                <Input id="location" name="location" autoComplete="address-level2" maxLength={120} />
-              </div>
-              <div class="grid gap-2">
-                <Label htmlFor="medium">Medium</Label>
-                <select id="medium" name="medium" class={selectClass}>
-                  <option value="">Select medium</option>
-                  <option>Painting or drawing</option>
-                  <option>Print or poster</option>
-                  <option>Photography</option>
-                  <option>Textile</option>
-                  <option>Audio or moving image</option>
-                  <option>Archive or documentation</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="grid gap-5 sm:grid-cols-[1fr_10rem]">
-              <div class="grid gap-2">
-                <Label htmlFor="title">Artwork title *</Label>
-                <Input id="title" name="title" required maxLength={160} />
-              </div>
-              <div class="grid gap-2">
-                <Label htmlFor="year">Year</Label>
-                <Input id="year" name="year" inputMode="numeric" maxLength={20} />
-              </div>
-            </div>
-
+          <form action="/api/submission/request-link" method="post" class="grid gap-6">
             <div class="grid gap-2">
-              <Label htmlFor="statement">Work statement *</Label>
-              <Textarea
-                id="statement"
-                name="statement"
-                required
-                rows={6}
-                maxLength={4000}
-                placeholder="Share the context, story, and why the work belongs in this exhibition."
-              />
+              <Label htmlFor="email">Email *</Label>
+              <Input id="email" name="email" type="email" required autoComplete="email" maxLength={254} />
             </div>
-
-            <div class="grid gap-2">
-              <Label htmlFor="installationNotes">Installation or access notes</Label>
-              <Textarea
-                id="installationNotes"
-                name="installationNotes"
-                rows={4}
-                maxLength={2000}
-                placeholder="Size, duration, display requirements, captions, permissions, or travel limits."
-              />
-            </div>
-
-            <div class="grid gap-2">
-              <Label htmlFor="preview_link">Preview, video, portfolio, or file-transfer link</Label>
-              <Input
-                id="preview_link"
-                name="preview_link"
-                type="url"
-                inputMode="url"
-                maxLength={2048}
-                placeholder="https://vimeo.com/... or https://drive.google.com/..."
-              />
-              <p class="text-sm leading-6 text-muted-foreground">
-                Video previews should preferably be supplied as a link, for example Vimeo,
-                YouTube, Google Drive, Dropbox, WeTransfer, or a portfolio page.
-              </p>
-            </div>
-
-            <div class="grid gap-2">
-              <Label htmlFor="artworkFiles">Upload preview files</Label>
-              <Input
-                id="artworkFiles"
-                name="artworkFiles"
-                type="file"
-                multiple
-                accept={ACCEPTED_FILE_TYPES}
-                className="min-h-12 py-2"
-                aria-describedby="artworkFilesHelp artworkFilesErrors"
-              />
-              <p id="artworkFilesHelp" class="text-sm leading-6 text-muted-foreground">
-                Accepted preview formats: JPG, JPEG, PNG, WebP, PDF, MP3, M4A, or WAV.
-                Maximum {MAX_FILES} files, {fileSizeLabel} each, {totalUploadLabel} total.
-                Do not upload PSD, TIFF, ZIP, EXE, arbitrary binary files, or final production files.
-              </p>
-              <div
-                id="artworkFilesErrors"
-                data-file-validation
-                hidden
-                class="rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive"
-                role="alert"
-              />
-            </div>
-
-            <label class="flex gap-3 rounded-md border p-4 text-sm leading-6">
-              <input type="checkbox" name="consent" required class="mt-1 size-4 accent-primary" />
-              <span>
-                I confirm I have the rights to submit this work and may be contacted about exhibition
-                suitability, captions, access, display permissions, or high-resolution originals if
-                the work is selected or shortlisted.
-              </span>
-            </label>
 
             <TurnstileWidget />
 
             <Button type="submit" size="lg" className="w-full sm:w-fit">
-              <Upload aria-hidden="true" />
-              Send artwork submission
+              <Mail aria-hidden="true" />
+              Send secure submission link
             </Button>
           </form>
-
-          <script is:inline define:vars={{ uploadPolicy }}>
-            const artworkForm = document.querySelector("[data-artwork-form]");
-            const fileInput = artworkForm?.querySelector('input[name="artworkFiles"]');
-            const fileErrors = document.querySelector("[data-file-validation]");
-            const submitButton = artworkForm?.querySelector('button[type="submit"]');
-            const allowedExtensions = new Set(uploadPolicy.allowedExtensions);
-            const allowedMimeTypes = new Set(uploadPolicy.allowedMimeTypes);
-
-            function fileExtension(fileName) {
-              return /\.([a-z0-9]+)$/i.exec(fileName.trim())?.[1]?.toLowerCase() || "";
-            }
-
-            function showFileErrors(errors) {
-              if (!fileErrors) return;
-
-              if (errors.length === 0) {
-                fileErrors.hidden = true;
-                fileErrors.textContent = "";
-                fileInput?.removeAttribute("aria-invalid");
-                if (submitButton) submitButton.disabled = false;
-                return;
-              }
-
-              fileErrors.hidden = false;
-              fileErrors.replaceChildren(
-                ...errors.map((error) => {
-                  const paragraph = document.createElement("p");
-                  paragraph.textContent = error;
-                  return paragraph;
-                }),
-              );
-              fileInput?.setAttribute("aria-invalid", "true");
-              if (submitButton) submitButton.disabled = true;
-            }
-
-            function validateArtworkFiles() {
-              const files = Array.from(fileInput?.files || []);
-              const errors = [];
-              let totalSize = 0;
-
-              if (files.length > uploadPolicy.maxFiles) {
-                errors.push(`Choose no more than ${uploadPolicy.maxFiles} files.`);
-              }
-
-              for (const file of files) {
-                const extension = fileExtension(file.name);
-                totalSize += file.size;
-
-                if (file.size === 0) {
-                  errors.push(`${file.name || "A selected file"} is empty.`);
-                }
-
-                if (file.size > uploadPolicy.maxFileSizeBytes) {
-                  errors.push(`${file.name} is larger than ${uploadPolicy.maxFileSizeLabel}.`);
-                }
-
-                if (!allowedExtensions.has(extension)) {
-                  errors.push(`${file.name} is not an accepted preview format.`);
-                }
-
-                if (file.type && !allowedMimeTypes.has(file.type.toLowerCase())) {
-                  errors.push(`${file.name} has a file type this form cannot accept.`);
-                }
-              }
-
-              if (totalSize > uploadPolicy.maxTotalUploadBytes) {
-                errors.push(`The selected files total more than ${uploadPolicy.maxTotalUploadLabel}.`);
-              }
-
-              showFileErrors([...new Set(errors)]);
-              return errors.length === 0;
-            }
-
-            fileInput?.addEventListener("change", validateArtworkFiles);
-            artworkForm?.addEventListener("submit", (event) => {
-              if (!validateArtworkFiles()) {
-                event.preventDefault();
-                fileInput?.focus();
-              }
-            });
-          </script>
         </CardContent>
       </Card>
     </div>
