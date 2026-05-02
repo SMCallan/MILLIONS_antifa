@@ -57,8 +57,9 @@ export const tourDates = [
 
 export const submissionGuidelines = [
   "2D, audio, moving image, textile, print, photography, and documentation-led works are welcome.",
-  "Upload up to six images, PDFs, or short supporting files with a combined size suitable for web review.",
-  "Include installation needs, access considerations, and whether the work can travel.",
+  "Submit preview files only: JPG, JPEG, PNG, WebP, PDF, MP3, M4A, or WAV. Video previews are best shared as links.",
+  "Upload up to five preview files, maximum 20MB each and 75MB total, so the public form stays reliable and cost-conscious.",
+  "Do not upload PSD, TIFF, ZIP, EXE, arbitrary binary files, or final production masters. Shortlisted artists may be asked separately for high-resolution originals.",
 ];
 
 export const bookingFeatures = [

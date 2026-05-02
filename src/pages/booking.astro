@@ -67,10 +67,22 @@ const selectClass =
             Booking enquiry received. The details have been saved for follow-up.
           </div>
           <div data-form-status="storage" hidden class="mb-6 rounded-md border border-accent bg-accent/25 p-4 text-sm font-medium text-accent-foreground" role="status">
-            Booking enquiry received in preview mode, but the Cloudflare R2 storage binding is not configured yet.
+            The booking enquiry was valid, but it was not stored because the Cloudflare R2 storage binding is not configured yet.
           </div>
           <div data-form-status="missing" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
             Please complete the required fields before submitting.
+          </div>
+          <div data-form-status="invalid-email" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Please enter a valid email address.
+          </div>
+          <div data-form-status="too-long" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            One or more answers is too long. Please shorten it and submit again.
+          </div>
+          <div data-form-status="storage-error" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            The enquiry could not be saved. Please try again later.
+          </div>
+          <div data-form-status="invalid" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            The enquiry could not be read. Please check the form and try again.
           </div>
 
           <script is:inline>
@@ -81,7 +93,7 @@ const selectClass =
                 ? "success"
                 : params.get("error");
 
-            if (status) {
+            if (status && /^[a-z-]+$/.test(status)) {
               document.querySelector(`[data-form-status="${status}"]`)?.removeAttribute("hidden");
             }
           </script>
@@ -90,29 +102,29 @@ const selectClass =
             <div class="grid gap-5 sm:grid-cols-2">
               <div class="grid gap-2">
                 <Label htmlFor="organisation">Organisation or centre *</Label>
-                <Input id="organisation" name="organisation" required autoComplete="organization" />
+                <Input id="organisation" name="organisation" required autoComplete="organization" maxLength={120} />
               </div>
               <div class="grid gap-2">
                 <Label htmlFor="contactName">Contact name *</Label>
-                <Input id="contactName" name="contactName" required autoComplete="name" />
+                <Input id="contactName" name="contactName" required autoComplete="name" maxLength={120} />
               </div>
             </div>
 
             <div class="grid gap-5 sm:grid-cols-2">
               <div class="grid gap-2">
                 <Label htmlFor="email">Email *</Label>
-                <Input id="email" name="email" type="email" required autoComplete="email" />
+                <Input id="email" name="email" type="email" required autoComplete="email" maxLength={254} />
               </div>
               <div class="grid gap-2">
                 <Label htmlFor="phone">Phone</Label>
-                <Input id="phone" name="phone" type="tel" autoComplete="tel" />
+                <Input id="phone" name="phone" type="tel" autoComplete="tel" maxLength={80} />
               </div>
             </div>
 
             <div class="grid gap-5 sm:grid-cols-2">
               <div class="grid gap-2">
                 <Label htmlFor="location">Venue location</Label>
-                <Input id="location" name="location" autoComplete="address-level2" />
+                <Input id="location" name="location" autoComplete="address-level2" maxLength={120} />
               </div>
               <div class="grid gap-2">
                 <Label htmlFor="venueType">Venue type</Label>
@@ -132,11 +144,11 @@ const selectClass =
             <div class="grid gap-5 sm:grid-cols-2">
               <div class="grid gap-2">
                 <Label htmlFor="dateRange">Preferred date range</Label>
-                <Input id="dateRange" name="dateRange" placeholder="e.g. September 2026" />
+                <Input id="dateRange" name="dateRange" placeholder="e.g. September 2026" maxLength={120} />
               </div>
               <div class="grid gap-2">
                 <Label htmlFor="expectedAudience">Expected audience</Label>
-                <Input id="expectedAudience" name="expectedAudience" placeholder="e.g. 150 visitors" />
+                <Input id="expectedAudience" name="expectedAudience" placeholder="e.g. 150 visitors" maxLength={80} />
               </div>
             </div>
 
@@ -146,6 +158,7 @@ const selectClass =
                 id="spaceDetails"
                 name="spaceDetails"
                 rows={4}
+                maxLength={2000}
                 placeholder="Wall length, room access, invigilation, public opening times, equipment, or access needs."
               />
             </div>
@@ -157,6 +170,7 @@ const selectClass =
                 name="message"
                 required
                 rows={6}
+                maxLength={3000}
                 placeholder="Tell us what you would like to host and what support you need."
               />
             </div>

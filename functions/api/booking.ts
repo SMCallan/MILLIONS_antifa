@@ -1,62 +1,68 @@
-type PagesContext = {
-  request: Request;
-  env: {
-    SUBMISSIONS?: {
-      put: (
-        key: string,
-        value: string | ArrayBuffer | ReadableStream,
-        options?: { httpMetadata?: { contentType?: string } },
-      ) => Promise<unknown>;
-    };
-  };
-};
+import {
+  type PagesContext,
+  formFailure,
+  formSuccess,
+  isValidEmail,
+  readFormData,
+  storageUnconfigured,
+  validateTextFields,
+} from "./_formValidation";
 
-function redirect(location: string) {
-  return new Response(null, {
-    status: 303,
-    headers: { Location: location },
-  });
-}
-
-function value(formData: FormData, key: string) {
-  return String(formData.get(key) ?? "").trim();
-}
+const BOOKING_FIELDS = [
+  { key: "organisation", required: true, maxLength: 120 },
+  { key: "contactName", required: true, maxLength: 120 },
+  { key: "email", required: true, maxLength: 254, validate: isValidEmail, invalidError: "invalid-email" },
+  { key: "phone", maxLength: 80 },
+  { key: "location", maxLength: 120 },
+  { key: "venueType", maxLength: 80 },
+  { key: "dateRange", maxLength: 120 },
+  { key: "expectedAudience", maxLength: 80 },
+  { key: "spaceDetails", maxLength: 2000 },
+  { key: "message", required: true, maxLength: 3000 },
+] as const;
 
 export async function onRequestPost({ request, env }: PagesContext) {
-  const formData = await request.formData();
-  const organisation = value(formData, "organisation");
-  const contactName = value(formData, "contactName");
-  const email = value(formData, "email");
-  const message = value(formData, "message");
+  const parsed = await readFormData(request, "/booking");
+  if (parsed.response) {
+    return parsed.response;
+  }
 
-  if (!organisation || !contactName || !email || !message) {
-    return redirect("/booking?error=missing");
+  const { formData } = parsed;
+  const fieldResult = validateTextFields(formData, BOOKING_FIELDS);
+
+  if (fieldResult.error) {
+    return formFailure(request, "/booking", fieldResult.error);
   }
 
   const id = `${Date.now()}-${crypto.randomUUID()}`;
   const enquiry = {
     id,
     createdAt: new Date().toISOString(),
-    organisation,
-    contactName,
-    email,
-    phone: value(formData, "phone"),
-    location: value(formData, "location"),
-    venueType: value(formData, "venueType"),
-    dateRange: value(formData, "dateRange"),
-    expectedAudience: value(formData, "expectedAudience"),
-    spaceDetails: value(formData, "spaceDetails"),
-    message,
+    organisation: fieldResult.values.organisation,
+    contactName: fieldResult.values.contactName,
+    email: fieldResult.values.email,
+    phone: fieldResult.values.phone,
+    location: fieldResult.values.location,
+    venueType: fieldResult.values.venueType,
+    dateRange: fieldResult.values.dateRange,
+    expectedAudience: fieldResult.values.expectedAudience,
+    spaceDetails: fieldResult.values.spaceDetails,
+    message: fieldResult.values.message,
   };
 
   if (!env.SUBMISSIONS) {
     console.warn("SUBMISSIONS R2 binding is not configured; booking enquiry was not stored.");
-    return redirect("/booking?submitted=1&storage=unconfigured");
+    return storageUnconfigured(request, "/booking");
   }
 
-  await env.SUBMISSIONS.put(`bookings/${id}.json`, JSON.stringify(enquiry, null, 2), {
-    httpMetadata: { contentType: "application/json" },
-  });
+  try {
+    await env.SUBMISSIONS.put(`bookings/${id}.json`, JSON.stringify(enquiry, null, 2), {
+      httpMetadata: { contentType: "application/json" },
+    });
+  } catch (error) {
+    console.error("Booking enquiry storage failed.", error);
+    return formFailure(request, "/booking", "storage-error", 500);
+  }
 
-  return redirect("/booking?submitted=1");
+  return formSuccess(request, "/booking");
 }
