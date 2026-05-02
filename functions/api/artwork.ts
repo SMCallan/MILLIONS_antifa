@@ -11,6 +11,7 @@ import {
   validateArtworkUploads,
   validateTextFields,
 } from "./_formValidation";
+import { validateTurnstile } from "./_turnstile";
 
 const ARTWORK_FIELDS = [
   { key: "artistName", required: true, maxLength: 120 },
@@ -30,6 +31,11 @@ export async function onRequestPost({ request, env }: PagesContext) {
   }
 
   const { formData } = parsed;
+  const turnstile = await validateTurnstile(request, formData, env);
+  if (!turnstile.ok) {
+    return formFailure(request, "/submit", turnstile.error);
+  }
+
   const fieldResult = validateTextFields(formData, ARTWORK_FIELDS);
 
   if (fieldResult.error) {

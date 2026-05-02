@@ -1,0 +1,33 @@
+---
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+const isLocalDev = import.meta.env.DEV;
+---
+
+{
+  siteKey ? (
+    <div class="grid gap-2">
+      <div
+        class="cf-turnstile"
+        data-sitekey={siteKey}
+        data-response-field-name="cf-turnstile-response"
+      />
+      <script
+        is:inline
+        src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+        async
+        defer
+      />
+    </div>
+  ) : (
+    <div
+      class="rounded-md border border-accent bg-accent/20 p-4 text-sm leading-6 text-accent-foreground"
+      role="status"
+    >
+      {
+        isLocalDev
+          ? "Turnstile is not configured for local development. Set PUBLIC_TURNSTILE_SITE_KEY to render the widget, or run the Pages Functions preview with BYPASS_TURNSTILE_IN_DEV=true for local form testing."
+          : "Turnstile is not configured for this build. Set PUBLIC_TURNSTILE_SITE_KEY before using the public forms."
+      }
+    </div>
+  )
+}

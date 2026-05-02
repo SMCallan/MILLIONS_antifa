@@ -7,6 +7,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import TurnstileWidget from "@/components/TurnstileWidget.astro";
 import { submissionGuidelines } from "@/data/site";
 import Layout from "@/layouts/Layout.astro";
 import {
@@ -117,6 +118,18 @@ const uploadPolicy = {
           </div>
           <div data-form-status="invalid" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
             The submission could not be read. Please check the form and try again.
+          </div>
+          <div data-form-status="turnstile-missing" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Please complete the verification challenge before submitting.
+          </div>
+          <div data-form-status="turnstile-invalid" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Verification failed. Please complete the challenge and try again.
+          </div>
+          <div data-form-status="turnstile-unconfigured" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Verification is not configured for this environment.
+          </div>
+          <div data-form-status="turnstile-unavailable" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
+            Verification could not be completed. Please try again.
           </div>
 
           <script is:inline>
@@ -247,6 +260,8 @@ const uploadPolicy = {
                 the work is selected or shortlisted.
               </span>
             </label>
+
+            <TurnstileWidget />
 
             <Button type="submit" size="lg" className="w-full sm:w-fit">
               <Upload aria-hidden="true" />

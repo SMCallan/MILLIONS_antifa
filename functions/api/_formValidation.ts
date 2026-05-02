@@ -18,7 +18,9 @@ export type R2Bucket = {
 export type PagesContext = {
   request: Request;
   env: {
+    BYPASS_TURNSTILE_IN_DEV?: string;
     SUBMISSIONS?: R2Bucket;
+    TURNSTILE_SECRET_KEY?: string;
   };
 };
 
@@ -34,6 +36,10 @@ export type FormError =
   | "missing-preview"
   | "storage-error"
   | "too-long"
+  | "turnstile-invalid"
+  | "turnstile-missing"
+  | "turnstile-unavailable"
+  | "turnstile-unconfigured"
   | "total-size";
 
 type FieldRule = {

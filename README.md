@@ -57,6 +57,44 @@ The R2 bucket should remain private. Store uploaded files and metadata reference
 
 Configure lifecycle deletion in Cloudflare R2 so preview submissions are automatically expired according to the project's retention policy.
 
+### Turnstile Form Protection
+
+Public form posts are protected with Cloudflare Turnstile. Client-side widgets are useful for UX, but server-side validation in the Pages Functions is required and must remain enabled.
+
+To configure Turnstile:
+
+1. In the Cloudflare dashboard, open **Turnstile** and create a new widget.
+2. Add the production domain and any preview domains that should render the challenge.
+3. Copy the widget site key and secret key.
+4. In Cloudflare Pages project settings, set `PUBLIC_TURNSTILE_SITE_KEY` as an environment variable for the builds that render the public site. This key is public and is embedded in the static Astro HTML.
+5. In Cloudflare Pages project settings, set `TURNSTILE_SECRET_KEY` as a secret/environment variable for Pages Functions. This value is private and must not be committed.
+6. Rebuild/redeploy after changing `PUBLIC_TURNSTILE_SITE_KEY`, because it is read during the static Astro build.
+
+Required variables:
+
+- `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by the artwork and booking form widgets.
+- `TURNSTILE_SECRET_KEY`: private Turnstile secret key used by `POST /api/artwork` and `POST /api/booking` to call Cloudflare Siteverify.
+
+Development-only bypass:
+
+- `BYPASS_TURNSTILE_IN_DEV=true` can be used only for local Pages Function testing.
+- The bypass is accepted only for local request hosts such as `localhost` or `127.0.0.1`.
+- Do not set `BYPASS_TURNSTILE_IN_DEV` in Cloudflare Pages production or preview environments.
+
+Example local bypass command:
+
+```bash
+npm run preview:pages -- --binding BYPASS_TURNSTILE_IN_DEV=true
+```
+
+Example local test with a real Turnstile secret:
+
+```bash
+npm run preview:pages -- --binding TURNSTILE_SECRET_KEY=<your-local-secret>
+```
+
+If `TURNSTILE_SECRET_KEY` is missing outside the explicit local bypass path, form submissions fail closed and nothing is stored.
+
 ## Useful Commands
 
 ```bash
