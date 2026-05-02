@@ -7,6 +7,7 @@ import {
   storageUnconfigured,
   validateTextFields,
 } from "./_formValidation";
+import { validateTurnstile } from "./_turnstile";
 
 const BOOKING_FIELDS = [
   { key: "organisation", required: true, maxLength: 120 },
@@ -28,6 +29,11 @@ export async function onRequestPost({ request, env }: PagesContext) {
   }
 
   const { formData } = parsed;
+  const turnstile = await validateTurnstile(request, formData, env);
+  if (!turnstile.ok) {
+    return formFailure(request, "/booking", turnstile.error);
+  }
+
   const fieldResult = validateTextFields(formData, BOOKING_FIELDS);
 
   if (fieldResult.error) {
