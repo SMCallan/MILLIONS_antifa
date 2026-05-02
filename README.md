@@ -22,8 +22,12 @@ Cloudflare Pages settings:
 
 The form routes are implemented as Pages Functions:
 
-- `POST /api/artwork`
 - `POST /api/booking`
+- `POST /api/submission/request-link`
+- `POST /api/submission/verify-token`
+- `GET /api/submission/current`
+- `POST /api/submission/save`
+- `POST /api/artwork` remains as a closed legacy route that redirects to the verified-link flow.
 
 ### Artwork Preview Upload Policy
 
@@ -57,6 +61,51 @@ The R2 bucket should remain private. Store uploaded files and metadata reference
 
 Configure lifecycle deletion in Cloudflare R2 so preview submissions are automatically expired according to the project's retention policy.
 
+### Verified Artwork Submission Flow
+
+Artwork submissions use a lightweight verified-email flow, not full user accounts:
+
+- Artists request a secure email magic link from `/submit`.
+- The link opens `/submit/access?token=...`.
+- `POST /api/submission/verify-token` exchanges a valid link for a short-lived HttpOnly submission session cookie.
+- The artist can create or update one active submission for the open-call campaign.
+- `POST /api/submission/save` stores metadata in D1 and private preview files in R2.
+- Resubmitting with new preview files replaces the previous active preview set after validation.
+- Final, master, layered, high-resolution, audio-master, or video-master files are requested later outside the public upload flow.
+
+The legacy anonymous artwork upload endpoint `POST /api/artwork` is closed and redirects artists to the verified-link flow.
+
+Required Cloudflare bindings and variables:
+
+- `SUBMISSIONS`: private R2 bucket binding for preview files.
+- `SUBMISSIONS_DB`: D1 database binding for campaigns, submissions, and magic links.
+- `MAGIC_LINK_SECRET`: random secret used to hash magic-link tokens and sign submission session cookies.
+- `PUBLIC_SITE_URL`: production site URL used when building magic links.
+- `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by static form widgets.
+- `TURNSTILE_SECRET_KEY`: private Turnstile secret used by Pages Functions.
+
+Optional future email settings:
+
+- `EMAIL_PROVIDER_API_KEY`: reserved for a future email provider adapter.
+- `SUBMISSION_NOTIFICATION_EMAIL`: reserved for future reviewer notifications.
+
+No email vendor is implemented yet. In local development, missing email provider settings cause the magic link to be logged only for local requests. Production must configure an email provider adapter before public use; production logs must not expose magic-link tokens.
+
+After creating the D1 database and adding the `SUBMISSIONS_DB` binding in Wrangler/Pages settings, apply D1 migrations before production use:
+
+```bash
+npx wrangler d1 migrations apply millions-antifa-submissions --remote
+```
+
+For local Pages Function testing with a configured local D1 binding, apply the migration to the local D1 database and bind D1/R2/dev variables:
+
+```bash
+npx wrangler d1 execute SUBMISSIONS_DB --local --file migrations/0001_verified_submissions.sql
+npm run preview:pages -- --d1 SUBMISSIONS_DB --r2 SUBMISSIONS --binding MAGIC_LINK_SECRET=dev-secret --binding BYPASS_TURNSTILE_IN_DEV=true
+```
+
+Use a strong generated `MAGIC_LINK_SECRET` in Cloudflare Pages. Do not commit `.dev.vars`, production secrets, D1 ids, R2 credentials, Turnstile secrets, or email provider keys.
+
 ### Turnstile Form Protection
 
 Public form posts are protected with Cloudflare Turnstile. Client-side widgets are useful for UX, but server-side validation in the Pages Functions is required and must remain enabled.
@@ -73,7 +122,7 @@ To configure Turnstile:
 Required variables:
 
 - `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by the artwork and booking form widgets.
-- `TURNSTILE_SECRET_KEY`: private Turnstile secret key used by `POST /api/artwork` and `POST /api/booking` to call Cloudflare Siteverify.
+- `TURNSTILE_SECRET_KEY`: private Turnstile secret key used by `POST /api/submission/request-link`, `POST /api/submission/save`, and `POST /api/booking` to call Cloudflare Siteverify.
 
 Development-only bypass:
 

@@ -1,0 +1,357 @@
+---
+import { Save } from "lucide-react";
+
+import TurnstileWidget from "@/components/TurnstileWidget.astro";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import Layout from "@/layouts/Layout.astro";
+import {
+  ACCEPTED_FILE_TYPES,
+  ALLOWED_EXTENSIONS,
+  ALLOWED_MIME_TYPES,
+  MAX_FILES,
+  MAX_FILE_SIZE_BYTES,
+  MAX_TOTAL_UPLOAD_BYTES,
+  formatUploadBytes,
+} from "@/lib/submissionPolicy";
+
+const fileSizeLabel = formatUploadBytes(MAX_FILE_SIZE_BYTES);
+const totalUploadLabel = formatUploadBytes(MAX_TOTAL_UPLOAD_BYTES);
+const uploadPolicy = {
+  allowedExtensions: ALLOWED_EXTENSIONS,
+  allowedMimeTypes: ALLOWED_MIME_TYPES,
+  maxFiles: MAX_FILES,
+  maxFileSizeBytes: MAX_FILE_SIZE_BYTES,
+  maxTotalUploadBytes: MAX_TOTAL_UPLOAD_BYTES,
+  maxFileSizeLabel: fileSizeLabel,
+  maxTotalUploadLabel: totalUploadLabel,
+};
+---
+
+<Layout
+  title="Submission Access"
+  description="Create or update a verified artwork submission for the Anti-Fascist Art Exhibition open call."
+>
+  <section class="section-y bg-background">
+    <div class="container-page max-w-4xl">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl">Artwork submission access</CardTitle>
+          <CardDescription>
+            Create or update the active preview submission for the verified email address.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <div data-state="loading" class="rounded-md border bg-muted/45 p-4 text-sm font-medium text-muted-foreground" role="status">
+            Checking secure link...
+          </div>
+
+          <div data-state="error" hidden class="rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert" />
+
+          <div data-state="saved" hidden class="mb-6 rounded-md border border-secondary bg-secondary/35 p-4 text-sm font-medium text-secondary-foreground" role="status">
+            Submission saved. The latest preview material is now attached to this email.
+          </div>
+
+          <div data-state="ready" hidden>
+            <div class="mb-6 rounded-md border bg-muted/35 p-4 text-sm leading-6 text-muted-foreground">
+              <p>
+                Verified email: <strong data-email class="text-foreground"></strong>
+              </p>
+              <p data-summary></p>
+            </div>
+
+            <form action="/api/submission/save" method="post" enctype="multipart/form-data" class="grid gap-6" data-submission-form>
+              <div class="grid gap-2">
+                <Label htmlFor="title">Artwork title *</Label>
+                <Input id="title" name="title" required maxLength={160} />
+              </div>
+
+              <div class="grid gap-2">
+                <Label htmlFor="description">Work statement *</Label>
+                <Textarea
+                  id="description"
+                  name="description"
+                  required
+                  rows={6}
+                  maxLength={4000}
+                  placeholder="Share the context, story, and why the work belongs in this exhibition."
+                />
+              </div>
+
+              <div class="grid gap-5 sm:grid-cols-2">
+                <div class="grid gap-2">
+                  <Label htmlFor="portfolio_url">Portfolio URL</Label>
+                  <Input id="portfolio_url" name="portfolio_url" type="url" inputMode="url" maxLength={2048} />
+                </div>
+                <div class="grid gap-2">
+                  <Label htmlFor="preview_link">Preview or video link</Label>
+                  <Input id="preview_link" name="preview_link" type="url" inputMode="url" maxLength={2048} />
+                </div>
+              </div>
+
+              <div class="grid gap-2">
+                <Label htmlFor="full_resolution_link_optional">Optional larger-file link</Label>
+                <Input
+                  id="full_resolution_link_optional"
+                  name="full_resolution_link_optional"
+                  type="url"
+                  inputMode="url"
+                  maxLength={2048}
+                />
+                <p class="text-sm leading-6 text-muted-foreground">
+                  Selected artists may still be contacted separately for high-resolution, layered,
+                  print-ready, audio-master, or video-master originals.
+                </p>
+              </div>
+
+              <div class="grid gap-2">
+                <Label htmlFor="previewFiles">Upload preview files</Label>
+                <Input
+                  id="previewFiles"
+                  name="previewFiles"
+                  type="file"
+                  multiple
+                  accept={ACCEPTED_FILE_TYPES}
+                  className="min-h-12 py-2"
+                  aria-describedby="previewFilesHelp previewFilesErrors"
+                />
+                <p id="previewFilesHelp" class="text-sm leading-6 text-muted-foreground">
+                  Accepted preview formats: JPG, JPEG, PNG, WebP, PDF, MP3, M4A, or WAV.
+                  Maximum {MAX_FILES} files, {fileSizeLabel} each, {totalUploadLabel} total.
+                  Selecting new files replaces the previous preview files after validation.
+                </p>
+                <div
+                  id="previewFilesErrors"
+                  data-file-validation
+                  hidden
+                  class="rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive"
+                  role="alert"
+                />
+              </div>
+
+              <TurnstileWidget />
+
+              <Button type="submit" size="lg" className="w-full sm:w-fit">
+                <Save aria-hidden="true" />
+                Save submission
+              </Button>
+            </form>
+          </div>
+
+          <script is:inline define:vars={{ uploadPolicy }}>
+            const loadingState = document.querySelector('[data-state="loading"]');
+            const readyState = document.querySelector('[data-state="ready"]');
+            const errorState = document.querySelector('[data-state="error"]');
+            const savedState = document.querySelector('[data-state="saved"]');
+            const emailEl = document.querySelector("[data-email]");
+            const summaryEl = document.querySelector("[data-summary]");
+            const form = document.querySelector("[data-submission-form]");
+            const fileInput = form?.querySelector('input[name="previewFiles"]');
+            const fileErrors = document.querySelector("[data-file-validation]");
+            const submitButton = form?.querySelector('button[type="submit"]');
+            const allowedExtensions = new Set(uploadPolicy.allowedExtensions);
+            const allowedMimeTypes = new Set(uploadPolicy.allowedMimeTypes);
+            const errorMessages = {
+              "database-unconfigured": "Submission storage is not configured yet.",
+              "empty-file": "One of the selected files is empty.",
+              "expired-token": "This secure link has expired. Request a new one.",
+              "file-count": `Choose no more than ${uploadPolicy.maxFiles} files.`,
+              "file-size": `Each preview file must be ${uploadPolicy.maxFileSizeLabel} or smaller.`,
+              "file-type": "Use preview files only: JPG, JPEG, PNG, WebP, PDF, MP3, M4A, or WAV.",
+              "invalid-email": "Please enter a valid email address.",
+              "invalid-token": "This secure link is invalid or has already been used.",
+              "invalid-url": "Please enter valid http or https links.",
+              "magic-link-unconfigured": "Secure submission links are not configured yet.",
+              "missing": "Please complete the required fields.",
+              "missing-preview": "Add preview files, a preview link, or a portfolio URL.",
+              "session-invalid": "Your submission session has expired. Request a new secure link.",
+              "storage-error": "The submission could not be saved. Please try again.",
+              "too-long": "One or more answers is too long.",
+              "total-size": `The selected files total more than ${uploadPolicy.maxTotalUploadLabel}.`,
+              "turnstile-invalid": "Verification failed. Complete the challenge and try again.",
+              "turnstile-missing": "Please complete the verification challenge.",
+              "turnstile-unavailable": "Verification could not be completed. Please try again.",
+              "turnstile-unconfigured": "Verification is not configured for this environment.",
+            };
+
+            function showError(error) {
+              loadingState.hidden = true;
+              readyState.hidden = true;
+              savedState.hidden = true;
+              errorState.hidden = false;
+              errorState.textContent = errorMessages[error] || "The submission could not be opened.";
+            }
+
+            function showInlineError(error) {
+              loadingState.hidden = true;
+              readyState.hidden = false;
+              savedState.hidden = true;
+              errorState.hidden = false;
+              errorState.textContent = errorMessages[error] || "The submission could not be saved.";
+            }
+
+            function showReady(payload) {
+              loadingState.hidden = true;
+              errorState.hidden = true;
+              readyState.hidden = false;
+              if (emailEl) emailEl.textContent = payload.email || "";
+              populateForm(payload.submission);
+            }
+
+            function populateForm(submission) {
+              const data = submission || {};
+              form.elements.namedItem("title").value = data.title || "";
+              form.elements.namedItem("description").value = data.description || "";
+              form.elements.namedItem("portfolio_url").value = data.portfolioUrl || "";
+              form.elements.namedItem("preview_link").value = data.previewLink || "";
+              form.elements.namedItem("full_resolution_link_optional").value =
+                data.fullResolutionLinkOptional || "";
+
+              if (summaryEl) {
+                const fileCount = Number(data.fileCount || 0);
+                summaryEl.textContent = fileCount > 0
+                  ? `${fileCount} preview file${fileCount === 1 ? "" : "s"} currently attached.`
+                  : "No preview files are currently attached.";
+              }
+            }
+
+            async function postForm(url, formData) {
+              const response = await fetch(url, {
+                method: "POST",
+                body: formData,
+                credentials: "same-origin",
+                headers: { Accept: "application/json" },
+              });
+              const payload = await response.json().catch(() => ({ ok: false, error: "invalid" }));
+              if (!response.ok || !payload.ok) {
+                throw new Error(payload.error || "invalid");
+              }
+              return payload;
+            }
+
+            async function loadCurrent() {
+              const response = await fetch("/api/submission/current", {
+                credentials: "same-origin",
+                headers: { Accept: "application/json" },
+              });
+              const payload = await response.json().catch(() => ({ ok: false, error: "invalid" }));
+              if (!response.ok || !payload.ok) {
+                throw new Error(payload.error || "session-invalid");
+              }
+              return payload;
+            }
+
+            function fileExtension(fileName) {
+              return /\.([a-z0-9]+)$/i.exec(fileName.trim())?.[1]?.toLowerCase() || "";
+            }
+
+            function showFileErrors(errors) {
+              if (!fileErrors) return;
+
+              if (errors.length === 0) {
+                fileErrors.hidden = true;
+                fileErrors.textContent = "";
+                fileInput?.removeAttribute("aria-invalid");
+                if (submitButton) submitButton.disabled = false;
+                return;
+              }
+
+              fileErrors.hidden = false;
+              fileErrors.replaceChildren(
+                ...errors.map((error) => {
+                  const paragraph = document.createElement("p");
+                  paragraph.textContent = error;
+                  return paragraph;
+                }),
+              );
+              fileInput?.setAttribute("aria-invalid", "true");
+              if (submitButton) submitButton.disabled = true;
+            }
+
+            function validateFiles() {
+              const files = Array.from(fileInput?.files || []);
+              const errors = [];
+              let totalSize = 0;
+
+              if (files.length > uploadPolicy.maxFiles) {
+                errors.push(`Choose no more than ${uploadPolicy.maxFiles} files.`);
+              }
+
+              for (const file of files) {
+                const extension = fileExtension(file.name);
+                totalSize += file.size;
+
+                if (file.size === 0) {
+                  errors.push(`${file.name || "A selected file"} is empty.`);
+                }
+                if (file.size > uploadPolicy.maxFileSizeBytes) {
+                  errors.push(`${file.name} is larger than ${uploadPolicy.maxFileSizeLabel}.`);
+                }
+                if (!allowedExtensions.has(extension)) {
+                  errors.push(`${file.name} is not an accepted preview format.`);
+                }
+                if (file.type && !allowedMimeTypes.has(file.type.toLowerCase())) {
+                  errors.push(`${file.name} has a file type this form cannot accept.`);
+                }
+              }
+
+              if (totalSize > uploadPolicy.maxTotalUploadBytes) {
+                errors.push(`The selected files total more than ${uploadPolicy.maxTotalUploadLabel}.`);
+              }
+
+              showFileErrors([...new Set(errors)]);
+              return errors.length === 0;
+            }
+
+            fileInput?.addEventListener("change", validateFiles);
+            form?.addEventListener("submit", async (event) => {
+              event.preventDefault();
+              savedState.hidden = true;
+
+              if (!validateFiles()) {
+                fileInput?.focus();
+                return;
+              }
+
+              try {
+                const payload = await postForm("/api/submission/save", new FormData(form));
+                populateForm(payload.submission);
+                fileInput.value = "";
+                savedState.hidden = false;
+                errorState.hidden = true;
+                window.turnstile?.reset?.();
+              } catch (error) {
+                showInlineError(error.message);
+                window.turnstile?.reset?.();
+              }
+            });
+
+            (async () => {
+              const token = new URLSearchParams(window.location.search).get("token");
+
+              try {
+                const payload = token
+                  ? await postForm("/api/submission/verify-token", (() => {
+                      const formData = new FormData();
+                      formData.set("token", token);
+                      return formData;
+                    })())
+                  : await loadCurrent();
+
+                if (token) {
+                  window.history.replaceState({}, "", "/submit/access");
+                }
+                showReady(payload);
+              } catch (error) {
+                showError(error.message);
+              }
+            })();
+          </script>
+        </CardContent>
+      </Card>
+    </div>
+  </section>
+</Layout>

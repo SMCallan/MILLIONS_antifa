@@ -8,6 +8,13 @@ import {
 } from "../../src/lib/submissionPolicy";
 
 export type R2Bucket = {
+  delete: (keys: string | string[]) => Promise<unknown>;
+  list: (options?: { prefix?: string; cursor?: string }) => Promise<{
+    cursor?: string;
+    delimitedPrefixes: string[];
+    objects: { key: string }[];
+    truncated: boolean;
+  }>;
   put: (
     key: string,
     value: string | ArrayBuffer | ReadableStream,
@@ -15,32 +22,55 @@ export type R2Bucket = {
   ) => Promise<unknown>;
 };
 
+export type D1Database = {
+  prepare: (query: string) => D1PreparedStatement;
+};
+
+export type D1PreparedStatement = {
+  bind: (...values: unknown[]) => D1PreparedStatement;
+  first: <T = Record<string, unknown>>() => Promise<T | null>;
+  run: () => Promise<unknown>;
+  all: <T = Record<string, unknown>>() => Promise<{ results: T[] }>;
+};
+
 export type PagesContext = {
   request: Request;
   env: {
     BYPASS_TURNSTILE_IN_DEV?: string;
+    EMAIL_PROVIDER_API_KEY?: string;
+    MAGIC_LINK_SECRET?: string;
+    PUBLIC_SITE_URL?: string;
     SUBMISSIONS?: R2Bucket;
+    SUBMISSIONS_DB?: D1Database;
+    SUBMISSION_NOTIFICATION_EMAIL?: string;
     TURNSTILE_SECRET_KEY?: string;
   };
 };
 
 export type FormError =
   | "empty-file"
+  | "database-unconfigured"
+  | "expired-token"
   | "file-count"
   | "file-size"
   | "file-type"
   | "invalid"
   | "invalid-email"
+  | "invalid-token"
   | "invalid-url"
+  | "link-sent"
+  | "magic-link-unconfigured"
   | "missing"
   | "missing-preview"
+  | "session-invalid"
   | "storage-error"
   | "too-long"
   | "turnstile-invalid"
   | "turnstile-missing"
   | "turnstile-unavailable"
   | "turnstile-unconfigured"
-  | "total-size";
+  | "total-size"
+  | "verified-link-required";
 
 type FieldRule = {
   key: string;
