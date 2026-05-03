@@ -27,6 +27,8 @@ The form routes are implemented as Pages Functions:
 - `POST /api/submission/verify-token`
 - `GET /api/submission/current`
 - `POST /api/submission/save`
+- `GET /admin/api/submissions`
+- `POST /admin/api/submissions`
 - `POST /api/artwork` remains as a closed legacy route that redirects to the verified-link flow.
 
 ### Artwork Preview Upload Policy
@@ -75,6 +77,25 @@ Artwork submissions use a lightweight verified-email flow, not full user account
 
 The legacy anonymous artwork upload endpoint `POST /api/artwork` is closed and redirects artists to the verified-link flow.
 
+### Protected Submission Review
+
+The minimal reviewer interface lives at `/admin/submissions`. It lists D1 submission metadata for reviewers:
+
+- title
+- email
+- portfolio link
+- preview link
+- file count
+- total preview size
+- review status
+- submitted and updated timestamps
+
+Reviewers can update the status to `new`, `reviewed`, `shortlisted`, `rejected`, or `contacted`.
+
+Before production use, protect `/admin/*` with Cloudflare Access. The metadata API is intentionally under `/admin/api/submissions` so the same Access policy covers the page and the Pages Function endpoint. Do not expose `/admin/*` publicly.
+
+The reviewer page does not expose private R2 object keys or public file URLs. If preview file downloads are added later, keep the endpoint under `/admin/*`, require Cloudflare Access, and generate short-lived links scoped to a single submission/file instead of making the R2 bucket public.
+
 Required Cloudflare bindings and variables:
 
 - `SUBMISSIONS`: private R2 bucket binding for preview files.
@@ -91,16 +112,16 @@ Optional future email settings:
 
 No email vendor is implemented yet. In local development, missing email provider settings cause the magic link to be logged only for local requests. Production must configure an email provider adapter before public use; production logs must not expose magic-link tokens.
 
-After creating the D1 database and adding the `SUBMISSIONS_DB` binding in Wrangler/Pages settings, apply D1 migrations before production use:
+After creating the D1 database and adding the `SUBMISSIONS_DB` binding in Wrangler/Pages settings, apply all D1 migrations before production use:
 
 ```bash
-npx wrangler d1 migrations apply millions-antifa-submissions --remote
+npx wrangler d1 migrations apply <your-submissions-d1-database-name> --remote
 ```
 
-For local Pages Function testing with a configured local D1 binding, apply the migration to the local D1 database and bind D1/R2/dev variables:
+For local Pages Function testing with a configured local D1 binding, apply the migrations to the local D1 database and bind D1/R2/dev variables:
 
 ```bash
-npx wrangler d1 execute SUBMISSIONS_DB --local --file migrations/0001_verified_submissions.sql
+npx wrangler d1 migrations apply <your-submissions-d1-database-name> --local
 npm run preview:pages -- --d1 SUBMISSIONS_DB --r2 SUBMISSIONS --binding MAGIC_LINK_SECRET=dev-secret --binding BYPASS_TURNSTILE_IN_DEV=true
 ```
 
