@@ -127,17 +127,26 @@ export async function onRequestPost({ request, env }: PagesContext) {
           id, campaign_slug, email, email_hash, title, description, portfolio_url, preview_link,
           full_resolution_link_optional, status, file_count, total_bytes, r2_prefix, created_at, updated_at
         )
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'active', ?, ?, ?, ?, ?)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'new', ?, ?, ?, ?, ?)
         ON CONFLICT(campaign_slug, email_hash) DO UPDATE SET
           title = excluded.title,
           description = excluded.description,
           portfolio_url = excluded.portfolio_url,
           preview_link = excluded.preview_link,
           full_resolution_link_optional = excluded.full_resolution_link_optional,
-          status = 'active',
+          status = 'new',
           file_count = excluded.file_count,
           total_bytes = excluded.total_bytes,
           r2_prefix = excluded.r2_prefix,
+          created_at = CASE
+            WHEN submissions.title IS NULL
+              AND submissions.description IS NULL
+              AND submissions.file_count = 0
+              AND submissions.preview_link IS NULL
+              AND submissions.portfolio_url IS NULL
+            THEN excluded.updated_at
+            ELSE submissions.created_at
+          END,
           updated_at = excluded.updated_at`,
       )
       .bind(
