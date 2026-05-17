@@ -56,10 +56,15 @@ export async function onRequestPost({ request, env }: PagesContext) {
     return formFailure(request, "/submit/access", "invalid-token", 401);
   }
 
-  await db
-    .prepare("UPDATE magic_links SET used_at = ? WHERE token_hash = ?")
-    .bind(nowIso(), tokenHash)
+  const usedAt = nowIso();
+  const tokenUpdate = await db
+    .prepare("UPDATE magic_links SET used_at = ? WHERE token_hash = ? AND used_at IS NULL AND expires_at > ?")
+    .bind(usedAt, tokenHash, usedAt)
     .run();
+
+  if (tokenUpdate.meta?.changes !== 1) {
+    return formFailure(request, "/submit/access", "invalid-token", 401);
+  }
 
   const cookie = await createSessionCookie(request, secret, {
     campaignSlug: ACTIVE_CAMPAIGN_SLUG,

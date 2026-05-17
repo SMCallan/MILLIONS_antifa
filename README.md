@@ -94,7 +94,19 @@ Reviewers can update the status to `new`, `reviewed`, `shortlisted`, `rejected`,
 
 Before production use, protect `/admin/*` with Cloudflare Access. The metadata API is intentionally under `/admin/api/submissions` so the same Access policy covers the page and the Pages Function endpoint. Do not expose `/admin/*` publicly.
 
+Recommended Cloudflare Access setup:
+
+1. In Cloudflare Zero Trust, create a **Self-hosted** Access application.
+2. Set the application domain/path to the production Pages hostname plus `/admin/*`.
+3. Add allow policies for named reviewer emails, an identity provider group, or a short-lived one-time PIN policy for approved reviewers.
+4. Confirm both `/admin/submissions` and `/admin/api/submissions` are blocked in a private browser before login.
+5. Repeat the policy for any Pages preview hostname that should be used for review testing.
+
+The current app intentionally does not include password auth. If the admin API is ever moved outside `/admin/*`, add runtime Cloudflare Access JWT validation in the Pages Function before returning D1 data. Use Cloudflare Access's signed JWT from the `Cf-Access-Jwt-Assertion` header or `CF_Authorization` cookie, verify it against the Access team JWKS endpoint, and check the expected audience tag before listing or updating submissions.
+
 The reviewer page does not expose private R2 object keys or public file URLs. If preview file downloads are added later, keep the endpoint under `/admin/*`, require Cloudflare Access, and generate short-lived links scoped to a single submission/file instead of making the R2 bucket public.
+
+Status changes currently update the submission's `updated_at` value. If production review needs separate artist-edit and reviewer-action timestamps, add a D1 migration for `status_updated_at` and update `POST /admin/api/submissions` to write that field instead.
 
 Required Cloudflare bindings and variables:
 
@@ -110,7 +122,15 @@ Optional future email settings:
 - `EMAIL_PROVIDER_API_KEY`: reserved for a future email provider adapter.
 - `SUBMISSION_NOTIFICATION_EMAIL`: reserved for future reviewer notifications.
 
-No email vendor is implemented yet. In local development, missing email provider settings cause the magic link to be logged only for local requests. Production must configure an email provider adapter before public use; production logs must not expose magic-link tokens.
+No email vendor is implemented yet. In local development, missing email provider settings cause the magic link to be logged only for local requests. Production fails closed if no adapter can send the link, so artists are not told that an email was sent when none was delivered.
+
+Before production use, implement the adapter in `functions/api/_email.ts` with a transactional email provider. Keep it vendor-neutral in the rest of the app:
+
+1. Store provider secrets in Cloudflare Pages environment variables, never in the repository.
+2. Send the magic-link URL in the email body to the normalized recipient address only.
+3. Return `{ ok: true }` from `sendMagicLinkEmail` only after the provider accepts the message.
+4. Log provider errors without logging the full magic-link token in production.
+5. Keep notification emails metadata-only; do not attach R2 files.
 
 After creating the D1 database and adding the `SUBMISSIONS_DB` binding in Wrangler/Pages settings, apply all D1 migrations before production use:
 
@@ -170,6 +190,7 @@ If `TURNSTILE_SECRET_KEY` is missing outside the explicit local bypass path, for
 ```bash
 npm run check
 npm run build
+npm audit
 npm run preview:pages
 npm run deploy:pages
 ```

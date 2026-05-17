@@ -97,20 +97,43 @@ export async function onRequestPost({ request, env }: PagesContext) {
     return formFailure(request, "/submit", "database-unconfigured", 500);
   }
 
-  await sendMagicLinkEmail(request, env, {
+  const emailResult = await sendMagicLinkEmail(request, env, {
     email,
     link: magicLinkUrl(request, env, token),
     submission,
   });
 
+  if (!emailResult.ok) {
+    return formFailure(request, "/submit", "magic-link-unconfigured", 503);
+  }
+
   return requestLinkSuccess(request);
 }
 
 function magicLinkUrl(request: Request, env: PagesContext["env"], token: string) {
-  const baseUrl = env.PUBLIC_SITE_URL?.trim() || new URL(request.url).origin;
+  const baseUrl = publicSiteUrl(request, env);
   const url = new URL("/submit/access", baseUrl);
   url.searchParams.set("token", token);
   return url.toString();
+}
+
+function publicSiteUrl(request: Request, env: PagesContext["env"]) {
+  const configuredUrl = env.PUBLIC_SITE_URL?.trim();
+  if (!configuredUrl) {
+    return new URL(request.url).origin;
+  }
+
+  try {
+    const url = new URL(configuredUrl);
+    if (url.protocol === "http:" || url.protocol === "https:") {
+      return url.origin;
+    }
+  } catch {
+    // Fall through to the request origin so a bad environment value does not break link requests.
+  }
+
+  console.error("PUBLIC_SITE_URL is invalid; using the request origin for this magic link.");
+  return new URL(request.url).origin;
 }
 
 function requestLinkSuccess(request: Request) {
