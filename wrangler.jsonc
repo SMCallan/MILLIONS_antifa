@@ -9,6 +9,13 @@
 			"database_id": "254b3404-5f9d-48c5-86e7-f6cf19800767",
 			"remote": true
 		}
+	],
+	"r2_buckets": [
+		{
+			"bucket_name": "millions-antifa-submissions",
+			"binding": "SUBMISSIONS",
+			"remote": true
+		}
 	]
 	// Optional but recommended for live form storage:
 	// 1. Create an R2 bucket, for example `millions-antifa-submissions`.
