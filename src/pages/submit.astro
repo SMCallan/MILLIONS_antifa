@@ -12,27 +12,27 @@ import Layout from "@/layouts/Layout.astro";
 ---
 
 <Layout
-  title="Submit Artwork"
-  description="Request a secure submission link for preview files, archive material, or documentation for the Anti-Fascist Art Exhibition open call."
+  title="Contribute Artwork"
+  description="Request a secure contribution link for artwork, poetry, moving image, or local anti-fascist material for A Million Words Against Fascism."
 >
   <SignalFieldHero
     client:load
     compact
-    headline="Submit artwork or archive material."
-    subtitle="Artists, collectives, educators, and organisers can request a secure email link, return to one active submission, and update preview material while the open call is live."
+    headline="Contribute artwork, poetry, or local material."
+    subtitle="Where venues have space, the tour can include local anti-fascist artists, poets, film-makers, animators, sculptors, painters, and community contributors alongside the core exhibition."
     primaryCta={{ label: "Request link", href: "#artwork-form" }}
     secondaryCta={{ label: "Tour dates", href: "/tour-dates" }}
-    badges={["Open call", "Verified email", "Preview files", "Archive material", "Tour-ready pieces"]}
+    badges={["Local artists", "Anti-fascist poetry", "Film and animation", "Preview files", "Community material"]}
     statusLines={[
-      "Preview files only through the public flow",
-      "Selected artists may be contacted later for production-ready originals",
+      "Preview files and links only through the public flow",
+      "Selected contributors may be contacted later for production-ready originals",
     ]}
   />
 
   <section id="artwork-form" class="section-y bg-background">
     <div class="container-page grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
       <aside class="space-y-5">
-        <h2 class="text-2xl font-black">Submission notes</h2>
+        <h2 class="text-2xl font-black">Contribution notes</h2>
         <div class="grid gap-4">
           {
             submissionGuidelines.map((item) => (
@@ -44,27 +44,27 @@ import Layout from "@/layouts/Layout.astro";
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Request a secure submission link</CardTitle>
+          <CardTitle className="text-2xl">Request a secure contribution link</CardTitle>
           <CardDescription>
-            Enter the email address you want attached to the submission. The link lets you create
-            or update one active preview submission for the open call.
+            Enter the email address you want attached to the contribution. The link lets you create
+            or update one active preview contribution for the tour.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div data-form-status="link-sent" hidden class="mb-6 rounded-md border border-secondary bg-secondary/35 p-4 text-sm font-medium text-secondary-foreground" role="status">
-            If the address can receive submissions, a secure link has been sent. Check your inbox and spam folder.
+            If the address can receive contribution links, a secure link has been sent. Check your inbox and spam folder.
           </div>
           <div data-form-status="invalid-email" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
             Please enter a valid email address.
           </div>
           <div data-form-status="database-unconfigured" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Submission storage is not configured yet.
+            Contribution storage is not configured yet.
           </div>
           <div data-form-status="magic-link-unconfigured" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Secure submission links are not configured yet.
+            Secure contribution links are not configured yet.
           </div>
           <div data-form-status="verified-link-required" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
-            Artwork submissions now require a secure email link.
+            Artwork contributions now require a secure email link.
           </div>
           <div data-form-status="turnstile-missing" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
             Please complete the verification challenge before requesting a link.
@@ -98,7 +98,7 @@ import Layout from "@/layouts/Layout.astro";
 
             <Button type="submit" size="lg" className="w-full sm:w-fit">
               <Mail aria-hidden="true" />
-              Send secure submission link
+              Send secure contribution link
             </Button>
           </form>
         </CardContent>

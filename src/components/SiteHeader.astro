@@ -7,10 +7,10 @@ const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
 <header class="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
   <div class="container-page flex min-h-16 items-center justify-between gap-4 py-3">
     <a href="/" class="flex items-center gap-3" aria-label={`${site.name} home`}>
-      <span class="grid size-10 place-items-center rounded-md bg-foreground text-background">
-        <span class="text-sm font-bold">{site.shortName}</span>
+      <span class="grid size-12 place-items-center overflow-hidden rounded-md border bg-background shadow-sm">
+        <img src={site.logo} alt="" class="h-full w-full object-cover" loading="eager" decoding="async" />
       </span>
-      <span class="hidden max-w-44 text-sm font-semibold leading-tight sm:block">{site.name}</span>
+      <span class="hidden max-w-52 text-sm font-semibold leading-tight sm:block">{site.name}</span>
     </a>
 
     <nav class="flex flex-wrap items-center justify-end gap-1 text-sm" aria-label="Main navigation">
