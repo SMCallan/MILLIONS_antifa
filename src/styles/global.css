@@ -147,34 +147,75 @@
 }
 
 @layer components {
-  .signal-field-fallback {
+  .poster-field-fallback {
     background:
-      linear-gradient(135deg, rgba(5, 7, 11, 0.88), rgba(3, 16, 18, 0.92)),
-      radial-gradient(ellipse at 18% 24%, rgba(0, 212, 190, 0.34), transparent 42%),
-      radial-gradient(ellipse at 82% 32%, rgba(221, 38, 38, 0.24), transparent 44%),
-      radial-gradient(ellipse at 56% 78%, rgba(245, 174, 52, 0.18), transparent 46%);
+      linear-gradient(115deg, rgba(7, 7, 6, 0.94), rgba(18, 15, 11, 0.9)),
+      linear-gradient(168deg, transparent 0 24%, rgba(185, 22, 16, 0.76) 24% 36%, transparent 36% 100%),
+      linear-gradient(8deg, transparent 0 58%, rgba(232, 214, 166, 0.56) 58% 76%, transparent 76% 100%),
+      radial-gradient(ellipse at 22% 28%, rgba(230, 45, 32, 0.34), transparent 46%),
+      radial-gradient(ellipse at 78% 42%, rgba(18, 190, 170, 0.24), transparent 42%);
   }
 
-  .signal-field-fallback::before,
-  .signal-field-fallback::after {
+  .poster-field-fallback::before,
+  .poster-field-fallback::after {
     content: "";
     position: absolute;
     inset: 0;
     pointer-events: none;
   }
 
-  .signal-field-fallback::before {
+  .poster-field-fallback::before {
     background-image:
-      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
-    background-size: 72px 72px;
+      linear-gradient(105deg, transparent 0 30%, rgba(11, 10, 9, 0.58) 30% 35%, transparent 35% 100%),
+      linear-gradient(8deg, rgba(235, 218, 175, 0.12) 0 12%, transparent 12% 100%),
+      radial-gradient(circle at 30% 50%, rgba(0, 0, 0, 0.36) 0 1px, transparent 1.5px);
+    background-size:
+      100% 100%,
+      100% 100%,
+      14px 14px;
     mask-image: radial-gradient(ellipse at center, black, transparent 78%);
-    opacity: 0.4;
+    opacity: 0.55;
   }
 
-  .signal-field-fallback::after {
+  .poster-field-fallback::after {
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
     mix-blend-mode: screen;
-    opacity: 0.06;
+    opacity: 0.09;
   }
+
+  .archive-lightbox-fallback {
+    background:
+      linear-gradient(118deg, rgba(5, 5, 7, 0.98), rgba(20, 17, 13, 0.92)),
+      linear-gradient(16deg, transparent 0 20%, rgba(232, 214, 166, 0.42) 20% 42%, transparent 42% 100%),
+      linear-gradient(104deg, transparent 0 44%, rgba(12, 11, 10, 0.72) 44% 51%, transparent 51% 100%),
+      radial-gradient(ellipse at 68% 40%, rgba(206, 34, 26, 0.34), transparent 42%),
+      radial-gradient(ellipse at 44% 52%, rgba(18, 196, 176, 0.18), transparent 46%);
+  }
+
+  .archive-lightbox-fallback::before,
+  .archive-lightbox-fallback::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .archive-lightbox-fallback::before {
+    background-image:
+      linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0 9%, transparent 9% 100%),
+      linear-gradient(rgba(0, 0, 0, 0.38) 0 18%, transparent 18% 100%),
+      linear-gradient(100deg, transparent 0 50%, rgba(34, 210, 190, 0.18) 50% 54%, transparent 54% 100%);
+    background-size:
+      100% 100%,
+      100% 64px,
+      100% 100%;
+    opacity: 0.48;
+  }
+
+  .archive-lightbox-fallback::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.42'/%3E%3C/svg%3E");
+    mix-blend-mode: screen;
+    opacity: 0.08;
+  }
+
 }

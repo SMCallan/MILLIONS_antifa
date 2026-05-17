@@ -7,35 +7,52 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { tourDates } from "@/data/site";
 import Layout from "@/layouts/Layout.astro";
+
+let routeStopNumber = 0;
+const routeItems = tourDates.map((event) => ({
+  ...event,
+  stopLabel: event.status === "Break" ? "Pause" : `Stop ${++routeStopNumber}`,
+}));
 ---
 
 <Layout
-  title="Exhibition and Tour Dates"
-  description="See upcoming dates, venues, and open hosting slots for the Anti-Fascist Art Exhibition."
+  title="International Tour Dates"
+  description="See planned dates, venues, and collaborators for A Million Words Against Fascism."
 >
   <SignalFieldHero
     client:load
     compact
-    headline="World tour route and host slots."
-    subtitle="Confirmed dates will appear alongside open route slots for centres, galleries, libraries, unions, colleges, and community venues interested in hosting the anti-fascist exhibition."
+    headline="Solidarity Park International Tour."
+    subtitle="The tour is planned around schools, unions, arts venues, International Brigade groups, choirs, colleges, and civic partners, building toward the Solidarity Park Festival in Catalunya."
     primaryCta={{ label: "View route", href: "#route" }}
-    secondaryCta={{ label: "Book a host slot", href: "/booking" }}
-    badges={["2026 route", "Host slots", "Community venues", "Libraries", "Unions", "Schools", "World tour"]}
+    secondaryCta={{ label: "Host the exhibition", href: "/booking" }}
+    badges={["2026-2027 route", "Booked stops", "Schools", "Unions", "International Brigades", "Solidarity Park"]}
     statusLines={[
-      "New route dates are being added through 2026",
-      "The tour is being built for civic, cultural, and community spaces",
+      "Dates, locations, and collaborators are subject to final agreements and confirmations",
+      "Most public events are envisaged as long weekends with school, college, music, and poetry involvement",
     ]}
   />
 
   <section id="route" class="section-y bg-background">
     <div class="container-page">
+      <div class="mb-10 max-w-3xl">
+        <Badge>Route notes</Badge>
+        <h2 class="mt-4 text-3xl font-black leading-tight md:text-5xl">
+          Planned locations and principal collaborators.
+        </h2>
+        <p class="mt-5 text-sm leading-7 text-muted-foreground">
+          Event lengths will vary by venue. The outline below reflects the current tour proposal
+          from the exhibition brief.
+        </p>
+      </div>
+
       <div class="grid gap-4">
         {
-          tourDates.map((event, index) => (
-            <Card className="overflow-hidden py-0">
-              <CardContent className="grid gap-6 p-6 md:grid-cols-[8rem_1fr_auto] md:items-center">
+          routeItems.map((event) => (
+            <Card className={event.status === "Break" ? "overflow-hidden py-0 bg-muted/45" : "overflow-hidden py-0"}>
+              <CardContent className="grid gap-6 p-6 md:grid-cols-[9rem_1fr_auto] md:items-center">
                 <div>
-                  <p class="text-sm text-muted-foreground">Stop {index + 1}</p>
+                  <p class="text-sm text-muted-foreground">{event.stopLabel}</p>
                   <p class="mt-1 text-xl font-black">{event.date}</p>
                 </div>
 
@@ -45,10 +62,15 @@ import Layout from "@/layouts/Layout.astro";
                     <MapPin className="size-4" aria-hidden="true" />
                     {event.venue}
                   </p>
+                  {event.collaborators.length > 0 && (
+                    <p class="mt-3 text-sm leading-6 text-muted-foreground">
+                      {event.collaborators.join(" / ")}
+                    </p>
+                  )}
                 </div>
 
                 <div class="flex flex-wrap gap-2 md:justify-end">
-                  <Badge variant={event.status === "Confirmed" ? "default" : "outline"}>{event.status}</Badge>
+                  <Badge variant={event.status === "Booked" ? "default" : "outline"}>{event.status}</Badge>
                   <Badge variant="secondary">{event.format}</Badge>
                 </div>
               </CardContent>
@@ -64,10 +86,10 @@ import Layout from "@/layouts/Layout.astro";
       <div>
         <p class="flex items-center gap-2 text-sm text-background/75">
           <CalendarDays className="size-4" aria-hidden="true" />
-          New route dates are being added through 2026
+          The tour builds toward 30 May 2027 in Catalunya
         </p>
         <h2 class="mt-3 max-w-2xl text-3xl font-black leading-tight">
-          Interested in adding your venue to the route?
+          Interested in hosting or partnering with a future event?
         </h2>
       </div>
       <a class={buttonVariants({ variant: "secondary", size: "lg" })} href="/booking">
