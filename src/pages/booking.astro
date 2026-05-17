@@ -16,27 +16,27 @@ const selectClass =
 ---
 
 <Layout
-  title="Book the Exhibition"
-  description="Enquire about booking the Anti-Fascist Art Exhibition for your centre, venue, or local programme."
+  title="Host the Exhibition"
+  description="Enquire about hosting A Million Words Against Fascism at a venue, school, union, festival, or civic space."
 >
   <SignalFieldHero
     client:load
     compact
-    headline="Host the exhibition at your centre or location."
-    subtitle="Share the basics about your venue, audience, and preferred dates. The booking team can scope the right format for the anti-fascist exhibition, from compact displays to larger public programmes."
+    headline="Host A Million Words Against Fascism."
+    subtitle="Share the basics about your venue, audience, education partners, and preferred dates. The tour can adapt the Solidarity Room, street-facing postcard activity, local history, and live programme to each setting."
     primaryCta={{ label: "Start enquiry", href: "#booking-form" }}
     secondaryCta={{ label: "Tour dates", href: "/tour-dates" }}
-    badges={["Booking enquiries", "Community centres", "Galleries", "Libraries", "Schools", "Unions", "Flexible formats"]}
+    badges={["Solidarity Room", "Schools and colleges", "Unions", "Arts venues", "Local history", "Poetry and music"]}
     statusLines={[
-      "World tour hosts are now being mapped",
-      "The exhibition can scale for one-day pop-ups, week-long displays, or longer touring blocks",
+      "Most events are envisaged as long weekends with Friday school and college involvement",
+      "Saturday programmes can include active participation from musicians, poets, artists, and community groups",
     ]}
   />
 
   <section id="booking-form" class="section-y bg-background">
     <div class="container-page grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
       <aside class="space-y-5">
-        <h2 class="text-2xl font-black">Booking formats</h2>
+        <h2 class="text-2xl font-black">Hosting formats</h2>
         <div class="grid gap-4">
           {
             bookingFeatures.map((item) => (
@@ -50,25 +50,26 @@ const selectClass =
             Typical lead time
           </p>
           <p class="mt-3 text-sm leading-7 text-muted-foreground">
-            Allow four to eight weeks for routing, access planning, shipping, insurance, and public
-            programme coordination.
+            Event lengths will vary by venue, but most stops are envisaged as long weekends with
+            school or college participation on Friday and wider public activity on Saturday.
           </p>
         </div>
       </aside>
 
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Booking enquiry form</CardTitle>
+          <CardTitle className="text-2xl">Host enquiry form</CardTitle>
           <CardDescription>
-            Tell us about the venue, audience, and dates you are considering.
+            Tell us about the venue, audience, education links, local history, and dates you are
+            considering.
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div data-form-status="success" hidden class="mb-6 rounded-md border border-secondary bg-secondary/35 p-4 text-sm font-medium text-secondary-foreground" role="status">
-            Booking enquiry received. The details have been saved for follow-up.
+            Host enquiry received. The details have been saved for follow-up.
           </div>
           <div data-form-status="storage" hidden class="mb-6 rounded-md border border-accent bg-accent/25 p-4 text-sm font-medium text-accent-foreground" role="status">
-            The booking enquiry was valid, but it was not stored because the Cloudflare R2 storage binding is not configured yet.
+            The host enquiry was valid, but it was not stored because the Cloudflare R2 storage binding is not configured yet.
           </div>
           <div data-form-status="missing" hidden class="mb-6 rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert">
             Please complete the required fields before submitting.
@@ -172,7 +173,7 @@ const selectClass =
                 name="spaceDetails"
                 rows={4}
                 maxLength={2000}
-                placeholder="Wall length, room access, invigilation, public opening times, equipment, or access needs."
+                placeholder="Room size, wall length, street-facing areas, public opening times, school access, equipment, or access needs."
               />
             </div>
 
@@ -184,7 +185,7 @@ const selectClass =
                 required
                 rows={6}
                 maxLength={3000}
-                placeholder="Tell us what you would like to host and what support you need."
+                placeholder="Tell us what you would like to host, any local International Brigades history, programme ideas, and what support you need."
               />
             </div>
 
@@ -192,7 +193,7 @@ const selectClass =
 
             <Button type="submit" size="lg" className="w-full sm:w-fit">
               <Send aria-hidden="true" />
-              Send booking enquiry
+              Send host enquiry
             </Button>
           </form>
         </CardContent>
