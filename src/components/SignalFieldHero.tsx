@@ -23,18 +23,17 @@ type SignalFieldHeroProps = {
 };
 
 const defaultBadges = [
-  "Under construction",
-  "World tour",
-  "Millions project",
-  "Open call soon",
-  "Well-known artists",
-  "Thousands of works",
-  "Anti-fascist art",
+  "Solidarity Park",
+  "International tour",
+  "1,000 young artists",
+  "International Brigades",
+  "Art, memory, education",
+  "Catalunya 2027",
 ];
 
 const defaultStatusLines = [
-  "More information releasing soon",
-  "A world tour of collective anti-fascist artwork is in formation",
+  "Touring toward the 90th anniversary of the Ciudad de Barcelona sinking",
+  "Inspired by the Artists International Association and the legacy of anti-fascist solidarity",
 ];
 
 const defaultPrimaryCta = {
@@ -43,11 +42,11 @@ const defaultPrimaryCta = {
 };
 
 const defaultSecondaryCta = {
-  label: "Submit artwork",
+  label: "Contribute artwork",
   href: "/submit",
 };
 
-type SignalFieldCanvasComponent = React.ComponentType;
+type HeroFieldCanvasComponent = React.ComponentType;
 
 function usePrefersReducedMotion() {
   const [reducedMotion, setReducedMotion] = React.useState(false);
@@ -204,8 +203,8 @@ function HeroContent({
 }
 
 export function SignalFieldHero({
-  headline = "Anti-fascist art. Millions of voices. A world tour in formation.",
-  subtitle = "This site is under construction. Soon we'll release more information about a touring exhibition featuring well-known and emerging artists: thousands of works, each carrying a thousand words. You do the math.",
+  headline = "A Million Words Against Fascism.",
+  subtitle = "If a picture tells a thousand words, what do a thousand artists create? A million words, each told from a unique perspective, forming an international touring exhibition against fascism.",
   primaryCta = defaultPrimaryCta,
   secondaryCta = defaultSecondaryCta,
   badges = defaultBadges,
@@ -217,7 +216,7 @@ export function SignalFieldHero({
   const [mounted, setMounted] = React.useState(false);
   const [webglAvailable, setWebglAvailable] = React.useState(false);
   const [CanvasComponent, setCanvasComponent] =
-    React.useState<SignalFieldCanvasComponent | null>(null);
+    React.useState<HeroFieldCanvasComponent | null>(null);
 
   React.useEffect(() => {
     setMounted(true);
@@ -231,9 +230,9 @@ export function SignalFieldHero({
 
     if (!showShader || CanvasComponent) return undefined;
 
-    import("@/components/SignalFieldCanvas").then((module) => {
+    import("@/components/ArchiveLightboxCanvas").then((module) => {
       if (!cancelled) {
-        setCanvasComponent(() => module.SignalFieldCanvas);
+        setCanvasComponent(() => module.ArchiveLightboxCanvas);
       }
     });
 
@@ -250,7 +249,7 @@ export function SignalFieldHero({
         className,
       )}
     >
-      <div className="signal-field-fallback absolute inset-0 z-0" aria-hidden="true" />
+      <div className="archive-lightbox-fallback absolute inset-0 z-0" aria-hidden="true" />
       {showShader && CanvasComponent ? (
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <CanvasComponent />

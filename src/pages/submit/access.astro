@@ -32,16 +32,16 @@ const uploadPolicy = {
 ---
 
 <Layout
-  title="Submission Access"
-  description="Create or update a verified artwork submission for the Anti-Fascist Art Exhibition open call."
+  title="Contribution Access"
+  description="Create or update a verified artwork contribution for A Million Words Against Fascism."
 >
   <section class="section-y bg-background">
     <div class="container-page max-w-4xl">
       <Card>
         <CardHeader>
-          <CardTitle className="text-2xl">Artwork submission access</CardTitle>
+          <CardTitle className="text-2xl">Artwork contribution access</CardTitle>
           <CardDescription>
-            Create or update the active preview submission for the verified email address.
+            Create or update the active preview contribution for the verified email address.
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -52,7 +52,7 @@ const uploadPolicy = {
           <div data-state="error" hidden class="rounded-md border border-destructive bg-destructive/10 p-4 text-sm font-medium text-destructive" role="alert" />
 
           <div data-state="saved" hidden class="mb-6 rounded-md border border-secondary bg-secondary/35 p-4 text-sm font-medium text-secondary-foreground" role="status">
-            Submission saved. The latest preview material is now attached to this email.
+            Contribution saved. The latest preview material is now attached to this email.
           </div>
 
           <div data-state="ready" hidden>
@@ -136,7 +136,7 @@ const uploadPolicy = {
 
               <Button type="submit" size="lg" className="w-full sm:w-fit">
                 <Save aria-hidden="true" />
-                Save submission
+                Save contribution
               </Button>
             </form>
           </div>
@@ -155,7 +155,7 @@ const uploadPolicy = {
             const allowedExtensions = new Set(uploadPolicy.allowedExtensions);
             const allowedMimeTypes = new Set(uploadPolicy.allowedMimeTypes);
             const errorMessages = {
-              "database-unconfigured": "Submission storage is not configured yet.",
+              "database-unconfigured": "Contribution storage is not configured yet.",
               "empty-file": "One of the selected files is empty.",
               "expired-token": "This secure link has expired. Request a new one.",
               "file-count": `Choose no more than ${uploadPolicy.maxFiles} files.`,
@@ -164,11 +164,11 @@ const uploadPolicy = {
               "invalid-email": "Please enter a valid email address.",
               "invalid-token": "This secure link is invalid or has already been used.",
               "invalid-url": "Please enter valid http or https links.",
-              "magic-link-unconfigured": "Secure submission links are not configured yet.",
+              "magic-link-unconfigured": "Secure contribution links are not configured yet.",
               "missing": "Please complete the required fields.",
               "missing-preview": "Add preview files, a preview link, or a portfolio URL.",
-              "session-invalid": "Your submission session has expired. Request a new secure link.",
-              "storage-error": "The submission could not be saved. Please try again.",
+              "session-invalid": "Your contribution session has expired. Request a new secure link.",
+              "storage-error": "The contribution could not be saved. Please try again.",
               "too-long": "One or more answers is too long.",
               "total-size": `The selected files total more than ${uploadPolicy.maxTotalUploadLabel}.`,
               "turnstile-invalid": "Verification failed. Complete the challenge and try again.",
@@ -182,7 +182,7 @@ const uploadPolicy = {
               readyState.hidden = true;
               savedState.hidden = true;
               errorState.hidden = false;
-              errorState.textContent = errorMessages[error] || "The submission could not be opened.";
+              errorState.textContent = errorMessages[error] || "The contribution could not be opened.";
             }
 
             function showInlineError(error) {
@@ -190,7 +190,7 @@ const uploadPolicy = {
               readyState.hidden = false;
               savedState.hidden = true;
               errorState.hidden = false;
-              errorState.textContent = errorMessages[error] || "The submission could not be saved.";
+              errorState.textContent = errorMessages[error] || "The contribution could not be saved.";
             }
 
             function showReady(payload) {

@@ -30,31 +30,31 @@ export function HeroShowcase() {
             variants={fadeUp}
             className="mb-5 inline-flex items-center rounded-md border border-background/35 bg-background/10 px-3 py-1 text-sm font-medium text-background"
           >
-            Touring exhibition and open call
+            Solidarity Park International Tour
           </motion.p>
           <motion.h1
             variants={fadeUp}
             className="max-w-4xl text-5xl font-black leading-none sm:text-6xl md:text-7xl"
           >
-            Anti-fascist art, memory, and public assembly.
+            A Million Words Against Fascism.
           </motion.h1>
           <motion.p
             variants={fadeUp}
             className="mt-6 max-w-2xl text-lg leading-8 text-background/88 md:text-xl"
           >
-            A mobile exhibition bringing together artists, archives, and community hosts to make
-            visible the creative work of resisting authoritarian politics.
+            A touring exhibition of art, memory, and education built from 1,000 young artists'
+            responses to the rise of fascism.
           </motion.p>
           <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg">
               <a href="/booking">
-                Book the exhibition
+                Host the exhibition
                 <ArrowRight aria-hidden="true" />
               </a>
             </Button>
             <Button asChild size="lg" variant="secondary">
               <a href="/submit">
-                Submit artwork
+                Contribute artwork
                 <Upload aria-hidden="true" />
               </a>
             </Button>
@@ -66,15 +66,15 @@ export function HeroShowcase() {
           >
             <span className="flex items-center gap-2">
               <CalendarDays className="size-4" aria-hidden="true" />
-              Summer 2026 route
+              2026-2027 route
             </span>
             <span className="flex items-center gap-2">
               <MapPin className="size-4" aria-hidden="true" />
-              Community venues
+              Solidarity Room
             </span>
             <span className="flex items-center gap-2">
               <Upload className="size-4" aria-hidden="true" />
-              Artwork submissions open
+              Contributions open
             </span>
           </motion.div>
         </motion.div>
