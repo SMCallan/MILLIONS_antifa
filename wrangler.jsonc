@@ -1,32 +1,39 @@
 {
-  "name": "millions-antifa",
-  "pages_build_output_dir": "./dist",
-  "compatibility_date": "2026-05-02"
-
-  // Optional but recommended for live form storage:
-  // 1. Create an R2 bucket, for example `millions-antifa-submissions`.
-  // 2. Add this binding in Cloudflare Pages project settings or uncomment below
-  //    after the bucket exists.
-  //
-  // "r2_buckets": [
-  //   {
-  //     "binding": "SUBMISSIONS",
-  //     "bucket_name": "millions-antifa-submissions"
-  //   }
-  // ]
-  //
-  // D1 metadata storage:
-  // 1. Create a D1 database, for example `millions-antifa-submissions`.
-  // 2. Add this binding in Cloudflare Pages project settings or uncomment below
-  //    with the real database id after the database exists.
-  // 3. Apply migrations from ./migrations before production use.
-  //
-  // "d1_databases": [
-  //   {
-  //     "binding": "SUBMISSIONS_DB",
-  //     "database_name": "millions-antifa-submissions",
-  //     "database_id": "<cloudflare-d1-database-id>",
-  //     "migrations_dir": "migrations"
-  //   }
-  // ]
+	"name": "millions-antifa",
+	"pages_build_output_dir": "./dist",
+	"compatibility_date": "2026-05-02",
+	"d1_databases": [
+		{
+			"binding": "SUBMISSIONS_DB",
+			"database_name": "millions-antifa-submissions",
+			"database_id": "254b3404-5f9d-48c5-86e7-f6cf19800767",
+			"remote": true
+		}
+	]
+	// Optional but recommended for live form storage:
+	// 1. Create an R2 bucket, for example `millions-antifa-submissions`.
+	// 2. Add this binding in Cloudflare Pages project settings or uncomment below
+	//    after the bucket exists.
+	//
+	// "r2_buckets": [
+	//   {
+	//     "binding": "SUBMISSIONS",
+	//     "bucket_name": "millions-antifa-submissions"
+	//   }
+	// ]
+	//
+	// D1 metadata storage:
+	// 1. Create a D1 database, for example `millions-antifa-submissions`.
+	// 2. Add this binding in Cloudflare Pages project settings or uncomment below
+	//    with the real database id after the database exists.
+	// 3. Apply migrations from ./migrations before production use.
+	//
+	// "d1_databases": [
+	//   {
+	//     "binding": "SUBMISSIONS_DB",
+	//     "database_name": "millions-antifa-submissions",
+	//     "database_id": "<cloudflare-d1-database-id>",
+	//     "migrations_dir": "migrations"
+	//   }
+	// ]
 }
