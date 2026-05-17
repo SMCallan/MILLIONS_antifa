@@ -29,7 +29,7 @@ export type D1Database = {
 export type D1PreparedStatement = {
   bind: (...values: unknown[]) => D1PreparedStatement;
   first: <T = Record<string, unknown>>() => Promise<T | null>;
-  run: () => Promise<unknown>;
+  run: () => Promise<{ meta?: { changes?: number }; success?: boolean }>;
   all: <T = Record<string, unknown>>() => Promise<{ results: T[] }>;
 };
 
