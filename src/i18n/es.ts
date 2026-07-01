@@ -36,7 +36,6 @@ export const es: TranslationOverride = {
     lede: "Si una imagen dice mil palabras, ¿qué crean mil artistas? Un millón de palabras, cada una desde una perspectiva única, formando una exposición itinerante internacional contra el fascismo.",
     primaryCta: "Fechas de la gira",
     secondaryCta: "Contribuir con obra",
-    logoCaption: "Logotipo / gráfico animado — Robert Ford",
     badges: [
       "Parque de la Solidaridad",
       "Gira internacional",

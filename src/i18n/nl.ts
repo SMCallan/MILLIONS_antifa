@@ -36,7 +36,6 @@ export const nl: TranslationOverride = {
     lede: "Als een beeld duizend woorden zegt, wat maken dan duizend kunstenaars? Een miljoen woorden, elk vanuit een uniek perspectief, samen een internationale reizende tentoonstelling tegen het fascisme.",
     primaryCta: "Tourdata",
     secondaryCta: "Kunstwerk bijdragen",
-    logoCaption: "Logo / bewegend beeld — Robert Ford",
     badges: [
       "Solidariteitspark",
       "Internationale tour",
