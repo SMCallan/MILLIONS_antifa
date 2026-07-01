@@ -1,0 +1,51 @@
+---
+import { ExternalLink } from "lucide-react";
+
+import { SignalFieldHero } from "@/components/SignalFieldHero";
+import { Badge } from "@/components/ui/badge";
+import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<SignalFieldHero
+  client:load
+  compact
+  headline={t.links.heroTitle}
+  subtitle={t.links.heroSubtitle}
+  primaryCta={{ label: t.hero.primaryCta, href: localizePath("/tour-dates", lang) }}
+  secondaryCta={{ label: t.nav.concept, href: localizePath("/concept", lang) }}
+  badges={t.hero.badges}
+  statusLines={t.hero.statusLines}
+/>
+
+<section class="section-y bg-background">
+  <div class="container-page">
+    <div class="grid gap-10 md:grid-cols-3">
+      {
+        t.links.groups.map((group) => (
+          <div>
+            <h2 class="text-xl font-black">{group.title}</h2>
+            <ul class="mt-5 grid gap-3">
+              {group.items.map((item) => (
+                <li class="rounded-md border bg-muted/40 p-4">
+                  <p class="flex items-center gap-2 text-sm font-semibold">
+                    <ExternalLink className="size-4 text-primary" aria-hidden="true" />
+                    {item.label}
+                  </p>
+                  <p class="mt-1 text-sm leading-6 text-muted-foreground">{item.note}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-10 flex items-center gap-3">
+      <Badge variant="outline">{t.common.draftNotice}</Badge>
+      <p class="text-sm text-muted-foreground">{t.links.note}</p>
+    </div>
+  </div>
+</section>

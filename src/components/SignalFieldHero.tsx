@@ -19,6 +19,15 @@ type SignalFieldHeroProps = {
   badges?: string[];
   statusLines?: string[];
   compact?: boolean;
+  /**
+   * "split" renders a two-column hero (logo/graphic left, title + sub text
+   * right) matching the site template. "stack" is the original single-column
+   * layout used on the sub-pages.
+   */
+  layout?: "stack" | "split";
+  logo?: string;
+  logoAlt?: string;
+  logoCaption?: string;
   className?: string;
 };
 
@@ -115,6 +124,25 @@ function CtaLink({
   );
 }
 
+function LogoPanel({ logo, logoAlt, logoCaption }: { logo: string; logoAlt: string; logoCaption?: string }) {
+  return (
+    <div className="flex flex-col gap-3">
+      <div className="grid aspect-[4/3] w-full place-items-center overflow-hidden rounded-xl border border-white/18 bg-white/6 p-6 backdrop-blur-md sm:p-8">
+        <img
+          src={logo}
+          alt={logoAlt}
+          className="max-h-full w-auto max-w-full object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.45)]"
+          loading="eager"
+          decoding="async"
+        />
+      </div>
+      {logoCaption ? (
+        <p className="text-xs font-medium uppercase tracking-wide text-white/55">{logoCaption}</p>
+      ) : null}
+    </div>
+  );
+}
+
 function HeroContent({
   reducedMotion,
   headline,
@@ -123,6 +151,10 @@ function HeroContent({
   secondaryCta,
   badges,
   statusLines,
+  layout,
+  logo,
+  logoAlt,
+  logoCaption,
 }: {
   reducedMotion: boolean;
   headline: string;
@@ -131,42 +163,76 @@ function HeroContent({
   secondaryCta: HeroCta;
   badges: string[];
   statusLines: string[];
+  layout: "stack" | "split";
+  logo?: string;
+  logoAlt?: string;
+  logoCaption?: string;
 }) {
   const introVariants = {
     hidden: { opacity: reducedMotion ? 1 : 0, y: reducedMotion ? 0 : 18 },
     visible: { opacity: 1, y: 0 },
   };
 
+  const isSplit = layout === "split" && Boolean(logo);
+
   return (
     <MotionConfig reducedMotion="user">
       <motion.div
-        className="max-w-5xl"
+        className="w-full"
         initial="hidden"
         animate="visible"
         transition={{ delayChildren: 0.08, staggerChildren: 0.1 }}
       >
-        <motion.h1
-          variants={introVariants}
-          className="max-w-5xl text-4xl font-black leading-none text-white sm:text-6xl md:text-7xl lg:text-8xl"
-        >
-          {headline}
-        </motion.h1>
+        {isSplit ? (
+          <div className="grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
+            <motion.div variants={introVariants} className="order-2 lg:order-1">
+              <LogoPanel logo={logo!} logoAlt={logoAlt ?? headline} logoCaption={logoCaption} />
+            </motion.div>
+            <div className="order-1 lg:order-2">
+              <motion.h1
+                variants={introVariants}
+                className="text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+              >
+                {headline}
+              </motion.h1>
+              <motion.p
+                variants={introVariants}
+                className="mt-6 max-w-xl text-lg leading-8 text-white/84 md:text-xl"
+              >
+                {subtitle}
+              </motion.p>
+              <motion.div variants={introVariants} className="mt-8 flex flex-wrap gap-3">
+                <CtaLink cta={primaryCta} variant="primary" />
+                <CtaLink cta={secondaryCta} variant="secondary" />
+              </motion.div>
+            </div>
+          </div>
+        ) : (
+          <div className="max-w-5xl">
+            <motion.h1
+              variants={introVariants}
+              className="max-w-5xl text-4xl font-black leading-none text-white sm:text-6xl md:text-7xl lg:text-8xl"
+            >
+              {headline}
+            </motion.h1>
 
-        <motion.p
-          variants={introVariants}
-          className="mt-7 max-w-3xl text-lg leading-8 text-white/84 md:text-xl"
-        >
-          {subtitle}
-        </motion.p>
+            <motion.p
+              variants={introVariants}
+              className="mt-7 max-w-3xl text-lg leading-8 text-white/84 md:text-xl"
+            >
+              {subtitle}
+            </motion.p>
 
-        <motion.div variants={introVariants} className="mt-9 flex flex-wrap gap-3">
-          <CtaLink cta={primaryCta} variant="primary" />
-          <CtaLink cta={secondaryCta} variant="secondary" />
-        </motion.div>
+            <motion.div variants={introVariants} className="mt-9 flex flex-wrap gap-3">
+              <CtaLink cta={primaryCta} variant="primary" />
+              <CtaLink cta={secondaryCta} variant="secondary" />
+            </motion.div>
+          </div>
+        )}
 
         <motion.div
           variants={introVariants}
-          className="mt-10 flex max-w-4xl flex-wrap gap-2 border-t border-white/18 pt-6"
+          className="mt-10 flex max-w-5xl flex-wrap gap-2 border-t border-white/18 pt-6"
           aria-label="Project status"
         >
           {badges.map((badge) => (
@@ -181,7 +247,7 @@ function HeroContent({
 
         <motion.div
           variants={introVariants}
-          className="mt-8 grid max-w-4xl gap-3 text-sm text-white/70 sm:grid-cols-2"
+          className="mt-8 grid max-w-5xl gap-3 text-sm text-white/70 sm:grid-cols-2"
         >
           {statusLines.map((line, index) => {
             const Icon = index === 0 ? CalendarDays : ShieldCheck;
@@ -210,6 +276,10 @@ export function SignalFieldHero({
   badges = defaultBadges,
   statusLines = defaultStatusLines,
   compact = false,
+  layout = "stack",
+  logo,
+  logoAlt,
+  logoCaption,
   className,
 }: SignalFieldHeroProps) {
   const reducedMotion = usePrefersReducedMotion();
@@ -282,6 +352,10 @@ export function SignalFieldHero({
           secondaryCta={secondaryCta}
           badges={badges}
           statusLines={statusLines}
+          layout={layout}
+          logo={logo}
+          logoAlt={logoAlt}
+          logoCaption={logoCaption}
         />
       </div>
     </section>

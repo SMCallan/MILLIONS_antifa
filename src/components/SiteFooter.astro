@@ -1,20 +1,33 @@
 ---
-import { navLinks, site } from "@/data/site";
+import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
+import { footerNav } from "@/data/site";
+import { site } from "@/data/site";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
 ---
 
 <footer class="border-t bg-foreground text-background">
   <div class="container-page grid gap-8 py-10 md:grid-cols-[auto_1fr_auto] md:items-start">
-    <img src={site.logo} alt={site.logoAlt} class="w-36 rounded-md bg-background object-contain p-2" loading="lazy" decoding="async" />
+    <img src="/million-words-logo.png" alt={t.meta.siteName} class="w-36 rounded-md bg-background object-contain p-2" loading="lazy" decoding="async" />
     <div class="max-w-2xl">
-      <p class="text-lg font-semibold">{site.name}</p>
-      <p class="mt-3 text-sm leading-6 text-background/75">{site.description}</p>
+      <p class="text-lg font-semibold">{t.meta.siteName}</p>
+      <p class="mt-3 text-sm leading-6 text-background/75">{t.footer.tagline}</p>
       <a href={site.url} class="mt-4 inline-block text-sm font-medium text-background/80 hover:text-background">
         {site.url.replace("https://", "")}
       </a>
     </div>
 
     <nav class="flex flex-col gap-2 text-sm" aria-label="Footer navigation">
-      {navLinks.map((link) => <a href={link.href} class="text-background/75 hover:text-background">{link.label}</a>)}
+      <p class="text-xs font-semibold uppercase tracking-wide text-background/60">{t.footer.navTitle}</p>
+      {
+        footerNav.map((link) => (
+          <a href={localizePath(link.href, lang)} class="text-background/75 hover:text-background">
+            {navLabel(link.key)}
+          </a>
+        ))
+      }
     </nav>
   </div>
 </footer>

@@ -1,7 +1,16 @@
 ---
 import SiteFooter from "@/components/SiteFooter.astro";
 import SiteHeader from "@/components/SiteHeader.astro";
-import { site } from "@/data/site";
+import {
+  defaultLang,
+  getLangFromUrl,
+  getLogicalPath,
+  isLocalizedPath,
+  languageCodes,
+  localizePath,
+  useTranslations,
+} from "@/i18n";
+import { languages } from "@/i18n/languages";
 import "@/styles/global.css";
 
 interface Props {
@@ -9,16 +18,30 @@ interface Props {
   description?: string;
 }
 
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const { dir } = languages[lang];
+
 const {
-  title = site.name,
-  description = site.description,
+  title = t.meta.siteName,
+  description = t.meta.description,
 } = Astro.props;
 
-const pageTitle = title === site.name ? title : `${title} | ${site.name}`;
+const pageTitle = title === t.meta.siteName ? title : `${title} | ${t.meta.siteName}`;
+
+// Canonical + hreflang alternates. Alternates are only emitted for pages that
+// actually have localized mirrors; the English-only functional pages get a
+// self-canonical without alternates.
+const logicalPath = getLogicalPath(Astro.url.pathname);
+const abs = (path: string) => (Astro.site ? new URL(path, Astro.site).href : path);
+const canonicalHref = abs(localizePath(logicalPath, lang));
+const alternates = isLocalizedPath(Astro.url.pathname)
+  ? languageCodes.map((code) => ({ code, href: abs(localizePath(logicalPath, code)) }))
+  : [];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang} dir={dir}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +50,15 @@ const pageTitle = title === site.name ? title : `${title} | ${site.name}`;
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content={lang} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalHref} />
+    {alternates.map(({ code, href }) => <link rel="alternate" hreflang={code} href={href} />)}
+    {
+      alternates.length > 0 && (
+        <link rel="alternate" hreflang="x-default" href={abs(localizePath(logicalPath, defaultLang))} />
+      )
+    }
     <title>{pageTitle}</title>
   </head>
   <body>
