@@ -1,0 +1,13 @@
+---
+import LinksBody from "@/components/pages/Links.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getLangFromUrl, getLocalePaths, useTranslations } from "@/i18n";
+
+export const getStaticPaths = getLocalePaths;
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout title={t.nav.links} description={t.links.heroSubtitle}>
+  <LinksBody />
+</Layout>
