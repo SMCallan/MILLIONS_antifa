@@ -27,7 +27,6 @@ type SignalFieldHeroProps = {
   layout?: "stack" | "split";
   logo?: string;
   logoAlt?: string;
-  logoCaption?: string;
   className?: string;
 };
 
@@ -124,21 +123,16 @@ function CtaLink({
   );
 }
 
-function LogoPanel({ logo, logoAlt, logoCaption }: { logo: string; logoAlt: string; logoCaption?: string }) {
+function LogoPanel({ logo, logoAlt }: { logo: string; logoAlt: string }) {
   return (
-    <div className="flex flex-col gap-3">
-      <div className="grid aspect-[4/3] w-full place-items-center overflow-hidden rounded-xl border border-white/18 bg-white/6 p-6 backdrop-blur-md sm:p-8">
-        <img
-          src={logo}
-          alt={logoAlt}
-          className="max-h-full w-auto max-w-full object-contain drop-shadow-[0_8px_30px_rgba(0,0,0,0.45)]"
-          loading="eager"
-          decoding="async"
-        />
-      </div>
-      {logoCaption ? (
-        <p className="text-xs font-medium uppercase tracking-wide text-white/55">{logoCaption}</p>
-      ) : null}
+    <div className="mx-auto w-full max-w-md rounded-2xl bg-white p-4 shadow-[0_25px_70px_-20px_rgba(0,0,0,0.75)] ring-1 ring-black/5 sm:p-5">
+      <img
+        src={logo}
+        alt={logoAlt}
+        className="block w-full rounded-lg object-contain"
+        loading="eager"
+        decoding="async"
+      />
     </div>
   );
 }
@@ -154,7 +148,6 @@ function HeroContent({
   layout,
   logo,
   logoAlt,
-  logoCaption,
 }: {
   reducedMotion: boolean;
   headline: string;
@@ -166,7 +159,6 @@ function HeroContent({
   layout: "stack" | "split";
   logo?: string;
   logoAlt?: string;
-  logoCaption?: string;
 }) {
   const introVariants = {
     hidden: { opacity: reducedMotion ? 1 : 0, y: reducedMotion ? 0 : 18 },
@@ -186,7 +178,7 @@ function HeroContent({
         {isSplit ? (
           <div className="grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
             <motion.div variants={introVariants} className="order-2 lg:order-1">
-              <LogoPanel logo={logo!} logoAlt={logoAlt ?? headline} logoCaption={logoCaption} />
+              <LogoPanel logo={logo!} logoAlt={logoAlt ?? headline} />
             </motion.div>
             <div className="order-1 lg:order-2">
               <motion.h1
@@ -279,7 +271,6 @@ export function SignalFieldHero({
   layout = "stack",
   logo,
   logoAlt,
-  logoCaption,
   className,
 }: SignalFieldHeroProps) {
   const reducedMotion = usePrefersReducedMotion();
@@ -300,9 +291,9 @@ export function SignalFieldHero({
 
     if (!showShader || CanvasComponent) return undefined;
 
-    import("@/components/ArchiveLightboxCanvas").then((module) => {
+    import("@/components/PosterFieldCanvas").then((module) => {
       if (!cancelled) {
-        setCanvasComponent(() => module.ArchiveLightboxCanvas);
+        setCanvasComponent(() => module.PosterFieldCanvas);
       }
     });
 
@@ -319,7 +310,7 @@ export function SignalFieldHero({
         className,
       )}
     >
-      <div className="archive-lightbox-fallback absolute inset-0 z-0" aria-hidden="true" />
+      <div className="poster-field-fallback absolute inset-0 z-0" aria-hidden="true" />
       {showShader && CanvasComponent ? (
         <div className="absolute inset-0 z-0" aria-hidden="true">
           <CanvasComponent />
@@ -355,7 +346,6 @@ export function SignalFieldHero({
           layout={layout}
           logo={logo}
           logoAlt={logoAlt}
-          logoCaption={logoCaption}
         />
       </div>
     </section>

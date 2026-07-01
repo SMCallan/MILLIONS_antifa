@@ -36,7 +36,6 @@ export const sv: TranslationOverride = {
     lede: "Om en bild säger tusen ord, vad skapar då tusen konstnärer? En miljon ord, vart och ett ur ett unikt perspektiv, som tillsammans bildar en internationell vandringsutställning mot fascismen.",
     primaryCta: "Turnédatum",
     secondaryCta: "Bidra med konst",
-    logoCaption: "Logotyp / rörlig grafik — Robert Ford",
     badges: [
       "Solidaritetsparken",
       "Internationell turné",

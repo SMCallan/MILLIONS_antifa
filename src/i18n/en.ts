@@ -45,7 +45,6 @@ export const en = {
     lede: "If a picture tells a thousand words, what do a thousand artists create? A million words, each told from a unique perspective, forming an international touring exhibition against fascism.",
     primaryCta: "Tour dates",
     secondaryCta: "Contribute artwork",
-    logoCaption: "Logo / moving graphic — Robert Ford",
     badges: [
       "Solidarity Park",
       "International tour",
