@@ -36,7 +36,6 @@ export const fr: TranslationOverride = {
     lede: "Si une image dit mille mots, que créent mille artistes ? Un million de mots, chacun exprimé depuis une perspective unique, formant une exposition itinérante internationale contre le fascisme.",
     primaryCta: "Dates de la tournée",
     secondaryCta: "Contribuer une œuvre",
-    logoCaption: "Logo / graphisme animé — Robert Ford",
     badges: [
       "Parc de la Solidarité",
       "Tournée internationale",

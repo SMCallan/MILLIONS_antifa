@@ -36,7 +36,6 @@ export const ca: TranslationOverride = {
     lede: "Si una imatge diu mil paraules, què creen mil artistes? Un milió de paraules, cadascuna des d'una perspectiva única, que formen una exposició itinerant internacional contra el feixisme.",
     primaryCta: "Dates de la gira",
     secondaryCta: "Contribuir amb obra",
-    logoCaption: "Logotip / gràfic animat — Robert Ford",
     badges: [
       "Parc de la Solidaritat",
       "Gira internacional",
