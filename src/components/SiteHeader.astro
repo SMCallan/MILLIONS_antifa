@@ -1,36 +1,102 @@
 ---
-import { navLinks, site } from "@/data/site";
+import { ChevronDown } from "lucide-react";
 
-const pathname = Astro.url.pathname.replace(/\/$/, "") || "/";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+import { getLangFromUrl, getLogicalPath, localizePath, useTranslations } from "@/i18n";
+import { moreInfoNav, primaryNav } from "@/data/site";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// The current path with any locale prefix removed, so active state matches
+// regardless of language.
+const logicalPath = getLogicalPath(Astro.url.pathname);
+
+const isActive = (href: string) => (href === "/" ? logicalPath === "/" : logicalPath === href);
+const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
 ---
 
 <header class="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
-  <div class="container-page flex min-h-16 items-center justify-between gap-4 py-3">
-    <a href="/" class="flex items-center gap-3" aria-label={`${site.name} home`}>
-      <span class="grid size-12 place-items-center overflow-hidden rounded-md border bg-background shadow-sm">
-        <img src={site.logo} alt="" class="h-full w-full object-cover" loading="eager" decoding="async" />
+  <!-- Language flags -->
+  <div class="border-b border-border/60 bg-muted/40">
+    <div class="container-page flex items-center justify-between gap-4 py-1.5">
+      <span class="hidden text-xs font-medium uppercase tracking-wide text-muted-foreground md:inline">
+        {t.langSwitcher.label}
       </span>
-      <span class="hidden max-w-52 text-sm font-semibold leading-tight sm:block">{site.name}</span>
+      <LanguageSwitcher />
+    </div>
+  </div>
+
+  <!-- Logo + navigation -->
+  <div class="container-page flex min-h-16 items-center justify-between gap-4 py-3">
+    <a href={localizePath("/", lang)} class="flex items-center gap-3" aria-label={t.meta.siteName}>
+      <span class="grid size-12 place-items-center overflow-hidden rounded-md border bg-background shadow-sm">
+        <img src="/million-words-logo.png" alt="" class="h-full w-full object-cover" loading="eager" decoding="async" />
+      </span>
+      <span class="hidden max-w-52 text-sm font-semibold leading-tight sm:block">{t.meta.siteName}</span>
     </a>
 
-    <nav class="flex flex-wrap items-center justify-end gap-1 text-sm" aria-label="Main navigation">
+    <nav class="flex items-center justify-end gap-1 text-sm" aria-label="Main navigation">
       {
-        navLinks.map((link) => {
-          const active = link.href === "/" ? pathname === "/" : pathname === link.href;
-          return (
-            <a
-              href={link.href}
-              class:list={[
-                "rounded-md px-3 py-2 font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-                active ? "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground" : "text-muted-foreground",
-              ]}
-              aria-current={active ? "page" : undefined}
-            >
-              {link.label}
-            </a>
-          );
-        })
+        primaryNav.map((link) => (
+          <a
+            href={localizePath(link.href, lang)}
+            class:list={[
+              "rounded-md px-3 py-2 font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+              isActive(link.href)
+                ? "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground"
+                : "text-muted-foreground",
+            ]}
+            aria-current={isActive(link.href) ? "page" : undefined}
+          >
+            {navLabel(link.key)}
+          </a>
+        ))
       }
+
+      <details class="group relative" data-more-info>
+        <summary
+          class="flex cursor-pointer list-none items-center gap-1 rounded-md px-3 py-2 font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground [&::-webkit-details-marker]:hidden"
+        >
+          {t.nav.moreInfo}
+          <ChevronDown className="size-4 transition-transform group-open:rotate-180" aria-hidden="true" />
+        </summary>
+        <div
+          class="absolute right-0 top-full z-50 mt-1 grid min-w-52 gap-1 rounded-md border bg-popover p-2 shadow-lg"
+        >
+          {
+            moreInfoNav.map((link) => (
+              <a
+                href={localizePath(link.href, lang)}
+                class:list={[
+                  "rounded-md px-3 py-2 font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                  isActive(link.href) ? "bg-accent text-accent-foreground" : "text-popover-foreground",
+                ]}
+                aria-current={isActive(link.href) ? "page" : undefined}
+              >
+                {navLabel(link.key)}
+              </a>
+            ))
+          }
+        </div>
+      </details>
     </nav>
   </div>
 </header>
+
+<script is:inline>
+  // Progressive enhancement: close the "More information" menu on outside click
+  // or Escape. The menu is a native <details> and works without this script.
+  (() => {
+    const menu = document.querySelector("[data-more-info]");
+    if (!menu) return;
+    document.addEventListener("click", (event) => {
+      if (menu.hasAttribute("open") && !menu.contains(event.target)) {
+        menu.removeAttribute("open");
+      }
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") menu.removeAttribute("open");
+    });
+  })();
+</script>

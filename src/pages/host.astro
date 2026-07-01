@@ -1,11 +1,11 @@
 ---
-import TourDatesBody from "@/components/pages/TourDates.astro";
+import HostBody from "@/components/pages/Host.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
-<Layout title={t.nav.tourDates} description={t.tourDates.heroSubtitle}>
-  <TourDatesBody />
+<Layout title={t.nav.host} description={t.host.heroSubtitle}>
+  <HostBody />
 </Layout>

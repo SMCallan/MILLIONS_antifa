@@ -1,0 +1,90 @@
+---
+import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
+
+import { SignalFieldHero } from "@/components/SignalFieldHero";
+import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { tourDates } from "@/data/site";
+import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const statusLabel = (status: string) => t.tourDates.status[status] ?? status;
+
+let routeStopNumber = 0;
+const routeItems = tourDates.map((event) => ({
+  ...event,
+  stopLabel: event.status === "Break" ? t.tourDates.pause : `${t.tourDates.stop} ${++routeStopNumber}`,
+}));
+---
+
+<SignalFieldHero
+  client:load
+  compact
+  headline={t.tourDates.heroTitle}
+  subtitle={t.tourDates.heroSubtitle}
+  primaryCta={{ label: t.tourDates.heroPrimaryCta, href: "#route" }}
+  secondaryCta={{ label: t.tourDates.heroSecondaryCta, href: localizePath("/host", lang) }}
+  badges={t.hero.badges}
+  statusLines={t.hero.statusLines}
+/>
+
+<section id="route" class="section-y bg-background">
+  <div class="container-page">
+    <div class="mb-10 max-w-3xl">
+      <Badge>{t.tourDates.routeBadge}</Badge>
+      <h2 class="mt-4 text-3xl font-black leading-tight md:text-5xl">{t.tourDates.routeTitle}</h2>
+      <p class="mt-5 text-sm leading-7 text-muted-foreground">{t.tourDates.routeBody}</p>
+    </div>
+
+    <div class="grid gap-4">
+      {
+        routeItems.map((event) => (
+          <Card className={event.status === "Break" ? "overflow-hidden py-0 bg-muted/45" : "overflow-hidden py-0"}>
+            <CardContent className="grid gap-6 p-6 md:grid-cols-[9rem_1fr_auto] md:items-center">
+              <div>
+                <p class="text-sm text-muted-foreground">{event.stopLabel}</p>
+                <p class="mt-1 text-xl font-black">{event.date}</p>
+              </div>
+
+              <div>
+                <h3 class="text-2xl font-black">{event.city}</h3>
+                <p class="mt-2 flex items-center gap-2 text-muted-foreground">
+                  <MapPin className="size-4" aria-hidden="true" />
+                  {event.venue}
+                </p>
+                {event.collaborators.length > 0 && (
+                  <p class="mt-3 text-sm leading-6 text-muted-foreground">
+                    {event.collaborators.join(" / ")}
+                  </p>
+                )}
+              </div>
+
+              <div class="flex flex-wrap gap-2 md:justify-end">
+                <Badge variant={event.status === "Booked" ? "default" : "outline"}>{statusLabel(event.status)}</Badge>
+                <Badge variant="secondary">{event.format}</Badge>
+              </div>
+            </CardContent>
+          </Card>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<section class="bg-foreground py-16 text-background">
+  <div class="container-page flex flex-col justify-between gap-6 md:flex-row md:items-center">
+    <div>
+      <p class="flex items-center gap-2 text-sm text-background/75">
+        <CalendarDays className="size-4" aria-hidden="true" />
+        {t.tourDates.ctaEyebrow}
+      </p>
+      <h2 class="mt-3 max-w-2xl text-3xl font-black leading-tight">{t.tourDates.ctaTitle}</h2>
+    </div>
+    <a class={buttonVariants({ variant: "secondary", size: "lg" })} href={localizePath("/host", lang)}>
+      {t.tourDates.ctaButton}
+      <ArrowRight className="size-4" aria-hidden="true" />
+    </a>
+  </div>
+</section>

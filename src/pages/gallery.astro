@@ -1,11 +1,11 @@
 ---
-import TourDatesBody from "@/components/pages/TourDates.astro";
+import GalleryBody from "@/components/pages/Gallery.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from "@/i18n";
 
 const t = useTranslations(getLangFromUrl(Astro.url));
 ---
 
-<Layout title={t.nav.tourDates} description={t.tourDates.heroSubtitle}>
-  <TourDatesBody />
+<Layout title={t.nav.gallery} description={t.gallery.heroSubtitle}>
+  <GalleryBody />
 </Layout>
