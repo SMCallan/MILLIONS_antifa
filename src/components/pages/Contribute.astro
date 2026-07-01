@@ -1,0 +1,73 @@
+---
+import { ArrowRight, Mail } from "lucide-react";
+
+import { SignalFieldHero } from "@/components/SignalFieldHero";
+import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<SignalFieldHero
+  client:load
+  compact
+  headline={t.contribute.heroTitle}
+  subtitle={t.contribute.heroSubtitle}
+  primaryCta={{ label: t.contribute.heroPrimaryCta, href: "#uploader" }}
+  secondaryCta={{ label: t.contribute.heroSecondaryCta, href: localizePath("/tour-dates", lang) }}
+  badges={t.hero.badges}
+  statusLines={t.hero.statusLines}
+/>
+
+<section class="section-y bg-background">
+  <div class="container-page grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+    <div>
+      <Badge variant="secondary">{t.nav.contribute}</Badge>
+      <h2 class="mt-4 text-3xl font-black leading-tight md:text-4xl">{t.contributeConditions.heroTitle}</h2>
+      <p class="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">{t.contributeConditions.intro}</p>
+
+      <div class="mt-8 grid gap-6">
+        {
+          t.contributeConditions.sections.map((section) => (
+            <article class="border-l-4 border-primary pl-5">
+              <h3 class="text-lg font-black">{section.heading}</h3>
+              <p class="mt-2 text-sm leading-7 text-muted-foreground">{section.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+
+    <aside id="uploader" class="lg:sticky lg:top-28">
+      <Card>
+        <CardHeader>
+          <CardTitle className="text-2xl">{t.contributeConditions.uploaderTitle}</CardTitle>
+          <CardDescription>{t.contributeConditions.uploaderBody}</CardDescription>
+        </CardHeader>
+        <CardContent className="grid gap-4">
+          <div class="grid gap-3">
+            {
+              t.contribute.guidelines.map((item) => (
+                <p class="rounded-md border bg-muted/40 px-4 py-3 text-sm leading-6 text-muted-foreground">{item}</p>
+              ))
+            }
+          </div>
+          <a class={buttonVariants({ size: "lg", className: "w-full" })} href="/submit">
+            <Mail className="size-4" aria-hidden="true" />
+            {t.contribute.submitButton}
+          </a>
+          <a
+            class={buttonVariants({ variant: "outline", className: "w-full" })}
+            href={localizePath("/tour-dates", lang)}
+          >
+            {t.contribute.heroSecondaryCta}
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </a>
+        </CardContent>
+      </Card>
+    </aside>
+  </div>
+</section>

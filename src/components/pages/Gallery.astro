@@ -1,0 +1,51 @@
+---
+import { ImageOff, Upload } from "lucide-react";
+
+import { SignalFieldHero } from "@/components/SignalFieldHero";
+import { buttonVariants } from "@/components/ui/button";
+import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+// Placeholder tiles until real works are confirmed for the tour.
+const tiles = [0, 1, 2, 3, 4, 5];
+---
+
+<SignalFieldHero
+  client:load
+  compact
+  headline={t.gallery.heroTitle}
+  subtitle={t.gallery.heroSubtitle}
+  primaryCta={{ label: t.gallery.contributeCta, href: localizePath("/contribute", lang) }}
+  secondaryCta={{ label: t.hero.primaryCta, href: localizePath("/tour-dates", lang) }}
+  badges={t.hero.badges}
+  statusLines={t.hero.statusLines}
+/>
+
+<section class="section-y bg-background">
+  <div class="container-page">
+    <div class="mb-10 max-w-2xl">
+      <h2 class="text-3xl font-black leading-tight md:text-4xl">{t.gallery.placeholderTitle}</h2>
+      <p class="mt-4 text-base leading-8 text-muted-foreground">{t.gallery.placeholderBody}</p>
+    </div>
+
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        tiles.map(() => (
+          <div class="poster-field-fallback relative grid aspect-[4/3] place-items-center overflow-hidden rounded-lg border">
+            <ImageOff className="relative z-10 size-8 text-white/40" aria-hidden="true" />
+            <span class="sr-only">{t.common.comingSoon}</span>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-10">
+      <a class={buttonVariants({ size: "lg" })} href={localizePath("/contribute", lang)}>
+        <Upload className="size-4" aria-hidden="true" />
+        {t.gallery.contributeCta}
+      </a>
+    </div>
+  </div>
+</section>

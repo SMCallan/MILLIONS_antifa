@@ -12,11 +12,30 @@ export const site = {
     "https://images.unsplash.com/photo-1766890410757-3abb563b3918?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=70&w=2200",
 };
 
-export const navLinks = [
-  { href: "/", label: "Home" },
-  { href: "/tour-dates", label: "Tour dates" },
-  { href: "/submit", label: "Contribute" },
-  { href: "/booking", label: "Host" },
+// Navigation, structured to match the site template: a primary "Tour dates"
+// item plus a grouped "More information" menu. `key` indexes into the `nav`
+// section of the i18n dictionaries so labels are localised; `href` is the
+// canonical (English-root) path and is localised at render time.
+export type NavItem = { key: string; href: string };
+
+export const primaryNav: NavItem[] = [
+  { key: "tourDates", href: "/tour-dates" },
+];
+
+export const moreInfoNav: NavItem[] = [
+  { key: "concept", href: "/concept" },
+  { key: "contribute", href: "/contribute" },
+  { key: "donate", href: "/donate" },
+  { key: "host", href: "/host" },
+  { key: "gallery", href: "/gallery" },
+  { key: "links", href: "/links" },
+];
+
+// Flat list used by the footer.
+export const footerNav: NavItem[] = [
+  { key: "home", href: "/" },
+  ...primaryNav,
+  ...moreInfoNav,
 ];
 
 export const tourDates = [
