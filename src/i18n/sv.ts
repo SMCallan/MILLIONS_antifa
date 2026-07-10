@@ -13,6 +13,8 @@ export const sv: TranslationOverride = {
     home: "Hem",
     tourDates: "Turnédatum",
     moreInfo: "Mer information",
+    menu: "Meny",
+    tour: "Turné",
     concept: "Koncept",
     contribute: "Bidra",
     donate: "Donera",
@@ -28,6 +30,7 @@ export const sv: TranslationOverride = {
     backToHome: "Tillbaka till start",
     getInTouch: "Kontakta oss",
     comingSoon: "Kommer snart",
+    close: "Stäng",
     draftNotice: "Preliminärt innehåll — färdigställs av projektteamet.",
   },
   hero: {
@@ -88,10 +91,11 @@ export const sv: TranslationOverride = {
     routeBadge: "Anteckningar om vägen",
     routeTitle: "Planerade platser och huvudsakliga medverkande.",
     routeBody:
-      "Evenemangens längd varierar beroende på lokal. Översikten nedan speglar det aktuella turnéförslaget från utställningsunderlaget.",
+      "Platserna är preliminära. Datum och detaljer bekräftas med varje lokal och publiceras här.",
     stop: "Stopp",
     pause: "Paus",
-    ctaEyebrow: "Turnén leder fram till 30 maj 2027 i Katalonien",
+    tbc: "Meddelas senare",
+    ctaEyebrow: "Rutten färdigställs tillsammans med partner runt om i Europa",
     ctaTitle: "Intresserad av att vara värd för eller samarbeta kring ett framtida evenemang?",
     ctaButton: "Starta en bokningsförfrågan",
     status: { Booked: "Bekräftad", "In agreement": "Under överenskommelse", Break: "Paus" },
@@ -199,17 +203,17 @@ export const sv: TranslationOverride = {
     heroPrimaryCta: "Starta förfrågan",
     heroSecondaryCta: "Turnédatum",
     formatsTitle: "Format för värdskap",
-    leadTimeTitle: "Vanlig framförhållning",
+    leadTimeTitle: "Flexibla format",
     leadTimeBody:
-      "Evenemangens längd varierar beroende på lokal, men de flesta stopp planeras som långa helger, med deltagande av skolor eller högskolor på fredagen och bredare publik verksamhet på lördagen.",
+      "Evenemangens format och längd är flexibla och avtalas individuellt med varje lokal och dess program.",
     formTitle: "Förfrågningsformulär för värdskap",
     formDescription:
       "Berätta om lokalen, publiken, utbildningskopplingar, lokal historia och de datum du överväger.",
     conditionsCta: "Läs villkoren för värdskap",
     features: [
-      "Det centrala Solidaritetsrummet planeras som ett 4 x 4 m stort utrymme med väggar täckta av 1 000 vykortsstora bilder skapade genom Solidaritetsparken.",
-      "De yttre, gatuvända väggarna kan rymma ytterligare 1 000 vykort gjorda av deltagare under turnén eller genom skolor och högskolor.",
-      "Lokaler kan lägga till lokal historia, material om Internationella brigaderna, konstuppdrag, poesi, musik, workshops och lokalt antifascistiskt arbete där utrymmet tillåter.",
+      "Utställningen kretsar kring Solidaritetsrummet, en installation av vykortsstora verk skapade genom projektet Solidaritetsparken.",
+      "Utåtvända väggar kan samla nya vykort gjorda av besökare, skolor och deltagare från lokalsamhället under turnén.",
+      "Lokaler kan lägga till lokal historia, konstuppdrag, poesi, musik, workshops och lokalt antifascistiskt arbete där utrymmet tillåter.",
     ],
     fields: {
       organisation: "Organisation eller center",
@@ -251,11 +255,11 @@ export const sv: TranslationOverride = {
     sections: [
       {
         heading: "Utrymme",
-        body: "Det centrala Solidaritetsrummet planeras som ett 4 x 4 m stort utrymme. Ytterligare väggyta, gatuvänd eller invändig, är välkommen för den andra uppsättningen av 1 000 vykort och för lokala och beställda verk.",
+        body: "Utställningen anpassas efter tillgängligt utrymme. Väggyta för Solidaritetsrummet, deltagarnas vykort och lokalt eller beställt arbete avtalas med varje lokal.",
       },
       {
         heading: "Program och längd",
-        body: "De flesta stopp planeras som långa helger, med deltagande av skolor eller högskolor på fredagen och bredare publik verksamhet på lördagen. Längre utställningsperioder är möjliga där en lokal kan rymma dem.",
+        body: "Längd och program utformas efter varje lokal, från korta stopp till längre utställningar, och deltagande från skolor och lokalsamhälle är välkommet.",
       },
       {
         heading: "Lokalt partnerskap",

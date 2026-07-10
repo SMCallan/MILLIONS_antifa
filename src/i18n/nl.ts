@@ -13,6 +13,8 @@ export const nl: TranslationOverride = {
     home: "Home",
     tourDates: "Tourdata",
     moreInfo: "Meer informatie",
+    menu: "Menu",
+    tour: "Tour",
     concept: "Concept",
     contribute: "Bijdragen",
     donate: "Doneren",
@@ -28,6 +30,7 @@ export const nl: TranslationOverride = {
     backToHome: "Terug naar home",
     getInTouch: "Neem contact op",
     comingSoon: "Binnenkort",
+    close: "Sluiten",
     draftNotice: "Voorlopige inhoud — wordt nog afgerond door het projectteam.",
   },
   hero: {
@@ -88,10 +91,11 @@ export const nl: TranslationOverride = {
     routeBadge: "Route-opmerkingen",
     routeTitle: "Geplande locaties en belangrijkste medewerkers.",
     routeBody:
-      "De duur van de evenementen verschilt per locatie. Het onderstaande overzicht weerspiegelt het huidige tourvoorstel uit het tentoonstellingsdossier.",
+      "De locaties zijn indicatief. Data en details worden met elke locatie bevestigd en hier gepubliceerd.",
     stop: "Halte",
     pause: "Pauze",
-    ctaEyebrow: "De tour werkt toe naar 30 mei 2027 in Catalonië",
+    tbc: "Nog te bevestigen",
+    ctaEyebrow: "De route wordt afgerond met partners in heel Europa",
     ctaTitle: "Interesse om een toekomstig evenement te hosten of eraan mee te werken?",
     ctaButton: "Een boekingsaanvraag starten",
     status: { Booked: "Bevestigd", "In agreement": "In overleg", Break: "Pauze" },
@@ -199,17 +203,17 @@ export const nl: TranslationOverride = {
     heroPrimaryCta: "Aanvraag starten",
     heroSecondaryCta: "Tourdata",
     formatsTitle: "Formats voor gastheerschap",
-    leadTimeTitle: "Gebruikelijke doorlooptijd",
+    leadTimeTitle: "Flexibele formats",
     leadTimeBody:
-      "De duur van evenementen verschilt per locatie, maar de meeste haltes zijn bedoeld als lange weekenden, met deelname van scholen of hogescholen op vrijdag en bredere publieke activiteit op zaterdag.",
+      "De vorm en duur van evenementen zijn flexibel en worden per locatie en programma afzonderlijk afgesproken.",
     formTitle: "Aanvraagformulier gastheerschap",
     formDescription:
       "Vertel ons over de locatie, het publiek, onderwijsverbindingen, lokale geschiedenis en de data die je overweegt.",
     conditionsCta: "Lees de voorwaarden voor gastheerschap",
     features: [
-      "De centrale Solidariteitsruimte is opgezet als een ruimte van 4 x 4 m met wanden bedekt met 1.000 ansichtkaartformaat-beelden gemaakt via het Solidariteitspark.",
-      "De buitenste, straatgerichte wanden kunnen nog eens 1.000 ansichtkaarten herbergen, gemaakt door deelnemers tijdens de tour of via scholen en hogescholen.",
-      "Locaties kunnen lokale geschiedenis, materiaal over de Internationale Brigades, kunstopdrachten, poëzie, muziek, workshops en lokaal antifascistisch werk toevoegen waar de ruimte dat toelaat.",
+      "De tentoonstelling draait om de Solidariteitsruimte, een installatie van ansichtkaartformaat-werken gemaakt via het project Solidariteitspark.",
+      "Naar buiten gerichte muren kunnen tijdens de tour nieuwe ansichtkaarten verzamelen, gemaakt door bezoekers, scholen en deelnemers uit de gemeenschap.",
+      "Locaties kunnen lokale geschiedenis, kunstopdrachten, poëzie, muziek, workshops en lokaal antifascistisch werk toevoegen waar de ruimte dat toelaat.",
     ],
     fields: {
       organisation: "Organisatie of centrum",
@@ -251,11 +255,11 @@ export const nl: TranslationOverride = {
     sections: [
       {
         heading: "Ruimte",
-        body: "De centrale Solidariteitsruimte is opgezet als een ruimte van 4 x 4 m. Extra wandruimte, straatgericht of binnen, is welkom voor de tweede set van 1.000 ansichtkaarten en voor lokaal en opdrachtwerk.",
+        body: "De tentoonstelling past zich aan de beschikbare ruimte aan. Wandruimte voor de Solidariteitsruimte, deelnemers-ansichtkaarten en lokaal of opdrachtwerk wordt met elke locatie afgesproken.",
       },
       {
         heading: "Programma en duur",
-        body: "De meeste haltes zijn bedoeld als lange weekenden, met deelname van scholen of hogescholen op vrijdag en bredere publieke activiteit op zaterdag. Langere tentoonstellingsperiodes zijn mogelijk waar een locatie ze kan herbergen.",
+        body: "Duur en programma worden per locatie vormgegeven, van korte periodes tot langere tentoonstellingen, en deelname van scholen en de gemeenschap is welkom.",
       },
       {
         heading: "Lokale samenwerking",
