@@ -13,6 +13,8 @@ export const es: TranslationOverride = {
     home: "Inicio",
     tourDates: "Fechas de la gira",
     moreInfo: "Más información",
+    menu: "Menú",
+    tour: "Gira",
     concept: "Concepto",
     contribute: "Contribuir",
     donate: "Donar",
@@ -28,6 +30,7 @@ export const es: TranslationOverride = {
     backToHome: "Volver al inicio",
     getInTouch: "Contactar",
     comingSoon: "Próximamente",
+    close: "Cerrar",
     draftNotice: "Contenido provisional, pendiente de finalizar por el equipo del proyecto.",
   },
   hero: {
@@ -88,10 +91,11 @@ export const es: TranslationOverride = {
     routeBadge: "Notas de la ruta",
     routeTitle: "Localizaciones previstas y principales colaboradores.",
     routeBody:
-      "La duración de cada evento variará según la sala. El resumen siguiente refleja la propuesta actual de la gira según el dosier de la exposición.",
+      "Las localizaciones son orientativas. Las fechas y los detalles se confirmarán con cada sala y se publicarán aquí.",
     stop: "Parada",
     pause: "Pausa",
-    ctaEyebrow: "La gira avanza hacia el 30 de mayo de 2027 en Cataluña",
+    tbc: "Por confirmar",
+    ctaEyebrow: "La ruta se está finalizando con socios de toda Europa",
     ctaTitle: "¿Te interesa acoger o colaborar en un evento futuro?",
     ctaButton: "Iniciar una consulta de reserva",
     status: { Booked: "Confirmado", "In agreement": "En acuerdo", Break: "Pausa" },
@@ -199,17 +203,17 @@ export const es: TranslationOverride = {
     heroPrimaryCta: "Iniciar consulta",
     heroSecondaryCta: "Fechas de la gira",
     formatsTitle: "Formatos de acogida",
-    leadTimeTitle: "Plazo habitual",
+    leadTimeTitle: "Formatos flexibles",
     leadTimeBody:
-      "La duración de los eventos variará según la sala, pero la mayoría de las paradas se plantean como fines de semana largos, con participación de escuelas o institutos el viernes y actividad pública más amplia el sábado.",
+      "Los formatos y la duración de los eventos son flexibles y se acuerdan individualmente con cada sala y su programa.",
     formTitle: "Formulario de consulta para acoger",
     formDescription:
       "Cuéntanos sobre la sala, el público, los vínculos educativos, la historia local y las fechas que estás considerando.",
     conditionsCta: "Leer las condiciones de acogida",
     features: [
-      "La Sala de la Solidaridad central se plantea como un espacio de 4 x 4 m con paredes cubiertas por 1.000 imágenes de tamaño postal creadas a través del Parque de la Solidaridad.",
-      "Las paredes exteriores que dan a la calle pueden acoger otras 1.000 postales realizadas por participantes durante la gira o a través de escuelas e institutos.",
-      "Las salas pueden añadir historia local, material de las Brigadas Internacionales, encargos artísticos, poesía, música, talleres y obra antifascista local cuando el espacio lo permita.",
+      "La exposición gira en torno a la Sala de la Solidaridad, una instalación de obras de tamaño postal creadas a través del proyecto Parque de la Solidaridad.",
+      "Las paredes exteriores pueden reunir nuevas postales hechas por visitantes, escuelas y participantes de la comunidad durante la gira.",
+      "Las salas pueden añadir historia local, encargos artísticos, poesía, música, talleres y obra antifascista local cuando el espacio lo permita.",
     ],
     fields: {
       organisation: "Organización o centro",
@@ -251,11 +255,11 @@ export const es: TranslationOverride = {
     sections: [
       {
         heading: "Espacio",
-        body: "La Sala de la Solidaridad central se plantea como un espacio de 4 x 4 m. Se agradece espacio de pared adicional, interior o hacia la calle, para el segundo conjunto de 1.000 postales y para la obra local y encargada.",
+        body: "La exposición se adapta al espacio disponible. El espacio de pared para la Sala de la Solidaridad, las postales de los participantes y la obra local o encargada se acuerda con cada sala.",
       },
       {
         heading: "Programa y duración",
-        body: "La mayoría de las paradas se plantean como fines de semana largos, con participación de escuelas o institutos el viernes y actividad pública más amplia el sábado. Son posibles periodos de exposición más largos cuando la sala puede acogerlos.",
+        body: "La duración y el programa de cada evento se adaptan a cada sala, desde estancias cortas hasta exposiciones más largas, y la participación de escuelas y de la comunidad es bienvenida.",
       },
       {
         heading: "Colaboración local",
