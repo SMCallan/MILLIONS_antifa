@@ -13,6 +13,8 @@ export const fr: TranslationOverride = {
     home: "Accueil",
     tourDates: "Dates de la tournée",
     moreInfo: "Plus d'informations",
+    menu: "Menu",
+    tour: "Tournée",
     concept: "Concept",
     contribute: "Contribuer",
     donate: "Faire un don",
@@ -28,6 +30,7 @@ export const fr: TranslationOverride = {
     backToHome: "Retour à l'accueil",
     getInTouch: "Nous contacter",
     comingSoon: "Bientôt disponible",
+    close: "Fermer",
     draftNotice: "Contenu provisoire — à finaliser par l'équipe du projet.",
   },
   hero: {
@@ -88,10 +91,11 @@ export const fr: TranslationOverride = {
     routeBadge: "Notes d'itinéraire",
     routeTitle: "Lieux prévus et principaux collaborateurs.",
     routeBody:
-      "La durée des événements variera selon le lieu. L'aperçu ci-dessous reflète la proposition de tournée actuelle du dossier d'exposition.",
+      "Les lieux sont indicatifs. Les dates et les détails seront confirmés avec chaque lieu et publiés ici.",
     stop: "Étape",
     pause: "Pause",
-    ctaEyebrow: "La tournée mène au 30 mai 2027 en Catalogne",
+    tbc: "À confirmer",
+    ctaEyebrow: "L'itinéraire est en cours de finalisation avec des partenaires à travers l'Europe",
     ctaTitle: "Envie d'accueillir un futur événement ou d'y participer ?",
     ctaButton: "Lancer une demande de réservation",
     status: { Booked: "Confirmé", "In agreement": "En accord", Break: "Pause" },
@@ -199,17 +203,17 @@ export const fr: TranslationOverride = {
     heroPrimaryCta: "Démarrer la demande",
     heroSecondaryCta: "Dates de la tournée",
     formatsTitle: "Formats d'accueil",
-    leadTimeTitle: "Délai habituel",
+    leadTimeTitle: "Formats flexibles",
     leadTimeBody:
-      "La durée des événements varie selon le lieu, mais la plupart des étapes sont envisagées comme de longs week-ends, avec la participation d'écoles ou de lycées le vendredi et une activité publique plus large le samedi.",
+      "Le format et la durée des événements sont flexibles et convenus individuellement avec chaque lieu et son programme.",
     formTitle: "Formulaire de demande d'accueil",
     formDescription:
       "Parlez-nous du lieu, du public, des liens éducatifs, de l'histoire locale et des dates que vous envisagez.",
     conditionsCta: "Lire les conditions d'accueil",
     features: [
-      "La Salle de la Solidarité centrale est conçue comme un espace de 4 x 4 m dont les murs sont couverts de 1 000 images au format carte postale créées grâce au Parc de la Solidarité.",
-      "Les murs extérieurs donnant sur la rue peuvent accueillir 1 000 autres cartes postales réalisées par les participants pendant la tournée ou via des écoles et des lycées.",
-      "Les lieux peuvent ajouter l'histoire locale, du matériel sur les Brigades internationales, des commandes d'artistes, de la poésie, de la musique, des ateliers et du travail antifasciste local là où l'espace le permet.",
+      "L'exposition s'articule autour de la Salle de la Solidarité, une installation d'œuvres au format carte postale réalisées grâce au projet Parc de la Solidarité.",
+      "Les murs tournés vers l'extérieur peuvent rassembler de nouvelles cartes postales réalisées par les visiteurs, les écoles et les participants de la communauté pendant la tournée.",
+      "Les lieux peuvent ajouter l'histoire locale, des commandes d'artistes, de la poésie, de la musique, des ateliers et du travail antifasciste local là où l'espace le permet.",
     ],
     fields: {
       organisation: "Organisation ou centre",
@@ -251,11 +255,11 @@ export const fr: TranslationOverride = {
     sections: [
       {
         heading: "Espace",
-        body: "La Salle de la Solidarité centrale est conçue comme un espace de 4 x 4 m. Un espace mural supplémentaire, sur rue ou à l'intérieur, est bienvenu pour le second lot de 1 000 cartes postales et pour les œuvres locales et commandées.",
+        body: "L'exposition s'adapte à l'espace disponible. L'espace mural pour la Salle de la Solidarité, les cartes postales des participants et les œuvres locales ou commandées est convenu avec chaque lieu.",
       },
       {
         heading: "Programme et durée",
-        body: "La plupart des étapes sont envisagées comme de longs week-ends, avec la participation d'écoles ou de lycées le vendredi et une activité publique plus large le samedi. Des durées d'exposition plus longues sont possibles là où un lieu peut les accueillir.",
+        body: "La durée et le programme sont façonnés autour de chaque lieu, de courtes étapes à des expositions plus longues, la participation des écoles et de la communauté étant la bienvenue.",
       },
       {
         heading: "Partenariat local",

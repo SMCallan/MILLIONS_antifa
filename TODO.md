@@ -10,6 +10,22 @@ existing R2 / D1 / Turnstile / magic-link submission flow was kept intact.
 
 ---
 
+## 0. Client direction (July 2026) — simplified interim site
+
+- [ ] **Homepage is now a single non-scrolling screen** (logo top-left, language
+      flags, title, MENU / TOUR actions, animation panel) per the client sketch.
+      The animation is the placeholder JS shader in
+      `src/components/HomeAnimation.tsx` — **swap in the commissioned animation
+      loop** there when the client supplies it.
+- [ ] **All tour dates are shown as "TBC"** and collaborators / statuses /
+      break rows were removed pending the client's final decisions
+      (`src/data/site.ts` `tourDates`; the localized "TBC" label is
+      `tourDates.tbc` in the dictionaries).
+- [ ] **Page copy was trimmed to stay descriptive and open-ended** (no fixed
+      room sizes, event formats, or anniversary dates on Tour/Host pages). The
+      client will write the final copy before launch — re-check translations
+      after that lands.
+
 ## 1. Blockers — do before launch
 
 - [ ] **Native review of all translations.** The 6 non-English locale files are

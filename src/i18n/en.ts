@@ -15,6 +15,8 @@ export const en = {
     home: "Home",
     tourDates: "Tour dates",
     moreInfo: "More information",
+    menu: "Menu",
+    tour: "Tour",
     concept: "Concept",
     contribute: "Contribute",
     donate: "Donate",
@@ -35,6 +37,7 @@ export const en = {
     backToHome: "Back to home",
     getInTouch: "Get in touch",
     comingSoon: "Coming soon",
+    close: "Close",
     draftNotice: "Draft content — to be finalised by the project team.",
   },
 
@@ -99,10 +102,11 @@ export const en = {
     routeBadge: "Route notes",
     routeTitle: "Planned locations and principal collaborators.",
     routeBody:
-      "Event lengths will vary by venue. The outline below reflects the current tour proposal from the exhibition brief.",
+      "Locations are indicative. Dates and details will be confirmed with each venue and published here.",
     stop: "Stop",
     pause: "Pause",
-    ctaEyebrow: "The tour builds toward 30 May 2027 in Catalunya",
+    tbc: "TBC",
+    ctaEyebrow: "The route is being finalised with partners across Europe",
     ctaTitle: "Interested in hosting or partnering with a future event?",
     ctaButton: "Start a booking enquiry",
     status: {
@@ -219,17 +223,17 @@ export const en = {
     heroPrimaryCta: "Start enquiry",
     heroSecondaryCta: "Tour dates",
     formatsTitle: "Hosting formats",
-    leadTimeTitle: "Typical lead time",
+    leadTimeTitle: "Flexible formats",
     leadTimeBody:
-      "Event lengths will vary by venue, but most stops are envisaged as long weekends with school or college participation on Friday and wider public activity on Saturday.",
+      "Event formats and lengths are flexible and agreed individually with each venue and its programme.",
     formTitle: "Host enquiry form",
     formDescription:
       "Tell us about the venue, audience, education links, local history, and dates you are considering.",
     conditionsCta: "Read the hosting conditions",
     features: [
-      "The central Solidarity Room is planned as a 4 x 4m space with walls covered by 1,000 postcard-sized images created through Solidarity Park.",
-      "The outside street-facing walls can host another 1,000 postcards made by participants during the tour or through schools and colleges.",
-      "Venues can add local history, International Brigades material, artist commissions, poetry, music, workshops, and local anti-fascist work where space allows.",
+      "The exhibition centres on the Solidarity Room, an installation of postcard-sized artworks made through the Solidarity Park project.",
+      "Outward-facing walls can gather new postcards made by visitors, schools, and community participants during the tour.",
+      "Venues can add local history, artist commissions, poetry, music, workshops, and local anti-fascist work where space allows.",
     ],
     fields: {
       organisation: "Organisation or centre",
@@ -272,11 +276,11 @@ export const en = {
     sections: [
       {
         heading: "Space",
-        body: "The central Solidarity Room is planned as a 4 x 4m space. Additional street-facing or interior wall space is welcome for the second set of 1,000 postcards and for local and commissioned work.",
+        body: "The exhibition adapts to the available space. Wall space for the Solidarity Room, participant postcards, and local or commissioned work is agreed with each venue.",
       },
       {
         heading: "Programme and duration",
-        body: "Most stops are envisaged as long weekends, with school or college participation on Friday and wider public activity on Saturday. Longer exhibition runs are possible where a venue can host them.",
+        body: "Event length and programme are shaped around each venue, from short runs to longer exhibitions, with school and community participation welcome.",
       },
       {
         heading: "Local partnership",

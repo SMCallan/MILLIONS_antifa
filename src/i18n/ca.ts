@@ -13,6 +13,8 @@ export const ca: TranslationOverride = {
     home: "Inici",
     tourDates: "Dates de la gira",
     moreInfo: "Més informació",
+    menu: "Menú",
+    tour: "Gira",
     concept: "Concepte",
     contribute: "Contribuir",
     donate: "Donar",
@@ -28,6 +30,7 @@ export const ca: TranslationOverride = {
     backToHome: "Tornar a l'inici",
     getInTouch: "Contactar",
     comingSoon: "Ben aviat",
+    close: "Tanca",
     draftNotice: "Contingut provisional, pendent de finalitzar per l'equip del projecte.",
   },
   hero: {
@@ -88,10 +91,11 @@ export const ca: TranslationOverride = {
     routeBadge: "Notes de la ruta",
     routeTitle: "Localitzacions previstes i principals col·laboradors.",
     routeBody:
-      "La durada de cada esdeveniment variarà segons la sala. El resum següent reflecteix la proposta actual de la gira segons el dossier de l'exposició.",
+      "Les localitzacions són orientatives. Les dates i els detalls es confirmaran amb cada sala i es publicaran aquí.",
     stop: "Parada",
     pause: "Pausa",
-    ctaEyebrow: "La gira avança cap al 30 de maig de 2027 a Catalunya",
+    tbc: "Per confirmar",
+    ctaEyebrow: "La ruta s'està finalitzant amb socis d'arreu d'Europa",
     ctaTitle: "T'interessa acollir o col·laborar en un esdeveniment futur?",
     ctaButton: "Iniciar una consulta de reserva",
     status: { Booked: "Confirmat", "In agreement": "En acord", Break: "Pausa" },
@@ -199,17 +203,17 @@ export const ca: TranslationOverride = {
     heroPrimaryCta: "Iniciar consulta",
     heroSecondaryCta: "Dates de la gira",
     formatsTitle: "Formats d'acollida",
-    leadTimeTitle: "Termini habitual",
+    leadTimeTitle: "Formats flexibles",
     leadTimeBody:
-      "La durada dels esdeveniments variarà segons la sala, però la majoria de parades es plantegen com a caps de setmana llargs, amb participació d'escoles o instituts el divendres i activitat pública més àmplia el dissabte.",
+      "Els formats i la durada dels esdeveniments són flexibles i s'acorden individualment amb cada sala i el seu programa.",
     formTitle: "Formulari de consulta per acollir",
     formDescription:
       "Explica'ns sobre la sala, el públic, els vincles educatius, la història local i les dates que estàs considerant.",
     conditionsCta: "Llegir les condicions d'acollida",
     features: [
-      "La Sala de la Solidaritat central es planteja com un espai de 4 x 4 m amb parets cobertes per 1.000 imatges de mida postal creades a través del Parc de la Solidaritat.",
-      "Les parets exteriors que donen al carrer poden acollir altres 1.000 postals fetes per participants durant la gira o a través d'escoles i instituts.",
-      "Les sales poden afegir història local, material de les Brigades Internacionals, encàrrecs artístics, poesia, música, tallers i obra antifeixista local quan l'espai ho permeti.",
+      "L'exposició gira al voltant de la Sala de la Solidaritat, una instal·lació d'obres de mida postal creades a través del projecte Parc de la Solidaritat.",
+      "Les parets exteriors poden reunir noves postals fetes per visitants, escoles i participants de la comunitat durant la gira.",
+      "Les sales poden afegir història local, encàrrecs artístics, poesia, música, tallers i obra antifeixista local quan l'espai ho permeti.",
     ],
     fields: {
       organisation: "Organització o centre",
@@ -251,11 +255,11 @@ export const ca: TranslationOverride = {
     sections: [
       {
         heading: "Espai",
-        body: "La Sala de la Solidaritat central es planteja com un espai de 4 x 4 m. S'agraeix espai de paret addicional, interior o cap al carrer, per al segon conjunt de 1.000 postals i per a l'obra local i encarregada.",
+        body: "L'exposició s'adapta a l'espai disponible. L'espai de paret per a la Sala de la Solidaritat, les postals dels participants i l'obra local o encarregada s'acorda amb cada sala.",
       },
       {
         heading: "Programa i durada",
-        body: "La majoria de parades es plantegen com a caps de setmana llargs, amb participació d'escoles o instituts el divendres i activitat pública més àmplia el dissabte. Són possibles períodes d'exposició més llargs quan la sala pot acollir-los.",
+        body: "La durada i el programa de cada esdeveniment s'adapten a cada sala, des d'estades curtes fins a exposicions més llargues, amb la participació benvinguda d'escoles i de la comunitat.",
       },
       {
         heading: "Col·laboració local",
