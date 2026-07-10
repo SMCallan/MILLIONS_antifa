@@ -16,6 +16,11 @@ import "@/styles/global.css";
 interface Props {
   title?: string;
   description?: string;
+  /**
+   * Single-screen mode (home page): no site header/footer chrome and no body
+   * scrolling — the page composes its own full-viewport layout.
+   */
+  minimal?: boolean;
 }
 
 const lang = getLangFromUrl(Astro.url);
@@ -25,6 +30,7 @@ const { dir } = languages[lang];
 const {
   title = t.meta.siteName,
   description = t.meta.description,
+  minimal = false,
 } = Astro.props;
 
 const pageTitle = title === t.meta.siteName ? title : `${title} | ${t.meta.siteName}`;
@@ -61,11 +67,19 @@ const alternates = isLocalizedPath(Astro.url.pathname)
     }
     <title>{pageTitle}</title>
   </head>
-  <body>
-    <SiteHeader />
-    <main>
-      <slot />
-    </main>
-    <SiteFooter />
+  <body class:list={[minimal && "overflow-hidden"]}>
+    {
+      minimal ? (
+        <slot />
+      ) : (
+        <>
+          <SiteHeader />
+          <main>
+            <slot />
+          </main>
+          <SiteFooter />
+        </>
+      )
+    }
   </body>
 </html>

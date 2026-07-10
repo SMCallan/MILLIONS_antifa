@@ -13,6 +13,8 @@ export const de: TranslationOverride = {
     home: "Start",
     tourDates: "Tourdaten",
     moreInfo: "Mehr Informationen",
+    menu: "Menü",
+    tour: "Tour",
     concept: "Konzept",
     contribute: "Beitragen",
     donate: "Spenden",
@@ -28,6 +30,7 @@ export const de: TranslationOverride = {
     backToHome: "Zurück zur Startseite",
     getInTouch: "Kontakt aufnehmen",
     comingSoon: "Demnächst",
+    close: "Schließen",
     draftNotice: "Vorläufiger Inhalt — wird vom Projektteam noch fertiggestellt.",
   },
   hero: {
@@ -88,10 +91,11 @@ export const de: TranslationOverride = {
     routeBadge: "Hinweise zur Route",
     routeTitle: "Geplante Orte und wichtigste Mitwirkende.",
     routeBody:
-      "Die Dauer der Veranstaltungen variiert je nach Ort. Die folgende Übersicht spiegelt den aktuellen Tourvorschlag aus dem Ausstellungskonzept wider.",
+      "Die Orte sind vorläufig. Termine und Details werden mit jedem Veranstaltungsort bestätigt und hier veröffentlicht.",
     stop: "Station",
     pause: "Pause",
-    ctaEyebrow: "Die Tour führt zum 30. Mai 2027 in Katalonien",
+    tbc: "Termin folgt",
+    ctaEyebrow: "Die Route wird derzeit mit Partnern in ganz Europa finalisiert",
     ctaTitle: "Interesse, eine künftige Veranstaltung auszurichten oder zu unterstützen?",
     ctaButton: "Buchungsanfrage starten",
     status: { Booked: "Bestätigt", "In agreement": "In Abstimmung", Break: "Pause" },
@@ -199,17 +203,17 @@ export const de: TranslationOverride = {
     heroPrimaryCta: "Anfrage starten",
     heroSecondaryCta: "Tourdaten",
     formatsTitle: "Formate für Gastgeber",
-    leadTimeTitle: "Übliche Vorlaufzeit",
+    leadTimeTitle: "Flexible Formate",
     leadTimeBody:
-      "Die Dauer der Veranstaltungen variiert je nach Ort, doch die meisten Stationen sind als lange Wochenenden gedacht, mit Beteiligung von Schulen oder Hochschulen am Freitag und breiterer öffentlicher Aktivität am Samstag.",
+      "Format und Dauer der Veranstaltungen sind flexibel und werden individuell mit jedem Ort und seinem Programm vereinbart.",
     formTitle: "Anfrageformular für Gastgeber",
     formDescription:
       "Erzählen Sie uns von Ort, Publikum, Bildungsverbindungen, lokaler Geschichte und den Terminen, die Sie in Betracht ziehen.",
     conditionsCta: "Bedingungen für Gastgeber lesen",
     features: [
-      "Der zentrale Solidaritätsraum ist als 4 x 4 m großer Raum geplant, dessen Wände mit 1.000 postkartengroßen Bildern aus dem Solidaritätspark bedeckt sind.",
-      "Die äußeren, zur Straße gewandten Wände können weitere 1.000 Postkarten aufnehmen, die während der Tour oder über Schulen und Hochschulen von Teilnehmenden gestaltet werden.",
-      "Veranstaltungsorte können lokale Geschichte, Material zu den Internationalen Brigaden, Auftragsarbeiten, Poesie, Musik, Workshops und lokale antifaschistische Arbeit ergänzen, wo der Platz es zulässt.",
+      "Im Zentrum der Ausstellung steht der Solidaritätsraum, eine Installation postkartengroßer Werke aus dem Projekt Solidaritätspark.",
+      "Nach außen gerichtete Wände können während der Tour neue Postkarten von Besucher:innen, Schulen und Gemeinschaftsteilnehmenden sammeln.",
+      "Veranstaltungsorte können lokale Geschichte, Auftragsarbeiten, Poesie, Musik, Workshops und lokale antifaschistische Arbeit ergänzen, wo der Platz es zulässt.",
     ],
     fields: {
       organisation: "Organisation oder Einrichtung",
@@ -251,11 +255,11 @@ export const de: TranslationOverride = {
     sections: [
       {
         heading: "Raum",
-        body: "Der zentrale Solidaritätsraum ist als 4 x 4 m großer Raum geplant. Zusätzliche Wandfläche zur Straße oder im Innenbereich ist willkommen für den zweiten Satz von 1.000 Postkarten sowie für lokale und beauftragte Arbeiten.",
+        body: "Die Ausstellung passt sich dem verfügbaren Raum an. Wandfläche für den Solidaritätsraum, Teilnehmer-Postkarten sowie lokale oder beauftragte Arbeiten wird mit jedem Ort vereinbart.",
       },
       {
         heading: "Programm und Dauer",
-        body: "Die meisten Stationen sind als lange Wochenenden gedacht, mit Beteiligung von Schulen oder Hochschulen am Freitag und breiterer öffentlicher Aktivität am Samstag. Längere Ausstellungslaufzeiten sind möglich, wo ein Ort sie ermöglichen kann.",
+        body: "Dauer und Programm werden an jedem Ort individuell gestaltet, von kurzen Stationen bis zu längeren Ausstellungen — die Beteiligung von Schulen und Gemeinschaft ist willkommen.",
       },
       {
         heading: "Lokale Partnerschaft",

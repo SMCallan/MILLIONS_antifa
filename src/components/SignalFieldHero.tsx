@@ -30,19 +30,11 @@ type SignalFieldHeroProps = {
   className?: string;
 };
 
-const defaultBadges = [
-  "Solidarity Park",
-  "International tour",
-  "1,000 young artists",
-  "International Brigades",
-  "Art, memory, education",
-  "Catalunya 2027",
-];
+// Kept intentionally empty (client direction, July 2026): sub-page heroes show
+// headline + subtitle + CTAs only. Pass explicit arrays to reinstate chips.
+const defaultBadges: string[] = [];
 
-const defaultStatusLines = [
-  "Touring toward the 90th anniversary of the Ciudad de Barcelona sinking",
-  "Inspired by the Artists International Association and the legacy of anti-fascist solidarity",
-];
+const defaultStatusLines: string[] = [];
 
 const defaultPrimaryCta = {
   label: "Tour dates",
@@ -222,39 +214,43 @@ function HeroContent({
           </div>
         )}
 
-        <motion.div
-          variants={introVariants}
-          className="mt-10 flex max-w-5xl flex-wrap gap-2 border-t border-white/18 pt-6"
-          aria-label="Project status"
-        >
-          {badges.map((badge) => (
-            <span
-              key={badge}
-              className="rounded-md border border-white/16 bg-white/9 px-3 py-1.5 text-sm font-medium text-white/78 backdrop-blur-md"
-            >
-              {badge}
-            </span>
-          ))}
-        </motion.div>
-
-        <motion.div
-          variants={introVariants}
-          className="mt-8 grid max-w-5xl gap-3 text-sm text-white/70 sm:grid-cols-2"
-        >
-          {statusLines.map((line, index) => {
-            const Icon = index === 0 ? CalendarDays : ShieldCheck;
-
-            return (
-              <span key={line} className="flex items-center gap-2">
-                <Icon
-                  className={cn("size-4", index === 0 ? "text-cyan-300" : "text-red-300")}
-                  aria-hidden="true"
-                />
-                {line}
+        {badges.length > 0 ? (
+          <motion.div
+            variants={introVariants}
+            className="mt-10 flex max-w-5xl flex-wrap gap-2 border-t border-white/18 pt-6"
+            aria-label="Project status"
+          >
+            {badges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-md border border-white/16 bg-white/9 px-3 py-1.5 text-sm font-medium text-white/78 backdrop-blur-md"
+              >
+                {badge}
               </span>
-            );
-          })}
-        </motion.div>
+            ))}
+          </motion.div>
+        ) : null}
+
+        {statusLines.length > 0 ? (
+          <motion.div
+            variants={introVariants}
+            className="mt-8 grid max-w-5xl gap-3 text-sm text-white/70 sm:grid-cols-2"
+          >
+            {statusLines.map((line, index) => {
+              const Icon = index === 0 ? CalendarDays : ShieldCheck;
+
+              return (
+                <span key={line} className="flex items-center gap-2">
+                  <Icon
+                    className={cn("size-4", index === 0 ? "text-cyan-300" : "text-red-300")}
+                    aria-hidden="true"
+                  />
+                  {line}
+                </span>
+              );
+            })}
+          </motion.div>
+        ) : null}
       </motion.div>
     </MotionConfig>
   );

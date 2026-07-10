@@ -10,13 +10,6 @@ import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-const statusLabel = (status: string) => t.tourDates.status[status] ?? status;
-
-let routeStopNumber = 0;
-const routeItems = tourDates.map((event) => ({
-  ...event,
-  stopLabel: event.status === "Break" ? t.tourDates.pause : `${t.tourDates.stop} ${++routeStopNumber}`,
-}));
 ---
 
 <SignalFieldHero
@@ -26,8 +19,6 @@ const routeItems = tourDates.map((event) => ({
   subtitle={t.tourDates.heroSubtitle}
   primaryCta={{ label: t.tourDates.heroPrimaryCta, href: "#route" }}
   secondaryCta={{ label: t.tourDates.heroSecondaryCta, href: localizePath("/host", lang) }}
-  badges={t.hero.badges}
-  statusLines={t.hero.statusLines}
 />
 
 <section id="route" class="section-y bg-background">
@@ -40,30 +31,22 @@ const routeItems = tourDates.map((event) => ({
 
     <div class="grid gap-4">
       {
-        routeItems.map((event) => (
-          <Card className={event.status === "Break" ? "overflow-hidden py-0 bg-muted/45" : "overflow-hidden py-0"}>
-            <CardContent className="grid gap-6 p-6 md:grid-cols-[9rem_1fr_auto] md:items-center">
+        tourDates.map((event, index) => (
+          <Card className="overflow-hidden py-0">
+            <CardContent className="grid gap-6 p-6 md:grid-cols-[9rem_1fr] md:items-center">
               <div>
-                <p class="text-sm text-muted-foreground">{event.stopLabel}</p>
-                <p class="mt-1 text-xl font-black">{event.date}</p>
+                <p class="text-sm text-muted-foreground">{`${t.tourDates.stop} ${index + 1}`}</p>
+                <p class="mt-1 text-xl font-black">{t.tourDates.tbc}</p>
               </div>
 
               <div>
                 <h3 class="text-2xl font-black">{event.city}</h3>
-                <p class="mt-2 flex items-center gap-2 text-muted-foreground">
-                  <MapPin className="size-4" aria-hidden="true" />
-                  {event.venue}
-                </p>
-                {event.collaborators.length > 0 && (
-                  <p class="mt-3 text-sm leading-6 text-muted-foreground">
-                    {event.collaborators.join(" / ")}
+                {event.venue && (
+                  <p class="mt-2 flex items-center gap-2 text-muted-foreground">
+                    <MapPin className="size-4" aria-hidden="true" />
+                    {event.venue}
                   </p>
                 )}
-              </div>
-
-              <div class="flex flex-wrap gap-2 md:justify-end">
-                <Badge variant={event.status === "Booked" ? "default" : "outline"}>{statusLabel(event.status)}</Badge>
-                <Badge variant="secondary">{event.format}</Badge>
               </div>
             </CardContent>
           </Card>

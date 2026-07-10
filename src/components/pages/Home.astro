@@ -1,157 +1,134 @@
 ---
-import { ArrowRight, CalendarDays, MapPin, Upload } from "lucide-react";
-
-import { SignalFieldHero } from "@/components/SignalFieldHero";
-import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { artistCommissions, tourDates } from "@/data/site";
+import { HomeAnimation } from "@/components/HomeAnimation";
+import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+import { footerNav } from "@/data/site";
 import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-const statusLabel = (status: string) => t.tourDates.status[status] ?? status;
-const featuredDates = tourDates.filter((event) => event.status !== "Break").slice(0, 3);
+const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
 ---
 
-<SignalFieldHero
-  client:load
-  layout="split"
-  logo="/million-words-logo.png"
-  logoAlt={t.meta.siteName}
-  headline={t.hero.title}
-  subtitle={t.hero.subtitle}
-  badges={t.hero.badges}
-  statusLines={t.hero.statusLines}
-  primaryCta={{ label: t.hero.primaryCta, href: localizePath("/tour-dates", lang) }}
-  secondaryCta={{ label: t.hero.secondaryCta, href: localizePath("/contribute", lang) }}
-/>
-
-<section id="concept" class="section-y bg-background">
-  <div class="container-page grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-    <div>
-      <Badge variant="secondary">{t.home.conceptBadge}</Badge>
-      <h2 class="mt-5 max-w-xl text-4xl font-black leading-tight md:text-5xl">
-        {t.home.conceptTitle}
-      </h2>
+<!--
+  Single-screen home page (client direction, July 2026): the whole page fits
+  the viewport with no scrolling on any device. Logo top-left, language flags,
+  title beside the animation panel, and two actions: MENU (opens the site menu
+  overlay) and TOUR (straight to the tour page).
+-->
+<div class="flex h-dvh flex-col overflow-hidden bg-background text-foreground">
+  <header class="flex items-center justify-between gap-4 px-4 pt-3 sm:px-6">
+    <a href={localizePath("/", lang)} class="shrink-0" aria-label={t.meta.siteName}>
       <img
         src="/million-words-logo.png"
         alt={t.meta.siteName}
-        class="mt-8 w-full max-w-sm rounded-md border bg-white object-contain p-2 shadow-sm"
-        loading="lazy"
+        class="size-14 rounded-md border bg-white object-contain p-1 shadow-sm sm:size-16"
+        loading="eager"
         decoding="async"
       />
-    </div>
+    </a>
+    <LanguageSwitcher />
+  </header>
 
-    <div class="grid gap-6 text-base leading-8 text-muted-foreground">
-      {t.home.conceptBody.map((paragraph) => <p>{paragraph}</p>)}
-      <div class="grid gap-3 sm:grid-cols-3">
-        {
-          t.home.stats.map((stat, index) => (
-            <div
-              class:list={[
-                "border-l-4 pl-4",
-                ["border-primary", "border-secondary", "border-accent"][index] ?? "border-primary",
-              ]}
-            >
-              <p class="text-2xl font-black text-foreground">{stat.value}</p>
-              <p class="text-sm">{stat.label}</p>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</section>
+  <main
+    class="flex min-h-0 flex-1 flex-col gap-5 px-4 py-4 sm:px-6 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-12 lg:px-12 lg:py-8"
+  >
+    <div class="flex flex-col gap-6 lg:gap-10">
+      <h1 class="max-w-xl text-[clamp(2.25rem,5.5vw,4.75rem)] font-black leading-[1.04] tracking-tight">
+        {t.hero.title}
+      </h1>
 
-<section class="section-y bg-muted/55">
-  <div class="container-page grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-    <div>
-      <Badge>{t.home.installationBadge}</Badge>
-      <h2 class="mt-4 max-w-xl text-3xl font-black leading-tight md:text-5xl">
-        {t.home.installationTitle}
-      </h2>
-      <p class="mt-5 max-w-2xl text-base leading-8 text-muted-foreground">
-        {t.home.installationBody}
-      </p>
-    </div>
-
-    <div class="grid gap-4">
-      <h3 class="text-xl font-black">{t.home.commissionsTitle}</h3>
-      <p class="text-sm leading-7 text-muted-foreground">{t.home.commissionsBody}</p>
-      <div class="grid gap-3 sm:grid-cols-2">
-        {
-          artistCommissions.map((artist) => (
-            <p class="rounded-md border bg-background px-4 py-3 text-sm font-medium">{artist}</p>
-          ))
-        }
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section-y bg-background">
-  <div class="container-page">
-    <div class="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-      <div>
-        <Badge>{t.home.tourBadge}</Badge>
-        <h2 class="mt-4 text-3xl font-black leading-tight md:text-5xl">{t.home.tourTitle}</h2>
-        <p class="mt-4 max-w-2xl text-sm leading-7 text-muted-foreground">{t.home.tourBody}</p>
-      </div>
-      <a class={buttonVariants({ variant: "outline" })} href={localizePath("/tour-dates", lang)}>
-        {t.common.viewAllDates}
-        <ArrowRight className="size-4" aria-hidden="true" />
-      </a>
-    </div>
-
-    <div class="mt-10 grid gap-4 md:grid-cols-3">
-      {
-        featuredDates.map((event) => (
-          <Card>
-            <CardHeader>
-              <CardDescription className="flex items-center gap-2">
-                <CalendarDays className="size-4" aria-hidden="true" />
-                {event.date}
-              </CardDescription>
-              <CardTitle className="text-2xl">{event.city}</CardTitle>
-            </CardHeader>
-            <CardContent className="grid gap-4">
-              <p class="flex items-center gap-2 text-sm text-muted-foreground">
-                <MapPin className="size-4" aria-hidden="true" />
-                {event.venue}
-              </p>
-              <div class="flex flex-wrap gap-2">
-                <Badge variant={event.status === "Booked" ? "default" : "outline"}>{statusLabel(event.status)}</Badge>
-                <Badge variant="secondary">{event.format}</Badge>
-              </div>
-            </CardContent>
-          </Card>
-        ))
-      }
-    </div>
-  </div>
-</section>
-
-<section class="section-y bg-muted/55">
-  <div class="container-page grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-    <div>
-      <Badge variant="outline">{t.home.hostBadge}</Badge>
-      <h2 class="mt-4 text-3xl font-black leading-tight md:text-5xl">{t.home.hostTitle}</h2>
-      <p class="mt-5 max-w-xl leading-7 text-muted-foreground">{t.home.hostBody}</p>
-    </div>
-
-    <div class="flex flex-col justify-center gap-4">
-      <div class="flex flex-wrap gap-3">
-        <a class={buttonVariants({ size: "lg" })} href={localizePath("/host", lang)}>
-          {t.home.hostCta}
-          <ArrowRight className="size-4" aria-hidden="true" />
+      <nav class="flex flex-wrap gap-3 lg:flex-col lg:items-start lg:gap-4" aria-label={t.nav.menu}>
+        <button
+          type="button"
+          data-menu-open
+          aria-haspopup="true"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          class="inline-flex cursor-pointer items-center rounded-md bg-foreground px-7 py-3.5 text-xl font-black uppercase tracking-widest text-background transition-colors hover:bg-primary hover:text-primary-foreground sm:px-9 sm:py-4 sm:text-2xl"
+        >
+          {t.nav.menu}
+        </button>
+        <a
+          href={localizePath("/tour-dates", lang)}
+          class="inline-flex items-center rounded-md bg-primary px-7 py-3.5 text-xl font-black uppercase tracking-widest text-primary-foreground transition-colors hover:bg-foreground hover:text-background sm:px-9 sm:py-4 sm:text-2xl"
+        >
+          {t.nav.tour}
         </a>
-        <a class={buttonVariants({ size: "lg", variant: "secondary" })} href={localizePath("/contribute", lang)}>
-          {t.home.contributeCta}
-          <Upload className="size-4" aria-hidden="true" />
-        </a>
-      </div>
+      </nav>
     </div>
+
+    <!-- Animation panel: placeholder shader until the commissioned loop is supplied. -->
+    <div
+      class="relative min-h-28 flex-1 overflow-hidden rounded-2xl border border-border/70 bg-[#0b0a09] shadow-xl lg:flex-none lg:self-stretch"
+    >
+      <HomeAnimation client:load />
+    </div>
+  </main>
+</div>
+
+<!-- Full-screen site menu -->
+<div
+  id="site-menu"
+  data-menu
+  hidden
+  class="fixed inset-0 z-50 flex flex-col bg-background/98 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-label={t.nav.menu}
+>
+  <div class="flex items-center justify-between px-4 py-3 sm:px-6">
+    <img
+      src="/million-words-logo.png"
+      alt=""
+      class="size-12 rounded-md border bg-white object-contain p-1"
+      loading="lazy"
+      decoding="async"
+    />
+    <button
+      type="button"
+      data-menu-close
+      class="cursor-pointer rounded-md border px-4 py-2 text-sm font-bold uppercase tracking-wide transition-colors hover:bg-accent hover:text-accent-foreground"
+    >
+      {t.common.close}
+    </button>
   </div>
-</section>
+
+  <nav
+    class="flex min-h-0 flex-1 flex-col items-center justify-center gap-1 overflow-y-auto px-6 py-4"
+    aria-label={t.nav.menu}
+  >
+    {
+      footerNav.map((link) => (
+        <a
+          href={localizePath(link.href, lang)}
+          class="rounded-md px-6 py-2 text-[clamp(1.5rem,4vh,2.4rem)] font-black tracking-tight transition-colors hover:text-primary"
+        >
+          {navLabel(link.key)}
+        </a>
+      ))
+    }
+  </nav>
+</div>
+
+<script is:inline>
+  // Menu overlay toggle. Progressive enhancement only — every menu destination
+  // is also reachable from the other pages' standard header.
+  (() => {
+    const menu = document.querySelector("[data-menu]");
+    const openButton = document.querySelector("[data-menu-open]");
+    const closeButton = document.querySelector("[data-menu-close]");
+    if (!menu || !openButton) return;
+
+    const setOpen = (open) => {
+      menu.hidden = !open;
+      openButton.setAttribute("aria-expanded", String(open));
+      (open ? closeButton : openButton)?.focus();
+    };
+
+    openButton.addEventListener("click", () => setOpen(true));
+    closeButton?.addEventListener("click", () => setOpen(false));
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !menu.hidden) setOpen(false);
+    });
+  })();
+</script>
