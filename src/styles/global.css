@@ -224,7 +224,7 @@
     font-family: var(--font-display);
     font-stretch: condensed;
     font-weight: 900;
-    letter-spacing: -0.055em;
+    letter-spacing: -0.03em;
   }
 
   .eyebrow {
