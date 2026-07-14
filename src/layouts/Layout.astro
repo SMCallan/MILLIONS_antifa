@@ -68,13 +68,14 @@ const alternates = isLocalizedPath(Astro.url.pathname)
     <title>{pageTitle}</title>
   </head>
   <body class:list={[minimal && "overflow-hidden"]}>
+    <a class="skip-link" href="#main-content">{t.common.skipToContent}</a>
     {
       minimal ? (
         <slot />
       ) : (
         <>
           <SiteHeader />
-          <main>
+          <main id="main-content" tabindex="-1">
             <slot />
           </main>
           <SiteFooter />

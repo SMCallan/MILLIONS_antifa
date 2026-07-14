@@ -27,15 +27,25 @@ export function HomeAnimation() {
 
   React.useEffect(() => {
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reducedMotion || !canUseWebGL()) return undefined;
+    const compactViewport = window.matchMedia("(max-width: 767px)").matches;
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+
+    // The CSS artwork is intentionally complete on its own. Keep phones,
+    // reduced-motion users, and data-saving connections off the ~900KB WebGL
+    // enhancement so the first screen remains immediate on modest hardware.
+    if (reducedMotion || compactViewport || connection?.saveData || !canUseWebGL()) return undefined;
 
     let cancelled = false;
-    import("@/components/PosterFieldCanvas").then((module) => {
-      if (!cancelled) setCanvas(() => module.PosterFieldCanvas);
-    });
+    const loadCanvas = () => {
+      import("@/components/PosterFieldCanvas").then((module) => {
+        if (!cancelled) setCanvas(() => module.PosterFieldCanvas);
+      });
+    };
+    const idleId = window.setTimeout(loadCanvas, 180);
 
     return () => {
       cancelled = true;
+      window.clearTimeout(idleId);
     };
   }, []);
 

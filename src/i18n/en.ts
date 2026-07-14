@@ -31,6 +31,7 @@ export const en = {
   },
 
   common: {
+    skipToContent: "Skip to content",
     viewAllDates: "View all dates",
     learnMore: "Learn more",
     readConditions: "Read the conditions",

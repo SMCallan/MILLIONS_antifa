@@ -1,33 +1,67 @@
 ---
+import { ArrowUpRight } from "lucide-react";
+
+import { footerNav, site } from "@/data/site";
 import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
-import { footerNav } from "@/data/site";
-import { site } from "@/data/site";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
+const year = new Date().getFullYear();
 ---
 
-<footer class="border-t bg-foreground text-background">
-  <div class="container-page grid gap-8 py-10 md:grid-cols-[auto_1fr_auto] md:items-start">
-    <img src="/million-words-logo.png" alt={t.meta.siteName} class="w-36 rounded-md bg-background object-contain p-2" loading="lazy" decoding="async" />
-    <div class="max-w-2xl">
-      <p class="text-lg font-semibold">{t.meta.siteName}</p>
-      <p class="mt-3 text-sm leading-6 text-background/75">{t.footer.tagline}</p>
-      <a href={site.url} class="mt-4 inline-block text-sm font-medium text-background/80 hover:text-background">
-        {site.url.replace("https://", "")}
-      </a>
+<footer class="hairline-grid border-t-4 border-primary bg-foreground text-background">
+  <div class="container-page grid gap-10 py-12 md:grid-cols-[0.9fr_1.1fr] md:py-16 lg:gap-20">
+    <div>
+      <div class="flex items-start gap-4">
+        <img
+          src="/million-words-logo.png"
+          alt=""
+          class="size-20 shrink-0 border border-background/20 bg-white object-cover sm:size-24"
+          width="192"
+          height="192"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <p class="display-type max-w-sm text-3xl uppercase leading-[0.88] sm:text-4xl">{t.meta.siteName}</p>
+          <p class="mt-3 text-[0.65rem] font-bold uppercase tracking-[0.15em] text-background/55">
+            {t.meta.tagline}
+          </p>
+        </div>
+      </div>
+      <p class="mt-7 max-w-xl text-sm leading-7 text-background/65">{t.footer.tagline}</p>
     </div>
 
-    <nav class="flex flex-col gap-2 text-sm" aria-label="Footer navigation">
-      <p class="text-xs font-semibold uppercase tracking-wide text-background/60">{t.footer.navTitle}</p>
+    <nav class="grid grid-cols-2 gap-x-7" aria-label={t.footer.navTitle}>
       {
-        footerNav.map((link) => (
-          <a href={localizePath(link.href, lang)} class="text-background/75 hover:text-background">
-            {navLabel(link.key)}
+        footerNav.map((link, index) => (
+          <a
+            href={localizePath(link.href, lang)}
+            class="group flex min-h-12 items-center gap-2 border-b border-background/18 py-2 text-sm font-bold transition-colors hover:border-primary hover:text-primary"
+          >
+            <span class="flex-1">{navLabel(link.key)}</span>
+            <span class="text-[0.58rem] tabular-nums text-background/35">
+              {String(index + 1).padStart(2, "0")}
+            </span>
           </a>
         ))
       }
     </nav>
+  </div>
+
+  <div class="border-t border-background/18">
+    <div class="container-page flex flex-col gap-3 py-5 text-[0.62rem] font-bold uppercase tracking-[0.12em] text-background/45 sm:flex-row sm:items-center sm:justify-between">
+      <p>© {year} {t.meta.shortName}</p>
+      <a
+        href={site.url}
+        class="inline-flex items-center gap-1.5 transition-colors hover:text-background"
+        target="_blank"
+        rel="noreferrer"
+      >
+        {site.url.replace("https://", "")}
+        <ArrowUpRight className="size-3" aria-hidden="true" />
+      </a>
+    </div>
   </div>
 </footer>
