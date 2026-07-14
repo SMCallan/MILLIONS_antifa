@@ -177,7 +177,7 @@ function HeroContent({
             <div className="order-1 lg:order-2">
               <motion.h1
                 variants={introVariants}
-                className="display-type text-[clamp(3rem,8vw,6.8rem)] uppercase leading-[0.86] text-white"
+                className="display-type text-[clamp(3rem,8vw,6.8rem)] uppercase leading-[0.92] text-white"
               >
                 {headline}
               </motion.h1>
@@ -197,7 +197,7 @@ function HeroContent({
           <div className="max-w-6xl">
             <motion.h1
               variants={introVariants}
-              className="display-type max-w-6xl text-[clamp(3.25rem,9.5vw,8rem)] uppercase leading-[0.84] text-white"
+              className="display-type max-w-6xl text-[clamp(3.25rem,9.5vw,8rem)] uppercase leading-[0.9] text-white"
             >
               {headline}
             </motion.h1>

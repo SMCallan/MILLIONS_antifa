@@ -28,7 +28,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
         />
       </span>
       <span class="hidden sm:block">
-        <span class="display-type block max-w-40 text-sm uppercase leading-[0.92]">{t.meta.siteName}</span>
+        <span class="display-type block max-w-40 text-sm uppercase leading-none">{t.meta.siteName}</span>
         <span class="mt-1 block text-[0.58rem] font-bold uppercase tracking-[0.15em] text-muted-foreground">
           {t.meta.shortName} / 2027
         </span>
@@ -59,7 +59,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
   >
     <section class="flex min-w-0 flex-col justify-center lg:pb-4">
       <p class="eyebrow text-primary">{t.meta.tagline}</p>
-      <h1 class="display-type mt-3 max-w-3xl text-[clamp(2.55rem,9.5vw,5.8rem)] uppercase leading-[0.82] text-foreground lg:mt-6 lg:text-[clamp(4.8rem,7.2vw,7.4rem)]">
+      <h1 class="display-type mt-3 max-w-3xl text-[clamp(2.45rem,9vw,5.5rem)] uppercase leading-[0.9] tracking-[-0.018em] text-foreground lg:mt-6 lg:text-[clamp(4.55rem,6.85vw,7.05rem)]">
         {t.hero.title}
       </h1>
       <p class="mt-3 hidden max-w-lg text-sm font-medium leading-6 text-muted-foreground sm:block lg:mt-6 lg:text-base lg:leading-7">
@@ -147,7 +147,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
     <div class="grid min-h-0 flex-1 lg:grid-cols-[0.38fr_0.62fr]">
       <div class="hidden border-r border-background/20 p-10 lg:flex lg:flex-col lg:justify-between">
         <p class="eyebrow text-primary">{t.nav.menu}</p>
-        <p class="display-type max-w-xs text-5xl uppercase leading-[0.84] text-background/20">
+        <p class="display-type max-w-xs text-5xl uppercase leading-[0.9] text-background/20">
           {t.hero.title}
         </p>
         <p class="max-w-xs text-sm leading-6 text-background/55">{t.hero.subtitle}</p>
