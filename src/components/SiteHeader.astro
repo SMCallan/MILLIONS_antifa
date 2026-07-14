@@ -1,102 +1,198 @@
 ---
-import { ChevronDown } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 
 import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
+import { footerNav, moreInfoNav, primaryNav } from "@/data/site";
 import { getLangFromUrl, getLogicalPath, localizePath, useTranslations } from "@/i18n";
-import { moreInfoNav, primaryNav } from "@/data/site";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
-
-// The current path with any locale prefix removed, so active state matches
-// regardless of language.
 const logicalPath = getLogicalPath(Astro.url.pathname);
 
 const isActive = (href: string) => (href === "/" ? logicalPath === "/" : logicalPath === href);
 const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
+const featuredKeys = new Set(["concept", "contribute", "host"]);
+const featuredNav = [...primaryNav, ...moreInfoNav.filter((link) => featuredKeys.has(link.key))];
+const overflowNav = moreInfoNav.filter((link) => !featuredKeys.has(link.key));
 ---
 
-<header class="sticky top-0 z-50 border-b border-border/80 bg-background/95 backdrop-blur">
-  <!-- Language flags -->
-  <div class="border-b border-border/60 bg-muted/40">
-    <div class="container-page flex items-center justify-between gap-4 py-1.5">
-      <span class="hidden text-xs font-medium uppercase tracking-wide text-muted-foreground md:inline">
-        {t.langSwitcher.label}
+<header class="sticky top-0 z-50 border-b border-foreground/20 bg-background/92 backdrop-blur-xl">
+  <div class="container-page flex min-h-[4.75rem] items-center justify-between gap-5">
+    <a
+      href={localizePath("/", lang)}
+      class="group flex min-w-0 items-center gap-3"
+      aria-label={t.meta.siteName}
+    >
+      <span class="grid size-12 shrink-0 place-items-center overflow-hidden border border-foreground/25 bg-white transition-transform group-hover:-rotate-2">
+        <img
+          src="/million-words-logo.png"
+          alt=""
+          class="h-full w-full object-cover"
+          width="96"
+          height="96"
+          loading="eager"
+          decoding="async"
+        />
       </span>
-      <LanguageSwitcher />
-    </div>
-  </div>
-
-  <!-- Logo + navigation -->
-  <div class="container-page flex min-h-16 items-center justify-between gap-4 py-3">
-    <a href={localizePath("/", lang)} class="flex items-center gap-3" aria-label={t.meta.siteName}>
-      <span class="grid size-12 place-items-center overflow-hidden rounded-md border bg-background shadow-sm">
-        <img src="/million-words-logo.png" alt="" class="h-full w-full object-cover" loading="eager" decoding="async" />
+      <span class="hidden min-w-0 sm:block">
+        <span class="display-type block max-w-44 text-base leading-[0.95] uppercase">{t.meta.siteName}</span>
+        <span class="mt-1 block text-[0.6rem] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+          {t.meta.tagline}
+        </span>
       </span>
-      <span class="hidden max-w-52 text-sm font-semibold leading-tight sm:block">{t.meta.siteName}</span>
     </a>
 
-    <nav class="flex items-center justify-end gap-1 text-sm" aria-label="Main navigation">
-      {
-        primaryNav.map((link) => (
-          <a
-            href={localizePath(link.href, lang)}
-            class:list={[
-              "rounded-md px-3 py-2 font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-              isActive(link.href)
-                ? "bg-primary text-primary-foreground hover:bg-primary hover:text-primary-foreground"
-                : "text-muted-foreground",
-            ]}
-            aria-current={isActive(link.href) ? "page" : undefined}
-          >
-            {navLabel(link.key)}
-          </a>
-        ))
-      }
+    <div class="hidden items-center gap-1 lg:flex">
+      <nav class="flex items-center" aria-label={t.nav.menu}>
+        {
+          featuredNav.map((link) => (
+            <a
+              href={localizePath(link.href, lang)}
+              class:list={[
+                "relative flex min-h-11 items-center px-3 text-[0.7rem] font-extrabold uppercase tracking-[0.11em] transition-colors after:absolute after:inset-x-3 after:bottom-1 after:h-0.5 after:origin-left after:bg-primary after:transition-transform",
+                isActive(link.href)
+                  ? "text-foreground after:scale-x-100"
+                  : "text-muted-foreground after:scale-x-0 hover:text-foreground hover:after:scale-x-100",
+              ]}
+              aria-current={isActive(link.href) ? "page" : undefined}
+            >
+              {navLabel(link.key)}
+            </a>
+          ))
+        }
 
-      <details class="group relative" data-more-info>
-        <summary
-          class="flex cursor-pointer list-none items-center gap-1 rounded-md px-3 py-2 font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-accent-foreground [&::-webkit-details-marker]:hidden"
-        >
-          {t.nav.moreInfo}
-          <ChevronDown className="size-4 transition-transform group-open:rotate-180" aria-hidden="true" />
-        </summary>
-        <div
-          class="absolute right-0 top-full z-50 mt-1 grid min-w-52 gap-1 rounded-md border bg-popover p-2 shadow-lg"
-        >
-          {
-            moreInfoNav.map((link) => (
-              <a
-                href={localizePath(link.href, lang)}
-                class:list={[
-                  "rounded-md px-3 py-2 font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
-                  isActive(link.href) ? "bg-accent text-accent-foreground" : "text-popover-foreground",
-                ]}
-                aria-current={isActive(link.href) ? "page" : undefined}
-              >
-                {navLabel(link.key)}
-              </a>
-            ))
-          }
-        </div>
-      </details>
-    </nav>
+        <details class="group relative" data-more-info>
+          <summary
+            class="flex min-h-11 cursor-pointer list-none items-center gap-1.5 px-3 text-[0.7rem] font-extrabold uppercase tracking-[0.11em] text-muted-foreground transition-colors hover:text-foreground [&::-webkit-details-marker]:hidden"
+          >
+            {t.nav.moreInfo}
+            <ChevronDown className="size-3.5 transition-transform group-open:rotate-180" aria-hidden="true" />
+          </summary>
+          <div class="absolute right-0 top-full mt-2 grid min-w-56 border border-foreground bg-popover p-2 shadow-[0.4rem_0.4rem_0_var(--foreground)]">
+            {
+              overflowNav.map((link) => (
+                <a
+                  href={localizePath(link.href, lang)}
+                  class:list={[
+                    "flex min-h-11 items-center justify-between gap-4 px-3 text-sm font-bold transition-colors",
+                    isActive(link.href)
+                      ? "bg-primary text-primary-foreground"
+                      : "text-popover-foreground hover:bg-accent hover:text-accent-foreground",
+                  ]}
+                  aria-current={isActive(link.href) ? "page" : undefined}
+                >
+                  {navLabel(link.key)}
+                  <ArrowUpRight className="size-3.5" aria-hidden="true" />
+                </a>
+              ))
+            }
+          </div>
+        </details>
+      </nav>
+
+      <div class="ml-2 border-l border-foreground/20 pl-3">
+        <LanguageSwitcher />
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2 lg:hidden">
+      <LanguageSwitcher />
+      <button
+        type="button"
+        data-mobile-nav-open
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="mobile-navigation"
+        class="grid size-11 cursor-pointer place-items-center border border-foreground bg-foreground text-background transition-colors hover:bg-primary"
+      >
+        <Menu className="size-5" aria-hidden="true" />
+        <span class="sr-only">{t.nav.menu}</span>
+      </button>
+    </div>
   </div>
 </header>
 
+<dialog
+  id="mobile-navigation"
+  data-mobile-nav
+  class="m-0 h-dvh max-h-none w-full max-w-none border-0 bg-foreground p-0 text-background"
+  aria-label={t.nav.menu}
+>
+  <div class="hairline-grid flex h-full flex-col overflow-hidden">
+    <div class="flex min-h-[4.75rem] items-center justify-between border-b border-background/20 px-4 sm:px-6">
+      <div>
+        <p class="display-type text-xl uppercase leading-none">{t.meta.shortName}</p>
+        <p class="mt-1 text-[0.6rem] font-bold uppercase tracking-[0.16em] text-background/60">
+          {t.meta.tagline}
+        </p>
+      </div>
+      <button
+        type="button"
+        data-mobile-nav-close
+        class="grid size-11 cursor-pointer place-items-center border border-background/40 transition-colors hover:border-primary hover:bg-primary"
+      >
+        <X className="size-5" aria-hidden="true" />
+        <span class="sr-only">{t.common.close}</span>
+      </button>
+    </div>
+
+    <nav class="flex min-h-0 flex-1 flex-col overflow-y-auto px-4 py-4 sm:px-6" aria-label={t.nav.menu}>
+      {
+        footerNav.map((link, index) => (
+          <a
+            href={localizePath(link.href, lang)}
+            class:list={[
+              "group flex min-h-14 items-center gap-4 border-b border-background/18 py-3 transition-colors hover:border-primary hover:text-primary",
+              isActive(link.href) ? "text-primary" : "text-background",
+            ]}
+            aria-current={isActive(link.href) ? "page" : undefined}
+          >
+            <span class="w-7 text-[0.65rem] font-bold tabular-nums text-background/45">
+              {String(index + 1).padStart(2, "0")}
+            </span>
+            <span class="display-type flex-1 text-[clamp(1.65rem,7vw,2.8rem)] uppercase leading-none">
+              {navLabel(link.key)}
+            </span>
+            <ArrowUpRight className="size-5 opacity-45 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" aria-hidden="true" />
+          </a>
+        ))
+      }
+    </nav>
+  </div>
+</dialog>
+
 <script is:inline>
-  // Progressive enhancement: close the "More information" menu on outside click
-  // or Escape. The menu is a native <details> and works without this script.
   (() => {
-    const menu = document.querySelector("[data-more-info]");
-    if (!menu) return;
+    const moreMenu = document.querySelector("[data-more-info]");
+    const dialog = document.querySelector("[data-mobile-nav]");
+    const openButton = document.querySelector("[data-mobile-nav-open]");
+    const closeButton = document.querySelector("[data-mobile-nav-close]");
+
     document.addEventListener("click", (event) => {
-      if (menu.hasAttribute("open") && !menu.contains(event.target)) {
-        menu.removeAttribute("open");
+      if (moreMenu?.hasAttribute("open") && !moreMenu.contains(event.target)) {
+        moreMenu.removeAttribute("open");
       }
     });
+
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape") menu.removeAttribute("open");
+      if (event.key === "Escape") moreMenu?.removeAttribute("open");
+    });
+
+    if (!(dialog instanceof HTMLDialogElement) || !(openButton instanceof HTMLElement)) return;
+
+    const close = () => dialog.close();
+
+    openButton.addEventListener("click", () => {
+      dialog.showModal();
+      openButton.setAttribute("aria-expanded", "true");
+      document.body.classList.add("nav-open");
+    });
+
+    closeButton?.addEventListener("click", close);
+    dialog.addEventListener("close", () => {
+      openButton.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-open");
+      openButton.focus();
     });
   })();
 </script>

@@ -1,5 +1,5 @@
 ---
-import { ExternalLink } from "lucide-react";
+import { CircleDashed } from "lucide-react";
 
 import { SignalFieldHero } from "@/components/SignalFieldHero";
 import { Badge } from "@/components/ui/badge";
@@ -29,7 +29,7 @@ const t = useTranslations(lang);
               {group.items.map((item) => (
                 <li class="rounded-md border bg-muted/40 p-4">
                   <p class="flex items-center gap-2 text-sm font-semibold">
-                    <ExternalLink className="size-4 text-primary" aria-hidden="true" />
+                    <CircleDashed className="size-4 text-primary" aria-hidden="true" />
                     {item.label}
                   </p>
                   <p class="mt-1 text-sm leading-6 text-muted-foreground">{item.note}</p>

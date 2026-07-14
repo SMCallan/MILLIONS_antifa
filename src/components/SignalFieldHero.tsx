@@ -99,8 +99,10 @@ function CtaLink({
       variant={isPrimary ? "default" : "outline"}
       className={cn(
         "focus-visible:ring-white/70",
+        isPrimary &&
+          "shadow-[0.25rem_0.25rem_0_rgba(255,255,255,0.28)] hover:border-white hover:bg-white hover:text-black",
         !isPrimary &&
-          "border-white/24 bg-white/9 text-white hover:bg-white/16 hover:text-white",
+          "border-white/35 bg-black/15 text-white hover:border-white hover:bg-white hover:text-black",
       )}
     >
       <a
@@ -117,11 +119,11 @@ function CtaLink({
 
 function LogoPanel({ logo, logoAlt }: { logo: string; logoAlt: string }) {
   return (
-    <div className="mx-auto w-full max-w-md rounded-2xl bg-white p-4 shadow-[0_25px_70px_-20px_rgba(0,0,0,0.75)] ring-1 ring-black/5 sm:p-5">
+    <div className="mx-auto w-full max-w-md border-2 border-white/80 bg-white p-3 shadow-[0.55rem_0.55rem_0_rgba(205,42,31,0.85)] sm:p-4">
       <img
         src={logo}
         alt={logoAlt}
-        className="block w-full rounded-lg object-contain"
+        className="block w-full object-contain"
         loading="eager"
         decoding="async"
       />
@@ -168,20 +170,20 @@ function HeroContent({
         transition={{ delayChildren: 0.08, staggerChildren: 0.1 }}
       >
         {isSplit ? (
-          <div className="grid items-center gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:gap-12">
+          <div className="grid items-center gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
             <motion.div variants={introVariants} className="order-2 lg:order-1">
               <LogoPanel logo={logo!} logoAlt={logoAlt ?? headline} />
             </motion.div>
             <div className="order-1 lg:order-2">
               <motion.h1
                 variants={introVariants}
-                className="text-4xl font-black leading-tight text-white sm:text-5xl md:text-6xl lg:text-7xl"
+                className="display-type text-[clamp(3rem,8vw,6.8rem)] uppercase leading-[0.86] text-white"
               >
                 {headline}
               </motion.h1>
               <motion.p
                 variants={introVariants}
-                className="mt-6 max-w-xl text-lg leading-8 text-white/84 md:text-xl"
+                className="mt-6 max-w-2xl text-base font-medium leading-7 text-white/76 sm:text-lg sm:leading-8"
               >
                 {subtitle}
               </motion.p>
@@ -192,17 +194,17 @@ function HeroContent({
             </div>
           </div>
         ) : (
-          <div className="max-w-5xl">
+          <div className="max-w-6xl">
             <motion.h1
               variants={introVariants}
-              className="max-w-5xl text-4xl font-black leading-none text-white sm:text-6xl md:text-7xl lg:text-8xl"
+              className="display-type max-w-6xl text-[clamp(3.25rem,9.5vw,8rem)] uppercase leading-[0.84] text-white"
             >
               {headline}
             </motion.h1>
 
             <motion.p
               variants={introVariants}
-              className="mt-7 max-w-3xl text-lg leading-8 text-white/84 md:text-xl"
+              className="mt-7 max-w-3xl text-base font-medium leading-7 text-white/76 sm:text-lg sm:leading-8 md:text-xl"
             >
               {subtitle}
             </motion.p>
@@ -277,7 +279,9 @@ export function SignalFieldHero({
 
   React.useEffect(() => {
     setMounted(true);
-    setWebglAvailable(canUseWebGL());
+    const compactViewport = window.matchMedia("(max-width: 767px)").matches;
+    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    setWebglAvailable(!compactViewport && !connection?.saveData && canUseWebGL());
   }, []);
 
   const showShader = mounted && webglAvailable && !reducedMotion;
@@ -287,22 +291,26 @@ export function SignalFieldHero({
 
     if (!showShader || CanvasComponent) return undefined;
 
-    import("@/components/PosterFieldCanvas").then((module) => {
-      if (!cancelled) {
-        setCanvasComponent(() => module.PosterFieldCanvas);
-      }
-    });
+    const loadCanvas = () => {
+      import("@/components/PosterFieldCanvas").then((module) => {
+        if (!cancelled) {
+          setCanvasComponent(() => module.PosterFieldCanvas);
+        }
+      });
+    };
+    const idleId = window.setTimeout(loadCanvas, 180);
 
     return () => {
       cancelled = true;
+      window.clearTimeout(idleId);
     };
   }, [CanvasComponent, showShader]);
 
   return (
     <section
       className={cn(
-        "relative isolate overflow-hidden bg-[#05070b] text-white",
-        compact ? "min-h-[58svh] md:min-h-[66svh]" : "min-h-[calc(100svh-4rem)]",
+        "relative isolate overflow-hidden border-b-4 border-primary bg-[#05070b] text-white",
+        compact ? "min-h-[30rem] sm:min-h-[34rem]" : "min-h-[calc(100svh-4rem)]",
         className,
       )}
     >
@@ -313,7 +321,7 @@ export function SignalFieldHero({
         </div>
       ) : null}
       <div
-        className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.72)_0%,rgba(0,0,0,0.38)_46%,rgba(0,0,0,0.22)_100%)]"
+        className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(0,0,0,0.86)_0%,rgba(0,0,0,0.58)_48%,rgba(0,0,0,0.22)_100%)]"
         aria-hidden="true"
       />
       <div
@@ -327,8 +335,8 @@ export function SignalFieldHero({
 
       <div
         className={cn(
-          "container-page relative z-20 flex items-start py-12 sm:py-16 md:items-center md:py-24",
-          compact ? "min-h-[58svh] md:min-h-[66svh]" : "min-h-[calc(100svh-4rem)]",
+          "container-page relative z-20 flex items-start py-14 sm:py-18 md:items-center md:py-24",
+          compact ? "min-h-[30rem] sm:min-h-[34rem]" : "min-h-[calc(100svh-4rem)]",
         )}
       >
         <HeroContent

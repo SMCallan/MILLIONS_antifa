@@ -1,4 +1,6 @@
 ---
+import { ArrowRight, ArrowUpRight, Menu, X } from "lucide-react";
+
 import { HomeAnimation } from "@/components/HomeAnimation";
 import LanguageSwitcher from "@/components/LanguageSwitcher.astro";
 import { footerNav } from "@/data/site";
@@ -9,126 +11,192 @@ const t = useTranslations(lang);
 const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
 ---
 
-<!--
-  Single-screen home page (client direction, July 2026): the whole page fits
-  the viewport with no scrolling on any device. Logo top-left, language flags,
-  title beside the animation panel, and two actions: MENU (opens the site menu
-  overlay) and TOUR (straight to the tour page).
--->
-<div class="flex h-dvh flex-col overflow-hidden bg-background text-foreground">
-  <header class="flex items-center justify-between gap-4 px-4 pt-3 sm:px-6">
-    <a href={localizePath("/", lang)} class="shrink-0" aria-label={t.meta.siteName}>
-      <img
-        src="/million-words-logo.png"
-        alt={t.meta.siteName}
-        class="size-14 rounded-md border bg-white object-contain p-1 shadow-sm sm:size-16"
-        loading="eager"
-        decoding="async"
-      />
+<div class="paper-surface relative flex h-dvh flex-col overflow-hidden bg-background text-foreground">
+  <div class="absolute inset-y-0 left-0 hidden w-2 bg-primary sm:block" aria-hidden="true"></div>
+
+  <header class="relative z-20 flex min-h-[4.5rem] items-center justify-between gap-4 border-b border-foreground/20 px-4 sm:px-7 lg:px-10">
+    <a href={localizePath("/", lang)} class="group flex items-center gap-3" aria-label={t.meta.siteName}>
+      <span class="grid size-12 shrink-0 place-items-center overflow-hidden border border-foreground/30 bg-white shadow-sm transition-transform group-hover:-rotate-2 sm:size-13">
+        <img
+          src="/million-words-logo.png"
+          alt=""
+          class="h-full w-full object-cover"
+          width="104"
+          height="104"
+          loading="eager"
+          decoding="async"
+        />
+      </span>
+      <span class="hidden sm:block">
+        <span class="display-type block max-w-40 text-sm uppercase leading-[0.92]">{t.meta.siteName}</span>
+        <span class="mt-1 block text-[0.58rem] font-bold uppercase tracking-[0.15em] text-muted-foreground">
+          {t.meta.shortName} / 2027
+        </span>
+      </span>
     </a>
-    <LanguageSwitcher />
+
+    <div class="flex items-center gap-2 sm:gap-3">
+      <LanguageSwitcher />
+      <button
+        type="button"
+        data-menu-open
+        aria-label={t.nav.menu}
+        aria-haspopup="dialog"
+        aria-expanded="false"
+        aria-controls="site-menu"
+        class="flex min-h-11 cursor-pointer items-center gap-2 border border-foreground bg-foreground px-3 text-xs font-extrabold uppercase tracking-[0.12em] text-background transition-colors hover:bg-primary sm:px-4"
+      >
+        <Menu className="size-4" aria-hidden="true" />
+        <span class="hidden min-[400px]:inline">{t.nav.menu}</span>
+      </button>
+    </div>
   </header>
 
   <main
-    class="flex min-h-0 flex-1 flex-col gap-5 px-4 py-4 sm:px-6 lg:grid lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)] lg:items-center lg:gap-12 lg:px-12 lg:py-8"
+    id="main-content"
+    tabindex="-1"
+    class="relative z-10 grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] gap-4 px-4 py-4 sm:px-7 sm:py-6 lg:grid-cols-[minmax(19rem,0.82fr)_minmax(28rem,1.18fr)] lg:grid-rows-1 lg:items-stretch lg:gap-9 lg:px-10 lg:py-8 xl:gap-14"
   >
-    <div class="flex flex-col gap-6 lg:gap-10">
-      <h1 class="max-w-xl text-[clamp(2.25rem,5.5vw,4.75rem)] font-black leading-[1.04] tracking-tight">
+    <section class="flex min-w-0 flex-col justify-center lg:pb-4">
+      <p class="eyebrow text-primary">{t.meta.tagline}</p>
+      <h1 class="display-type mt-3 max-w-3xl text-[clamp(2.55rem,9.5vw,5.8rem)] uppercase leading-[0.82] text-foreground lg:mt-6 lg:text-[clamp(4.8rem,7.2vw,7.4rem)]">
         {t.hero.title}
       </h1>
+      <p class="mt-3 hidden max-w-lg text-sm font-medium leading-6 text-muted-foreground sm:block lg:mt-6 lg:text-base lg:leading-7">
+        {t.hero.subtitle}
+      </p>
 
-      <nav class="flex flex-wrap gap-3 lg:flex-col lg:items-start lg:gap-4" aria-label={t.nav.menu}>
-        <button
-          type="button"
-          data-menu-open
-          aria-haspopup="true"
-          aria-expanded="false"
-          aria-controls="site-menu"
-          class="inline-flex cursor-pointer items-center rounded-md bg-foreground px-7 py-3.5 text-xl font-black uppercase tracking-widest text-background transition-colors hover:bg-primary hover:text-primary-foreground sm:px-9 sm:py-4 sm:text-2xl"
-        >
-          {t.nav.menu}
-        </button>
+      <nav class="mt-4 flex flex-wrap gap-2 sm:mt-5 sm:gap-3 lg:mt-8" aria-label={t.nav.menu}>
         <a
           href={localizePath("/tour-dates", lang)}
-          class="inline-flex items-center rounded-md bg-primary px-7 py-3.5 text-xl font-black uppercase tracking-widest text-primary-foreground transition-colors hover:bg-foreground hover:text-background sm:px-9 sm:py-4 sm:text-2xl"
+          class="group inline-flex min-h-12 items-center gap-4 border border-primary bg-primary px-5 text-sm font-black uppercase tracking-[0.13em] text-primary-foreground shadow-[0.3rem_0.3rem_0_var(--foreground)] transition-transform hover:-translate-y-0.5 sm:px-6"
         >
           {t.nav.tour}
+          <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
         </a>
+        <button
+          type="button"
+          data-menu-open-secondary
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          aria-controls="site-menu"
+          class="inline-flex min-h-12 cursor-pointer items-center gap-3 border border-foreground bg-transparent px-5 text-sm font-black uppercase tracking-[0.13em] transition-colors hover:bg-foreground hover:text-background sm:px-6"
+        >
+          <Menu className="size-4" aria-hidden="true" />
+          {t.nav.menu}
+        </button>
       </nav>
-    </div>
+    </section>
 
-    <!-- Animation panel: placeholder shader until the commissioned loop is supplied. -->
-    <div
-      class="relative min-h-28 flex-1 overflow-hidden rounded-2xl border border-border/70 bg-[#0b0a09] shadow-xl lg:flex-none lg:self-stretch"
-    >
-      <HomeAnimation client:load />
-    </div>
+    <figure class="print-shadow relative min-h-0 overflow-hidden border-2 border-foreground bg-[#090806]">
+      <div class="absolute inset-0">
+        <HomeAnimation client:load />
+      </div>
+      <figcaption class="pointer-events-none absolute inset-x-0 top-0 z-10 flex items-center justify-between border-b border-white/18 bg-black/45 px-3 py-2 text-[0.58rem] font-bold uppercase tracking-[0.15em] text-white/75 backdrop-blur-sm sm:px-4">
+        <span>{t.hero.badges[0]}</span>
+        <span>001 / 1000</span>
+      </figcaption>
+      <div class="pointer-events-none absolute bottom-3 right-3 z-10 border border-white/35 bg-black/50 px-2.5 py-1.5 text-[0.58rem] font-bold uppercase tracking-[0.14em] text-white/70 backdrop-blur-sm sm:bottom-4 sm:right-4">
+        {t.hero.badges[2]}
+      </div>
+    </figure>
   </main>
+
+  <div class="relative z-20 flex min-h-8 items-center justify-between gap-4 border-t border-foreground/20 bg-background px-4 text-[0.55rem] font-bold uppercase tracking-[0.13em] text-muted-foreground sm:px-7 lg:px-10">
+    <span>{t.hero.badges[1]}</span>
+    <span class="hidden sm:inline">{t.hero.badges[4]}</span>
+    <span>{t.hero.badges[5]}</span>
+  </div>
 </div>
 
-<!-- Full-screen site menu -->
-<div
+<dialog
   id="site-menu"
   data-menu
-  hidden
-  class="fixed inset-0 z-50 flex flex-col bg-background/98 backdrop-blur-sm"
-  role="dialog"
-  aria-modal="true"
+  class="m-0 h-dvh max-h-none w-full max-w-none border-0 bg-foreground p-0 text-background"
   aria-label={t.nav.menu}
 >
-  <div class="flex items-center justify-between px-4 py-3 sm:px-6">
-    <img
-      src="/million-words-logo.png"
-      alt=""
-      class="size-12 rounded-md border bg-white object-contain p-1"
-      loading="lazy"
-      decoding="async"
-    />
-    <button
-      type="button"
-      data-menu-close
-      class="cursor-pointer rounded-md border px-4 py-2 text-sm font-bold uppercase tracking-wide transition-colors hover:bg-accent hover:text-accent-foreground"
-    >
-      {t.common.close}
-    </button>
-  </div>
+  <div class="hairline-grid flex h-full flex-col overflow-hidden">
+    <header class="flex min-h-[4.75rem] items-center justify-between border-b border-background/20 px-4 sm:px-7 lg:px-10">
+      <div class="flex items-center gap-3">
+        <img
+          src="/million-words-logo.png"
+          alt=""
+          class="size-11 border border-background/25 bg-white object-cover"
+          width="88"
+          height="88"
+          loading="lazy"
+          decoding="async"
+        />
+        <div>
+          <p class="display-type text-lg uppercase leading-none">{t.meta.shortName}</p>
+          <p class="mt-1 hidden text-[0.58rem] font-bold uppercase tracking-[0.15em] text-background/55 sm:block">
+            {t.meta.tagline}
+          </p>
+        </div>
+      </div>
+      <button
+        type="button"
+        data-menu-close
+        class="flex min-h-11 cursor-pointer items-center gap-2 border border-background/40 px-3 text-xs font-bold uppercase tracking-[0.12em] transition-colors hover:border-primary hover:bg-primary sm:px-4"
+      >
+        {t.common.close}
+        <X className="size-4" aria-hidden="true" />
+      </button>
+    </header>
 
-  <nav
-    class="flex min-h-0 flex-1 flex-col items-center justify-center gap-1 overflow-y-auto px-6 py-4"
-    aria-label={t.nav.menu}
-  >
-    {
-      footerNav.map((link) => (
-        <a
-          href={localizePath(link.href, lang)}
-          class="rounded-md px-6 py-2 text-[clamp(1.5rem,4vh,2.4rem)] font-black tracking-tight transition-colors hover:text-primary"
-        >
-          {navLabel(link.key)}
-        </a>
-      ))
-    }
-  </nav>
-</div>
+    <div class="grid min-h-0 flex-1 lg:grid-cols-[0.38fr_0.62fr]">
+      <div class="hidden border-r border-background/20 p-10 lg:flex lg:flex-col lg:justify-between">
+        <p class="eyebrow text-primary">{t.nav.menu}</p>
+        <p class="display-type max-w-xs text-5xl uppercase leading-[0.84] text-background/20">
+          {t.hero.title}
+        </p>
+        <p class="max-w-xs text-sm leading-6 text-background/55">{t.hero.subtitle}</p>
+      </div>
+
+      <nav class="min-h-0 overflow-y-auto px-4 py-3 sm:px-7 lg:px-10 lg:py-6" aria-label={t.nav.menu}>
+        {
+          footerNav.map((link, index) => (
+            <a
+              href={localizePath(link.href, lang)}
+              class="group flex min-h-14 items-center gap-4 border-b border-background/18 py-2.5 transition-colors hover:border-primary hover:text-primary sm:min-h-16"
+            >
+              <span class="w-7 text-[0.62rem] font-bold tabular-nums text-background/40">
+                {String(index + 1).padStart(2, "0")}
+              </span>
+              <span class="display-type flex-1 text-[clamp(1.7rem,6vh,3.8rem)] uppercase leading-none">
+                {navLabel(link.key)}
+              </span>
+              <ArrowUpRight className="size-5 opacity-40 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100" aria-hidden="true" />
+            </a>
+          ))
+        }
+      </nav>
+    </div>
+  </div>
+</dialog>
 
 <script is:inline>
-  // Menu overlay toggle. Progressive enhancement only — every menu destination
-  // is also reachable from the other pages' standard header.
   (() => {
-    const menu = document.querySelector("[data-menu]");
-    const openButton = document.querySelector("[data-menu-open]");
+    const dialog = document.querySelector("[data-menu]");
+    const openButtons = [...document.querySelectorAll("[data-menu-open], [data-menu-open-secondary]")];
     const closeButton = document.querySelector("[data-menu-close]");
-    if (!menu || !openButton) return;
+    let activeTrigger = null;
 
-    const setOpen = (open) => {
-      menu.hidden = !open;
-      openButton.setAttribute("aria-expanded", String(open));
-      (open ? closeButton : openButton)?.focus();
+    if (!(dialog instanceof HTMLDialogElement) || openButtons.length === 0) return;
+
+    const open = (trigger) => {
+      activeTrigger = trigger;
+      dialog.showModal();
+      openButtons.forEach((button) => button.setAttribute("aria-expanded", "true"));
+      document.body.classList.add("home-menu-open");
     };
 
-    openButton.addEventListener("click", () => setOpen(true));
-    closeButton?.addEventListener("click", () => setOpen(false));
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !menu.hidden) setOpen(false);
+    openButtons.forEach((button) => button.addEventListener("click", () => open(button)));
+    closeButton?.addEventListener("click", () => dialog.close());
+    dialog.addEventListener("close", () => {
+      openButtons.forEach((button) => button.setAttribute("aria-expanded", "false"));
+      document.body.classList.remove("home-menu-open");
+      activeTrigger?.focus();
     });
   })();
 </script>
