@@ -1,6 +1,6 @@
 import * as React from "react";
 
-const DESKTOP_VIDEO = "/media/millions-home.mp4";
+const DESKTOP_VIDEO = "/media/millions-home-desktop-720.mp4";
 const MOBILE_VIDEO = "/media/millions-home-mobile.mp4";
 const POSTER = "/media/millions-home-poster.jpg";
 
