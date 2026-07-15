@@ -1,61 +1,88 @@
 import * as React from "react";
 
-type CanvasComponent = React.ComponentType;
+const DESKTOP_VIDEO = "/media/millions-home.mp4";
+const MOBILE_VIDEO = "/media/millions-home-mobile.mp4";
+const POSTER = "/media/millions-home-poster.jpg";
 
-function canUseWebGL() {
-  try {
-    const canvas = document.createElement("canvas");
-    return Boolean(
-      window.WebGLRenderingContext &&
-        (canvas.getContext("webgl") || canvas.getContext("experimental-webgl")),
-    );
-  } catch {
-    return false;
-  }
-}
+type NetworkInformation = EventTarget & {
+  saveData?: boolean;
+};
+
+type NavigatorWithConnection = Navigator & {
+  connection?: NetworkInformation;
+};
 
 /**
- * PLACEHOLDER animation loop for the single-screen home page.
- *
- * Currently renders the in-house poster-wall shader (PosterFieldCanvas) with a
- * static CSS fallback for reduced-motion / no-WebGL. When the client supplies
- * the commissioned animation loop, swap the implementation here — the home
- * page only depends on this component filling its parent.
+ * The commissioned home-page film. A responsive H.264 source is selected only
+ * after hydration, keeping reduced-motion and data-saving visitors on the
+ * lightweight poster rather than downloading a video they did not request.
  */
 export function HomeAnimation() {
-  const [Canvas, setCanvas] = React.useState<CanvasComponent | null>(null);
+  const [source, setSource] = React.useState<string | null>(null);
+  const [isReady, setIsReady] = React.useState(false);
 
   React.useEffect(() => {
-    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const compactViewport = window.matchMedia("(max-width: 767px)").matches;
-    const connection = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const compactViewport = window.matchMedia("(max-width: 767px)");
+    const connection = (navigator as NavigatorWithConnection).connection;
 
-    // The CSS artwork is intentionally complete on its own. Keep phones,
-    // reduced-motion users, and data-saving connections off the ~900KB WebGL
-    // enhancement so the first screen remains immediate on modest hardware.
-    if (reducedMotion || compactViewport || connection?.saveData || !canUseWebGL()) return undefined;
+    const selectSource = () => {
+      setIsReady(false);
 
-    let cancelled = false;
-    const loadCanvas = () => {
-      import("@/components/PosterFieldCanvas").then((module) => {
-        if (!cancelled) setCanvas(() => module.PosterFieldCanvas);
-      });
+      if (reducedMotion.matches || connection?.saveData) {
+        setSource(null);
+        return;
+      }
+
+      setSource(compactViewport.matches ? MOBILE_VIDEO : DESKTOP_VIDEO);
     };
-    const idleId = window.setTimeout(loadCanvas, 180);
+
+    selectSource();
+    reducedMotion.addEventListener("change", selectSource);
+    compactViewport.addEventListener("change", selectSource);
+    connection?.addEventListener("change", selectSource);
 
     return () => {
-      cancelled = true;
-      window.clearTimeout(idleId);
+      reducedMotion.removeEventListener("change", selectSource);
+      compactViewport.removeEventListener("change", selectSource);
+      connection?.removeEventListener("change", selectSource);
     };
   }, []);
 
   return (
-    <div className="poster-field-fallback relative h-full w-full" aria-hidden="true">
-      {Canvas ? (
-        <div className="absolute inset-0">
-          <Canvas />
-        </div>
+    <div className="relative h-full w-full overflow-hidden bg-black" aria-hidden="true">
+      <img
+        src={POSTER}
+        alt=""
+        width="960"
+        height="540"
+        decoding="async"
+        className={`absolute inset-0 h-full w-full object-cover object-center transition-[filter,opacity,transform] duration-500 ${
+          source ? "scale-110 opacity-55 blur-xl md:scale-100 md:opacity-100 md:blur-none" : ""
+        }`}
+      />
+
+      {source ? (
+        <video
+          key={source}
+          src={source}
+          poster={POSTER}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          disablePictureInPicture
+          tabIndex={-1}
+          onLoadedData={() => setIsReady(true)}
+          onError={() => setSource(null)}
+          className={`absolute inset-0 h-full w-full object-contain object-center transition-opacity duration-500 md:object-cover ${
+            isReady ? "opacity-100" : "opacity-0"
+          }`}
+        />
       ) : null}
+
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.08),transparent_24%,transparent_76%,rgba(0,0,0,0.12))]" />
     </div>
   );
 }
