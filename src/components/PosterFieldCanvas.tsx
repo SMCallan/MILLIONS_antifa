@@ -114,14 +114,14 @@ const fragmentShader = /* glsl */ `
     vec2 printDrift = vec2(sin(time * 1.45), cos(time * 1.25)) * mix(0.024, 0.014, mobile);
     vec2 blackDrift = vec2(cos(time * 1.12), sin(time * 1.36)) * mix(0.018, 0.01, mobile);
 
-    vec3 wall = vec3(0.028, 0.027, 0.024);
-    vec3 ink = vec3(0.018, 0.016, 0.014);
-    vec3 paper = vec3(0.86, 0.78, 0.58);
-    vec3 agedPaper = vec3(0.62, 0.55, 0.42);
-    vec3 red = vec3(0.9, 0.055, 0.038);
-    vec3 oldRed = vec3(0.52, 0.025, 0.025);
-    vec3 projection = vec3(0.04, 0.82, 0.74);
-    vec3 amber = vec3(0.95, 0.62, 0.18);
+    vec3 wall = vec3(0.018, 0.04, 0.028);
+    vec3 ink = vec3(0.012, 0.025, 0.018);
+    vec3 paper = vec3(0.84, 0.79, 0.55);
+    vec3 agedPaper = vec3(0.57, 0.55, 0.36);
+    vec3 emerald = vec3(0.025, 0.62, 0.31);
+    vec3 cobalt = vec3(0.025, 0.16, 0.64);
+    vec3 projection = vec3(0.08, 0.36, 0.94);
+    vec3 amber = vec3(0.94, 0.63, 0.1);
 
     vec3 color = wall;
     color += vec3(0.02, 0.017, 0.012) * fbm(p * 3.0 + time * 0.2);
@@ -135,11 +135,11 @@ const fragmentShader = /* glsl */ `
     vec3 paperTone = mix(agedPaper, paper, 0.34 + fiber * 0.5);
     color = mix(color, paperTone, pasted * 0.82);
 
-    float redBlock = hardBox(p, vec2(-0.5 * aspect, 0.19) + printDrift, vec2(0.34, 0.28), -0.055);
-    redBlock += hardBox(p, vec2(0.35 * aspect, -0.42) - printDrift * 0.7, vec2(0.46, 0.18), 0.058);
-    redBlock += hardBox(p, vec2(0.1 * aspect, 0.54) + vec2(printDrift.y, -printDrift.x) * 0.6, vec2(0.68, 0.105), -0.015);
-    redBlock = clamp(redBlock, 0.0, 1.0) * pasted;
-    color = mix(color, mix(oldRed, red, 0.72 + pulse * 0.18), redBlock * 0.82);
+    float colorBlock = hardBox(p, vec2(-0.5 * aspect, 0.19) + printDrift, vec2(0.34, 0.28), -0.055);
+    colorBlock += hardBox(p, vec2(0.35 * aspect, -0.42) - printDrift * 0.7, vec2(0.46, 0.18), 0.058);
+    colorBlock += hardBox(p, vec2(0.1 * aspect, 0.54) + vec2(printDrift.y, -printDrift.x) * 0.6, vec2(0.68, 0.105), -0.015);
+    colorBlock = clamp(colorBlock, 0.0, 1.0) * pasted;
+    color = mix(color, mix(cobalt, emerald, 0.72 + pulse * 0.18), colorBlock * 0.82);
 
     float blackBand = hardBox(p, vec2(-0.2 * aspect, -0.08) + blackDrift, vec2(1.18, 0.08), -0.21);
     blackBand += hardBox(p, vec2(0.7 * aspect, 0.22) - blackDrift * 0.8, vec2(0.5, 0.055), 0.28);
@@ -156,15 +156,15 @@ const fragmentShader = /* glsl */ `
     stencil += hardBox(p, vec2(0.56 * aspect, 0.05) - stencilDrift * 0.5, vec2(0.055, 0.36), 0.0);
     stencil += hardBox(p, vec2(0.7 * aspect, 0.25) - stencilDrift * 0.5, vec2(0.22, 0.05), 0.0);
     stencil += hardBox(p, vec2(0.7 * aspect, -0.14) - stencilDrift * 0.5, vec2(0.22, 0.05), 0.0);
-    stencil = clamp(stencil, 0.0, 1.0) * pasted * (0.55 + redBlock * 0.2);
+    stencil = clamp(stencil, 0.0, 1.0) * pasted * (0.55 + colorBlock * 0.2);
     color = mix(color, ink, stencil * 0.42);
 
     float stripes = stripeField(p + vec2(time * 0.12, -time * 0.05), -0.58, 9.0, 0.055);
     stripes *= roughBox(p, vec2(-0.32 * aspect, -0.26), vec2(0.9, 0.34), -0.11, 0.06);
-    color = mix(color, mix(red, amber, 0.22), stripes * pasted * 0.18);
+    color = mix(color, mix(emerald, amber, 0.22), stripes * pasted * 0.18);
 
     float dots = halftone(p + vec2(time * 0.09, sin(time * 1.7) * 0.035), 0.24 + sin(time * 0.8) * 0.03, mix(48.0, 32.0, mobile), 0.18 + pulse * 0.03);
-    float dotField = dots * pasted * (0.22 + redBlock * 0.48);
+    float dotField = dots * pasted * (0.22 + colorBlock * 0.48);
     color = mix(color, ink, dotField * 0.26);
 
     float archiveLines = stripeField(p + vec2(-time * 0.28, time * 0.06), 1.52 + sin(time * 0.55) * 0.08, 18.0, 0.035);
@@ -186,7 +186,7 @@ const fragmentShader = /* glsl */ `
     registration += hardBox(p, vec2(0.88 * aspect, -0.64), vec2(0.24, 0.01), 0.0);
     registration += hardBox(p, vec2(0.88 * aspect, -0.64), vec2(0.01, 0.24), 0.0);
     color += projection * registration * (0.18 + reveal * 0.32);
-    color += red * registration * 0.1;
+    color += emerald * registration * 0.1;
 
     float tearShadow = smoothstep(0.0, 0.08, pasted) * (1.0 - smoothstep(0.68, 1.0, pasted));
     color -= ink * tearShadow * 0.1;

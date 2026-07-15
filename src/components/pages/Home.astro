@@ -12,7 +12,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
 ---
 
 <div class="paper-surface relative flex h-dvh flex-col overflow-hidden bg-background text-foreground">
-  <div class="absolute inset-y-0 left-0 hidden w-2 bg-primary sm:block" aria-hidden="true"></div>
+  <div class="solidarity-rail absolute inset-y-0 left-0 hidden w-2 sm:block" aria-hidden="true"></div>
 
   <header class="relative z-20 flex min-h-[4.5rem] items-center justify-between gap-4 border-b border-foreground/20 px-4 sm:px-7 lg:px-10">
     <a href={localizePath("/", lang)} class="group flex items-center gap-3" aria-label={t.meta.siteName}>
@@ -58,7 +58,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
     class="relative z-10 grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] gap-4 px-4 py-4 sm:px-7 sm:py-6 lg:grid-cols-[minmax(19rem,0.82fr)_minmax(28rem,1.18fr)] lg:grid-rows-1 lg:items-stretch lg:gap-9 lg:px-10 lg:py-8 xl:gap-14"
   >
     <section class="flex min-w-0 flex-col justify-center lg:pb-4">
-      <p class="eyebrow text-primary">{t.meta.tagline}</p>
+      <p class="eyebrow text-signal-blue">{t.meta.tagline}</p>
       <h1 class="display-type mt-3 max-w-3xl text-[clamp(2.45rem,9vw,5.5rem)] uppercase leading-[0.9] tracking-[-0.018em] text-foreground lg:mt-6 lg:text-[clamp(4.55rem,6.85vw,7.05rem)]">
         {t.hero.title}
       </h1>
@@ -69,7 +69,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
       <nav class="mt-4 flex flex-wrap gap-2 sm:mt-5 sm:gap-3 lg:mt-8" aria-label={t.nav.menu}>
         <a
           href={localizePath("/tour-dates", lang)}
-          class="group inline-flex min-h-12 items-center gap-4 border border-primary bg-primary px-5 text-sm font-black uppercase tracking-[0.13em] text-primary-foreground shadow-[0.3rem_0.3rem_0_var(--foreground)] transition-transform hover:-translate-y-0.5 sm:px-6"
+          class="group inline-flex min-h-12 items-center gap-4 border border-primary bg-primary px-5 text-sm font-black uppercase tracking-[0.13em] text-primary-foreground shadow-[0.3rem_0.3rem_0_var(--signal-blue)] transition-transform hover:-translate-y-0.5 sm:px-6"
         >
           {t.nav.tour}
           <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
@@ -97,7 +97,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
         <span>001 / 1000</span>
       </figcaption>
       <div class="pointer-events-none absolute inset-x-3 bottom-3 z-10 flex items-end justify-between gap-2 sm:inset-x-4 sm:bottom-4">
-        <span class="max-w-[10.5rem] border border-white/35 bg-black/55 px-2.5 py-1.5 text-[0.5rem] font-bold uppercase leading-[1.25] tracking-[0.1em] text-white/80 backdrop-blur-sm sm:max-w-none sm:text-[0.58rem] sm:tracking-[0.14em]">
+        <span class="max-w-[10.5rem] border border-accent/60 bg-black/55 px-2.5 py-1.5 text-[0.5rem] font-bold uppercase leading-[1.25] tracking-[0.1em] text-accent backdrop-blur-sm sm:max-w-none sm:text-[0.58rem] sm:tracking-[0.14em]">
           {t.hero.artworkCredit}
         </span>
         <span class="shrink-0 border border-white/35 bg-black/50 px-2.5 py-1.5 text-[0.52rem] font-bold uppercase tracking-[0.11em] text-white/70 backdrop-blur-sm sm:text-[0.58rem] sm:tracking-[0.14em]">
@@ -109,7 +109,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
 
   <div class="relative z-20 flex min-h-8 items-center justify-between gap-4 border-t border-foreground/20 bg-background px-4 text-[0.55rem] font-bold uppercase tracking-[0.13em] text-muted-foreground sm:px-7 lg:px-10">
     <span>{t.hero.badges[1]}</span>
-    <span class="hidden sm:inline">{t.hero.badges[4]}</span>
+    <span class="hidden text-signal-blue sm:inline">{t.hero.badges[4]}</span>
     <span>{t.hero.badges[5]}</span>
   </div>
 </div>
@@ -151,7 +151,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
 
     <div class="grid min-h-0 flex-1 lg:grid-cols-[0.38fr_0.62fr]">
       <div class="hidden border-r border-background/20 p-10 lg:flex lg:flex-col lg:justify-between">
-        <p class="eyebrow text-primary">{t.nav.menu}</p>
+        <p class="eyebrow text-primary-bright">{t.nav.menu}</p>
         <p class="display-type max-w-xs text-5xl uppercase leading-[0.9] text-background/20">
           {t.hero.title}
         </p>
@@ -163,7 +163,7 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
           footerNav.map((link, index) => (
             <a
               href={localizePath(link.href, lang)}
-              class="group flex min-h-14 items-center gap-4 border-b border-background/18 py-2.5 transition-colors hover:border-primary hover:text-primary sm:min-h-16"
+              class="group flex min-h-14 items-center gap-4 border-b border-background/18 py-2.5 transition-colors hover:border-primary-bright hover:text-primary-bright sm:min-h-16"
             >
               <span class="w-7 text-[0.62rem] font-bold tabular-nums text-background/40">
                 {String(index + 1).padStart(2, "0")}

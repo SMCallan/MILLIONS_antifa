@@ -142,8 +142,8 @@ const overflowNav = moreInfoNav.filter((link) => !featuredKeys.has(link.key));
           <a
             href={localizePath(link.href, lang)}
             class:list={[
-              "group flex min-h-14 items-center gap-4 border-b border-background/18 py-3 transition-colors hover:border-primary hover:text-primary",
-              isActive(link.href) ? "text-primary" : "text-background",
+              "group flex min-h-14 items-center gap-4 border-b border-background/18 py-3 transition-colors hover:border-primary-bright hover:text-primary-bright",
+              isActive(link.href) ? "text-primary-bright" : "text-background",
             ]}
             aria-current={isActive(link.href) ? "page" : undefined}
           >

@@ -38,7 +38,7 @@ const year = new Date().getFullYear();
         footerNav.map((link, index) => (
           <a
             href={localizePath(link.href, lang)}
-            class="group flex min-h-12 items-center gap-2 border-b border-background/18 py-2 text-sm font-bold transition-colors hover:border-primary hover:text-primary"
+            class="group flex min-h-12 items-center gap-2 border-b border-background/18 py-2 text-sm font-bold transition-colors hover:border-primary-bright hover:text-primary-bright"
           >
             <span class="flex-1">{navLabel(link.key)}</span>
             <span class="text-[0.58rem] tabular-nums text-background/35">
