@@ -119,7 +119,7 @@ function CtaLink({
 
 function LogoPanel({ logo, logoAlt }: { logo: string; logoAlt: string }) {
   return (
-    <div className="mx-auto w-full max-w-md border-2 border-white/80 bg-white p-3 shadow-[0.55rem_0.55rem_0_rgba(205,42,31,0.85)] sm:p-4">
+    <div className="mx-auto w-full max-w-md border-2 border-white/80 bg-white p-3 shadow-[0.55rem_0.55rem_0_var(--signal-blue)] sm:p-4">
       <img
         src={logo}
         alt={logoAlt}
@@ -244,7 +244,7 @@ function HeroContent({
               return (
                 <span key={line} className="flex items-center gap-2">
                   <Icon
-                    className={cn("size-4", index === 0 ? "text-cyan-300" : "text-red-300")}
+                    className={cn("size-4", index === 0 ? "text-cyan-300" : "text-amber-300")}
                     aria-hidden="true"
                   />
                   {line}
