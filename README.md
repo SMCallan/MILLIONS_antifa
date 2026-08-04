@@ -9,6 +9,32 @@ npm install
 npm run dev
 ```
 
+## Typography
+
+The site sets everything in [Archivo](https://fonts.google.com/specimen/Archivo)
+(SIL Open Font License), self-hosted from `@fontsource-variable/archivo`.
+
+Serve it from our own origin — **do not switch to the Google Fonts CDN.**
+Hotlinking `fonts.googleapis.com` sends every visitor's IP to Google, which a
+Munich court ruled a GDPR violation in 2022. This site's audience is largely in
+the EU, so that is a live risk rather than a theoretical one.
+
+We import the `wdth` build, which carries two axes:
+
+- weight `100-900`, so `font-black` renders a drawn 900 instead of a synthetic one
+- width `62%-125%`, so the `font-stretch: condensed` on headings actually applies
+
+Both were previously inert: the old stack was Helvetica Neue / Arial Narrow, which
+has no 900 and no width axis, and neither font exists on Android or Linux — those
+visitors fell through to a generic sans and lost the design entirely.
+
+Only the upright build is imported; the site uses no italics. Fontsource splits
+the font by `unicode-range`, so all seven languages load from the single ~90 KB
+Latin file — Catalan `l·l`, French `œ`, German `ß`, Swedish `å` and Spanish `¿`
+are all inside it, and the Latin-Extended and Vietnamese files are never fetched.
+`Layout.astro` preloads the Latin file because the display type is the largest
+thing above the fold.
+
 ## Home Page Animation
 
 `src/components/HomeAnimation.tsx` picks between two encodes at runtime and falls
