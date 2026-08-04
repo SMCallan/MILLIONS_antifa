@@ -6,7 +6,7 @@ export const site = {
     "An international touring exhibition of art, memory, and education responding to the rise of far-right and fascist ideologies.",
   email: "bookings@example.org",
   url: "https://www.millionwords.net",
-  logo: "/million-words-logo.png",
+  logo: "/million-words-logo.webp",
   logoAlt: "A Million Words Against Fascism project artwork",
   heroImage:
     "https://images.unsplash.com/photo-1766890410757-3abb563b3918?auto=format&fit=crop&fm=jpg&ixlib=rb-4.1.0&q=70&w=2200",
