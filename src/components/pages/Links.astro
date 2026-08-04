@@ -1,12 +1,20 @@
 ---
-import { CircleDashed } from "lucide-react";
+import { ArrowUpRight, ExternalLink } from "lucide-react";
 
 import { SignalFieldHero } from "@/components/SignalFieldHero";
-import { Badge } from "@/components/ui/badge";
+import { linkGroups } from "@/data/site";
 import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// `linkGroups` drives the order and the destinations; the dictionaries supply
+// the copy. Indexed loosely because the keys come from the data file rather
+// than from the dictionary's own literal type — a key present in one and not
+// the other is skipped below rather than rendering an empty card.
+type LinkCopy = { label: string; note: string };
+type GroupCopy = { title: string; items: Record<string, LinkCopy | undefined> };
+const groups = t.links.groups as unknown as Record<string, GroupCopy | undefined>;
 ---
 
 <SignalFieldHero
@@ -22,28 +30,47 @@ const t = useTranslations(lang);
   <div class="container-page">
     <div class="grid gap-10 md:grid-cols-3">
       {
-        t.links.groups.map((group) => (
-          <div>
-            <h2 class="text-xl font-black">{group.title}</h2>
-            <ul class="mt-5 grid gap-3">
-              {group.items.map((item) => (
-                <li class="rounded-md border bg-muted/40 p-4">
-                  <p class="flex items-center gap-2 text-sm font-semibold">
-                    <CircleDashed className="size-4 text-primary" aria-hidden="true" />
-                    {item.label}
-                  </p>
-                  <p class="mt-1 text-sm leading-6 text-muted-foreground">{item.note}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
-    </div>
+        linkGroups.map((group) => {
+          const groupCopy = groups[group.key];
+          if (!groupCopy) return null;
 
-    <div class="mt-10 flex items-center gap-3">
-      <Badge variant="outline">{t.common.draftNotice}</Badge>
-      <p class="text-sm text-muted-foreground">{t.links.note}</p>
+          return (
+            <div>
+              <h2 class="text-xl font-black">{groupCopy.title}</h2>
+              <ul class="mt-5 grid gap-3">
+                {group.items.map((item) => {
+                  const copy = groupCopy.items?.[item.key];
+                  if (!copy) return null;
+
+                  const href = item.external ? item.href : localizePath(item.href, lang);
+                  const Icon = item.external ? ExternalLink : ArrowUpRight;
+
+                  return (
+                    <li>
+                      <a
+                        href={href}
+                        target={item.external ? "_blank" : undefined}
+                        rel={item.external ? "noopener noreferrer" : undefined}
+                        class="group block rounded-md border bg-muted/40 p-4 transition-colors hover:border-primary hover:bg-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                      >
+                        <p class="flex items-center gap-2 text-sm font-semibold">
+                          <Icon
+                            className="size-4 shrink-0 text-primary transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                            aria-hidden="true"
+                          />
+                          {copy.label}
+                          {item.external && <span class="sr-only">({t.common.opensInNewTab})</span>}
+                        </p>
+                        <p class="mt-1 text-sm leading-6 text-muted-foreground">{copy.note}</p>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          );
+        })
+      }
     </div>
   </div>
 </section>

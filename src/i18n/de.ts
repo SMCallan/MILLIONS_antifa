@@ -31,7 +31,7 @@ export const de: TranslationOverride = {
     getInTouch: "Kontakt aufnehmen",
     comingSoon: "Demnächst",
     close: "Schließen",
-    draftNotice: "Vorläufiger Inhalt — wird vom Projektteam noch fertiggestellt.",
+    opensInNewTab: "Wird in einem neuen Tab geöffnet",
   },
   hero: {
     title: "Eine Million Worte gegen den Faschismus",
@@ -292,30 +292,29 @@ export const de: TranslationOverride = {
     heroTitle: "Links",
     heroSubtitle:
       "Partner, Mitwirkende und weiterführende Lektüre rund um das Projekt Solidaritätspark und die antifaschistische Erinnerung, aus der es schöpft.",
-    groups: [
-      {
+    groups: {
+      project: {
         title: "Das Projekt",
-        items: [
-          { label: "Vereinigung Solidaritätspark", note: "Die Organisation hinter der Ausstellung." },
-          { label: "Festival des Solidaritätsparks, Katalonien", note: "Das Festival, auf das die Tour 2027 hinführt." },
-        ],
+        items: {
+          association: { label: "Vereinigung Solidaritätspark", note: "Die Organisation hinter der Ausstellung." },
+          festival: { label: "Festival des Solidaritätsparks, Katalonien", note: "Das Festival, auf das die Tour 2027 hinführt." },
+        },
       },
-      {
+      memory: {
         title: "Geschichte und Erinnerung",
-        items: [
-          { label: "International Brigade Memorial Trust", note: "Die Erinnerung an die Internationalen Brigaden wachhalten." },
-          { label: "Vereinigung Baskische Kinder von '37", note: "Die Geschichte der während des Spanischen Bürgerkriegs evakuierten Kinder." },
-        ],
+        items: {
+          ibmt: { label: "International Brigade Memorial Trust", note: "Die Erinnerung an die Internationalen Brigaden wachhalten." },
+          basqueChildren: { label: "Vereinigung Baskische Kinder von '37", note: "Die Geschichte der während des Spanischen Bürgerkriegs evakuierten Kinder." },
+        },
       },
-      {
+      getInvolved: {
         title: "Mitmachen",
-        items: [
-          { label: "Kunstwerk beitragen", note: "Vorschaumaterial über einen sicheren Link senden." },
-          { label: "Ausstellung gastgeben", note: "Bringen Sie eine Tourstation an Ihren Ort." },
-        ],
+        items: {
+          contribute: { label: "Kunstwerk beitragen", note: "Vorschaumaterial über einen sicheren Link senden." },
+          host: { label: "Ausstellung gastgeben", note: "Bringen Sie eine Tourstation an Ihren Ort." },
+        },
       },
-    ],
-    note: "Die Linkziele werden vom Projektteam finalisiert.",
+    },
   },
   footer: {
     tagline: "Europäische Wanderausstellung des Projekts Solidaritätspark.",

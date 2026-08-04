@@ -31,7 +31,7 @@ export const ca: TranslationOverride = {
     getInTouch: "Contactar",
     comingSoon: "Ben aviat",
     close: "Tanca",
-    draftNotice: "Contingut provisional, pendent de finalitzar per l'equip del projecte.",
+    opensInNewTab: "S’obre en una pestanya nova",
   },
   hero: {
     title: "Un milió de paraules contra el feixisme",
@@ -292,30 +292,29 @@ export const ca: TranslationOverride = {
     heroTitle: "Enllaços",
     heroSubtitle:
       "Socis, col·laboradors i lectures relacionades amb el projecte Parc de la Solidaritat i la memòria antifeixista en què s'inspira.",
-    groups: [
-      {
+    groups: {
+      project: {
         title: "El projecte",
-        items: [
-          { label: "Associació Parc de la Solidaritat", note: "L'organització que hi ha darrere de l'exposició." },
-          { label: "Festival del Parc de la Solidaritat, Catalunya", note: "El festival cap al qual avança la gira de 2027." },
-        ],
+        items: {
+          association: { label: "Associació Parc de la Solidaritat", note: "L'organització que hi ha darrere de l'exposició." },
+          festival: { label: "Festival del Parc de la Solidaritat, Catalunya", note: "El festival cap al qual avança la gira de 2027." },
+        },
       },
-      {
+      memory: {
         title: "Història i memòria",
-        items: [
-          { label: "International Brigade Memorial Trust", note: "Mantenir viva la memòria de les Brigades Internacionals." },
-          { label: "Associació Nens Bascos del 37", note: "La història dels nens evacuats durant la Guerra Civil espanyola." },
-        ],
+        items: {
+          ibmt: { label: "International Brigade Memorial Trust", note: "Mantenir viva la memòria de les Brigades Internacionals." },
+          basqueChildren: { label: "Associació Nens Bascos del 37", note: "La història dels nens evacuats durant la Guerra Civil espanyola." },
+        },
       },
-      {
+      getInvolved: {
         title: "Participa",
-        items: [
-          { label: "Contribuir amb obra", note: "Envia material de vista prèvia mitjançant un enllaç segur." },
-          { label: "Acollir l'exposició", note: "Porta una parada de la gira a la teva sala." },
-        ],
+        items: {
+          contribute: { label: "Contribuir amb obra", note: "Envia material de vista prèvia mitjançant un enllaç segur." },
+          host: { label: "Acollir l'exposició", note: "Porta una parada de la gira a la teva sala." },
+        },
       },
-    ],
-    note: "Els destins dels enllaços els finalitzarà l'equip del projecte.",
+    },
   },
   footer: {
     tagline: "Exposició itinerant europea del projecte Parc de la Solidaritat.",

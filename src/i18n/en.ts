@@ -39,7 +39,7 @@ export const en = {
     getInTouch: "Get in touch",
     comingSoon: "Coming soon",
     close: "Close",
-    draftNotice: "Draft content — to be finalised by the project team.",
+    opensInNewTab: "Opens in a new tab",
   },
 
   // Hero used on the home page (logo left, title + sub text right).
@@ -316,30 +316,33 @@ export const en = {
     heroTitle: "Links",
     heroSubtitle:
       "Partners, collaborators, and further reading connected to the Solidarity Park project and the anti-fascist memory it draws on.",
-    groups: [
-      {
+    // Keyed by the ids in `linkGroups` (src/data/site.ts), which holds the
+    // destinations. Objects rather than arrays so a locale can translate one
+    // entry without replacing the whole set — deepMerge overlays arrays
+    // wholesale but merges objects key by key.
+    groups: {
+      project: {
         title: "The project",
-        items: [
-          { label: "Association Solidarity Park", note: "The organisation behind the exhibition." },
-          { label: "Solidarity Park Festival, Catalunya", note: "The festival the 2027 tour builds toward." },
-        ],
+        items: {
+          association: { label: "Association Solidarity Park", note: "The organisation behind the exhibition." },
+          festival: { label: "Solidarity Park Festival, Catalunya", note: "The festival the 2027 tour builds toward." },
+        },
       },
-      {
+      memory: {
         title: "History and memory",
-        items: [
-          { label: "International Brigade Memorial Trust", note: "Keeping the memory of the International Brigades alive." },
-          { label: "Basque Children of '37 Association", note: "The story of children evacuated during the Spanish Civil War." },
-        ],
+        items: {
+          ibmt: { label: "International Brigade Memorial Trust", note: "Keeping the memory of the International Brigades alive." },
+          basqueChildren: { label: "Basque Children of '37 Association", note: "The story of children evacuated during the Spanish Civil War." },
+        },
       },
-      {
+      getInvolved: {
         title: "Get involved",
-        items: [
-          { label: "Contribute artwork", note: "Send preview material through a secure link." },
-          { label: "Host the exhibition", note: "Bring a stop on the tour to your venue." },
-        ],
+        items: {
+          contribute: { label: "Contribute artwork", note: "Send preview material through a secure link." },
+          host: { label: "Host the exhibition", note: "Bring a stop on the tour to your venue." },
+        },
       },
-    ],
-    note: "Link destinations will be finalised by the project team.",
+    },
   },
 
   footer: {

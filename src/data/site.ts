@@ -31,6 +31,40 @@ export const moreInfoNav: NavItem[] = [
   { key: "links", href: "/links" },
 ];
 
+// Links page. `key` indexes into the `links.groups` section of the i18n
+// dictionaries so titles, labels and notes stay translated; the destination
+// lives here once, so correcting a URL is a single edit rather than seven.
+// Internal paths are localised at render time; external URLs are used verbatim.
+//
+// External destinations were verified live in August 2026. If one starts
+// 404ing, fix it here — nothing in the locale files needs touching.
+export type LinkItem = { key: string; href: string; external?: boolean };
+export type LinkGroup = { key: string; items: LinkItem[] };
+
+export const linkGroups: LinkGroup[] = [
+  {
+    key: "project",
+    items: [
+      { key: "association", href: "https://solidaritypark.com/about/", external: true },
+      { key: "festival", href: "https://solidaritypark.com/", external: true },
+    ],
+  },
+  {
+    key: "memory",
+    items: [
+      { key: "ibmt", href: "https://international-brigades.org.uk/", external: true },
+      { key: "basqueChildren", href: "https://www.basquechildren.org/", external: true },
+    ],
+  },
+  {
+    key: "getInvolved",
+    items: [
+      { key: "contribute", href: "/contribute" },
+      { key: "host", href: "/host" },
+    ],
+  },
+];
+
 // Flat list used by the footer.
 export const footerNav: NavItem[] = [
   { key: "home", href: "/" },
