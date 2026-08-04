@@ -31,7 +31,7 @@ export const sv: TranslationOverride = {
     getInTouch: "Kontakta oss",
     comingSoon: "Kommer snart",
     close: "Stäng",
-    draftNotice: "Preliminärt innehåll — färdigställs av projektteamet.",
+    opensInNewTab: "Öppnas i en ny flik",
   },
   hero: {
     title: "En miljon ord mot fascismen",
@@ -292,30 +292,29 @@ export const sv: TranslationOverride = {
     heroTitle: "Länkar",
     heroSubtitle:
       "Partner, medverkande och vidare läsning kopplade till projektet Solidaritetsparken och det antifascistiska minne det bygger på.",
-    groups: [
-      {
+    groups: {
+      project: {
         title: "Projektet",
-        items: [
-          { label: "Föreningen Solidaritetsparken", note: "Organisationen bakom utställningen." },
-          { label: "Solidaritetsparkens festival, Katalonien", note: "Festivalen som turnén 2027 leder fram till." },
-        ],
+        items: {
+          association: { label: "Föreningen Solidaritetsparken", note: "Organisationen bakom utställningen." },
+          festival: { label: "Solidaritetsparkens festival, Katalonien", note: "Festivalen som turnén 2027 leder fram till." },
+        },
       },
-      {
+      memory: {
         title: "Historia och minne",
-        items: [
-          { label: "International Brigade Memorial Trust", note: "Att hålla minnet av Internationella brigaderna levande." },
-          { label: "Föreningen Baskiska barn från -37", note: "Berättelsen om barn som evakuerades under spanska inbördeskriget." },
-        ],
+        items: {
+          ibmt: { label: "International Brigade Memorial Trust", note: "Att hålla minnet av Internationella brigaderna levande." },
+          basqueChildren: { label: "Föreningen Baskiska barn från -37", note: "Berättelsen om barn som evakuerades under spanska inbördeskriget." },
+        },
       },
-      {
+      getInvolved: {
         title: "Engagera dig",
-        items: [
-          { label: "Bidra med konst", note: "Skicka förhandsmaterial via en säker länk." },
-          { label: "Var värd för utställningen", note: "Ta ett stopp på turnén till din lokal." },
-        ],
+        items: {
+          contribute: { label: "Bidra med konst", note: "Skicka förhandsmaterial via en säker länk." },
+          host: { label: "Var värd för utställningen", note: "Ta ett stopp på turnén till din lokal." },
+        },
       },
-    ],
-    note: "Länkarnas destinationer färdigställs av projektteamet.",
+    },
   },
   footer: {
     tagline: "Europeisk vandringsutställning från projektet Solidaritetsparken.",
