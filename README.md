@@ -9,6 +9,38 @@ npm install
 npm run dev
 ```
 
+## Home Page Animation
+
+`src/components/HomeAnimation.tsx` picks between two encodes at runtime and falls
+back to the poster for reduced-motion and data-saver visitors:
+
+- `public/media/millions-home-desktop-720.mp4` — 1280x720
+- `public/media/millions-home-mobile.mp4` — 640x360, served under 768px
+- `public/media/millions-home-poster.jpg` — 960x540 poster and fallback still
+
+Full-resolution masters stay out of the repo (gitignored at the root). Cloudflare
+Pages rejects any single asset over 25 MiB, so the ~56 MB 1080p master cannot be
+served directly.
+
+This footage is unusually expensive to encode — every pixel of the frame is in
+motion, so a plain CRF 21 encode comes out *larger* than the source. A light
+temporal denoise first strips the grain that otherwise eats the bitrate. To cut
+new encodes from a new master:
+
+```bash
+ffmpeg -i "final 1.mp4" -an -vf "hqdn3d=3:2:6:6,scale=1280:720:flags=lanczos" -c:v libx264 -preset slow -crf 32 -profile:v high -level 4.0 -pix_fmt yuv420p -movflags +faststart public/media/millions-home-desktop-720.mp4
+```
+
+```bash
+ffmpeg -i "final 1.mp4" -an -vf "hqdn3d=3:2:6:6,scale=640:360:flags=lanczos" -c:v libx264 -preset slow -crf 32 -profile:v high -level 3.1 -pix_fmt yuv420p -movflags +faststart public/media/millions-home-mobile.mp4
+```
+
+Then refresh the poster from a frame where the medallion is on screen:
+
+```bash
+ffmpeg -i public/media/millions-home-desktop-720.mp4 -vf "select='eq(n\,240)',scale=960:540:flags=lanczos" -frames:v 1 -q:v 5 public/media/millions-home-poster.jpg
+```
+
 ## Cloudflare Pages
 
 This project is configured for Cloudflare Pages as a static Astro build with Pages Functions for form posts.
