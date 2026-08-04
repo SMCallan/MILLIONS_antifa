@@ -31,7 +31,7 @@ export const es: TranslationOverride = {
     getInTouch: "Contactar",
     comingSoon: "Próximamente",
     close: "Cerrar",
-    draftNotice: "Contenido provisional, pendiente de finalizar por el equipo del proyecto.",
+    opensInNewTab: "Se abre en una pestaña nueva",
   },
   hero: {
     title: "Un millón de palabras contra el fascismo",
@@ -292,30 +292,29 @@ export const es: TranslationOverride = {
     heroTitle: "Enlaces",
     heroSubtitle:
       "Socios, colaboradores y lecturas relacionadas con el proyecto Parque de la Solidaridad y la memoria antifascista en la que se inspira.",
-    groups: [
-      {
+    groups: {
+      project: {
         title: "El proyecto",
-        items: [
-          { label: "Asociación Parque de la Solidaridad", note: "La organización que hay detrás de la exposición." },
-          { label: "Festival del Parque de la Solidaridad, Cataluña", note: "El festival hacia el que avanza la gira de 2027." },
-        ],
+        items: {
+          association: { label: "Asociación Parque de la Solidaridad", note: "La organización que hay detrás de la exposición." },
+          festival: { label: "Festival del Parque de la Solidaridad, Cataluña", note: "El festival hacia el que avanza la gira de 2027." },
+        },
       },
-      {
+      memory: {
         title: "Historia y memoria",
-        items: [
-          { label: "International Brigade Memorial Trust", note: "Mantener viva la memoria de las Brigadas Internacionales." },
-          { label: "Asociación Niños Vascos del 37", note: "La historia de los niños evacuados durante la Guerra Civil española." },
-        ],
+        items: {
+          ibmt: { label: "International Brigade Memorial Trust", note: "Mantener viva la memoria de las Brigadas Internacionales." },
+          basqueChildren: { label: "Asociación Niños Vascos del 37", note: "La historia de los niños evacuados durante la Guerra Civil española." },
+        },
       },
-      {
+      getInvolved: {
         title: "Participa",
-        items: [
-          { label: "Contribuir con obra", note: "Envía material de vista previa mediante un enlace seguro." },
-          { label: "Acoger la exposición", note: "Lleva una parada de la gira a tu sala." },
-        ],
+        items: {
+          contribute: { label: "Contribuir con obra", note: "Envía material de vista previa mediante un enlace seguro." },
+          host: { label: "Acoger la exposición", note: "Lleva una parada de la gira a tu sala." },
+        },
       },
-    ],
-    note: "Los destinos de los enlaces los finalizará el equipo del proyecto.",
+    },
   },
   footer: {
     tagline: "Exposición itinerante europea del proyecto Parque de la Solidaridad.",

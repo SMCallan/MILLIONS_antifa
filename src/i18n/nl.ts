@@ -31,7 +31,7 @@ export const nl: TranslationOverride = {
     getInTouch: "Neem contact op",
     comingSoon: "Binnenkort",
     close: "Sluiten",
-    draftNotice: "Voorlopige inhoud — wordt nog afgerond door het projectteam.",
+    opensInNewTab: "Opent in een nieuw tabblad",
   },
   hero: {
     title: "Een miljoen woorden tegen het fascisme",
@@ -292,30 +292,29 @@ export const nl: TranslationOverride = {
     heroTitle: "Links",
     heroSubtitle:
       "Partners, medewerkers en verdere lectuur verbonden met het project Solidariteitspark en de antifascistische herinnering waaruit het put.",
-    groups: [
-      {
+    groups: {
+      project: {
         title: "Het project",
-        items: [
-          { label: "Vereniging Solidariteitspark", note: "De organisatie achter de tentoonstelling." },
-          { label: "Festival van het Solidariteitspark, Catalonië", note: "Het festival waar de tour van 2027 naartoe werkt." },
-        ],
+        items: {
+          association: { label: "Vereniging Solidariteitspark", note: "De organisatie achter de tentoonstelling." },
+          festival: { label: "Festival van het Solidariteitspark, Catalonië", note: "Het festival waar de tour van 2027 naartoe werkt." },
+        },
       },
-      {
+      memory: {
         title: "Geschiedenis en herinnering",
-        items: [
-          { label: "International Brigade Memorial Trust", note: "De herinnering aan de Internationale Brigades levend houden." },
-          { label: "Vereniging Baskische Kinderen van '37", note: "Het verhaal van kinderen die tijdens de Spaanse Burgeroorlog werden geëvacueerd." },
-        ],
+        items: {
+          ibmt: { label: "International Brigade Memorial Trust", note: "De herinnering aan de Internationale Brigades levend houden." },
+          basqueChildren: { label: "Vereniging Baskische Kinderen van '37", note: "Het verhaal van kinderen die tijdens de Spaanse Burgeroorlog werden geëvacueerd." },
+        },
       },
-      {
+      getInvolved: {
         title: "Doe mee",
-        items: [
-          { label: "Kunstwerk bijdragen", note: "Stuur previewmateriaal via een beveiligde link." },
-          { label: "Gastheer zijn van de tentoonstelling", note: "Breng een halte van de tour naar jouw locatie." },
-        ],
+        items: {
+          contribute: { label: "Kunstwerk bijdragen", note: "Stuur previewmateriaal via een beveiligde link." },
+          host: { label: "Gastheer zijn van de tentoonstelling", note: "Breng een halte van de tour naar jouw locatie." },
+        },
       },
-    ],
-    note: "De linkbestemmingen worden door het projectteam afgerond.",
+    },
   },
   footer: {
     tagline: "Europese reizende tentoonstelling van het project Solidariteitspark.",
