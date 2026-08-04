@@ -8,5 +8,10 @@ dist/
 .DS_Store
 public/masterCOLOURMW.jpg.png
 
+# Full-resolution video masters kept at the repo root. The web encodes that ship
+# live in public/media/ — see the README for the ffmpeg commands.
+/*.mp4
+/*.mov
+
 # Local tooling / editor config
 .claude/
