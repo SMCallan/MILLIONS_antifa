@@ -1,3 +1,9 @@
+/* Self-hosted Archivo. Shipped from our own origin rather than the Google Fonts
+   CDN so visitor IPs are never handed to a third party — the audience for this
+   site is largely in the EU. The wdth build carries both a 100-900 weight axis
+   and a 62%-125% width axis, which is what makes the condensed display styles
+   below real rather than synthesised. Normal only; the site uses no italics. */
+@import "@fontsource-variable/archivo/wdth.css";
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -79,8 +85,8 @@
 }
 
 @theme inline {
-  --font-sans: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Arial Narrow", "Aptos Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-sans: "Archivo Variable", "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Archivo Variable", "Arial Narrow", "Aptos Narrow", "Helvetica Neue", Arial, sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
