@@ -12,6 +12,10 @@ import {
 } from "@/i18n";
 import { languages } from "@/i18n/languages";
 import "@/styles/global.css";
+// Hashed build URL for the Latin subset, preloaded below. The display type is
+// the largest thing above the fold, so waiting on the stylesheet to discover
+// this file is a visible swap.
+import archivoLatin from "@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2?url";
 
 interface Props {
   title?: string;
@@ -57,6 +61,7 @@ const alternates = isLocalizedPath(Astro.url.pathname)
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content={lang} />
+    <link rel="preload" href={archivoLatin} as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="canonical" href={canonicalHref} />
     {alternates.map(({ code, href }) => <link rel="alternate" hreflang={code} href={href} />)}
