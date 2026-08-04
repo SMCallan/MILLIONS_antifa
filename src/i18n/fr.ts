@@ -31,7 +31,7 @@ export const fr: TranslationOverride = {
     getInTouch: "Nous contacter",
     comingSoon: "Bientôt disponible",
     close: "Fermer",
-    draftNotice: "Contenu provisoire — à finaliser par l'équipe du projet.",
+    opensInNewTab: "S’ouvre dans un nouvel onglet",
   },
   hero: {
     title: "Un million de mots contre le fascisme",
@@ -292,30 +292,29 @@ export const fr: TranslationOverride = {
     heroTitle: "Liens",
     heroSubtitle:
       "Partenaires, collaborateurs et lectures complémentaires liés au projet Parc de la Solidarité et à la mémoire antifasciste dont il s'inspire.",
-    groups: [
-      {
+    groups: {
+      project: {
         title: "Le projet",
-        items: [
-          { label: "Association Parc de la Solidarité", note: "L'organisation derrière l'exposition." },
-          { label: "Festival du Parc de la Solidarité, Catalogne", note: "Le festival vers lequel mène la tournée 2027." },
-        ],
+        items: {
+          association: { label: "Association Parc de la Solidarité", note: "L'organisation derrière l'exposition." },
+          festival: { label: "Festival du Parc de la Solidarité, Catalogne", note: "Le festival vers lequel mène la tournée 2027." },
+        },
       },
-      {
+      memory: {
         title: "Histoire et mémoire",
-        items: [
-          { label: "International Brigade Memorial Trust", note: "Perpétuer la mémoire des Brigades internationales." },
-          { label: "Association des enfants basques de 37", note: "L'histoire des enfants évacués pendant la guerre civile espagnole." },
-        ],
+        items: {
+          ibmt: { label: "International Brigade Memorial Trust", note: "Perpétuer la mémoire des Brigades internationales." },
+          basqueChildren: { label: "Association des enfants basques de 37", note: "L'histoire des enfants évacués pendant la guerre civile espagnole." },
+        },
       },
-      {
+      getInvolved: {
         title: "Participer",
-        items: [
-          { label: "Contribuer une œuvre", note: "Envoyez du matériel d'aperçu via un lien sécurisé." },
-          { label: "Accueillir l'exposition", note: "Amenez une étape de la tournée dans votre lieu." },
-        ],
+        items: {
+          contribute: { label: "Contribuer une œuvre", note: "Envoyez du matériel d'aperçu via un lien sécurisé." },
+          host: { label: "Accueillir l'exposition", note: "Amenez une étape de la tournée dans votre lieu." },
+        },
       },
-    ],
-    note: "Les destinations des liens seront finalisées par l'équipe du projet.",
+    },
   },
   footer: {
     tagline: "Exposition itinérante européenne du projet Parc de la Solidarité.",
