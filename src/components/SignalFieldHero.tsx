@@ -19,6 +19,7 @@ type SignalFieldHeroProps = {
   badges?: string[];
   statusLines?: string[];
   compact?: boolean;
+  showCtas?: boolean;
   /**
    * "split" renders a two-column hero (logo/graphic left, title + sub text
    * right) matching the site template. "stack" is the original single-column
@@ -142,6 +143,7 @@ function HeroContent({
   layout,
   logo,
   logoAlt,
+  showCtas,
 }: {
   reducedMotion: boolean;
   headline: string;
@@ -153,6 +155,7 @@ function HeroContent({
   layout: "stack" | "split";
   logo?: string;
   logoAlt?: string;
+  showCtas: boolean;
 }) {
   const introVariants = {
     hidden: { opacity: reducedMotion ? 1 : 0, y: reducedMotion ? 0 : 18 },
@@ -187,10 +190,12 @@ function HeroContent({
               >
                 {subtitle}
               </motion.p>
-              <motion.div variants={introVariants} className="mt-8 flex flex-wrap gap-3">
-                <CtaLink cta={primaryCta} variant="primary" />
-                <CtaLink cta={secondaryCta} variant="secondary" />
-              </motion.div>
+              {showCtas ? (
+                <motion.div variants={introVariants} className="mt-8 flex flex-wrap gap-3">
+                  <CtaLink cta={primaryCta} variant="primary" />
+                  <CtaLink cta={secondaryCta} variant="secondary" />
+                </motion.div>
+              ) : null}
             </div>
           </div>
         ) : (
@@ -209,10 +214,12 @@ function HeroContent({
               {subtitle}
             </motion.p>
 
-            <motion.div variants={introVariants} className="mt-9 flex flex-wrap gap-3">
-              <CtaLink cta={primaryCta} variant="primary" />
-              <CtaLink cta={secondaryCta} variant="secondary" />
-            </motion.div>
+            {showCtas ? (
+              <motion.div variants={introVariants} className="mt-9 flex flex-wrap gap-3">
+                <CtaLink cta={primaryCta} variant="primary" />
+                <CtaLink cta={secondaryCta} variant="secondary" />
+              </motion.div>
+            ) : null}
           </div>
         )}
 
@@ -266,6 +273,7 @@ export function SignalFieldHero({
   badges = defaultBadges,
   statusLines = defaultStatusLines,
   compact = false,
+  showCtas = true,
   layout = "stack",
   logo,
   logoAlt,
@@ -350,6 +358,7 @@ export function SignalFieldHero({
           layout={layout}
           logo={logo}
           logoAlt={logoAlt}
+          showCtas={showCtas}
         />
       </div>
     </section>
