@@ -5,7 +5,7 @@ import type { TranslationOverride } from "./types";
 
 export const sv: TranslationOverride = {
   meta: {
-    tagline: "Europeisk vandringsutställning från projektet Solidaritetsparken",
+    tagline: "Europeisk vandringsutställning från projektet Solidarity Park",
     description:
       "En internationell vandringsutställning om konst, minne och utbildning som svar på framväxten av högerextrema och fascistiska ideologier.",
   },
@@ -35,13 +35,13 @@ export const sv: TranslationOverride = {
   },
   hero: {
     title: "En miljon ord mot fascismen",
-    subtitle: "Europeisk vandringsutställning från projektet Solidaritetsparken.",
+    subtitle: "Europeisk vandringsutställning från projektet Solidarity Park.",
     artworkCredit: "Animation och logotyp: Roberto Ford",
     lede: "Om en bild säger tusen ord, vad skapar då tusen konstnärer? En miljon ord, vart och ett ur ett unikt perspektiv, som tillsammans bildar en internationell vandringsutställning mot fascismen.",
     primaryCta: "Turnédatum",
     secondaryCta: "Bidra med konst",
     badges: [
-      "Solidaritetsparken",
+      "Solidarity Park",
       "Internationell turné",
       "1 000 unga konstnärer",
       "Internationella brigaderna",
@@ -58,8 +58,8 @@ export const sv: TranslationOverride = {
     conceptTitle: "Tusen unga konstnärer. En miljon ord mot fascismen.",
     conceptBody: [
       "Om en bild säger tusen ord skapar tusen konstnärer en miljon ord. Utställningen för samman dessa röster som ett internationellt svar på framväxten av högerextrema och fascistiska ideologier.",
-      "Till juni 2026 kommer projektet Solidaritetsparken att ha möjliggjort mer än 1 000 visuella verk av unga genom sitt utbildningsinitiativ om spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet.",
-      "Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027, berättelsen som bidrog till att starta Föreningen Solidaritetsparkens arbete med konst, minne och utbildning.",
+      "Till juni 2026 kommer projektet Solidarity Park att ha möjliggjort mer än 1 000 visuella verk av unga genom sitt utbildningsinitiativ om spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet.",
+      "Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027, berättelsen som bidrog till att starta arbetet inom Föreningen Solidarity Park med konst, minne och utbildning.",
     ],
     stats: [
       { value: "1 000+", label: "verk av unga konstnärer" },
@@ -69,7 +69,7 @@ export const sv: TranslationOverride = {
     installationBadge: "Installation",
     installationTitle: "Solidaritetsrummet står i utställningens centrum.",
     installationBody:
-      "Inuti är rummet planerat som en vägg-till-vägg-presentation av 1 000 vykortsstora bilder skapade genom projektet Solidaritetsparken. Utanför kan de gatuvända väggarna samla ytterligare 1 000 nya bilder skapade av besökare, skolor, högskolor och deltagare från lokalsamhället under turnén.",
+      "Inuti är rummet planerat som en vägg-till-vägg-presentation av 1 000 vykortsstora bilder skapade genom projektet Solidarity Park. Utanför kan de gatuvända väggarna samla ytterligare 1 000 nya bilder skapade av besökare, skolor, högskolor och deltagare från lokalsamhället under turnén.",
     commissionsTitle: "Internationella konstuppdrag",
     commissionsBody:
       "Runt Solidaritetsrummet finns ett kurerat program inspirerat av miljontals berättelser mot fascismen, med film, animation, skulptur, måleri, illustration och poesi.",
@@ -84,9 +84,9 @@ export const sv: TranslationOverride = {
     contributeCta: "Bidra med konst",
   },
   tourDates: {
-    heroTitle: "Solidaritetsparkens internationella turné.",
+    heroTitle: "Den internationella turnén för Solidarity Park.",
     heroSubtitle:
-      "Turnén är planerad kring skolor, fackförbund, konstlokaler, grupper från Internationella brigaderna, körer, högskolor och medborgarpartner, och leder fram till Solidaritetsparkens festival i Katalonien.",
+      "Turnén är planerad kring skolor, fackförbund, konstlokaler, grupper från Internationella brigaderna, körer, högskolor och medborgarpartner, och leder fram till festivalen för Solidarity Park i Katalonien.",
     heroPrimaryCta: "Visa vägen",
     heroSecondaryCta: "Var värd för utställningen",
     routeBadge: "Anteckningar om vägen",
@@ -111,12 +111,12 @@ export const sv: TranslationOverride = {
         body: "Om en bild säger tusen ord skapar tusen konstnärer en miljon ord. Varje bidrag är ett enskilt perspektiv, och tillsammans bildar de ett internationellt, kollektivt svar på högerextrema och fascistiska ideologier.",
       },
       {
-        heading: "Förankrat i projektet Solidaritetsparken",
-        body: "Utställningen växer ur Solidaritetsparkens utbildningsinitiativ, som introducerar unga till spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet. Till juni 2026 kommer projektet att ha möjliggjort mer än 1 000 visuella verk av unga.",
+        heading: "Förankrat i projektet Solidarity Park",
+        body: "Utställningen växer ur utbildningsinitiativet inom Solidarity Park, som introducerar unga till spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet. Till juni 2026 kommer projektet att ha möjliggjort mer än 1 000 visuella verk av unga.",
       },
       {
         heading: "Mot Ciudad de Barcelona-minnet",
-        body: "Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027 – berättelsen som bidrog till att starta Föreningen Solidaritetsparkens arbete med konst, minne och utbildning.",
+        body: "Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027 – berättelsen som bidrog till att starta arbetet inom Föreningen Solidarity Park med konst, minne och utbildning.",
       },
       {
         heading: "Konst, minne och utbildning",
@@ -212,7 +212,7 @@ export const sv: TranslationOverride = {
       "Berätta om lokalen, publiken, utbildningskopplingar, lokal historia och de datum du överväger.",
     conditionsCta: "Läs villkoren för värdskap",
     features: [
-      "Utställningen kretsar kring Solidaritetsrummet, en installation av vykortsstora verk skapade genom projektet Solidaritetsparken.",
+      "Utställningen kretsar kring Solidaritetsrummet, en installation av vykortsstora verk skapade genom projektet Solidarity Park.",
       "Utåtvända väggar kan samla nya vykort gjorda av besökare, skolor och deltagare från lokalsamhället under turnén.",
       "Lokaler kan lägga till lokal historia, konstuppdrag, poesi, musik, workshops och lokalt antifascistiskt arbete där utrymmet tillåter.",
     ],
@@ -282,7 +282,7 @@ export const sv: TranslationOverride = {
   gallery: {
     heroTitle: "Galleri",
     heroSubtitle:
-      "Ett urval av verk från projektet Solidaritetsparken och vandringsutställningen. Bilder läggs till allteftersom samlingen växer.",
+      "Ett urval av verk från projektet Solidarity Park och vandringsutställningen. Bilder läggs till allteftersom samlingen växer.",
     placeholderTitle: "Galleri kommer snart",
     placeholderBody:
       "Allteftersom unga konstnärers verk och beställda stycken bekräftas för turnén visas ett urval här. Bidrag som skickas via den säkra länken granskas privat och publiceras inte automatiskt.",
@@ -291,13 +291,13 @@ export const sv: TranslationOverride = {
   links: {
     heroTitle: "Länkar",
     heroSubtitle:
-      "Partner, medverkande och vidare läsning kopplade till projektet Solidaritetsparken och det antifascistiska minne det bygger på.",
+      "Partner, medverkande och vidare läsning kopplade till projektet Solidarity Park och det antifascistiska minne det bygger på.",
     groups: {
       project: {
         title: "Projektet",
         items: {
-          association: { label: "Föreningen Solidaritetsparken", note: "Organisationen bakom utställningen." },
-          festival: { label: "Solidaritetsparkens festival, Katalonien", note: "Festivalen som turnén 2027 leder fram till." },
+          association: { label: "Föreningen Solidarity Park", note: "Organisationen bakom utställningen." },
+          festival: { label: "Festivalen för Solidarity Park, Katalonien", note: "Festivalen som turnén 2027 leder fram till." },
         },
       },
       memory: {
@@ -317,7 +317,7 @@ export const sv: TranslationOverride = {
     },
   },
   footer: {
-    tagline: "Europeisk vandringsutställning från projektet Solidaritetsparken.",
+    tagline: "Europeisk vandringsutställning från projektet Solidarity Park.",
     navTitle: "Utforska",
   },
 };

@@ -52,7 +52,7 @@ export const en = {
     secondaryCta: "Contribute artwork",
     badges: [
       "Solidarity Park",
-      "International tour",
+      "International Brigades",
       "1,000 young artists",
       "International Brigades",
       "Art, memory, education",
@@ -96,15 +96,15 @@ export const en = {
   },
 
   tourDates: {
-    heroTitle: "Solidarity Park International Tour.",
+    heroTitle: "Million Words Against Fascism Tour.",
     heroSubtitle:
-      "The tour is planned around schools, unions, arts venues, International Brigade groups, choirs, colleges, and civic partners, building toward the Solidarity Park Festival in Catalunya.",
+      "The tour is in collaboration with Artists across the world, Schools, Art Colleges, Trade Unions, Arts Venues, International Brigade groups, Poets, Radical Choirs, and Solidarity Campaign groups all building toward the Solidarity Park Festival in Catalunya May 2027.",
     heroPrimaryCta: "View route",
     heroSecondaryCta: "Host the exhibition",
     routeBadge: "Route notes",
-    routeTitle: "Planned locations and principal collaborators.",
+    routeTitle: "Locations",
     routeBody:
-      "Locations are indicative. Dates and details will be confirmed with each venue and published here.",
+      "Full venues, times and activities will be published when confirmed.",
     stop: "Stop",
     pause: "Pause",
     tbc: "TBC",
@@ -121,23 +121,27 @@ export const en = {
   concept: {
     heroTitle: "The concept",
     heroSubtitle:
-      "A thousand young artists answering the rise of fascism with a million words, gathered into one touring exhibition.",
+      "A thousand young artists answering the rise of fascism gathered into one touring exhibition where 1,000 more will add their art.",
     sections: [
       {
         heading: "A million words",
-        body: "If a picture tells a thousand words, a thousand artists create a million words. Each contribution is a single perspective, and together they form an international, collective answer to far-right and fascist ideologies.",
+        body: "The saying goes, ‘an image is worth a thousand words.’ If so, then a thousand young international artists in this exhibition tour will create a million words. Each contribution is their unique critical historical understanding, and together they form an international, collective answer to far-right and fascist ideologies today.",
       },
       {
         heading: "Rooted in the Solidarity Park project",
-        body: "The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project will have facilitated more than 1,000 visual artworks by young people.",
+        body: "The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project has facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.",
       },
       {
-        heading: "Toward the Ciudad de Barcelona anniversary",
-        body: "The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027 — the story that helped launch Association Solidarity Park's work in art, memory, and education.",
+        heading: "A thousand more images",
+        body: "As the tour rolls out across Europe, we invite young people and the public to add 1,000 more images to the exhibition, creating a movement of millions and millions of words against the rise of fascistic ideology.",
       },
       {
-        heading: "Art, memory, and education",
-        body: "Around the central Solidarity Room, a curated programme of film, animation, sculpture, painting, illustration, and poetry carries millions of stories against fascism, connecting historical memory with the work of a new generation.",
+        heading: "International Artists",
+        body: "Established international artists have also been invited to exhibit paintings, sculptures, performances, and multimedia pieces inspired by the exhibition title and the work of the Artists' International Association of the 1930s.",
+      },
+      {
+        heading: "Towards Solidarity Park Festival 30th May 2027 in Catalunya",
+        body: "The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of the Solidarity Park Association, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.",
       },
     ],
   },
