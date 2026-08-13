@@ -15,19 +15,17 @@ const t = useTranslations(lang);
   compact
   headline={t.concept.heroTitle}
   subtitle={t.concept.heroSubtitle}
-  primaryCta={{ label: t.hero.primaryCta, href: localizePath("/tour-dates", lang) }}
-  secondaryCta={{ label: t.hero.secondaryCta, href: localizePath("/contribute", lang) }}
+  showCtas={false}
 />
 
 <section class="section-y bg-background">
   <div class="container-page grid gap-10 lg:grid-cols-[0.7fr_1.3fr] lg:items-start">
     <div class="lg:sticky lg:top-28">
       <Badge variant="secondary">{t.nav.concept}</Badge>
-      <p class="mt-4 text-lg font-medium leading-8 text-muted-foreground">{t.meta.tagline}</p>
       <img
         src="/million-words-logo.webp"
         alt={t.meta.siteName}
-        class="mt-8 w-full max-w-xs rounded-md border bg-white object-contain p-2 shadow-sm"
+        class="mt-5 w-full max-w-xs rounded-md border bg-white object-contain p-2 shadow-sm"
         loading="lazy"
         decoding="async"
       />

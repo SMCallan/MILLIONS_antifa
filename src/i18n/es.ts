@@ -5,7 +5,7 @@ import type { TranslationOverride } from "./types";
 
 export const es: TranslationOverride = {
   meta: {
-    tagline: "Exposición itinerante europea del proyecto Parque de la Solidaridad",
+    tagline: "Exposición itinerante europea del proyecto Solidarity Park",
     description:
       "Una exposición itinerante internacional de arte, memoria y educación como respuesta al auge de las ideologías de extrema derecha y fascistas.",
   },
@@ -35,13 +35,13 @@ export const es: TranslationOverride = {
   },
   hero: {
     title: "Un millón de palabras contra el fascismo",
-    subtitle: "Exposición itinerante europea del proyecto Parque de la Solidaridad.",
+    subtitle: "Exposición itinerante europea del proyecto Solidarity Park.",
     artworkCredit: "Animación y logotipo: Roberto Ford",
     lede: "Si una imagen dice mil palabras, ¿qué crean mil artistas? Un millón de palabras, cada una desde una perspectiva única, formando una exposición itinerante internacional contra el fascismo.",
     primaryCta: "Fechas de la gira",
     secondaryCta: "Contribuir con obra",
     badges: [
-      "Parque de la Solidaridad",
+      "Solidarity Park",
       "Gira internacional",
       "1.000 jóvenes artistas",
       "Brigadas Internacionales",
@@ -58,8 +58,8 @@ export const es: TranslationOverride = {
     conceptTitle: "Mil jóvenes artistas. Un millón de palabras contra el fascismo.",
     conceptBody: [
       "Si una imagen dice mil palabras, mil artistas crean un millón de palabras. La exposición reúne esas voces como respuesta internacional al auge de las ideologías de extrema derecha y fascistas.",
-      "Para junio de 2026, el proyecto Parque de la Solidaridad habrá facilitado más de 1.000 obras visuales de jóvenes a través de su iniciativa educativa sobre la Guerra Civil española, las Brigadas Internacionales y las lecciones de la solidaridad internacional.",
-      "La gira de 2027 avanza hacia el 90.º aniversario del hundimiento del Ciudad de Barcelona, el 30 de mayo de 2027, la historia que ayudó a poner en marcha el trabajo de la Asociación Parque de la Solidaridad en arte, memoria y educación.",
+      "Para junio de 2026, el proyecto Solidarity Park habrá facilitado más de 1.000 obras visuales de jóvenes a través de su iniciativa educativa sobre la Guerra Civil española, las Brigadas Internacionales y las lecciones de la solidaridad internacional.",
+      "La gira de 2027 avanza hacia el 90.º aniversario del hundimiento del Ciudad de Barcelona, el 30 de mayo de 2027, la historia que ayudó a poner en marcha el trabajo de la Asociación Solidarity Park en arte, memoria y educación.",
     ],
     stats: [
       { value: "1.000+", label: "obras de jóvenes artistas" },
@@ -69,7 +69,7 @@ export const es: TranslationOverride = {
     installationBadge: "Instalación",
     installationTitle: "La Sala de la Solidaridad ocupa el centro de la exposición.",
     installationBody:
-      "En el interior, la sala se plantea como una exposición de pared a pared con 1.000 imágenes de tamaño postal creadas a través del proyecto Parque de la Solidaridad. En el exterior, las paredes que dan a la calle pueden reunir otras 1.000 imágenes nuevas creadas por visitantes, escuelas, institutos y participantes de la comunidad durante la gira.",
+      "En el interior, la sala se plantea como una exposición de pared a pared con 1.000 imágenes de tamaño postal creadas a través del proyecto Solidarity Park. En el exterior, las paredes que dan a la calle pueden reunir otras 1.000 imágenes nuevas creadas por visitantes, escuelas, institutos y participantes de la comunidad durante la gira.",
     commissionsTitle: "Encargos a artistas internacionales",
     commissionsBody:
       "En torno a la Sala de la Solidaridad habrá un programa comisariado inspirado en millones de historias contra el fascismo, con cine, animación, escultura, pintura, ilustración y poesía.",
@@ -84,9 +84,9 @@ export const es: TranslationOverride = {
     contributeCta: "Contribuir con obra",
   },
   tourDates: {
-    heroTitle: "Gira internacional del Parque de la Solidaridad.",
+    heroTitle: "Gira internacional de Solidarity Park.",
     heroSubtitle:
-      "La gira se organiza en torno a escuelas, sindicatos, salas de arte, grupos de las Brigadas Internacionales, corales, institutos y socios cívicos, avanzando hacia el Festival del Parque de la Solidaridad en Cataluña.",
+      "La gira se organiza en torno a escuelas, sindicatos, salas de arte, grupos de las Brigadas Internacionales, corales, institutos y socios cívicos, avanzando hacia el Festival de Solidarity Park en Cataluña.",
     heroPrimaryCta: "Ver ruta",
     heroSecondaryCta: "Acoger la exposición",
     routeBadge: "Notas de la ruta",
@@ -111,12 +111,12 @@ export const es: TranslationOverride = {
         body: "Si una imagen dice mil palabras, mil artistas crean un millón de palabras. Cada contribución es una perspectiva única y, juntas, forman una respuesta internacional y colectiva a las ideologías de extrema derecha y fascistas.",
       },
       {
-        heading: "Arraigado en el proyecto Parque de la Solidaridad",
-        body: "La exposición surge de la iniciativa educativa del proyecto Parque de la Solidaridad, que acerca a los jóvenes a la Guerra Civil española, las Brigadas Internacionales y las lecciones de la solidaridad internacional. Para junio de 2026, el proyecto habrá facilitado más de 1.000 obras visuales de jóvenes.",
+        heading: "Arraigado en el proyecto Solidarity Park",
+        body: "La exposición surge de la iniciativa educativa del proyecto Solidarity Park, que acerca a los jóvenes a la Guerra Civil española, las Brigadas Internacionales y las lecciones de la solidaridad internacional. Para junio de 2026, el proyecto habrá facilitado más de 1.000 obras visuales de jóvenes.",
       },
       {
         heading: "Hacia el aniversario del Ciudad de Barcelona",
-        body: "La gira de 2027 avanza hacia el 90.º aniversario del hundimiento del Ciudad de Barcelona, el 30 de mayo de 2027: la historia que ayudó a poner en marcha el trabajo de la Asociación Parque de la Solidaridad en arte, memoria y educación.",
+        body: "La gira de 2027 avanza hacia el 90.º aniversario del hundimiento del Ciudad de Barcelona, el 30 de mayo de 2027: la historia que ayudó a poner en marcha el trabajo de la Asociación Solidarity Park en arte, memoria y educación.",
       },
       {
         heading: "Arte, memoria y educación",
@@ -212,7 +212,7 @@ export const es: TranslationOverride = {
       "Cuéntanos sobre la sala, el público, los vínculos educativos, la historia local y las fechas que estás considerando.",
     conditionsCta: "Leer las condiciones de acogida",
     features: [
-      "La exposición gira en torno a la Sala de la Solidaridad, una instalación de obras de tamaño postal creadas a través del proyecto Parque de la Solidaridad.",
+      "La exposición gira en torno a la Sala de la Solidaridad, una instalación de obras de tamaño postal creadas a través del proyecto Solidarity Park.",
       "Las paredes exteriores pueden reunir nuevas postales hechas por visitantes, escuelas y participantes de la comunidad durante la gira.",
       "Las salas pueden añadir historia local, encargos artísticos, poesía, música, talleres y obra antifascista local cuando el espacio lo permita.",
     ],
@@ -282,7 +282,7 @@ export const es: TranslationOverride = {
   gallery: {
     heroTitle: "Galería",
     heroSubtitle:
-      "Una selección de obras del proyecto Parque de la Solidaridad y de la exposición itinerante. Se añadirán imágenes a medida que crezca la colección.",
+      "Una selección de obras del proyecto Solidarity Park y de la exposición itinerante. Se añadirán imágenes a medida que crezca la colección.",
     placeholderTitle: "Galería próximamente",
     placeholderBody:
       "A medida que se confirmen para la gira las obras de jóvenes artistas y las piezas encargadas, aquí se mostrará una selección. Las contribuciones enviadas mediante el enlace seguro se revisan de forma privada y no se publican automáticamente.",
@@ -291,13 +291,13 @@ export const es: TranslationOverride = {
   links: {
     heroTitle: "Enlaces",
     heroSubtitle:
-      "Socios, colaboradores y lecturas relacionadas con el proyecto Parque de la Solidaridad y la memoria antifascista en la que se inspira.",
+      "Socios, colaboradores y lecturas relacionadas con el proyecto Solidarity Park y la memoria antifascista en la que se inspira.",
     groups: {
       project: {
         title: "El proyecto",
         items: {
-          association: { label: "Asociación Parque de la Solidaridad", note: "La organización que hay detrás de la exposición." },
-          festival: { label: "Festival del Parque de la Solidaridad, Cataluña", note: "El festival hacia el que avanza la gira de 2027." },
+          association: { label: "Asociación Solidarity Park", note: "La organización que hay detrás de la exposición." },
+          festival: { label: "Festival de Solidarity Park, Cataluña", note: "El festival hacia el que avanza la gira de 2027." },
         },
       },
       memory: {
@@ -317,7 +317,7 @@ export const es: TranslationOverride = {
     },
   },
   footer: {
-    tagline: "Exposición itinerante europea del proyecto Parque de la Solidaridad.",
+    tagline: "Exposición itinerante europea del proyecto Solidarity Park.",
     navTitle: "Explorar",
   },
 };

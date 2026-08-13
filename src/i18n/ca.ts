@@ -5,7 +5,7 @@ import type { TranslationOverride } from "./types";
 
 export const ca: TranslationOverride = {
   meta: {
-    tagline: "Exposició itinerant europea del projecte Parc de la Solidaritat",
+    tagline: "Exposició itinerant europea del projecte Solidarity Park",
     description:
       "Una exposició itinerant internacional d'art, memòria i educació com a resposta a l'auge de les ideologies d'extrema dreta i feixistes.",
   },
@@ -35,13 +35,13 @@ export const ca: TranslationOverride = {
   },
   hero: {
     title: "Un milió de paraules contra el feixisme",
-    subtitle: "Exposició itinerant europea del projecte Parc de la Solidaritat.",
+    subtitle: "Exposició itinerant europea del projecte Solidarity Park.",
     artworkCredit: "Animació i logotip: Roberto Ford",
     lede: "Si una imatge diu mil paraules, què creen mil artistes? Un milió de paraules, cadascuna des d'una perspectiva única, que formen una exposició itinerant internacional contra el feixisme.",
     primaryCta: "Dates de la gira",
     secondaryCta: "Contribuir amb obra",
     badges: [
-      "Parc de la Solidaritat",
+      "Solidarity Park",
       "Gira internacional",
       "1.000 joves artistes",
       "Brigades Internacionals",
@@ -58,8 +58,8 @@ export const ca: TranslationOverride = {
     conceptTitle: "Mil joves artistes. Un milió de paraules contra el feixisme.",
     conceptBody: [
       "Si una imatge diu mil paraules, mil artistes creen un milió de paraules. L'exposició reuneix aquestes veus com a resposta internacional a l'auge de les ideologies d'extrema dreta i feixistes.",
-      "Al juny de 2026, el projecte Parc de la Solidaritat haurà facilitat més de 1.000 obres visuals de joves a través de la seva iniciativa educativa sobre la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional.",
-      "La gira de 2027 avança cap al 90è aniversari de l'enfonsament del Ciudad de Barcelona, el 30 de maig de 2027, la història que va ajudar a posar en marxa la tasca de l'Associació Parc de la Solidaritat en art, memòria i educació.",
+      "Al juny de 2026, el projecte Solidarity Park haurà facilitat més de 1.000 obres visuals de joves a través de la seva iniciativa educativa sobre la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional.",
+      "La gira de 2027 avança cap al 90è aniversari de l'enfonsament del Ciudad de Barcelona, el 30 de maig de 2027, la història que va ajudar a posar en marxa la tasca de l'Associació Solidarity Park en art, memòria i educació.",
     ],
     stats: [
       { value: "1.000+", label: "obres de joves artistes" },
@@ -69,7 +69,7 @@ export const ca: TranslationOverride = {
     installationBadge: "Instal·lació",
     installationTitle: "La Sala de la Solidaritat ocupa el centre de l'exposició.",
     installationBody:
-      "A l'interior, la sala es planteja com una exposició de paret a paret amb 1.000 imatges de mida postal creades a través del projecte Parc de la Solidaritat. A l'exterior, les parets que donen al carrer poden reunir altres 1.000 imatges noves creades per visitants, escoles, instituts i participants de la comunitat durant la gira.",
+      "A l'interior, la sala es planteja com una exposició de paret a paret amb 1.000 imatges de mida postal creades a través del projecte Solidarity Park. A l'exterior, les parets que donen al carrer poden reunir altres 1.000 imatges noves creades per visitants, escoles, instituts i participants de la comunitat durant la gira.",
     commissionsTitle: "Encàrrecs a artistes internacionals",
     commissionsBody:
       "Al voltant de la Sala de la Solidaritat hi haurà un programa comissariat inspirat en milions d'històries contra el feixisme, amb cinema, animació, escultura, pintura, il·lustració i poesia.",
@@ -84,9 +84,9 @@ export const ca: TranslationOverride = {
     contributeCta: "Contribuir amb obra",
   },
   tourDates: {
-    heroTitle: "Gira internacional del Parc de la Solidaritat.",
+    heroTitle: "Gira internacional de Solidarity Park.",
     heroSubtitle:
-      "La gira s'organitza al voltant d'escoles, sindicats, sales d'art, grups de les Brigades Internacionals, corals, instituts i socis cívics, avançant cap al Festival del Parc de la Solidaritat a Catalunya.",
+      "La gira s'organitza al voltant d'escoles, sindicats, sales d'art, grups de les Brigades Internacionals, corals, instituts i socis cívics, avançant cap al Festival de Solidarity Park a Catalunya.",
     heroPrimaryCta: "Veure ruta",
     heroSecondaryCta: "Acollir l'exposició",
     routeBadge: "Notes de la ruta",
@@ -111,12 +111,12 @@ export const ca: TranslationOverride = {
         body: "Si una imatge diu mil paraules, mil artistes creen un milió de paraules. Cada contribució és una perspectiva única i, juntes, formen una resposta internacional i col·lectiva a les ideologies d'extrema dreta i feixistes.",
       },
       {
-        heading: "Arrelat al projecte Parc de la Solidaritat",
-        body: "L'exposició sorgeix de la iniciativa educativa del projecte Parc de la Solidaritat, que apropa els joves a la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional. Al juny de 2026, el projecte haurà facilitat més de 1.000 obres visuals de joves.",
+        heading: "Arrelat al projecte Solidarity Park",
+        body: "L'exposició sorgeix de la iniciativa educativa del projecte Solidarity Park, que apropa els joves a la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional. Al juny de 2026, el projecte haurà facilitat més de 1.000 obres visuals de joves.",
       },
       {
         heading: "Cap a l'aniversari del Ciudad de Barcelona",
-        body: "La gira de 2027 avança cap al 90è aniversari de l'enfonsament del Ciudad de Barcelona, el 30 de maig de 2027: la història que va ajudar a posar en marxa la tasca de l'Associació Parc de la Solidaritat en art, memòria i educació.",
+        body: "La gira de 2027 avança cap al 90è aniversari de l'enfonsament del Ciudad de Barcelona, el 30 de maig de 2027: la història que va ajudar a posar en marxa la tasca de l'Associació Solidarity Park en art, memòria i educació.",
       },
       {
         heading: "Art, memòria i educació",
@@ -212,7 +212,7 @@ export const ca: TranslationOverride = {
       "Explica'ns sobre la sala, el públic, els vincles educatius, la història local i les dates que estàs considerant.",
     conditionsCta: "Llegir les condicions d'acollida",
     features: [
-      "L'exposició gira al voltant de la Sala de la Solidaritat, una instal·lació d'obres de mida postal creades a través del projecte Parc de la Solidaritat.",
+      "L'exposició gira al voltant de la Sala de la Solidaritat, una instal·lació d'obres de mida postal creades a través del projecte Solidarity Park.",
       "Les parets exteriors poden reunir noves postals fetes per visitants, escoles i participants de la comunitat durant la gira.",
       "Les sales poden afegir història local, encàrrecs artístics, poesia, música, tallers i obra antifeixista local quan l'espai ho permeti.",
     ],
@@ -282,7 +282,7 @@ export const ca: TranslationOverride = {
   gallery: {
     heroTitle: "Galeria",
     heroSubtitle:
-      "Una selecció d'obres del projecte Parc de la Solidaritat i de l'exposició itinerant. S'hi afegiran imatges a mesura que creixi la col·lecció.",
+      "Una selecció d'obres del projecte Solidarity Park i de l'exposició itinerant. S'hi afegiran imatges a mesura que creixi la col·lecció.",
     placeholderTitle: "Galeria ben aviat",
     placeholderBody:
       "A mesura que es confirmin per a la gira les obres de joves artistes i les peces encarregades, aquí es mostrarà una selecció. Les contribucions enviades mitjançant l'enllaç segur es revisen de manera privada i no es publiquen automàticament.",
@@ -291,13 +291,13 @@ export const ca: TranslationOverride = {
   links: {
     heroTitle: "Enllaços",
     heroSubtitle:
-      "Socis, col·laboradors i lectures relacionades amb el projecte Parc de la Solidaritat i la memòria antifeixista en què s'inspira.",
+      "Socis, col·laboradors i lectures relacionades amb el projecte Solidarity Park i la memòria antifeixista en què s'inspira.",
     groups: {
       project: {
         title: "El projecte",
         items: {
-          association: { label: "Associació Parc de la Solidaritat", note: "L'organització que hi ha darrere de l'exposició." },
-          festival: { label: "Festival del Parc de la Solidaritat, Catalunya", note: "El festival cap al qual avança la gira de 2027." },
+          association: { label: "Associació Solidarity Park", note: "L'organització que hi ha darrere de l'exposició." },
+          festival: { label: "Festival de Solidarity Park, Catalunya", note: "El festival cap al qual avança la gira de 2027." },
         },
       },
       memory: {
@@ -317,7 +317,7 @@ export const ca: TranslationOverride = {
     },
   },
   footer: {
-    tagline: "Exposició itinerant europea del projecte Parc de la Solidaritat.",
+    tagline: "Exposició itinerant europea del projecte Solidarity Park.",
     navTitle: "Explorar",
   },
 };

@@ -72,23 +72,33 @@ export const footerNav: NavItem[] = [
   ...moreInfoNav,
 ];
 
-// Planned route for the touring exhibition. Dates and event formats are
-// intentionally not listed: every stop renders as "TBC" (see tourDates.tbc in
-// the i18n dictionaries) until agreements are confirmed by the project team.
-// `venue` is optional — leave it empty until a venue is confirmed.
-export const tourDates: { city: string; venue?: string }[] = [
-  { city: "Hull, England", venue: "Hull History Centre" },
-  { city: "Sunderland, England" },
-  { city: "Dundee, Scotland" },
-  { city: "South Wales", venue: "Rhondda Cynon Taf" },
-  { city: "Woking, Surrey" },
-  { city: "Greenwich Peninsula, London", venue: "Fire Pit" },
+// Planned route for the touring exhibition. Dates and venues are shown when
+// confirmed; stops without either remain visibly marked TBC.
+export const tourDates: { city: string; date?: string; venue?: string }[] = [
+  { city: "Hull", date: "1–17 December" },
+  {
+    city: "Dundee, Scotland",
+    date: "29–31 January",
+    venue: "Generator Projects, Units 25–26, Mid Wynd Industrial Estate, Dundee, DD1 4JG",
+  },
+  { city: "Sunderland" },
+  {
+    city: "Pontypridd, South Wales",
+    date: "13–27 February",
+    venue: "Llyfrgell Pontypridd Library, 1 Gas Road, Taff Street, Pontypridd, CF37 4TH",
+  },
+  { city: "Midlands, England" },
+  { city: "London and South East, UK" },
   { city: "Leeuwarden, Holland" },
+  { city: "Stockholm, Sweden" },
   { city: "Cologne, Germany" },
-  { city: "Hamburg, Germany or Gothenburg / Malmo, Sweden" },
   { city: "Toulouse, France" },
-  { city: "Malgrat de Mar, Catalunya", venue: "Solidarity Park Festival" },
-  { city: "Hull, England", venue: "Hull Art School" },
+  {
+    city: "Malgrat de Mar, Catalunya",
+    date: "26–30 May",
+    venue: "Solidarity Park Festival — Municipal Archives, Carrer de Mar",
+  },
+  { city: "Hull", venue: "Hull Art School" },
 ];
 
 export const submissionGuidelines = [
