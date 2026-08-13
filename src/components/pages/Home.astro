@@ -9,6 +9,16 @@ import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
+const needsCompactHero = (["de", "sv", "nl"] as const).includes(lang as "de" | "sv" | "nl");
+const brandName = "Solidarity Park";
+const brandNameIndex = t.hero.subtitle.indexOf(brandName);
+const heroCopy = brandNameIndex >= 0
+  ? {
+      before: t.hero.subtitle.slice(0, brandNameIndex),
+      brand: brandName,
+      after: t.hero.subtitle.slice(brandNameIndex + brandName.length),
+    }
+  : { before: t.hero.subtitle, brand: "", after: "" };
 ---
 
 <div class="paper-surface relative flex h-dvh flex-col overflow-hidden bg-background text-foreground">
@@ -55,8 +65,15 @@ const navLabel = (key: string) => (t.nav as Record<string, string>)[key] ?? key;
     class="relative z-10 grid min-h-0 flex-1 grid-rows-[auto_minmax(0,1fr)] gap-4 px-4 py-4 sm:px-7 sm:py-6 lg:grid-cols-[minmax(19rem,0.82fr)_minmax(28rem,1.18fr)] lg:grid-rows-1 lg:items-stretch lg:gap-9 lg:px-10 lg:py-8 xl:gap-14"
   >
     <section class="flex min-w-0 flex-col justify-center lg:pb-4">
-      <h1 class="display-type max-w-3xl text-[clamp(2.3rem,8.2vw,5.2rem)] uppercase leading-[0.92] tracking-[-0.018em] text-foreground lg:text-[clamp(4.1rem,6.15vw,6.4rem)]">
-        {t.hero.subtitle}
+      <h1
+        class:list={[
+          "display-type max-w-full break-words text-[clamp(2.3rem,8.2vw,5.2rem)] uppercase leading-[0.92] tracking-[-0.018em] text-foreground [hyphens:auto] [text-wrap:pretty]",
+          needsCompactHero
+            ? "lg:text-[clamp(3rem,4.5vw,4.8rem)]"
+            : "lg:text-[clamp(4.1rem,6.15vw,6.4rem)]",
+        ]}
+      >
+        {heroCopy.before}{heroCopy.brand && <span class="[hyphens:none]">{heroCopy.brand}</span>}{heroCopy.after}
       </h1>
 
       <nav class="mt-4 flex flex-wrap gap-2 sm:mt-5 sm:gap-3 lg:mt-8" aria-label={t.nav.menu}>

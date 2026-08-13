@@ -5,7 +5,7 @@ import type { TranslationOverride } from "./types";
 
 export const de: TranslationOverride = {
   meta: {
-    tagline: "Europäische Wanderausstellung des Projekts Solidaritätspark",
+    tagline: "Europäische Wanderausstellung des Projekts Solidarity Park",
     description:
       "Eine internationale Wanderausstellung über Kunst, Erinnerung und Bildung als Antwort auf den Aufstieg rechtsextremer und faschistischer Ideologien.",
   },
@@ -35,13 +35,13 @@ export const de: TranslationOverride = {
   },
   hero: {
     title: "Eine Million Worte gegen den Faschismus",
-    subtitle: "Europäische Wanderausstellung des Projekts Solidaritätspark.",
+    subtitle: "Europäische Wanderausstellung des Projekts Solidarity Park.",
     artworkCredit: "Animation und Logo: Roberto Ford",
     lede: "Wenn ein Bild tausend Worte sagt, was schaffen dann tausend Künstlerinnen und Künstler? Eine Million Worte, jedes aus einer einzigartigen Perspektive, die zu einer internationalen Wanderausstellung gegen den Faschismus werden.",
     primaryCta: "Tourdaten",
     secondaryCta: "Kunstwerk beitragen",
     badges: [
-      "Solidaritätspark",
+      "Solidarity Park",
       "Internationale Tour",
       "1.000 junge Kunstschaffende",
       "Internationale Brigaden",
@@ -58,8 +58,8 @@ export const de: TranslationOverride = {
     conceptTitle: "Tausend junge Kunstschaffende. Eine Million Worte gegen den Faschismus.",
     conceptBody: [
       "Wenn ein Bild tausend Worte sagt, schaffen tausend Kunstschaffende eine Million Worte. Die Ausstellung bringt diese Stimmen als internationale Antwort auf den Aufstieg rechtsextremer und faschistischer Ideologien zusammen.",
-      "Bis Juni 2026 wird das Projekt Solidaritätspark über seine Bildungsinitiative zum Spanischen Bürgerkrieg, zu den Internationalen Brigaden und zu den Lehren internationaler Solidarität mehr als 1.000 visuelle Werke junger Menschen ermöglicht haben.",
-      "Die Tour 2027 führt zum 90. Jahrestag des Untergangs der Ciudad de Barcelona am 30. Mai 2027 — die Geschichte, die die Arbeit der Vereinigung Solidaritätspark in Kunst, Erinnerung und Bildung mit angestoßen hat.",
+      "Bis Juni 2026 wird das Projekt Solidarity Park über seine Bildungsinitiative zum Spanischen Bürgerkrieg, zu den Internationalen Brigaden und zu den Lehren internationaler Solidarität mehr als 1.000 visuelle Werke junger Menschen ermöglicht haben.",
+      "Die Tour 2027 führt zum 90. Jahrestag des Untergangs der Ciudad de Barcelona am 30. Mai 2027 — die Geschichte, die die Arbeit der Vereinigung Solidarity Park in Kunst, Erinnerung und Bildung mit angestoßen hat.",
     ],
     stats: [
       { value: "1.000+", label: "Werke junger Kunstschaffender" },
@@ -69,7 +69,7 @@ export const de: TranslationOverride = {
     installationBadge: "Installation",
     installationTitle: "Der Solidaritätsraum steht im Zentrum der Ausstellung.",
     installationBody:
-      "Im Inneren ist der Raum als wandfüllende Präsentation von 1.000 postkartengroßen Bildern geplant, die durch das Projekt Solidaritätspark entstanden sind. Draußen können die zur Straße gewandten Wände weitere 1.000 neue Bilder sammeln, die während der Tour von Besucher:innen, Schulen, Hochschulen und Gemeinschaftsteilnehmenden geschaffen werden.",
+      "Im Inneren ist der Raum als wandfüllende Präsentation von 1.000 postkartengroßen Bildern geplant, die durch das Projekt Solidarity Park entstanden sind. Draußen können die zur Straße gewandten Wände weitere 1.000 neue Bilder sammeln, die während der Tour von Besucher:innen, Schulen, Hochschulen und Gemeinschaftsteilnehmenden geschaffen werden.",
     commissionsTitle: "Internationale Auftragsarbeiten",
     commissionsBody:
       "Rund um den Solidaritätsraum entsteht ein kuratiertes Programm, inspiriert von Millionen Geschichten gegen den Faschismus, mit Film, Animation, Skulptur, Malerei, Illustration und Poesie.",
@@ -84,9 +84,9 @@ export const de: TranslationOverride = {
     contributeCta: "Kunstwerk beitragen",
   },
   tourDates: {
-    heroTitle: "Internationale Tour des Solidaritätsparks.",
+    heroTitle: "Internationale Tour von Solidarity Park.",
     heroSubtitle:
-      "Die Tour ist rund um Schulen, Gewerkschaften, Kunstorte, Gruppen der Internationalen Brigaden, Chöre, Hochschulen und zivilgesellschaftliche Partner geplant und führt zum Festival des Solidaritätsparks in Katalonien.",
+      "Die Tour ist rund um Schulen, Gewerkschaften, Kunstorte, Gruppen der Internationalen Brigaden, Chöre, Hochschulen und zivilgesellschaftliche Partner geplant und führt zum Festival von Solidarity Park in Katalonien.",
     heroPrimaryCta: "Route ansehen",
     heroSecondaryCta: "Ausstellung gastgeben",
     routeBadge: "Hinweise zur Route",
@@ -111,12 +111,12 @@ export const de: TranslationOverride = {
         body: "Wenn ein Bild tausend Worte sagt, schaffen tausend Kunstschaffende eine Million Worte. Jeder Beitrag ist eine einzelne Perspektive, und zusammen bilden sie eine internationale, kollektive Antwort auf rechtsextreme und faschistische Ideologien.",
       },
       {
-        heading: "Verwurzelt im Projekt Solidaritätspark",
-        body: "Die Ausstellung geht aus der Bildungsinitiative des Projekts Solidaritätspark hervor, die jungen Menschen den Spanischen Bürgerkrieg, die Internationalen Brigaden und die Lehren internationaler Solidarität nahebringt. Bis Juni 2026 wird das Projekt mehr als 1.000 visuelle Werke junger Menschen ermöglicht haben.",
+        heading: "Verwurzelt im Projekt Solidarity Park",
+        body: "Die Ausstellung geht aus der Bildungsinitiative des Projekts Solidarity Park hervor, die jungen Menschen den Spanischen Bürgerkrieg, die Internationalen Brigaden und die Lehren internationaler Solidarität nahebringt. Bis Juni 2026 wird das Projekt mehr als 1.000 visuelle Werke junger Menschen ermöglicht haben.",
       },
       {
         heading: "Zum Jahrestag der Ciudad de Barcelona",
-        body: "Die Tour 2027 führt zum 90. Jahrestag des Untergangs der Ciudad de Barcelona am 30. Mai 2027 — die Geschichte, die die Arbeit der Vereinigung Solidaritätspark in Kunst, Erinnerung und Bildung mit angestoßen hat.",
+        body: "Die Tour 2027 führt zum 90. Jahrestag des Untergangs der Ciudad de Barcelona am 30. Mai 2027 — die Geschichte, die die Arbeit der Vereinigung Solidarity Park in Kunst, Erinnerung und Bildung mit angestoßen hat.",
       },
       {
         heading: "Kunst, Erinnerung und Bildung",
@@ -212,7 +212,7 @@ export const de: TranslationOverride = {
       "Erzählen Sie uns von Ort, Publikum, Bildungsverbindungen, lokaler Geschichte und den Terminen, die Sie in Betracht ziehen.",
     conditionsCta: "Bedingungen für Gastgeber lesen",
     features: [
-      "Im Zentrum der Ausstellung steht der Solidaritätsraum, eine Installation postkartengroßer Werke aus dem Projekt Solidaritätspark.",
+      "Im Zentrum der Ausstellung steht der Solidaritätsraum, eine Installation postkartengroßer Werke aus dem Projekt Solidarity Park.",
       "Nach außen gerichtete Wände können während der Tour neue Postkarten von Besucher:innen, Schulen und Gemeinschaftsteilnehmenden sammeln.",
       "Veranstaltungsorte können lokale Geschichte, Auftragsarbeiten, Poesie, Musik, Workshops und lokale antifaschistische Arbeit ergänzen, wo der Platz es zulässt.",
     ],
@@ -282,7 +282,7 @@ export const de: TranslationOverride = {
   gallery: {
     heroTitle: "Galerie",
     heroSubtitle:
-      "Eine Auswahl von Werken aus dem Projekt Solidaritätspark und der Wanderausstellung. Bilder werden ergänzt, während die Sammlung wächst.",
+      "Eine Auswahl von Werken aus dem Projekt Solidarity Park und der Wanderausstellung. Bilder werden ergänzt, während die Sammlung wächst.",
     placeholderTitle: "Galerie demnächst",
     placeholderBody:
       "Sobald Werke junger Kunstschaffender und Auftragsarbeiten für die Tour bestätigt sind, wird hier eine Auswahl gezeigt. Über den sicheren Link eingereichte Beiträge werden privat geprüft und nicht automatisch veröffentlicht.",
@@ -291,13 +291,13 @@ export const de: TranslationOverride = {
   links: {
     heroTitle: "Links",
     heroSubtitle:
-      "Partner, Mitwirkende und weiterführende Lektüre rund um das Projekt Solidaritätspark und die antifaschistische Erinnerung, aus der es schöpft.",
+      "Partner, Mitwirkende und weiterführende Lektüre rund um das Projekt Solidarity Park und die antifaschistische Erinnerung, aus der es schöpft.",
     groups: {
       project: {
         title: "Das Projekt",
         items: {
-          association: { label: "Vereinigung Solidaritätspark", note: "Die Organisation hinter der Ausstellung." },
-          festival: { label: "Festival des Solidaritätsparks, Katalonien", note: "Das Festival, auf das die Tour 2027 hinführt." },
+          association: { label: "Vereinigung Solidarity Park", note: "Die Organisation hinter der Ausstellung." },
+          festival: { label: "Festival von Solidarity Park, Katalonien", note: "Das Festival, auf das die Tour 2027 hinführt." },
         },
       },
       memory: {
@@ -317,7 +317,7 @@ export const de: TranslationOverride = {
     },
   },
   footer: {
-    tagline: "Europäische Wanderausstellung des Projekts Solidaritätspark.",
+    tagline: "Europäische Wanderausstellung des Projekts Solidarity Park.",
     navTitle: "Entdecken",
   },
 };
