@@ -5,7 +5,7 @@ import type { TranslationOverride } from "./types";
 
 export const nl: TranslationOverride = {
   meta: {
-    tagline: "Europese reizende tentoonstelling van het project Solidariteitspark",
+    tagline: "Europese reizende tentoonstelling van het project Solidarity Park",
     description:
       "Een internationale reizende tentoonstelling over kunst, herinnering en educatie als antwoord op de opkomst van extreemrechtse en fascistische ideologieën.",
   },
@@ -35,13 +35,13 @@ export const nl: TranslationOverride = {
   },
   hero: {
     title: "Een miljoen woorden tegen het fascisme",
-    subtitle: "Europese reizende tentoonstelling van het project Solidariteitspark.",
+    subtitle: "Europese reizende tentoonstelling van het project Solidarity Park.",
     artworkCredit: "Animatie en logo: Roberto Ford",
     lede: "Als een beeld duizend woorden zegt, wat maken dan duizend kunstenaars? Een miljoen woorden, elk vanuit een uniek perspectief, samen een internationale reizende tentoonstelling tegen het fascisme.",
     primaryCta: "Tourdata",
     secondaryCta: "Kunstwerk bijdragen",
     badges: [
-      "Solidariteitspark",
+      "Solidarity Park",
       "Internationale tour",
       "1.000 jonge kunstenaars",
       "Internationale Brigades",
@@ -58,8 +58,8 @@ export const nl: TranslationOverride = {
     conceptTitle: "Duizend jonge kunstenaars. Een miljoen woorden tegen het fascisme.",
     conceptBody: [
       "Als een beeld duizend woorden zegt, maken duizend kunstenaars een miljoen woorden. De tentoonstelling brengt deze stemmen samen als een internationaal antwoord op de opkomst van extreemrechtse en fascistische ideologieën.",
-      "Tegen juni 2026 zal het project Solidariteitspark via zijn educatieve initiatief over de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit meer dan 1.000 beeldende werken van jongeren hebben gefaciliteerd.",
-      "De tour van 2027 werkt toe naar de 90e verjaardag van het zinken van de Ciudad de Barcelona op 30 mei 2027, het verhaal dat het werk van de Vereniging Solidariteitspark in kunst, herinnering en educatie mede op gang bracht.",
+      "Tegen juni 2026 zal het project Solidarity Park via zijn educatieve initiatief over de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit meer dan 1.000 beeldende werken van jongeren hebben gefaciliteerd.",
+      "De tour van 2027 werkt toe naar de 90e verjaardag van het zinken van de Ciudad de Barcelona op 30 mei 2027, het verhaal dat het werk van de Vereniging Solidarity Park in kunst, herinnering en educatie mede op gang bracht.",
     ],
     stats: [
       { value: "1.000+", label: "werken van jonge kunstenaars" },
@@ -69,7 +69,7 @@ export const nl: TranslationOverride = {
     installationBadge: "Installatie",
     installationTitle: "De Solidariteitsruimte staat in het hart van de tentoonstelling.",
     installationBody:
-      "Binnen is de ruimte opgezet als een wandvullende presentatie van 1.000 ansichtkaartformaat-beelden die via het project Solidariteitspark zijn gemaakt. Buiten kunnen de straatgerichte muren nog eens 1.000 nieuwe beelden verzamelen, gemaakt door bezoekers, scholen, hogescholen en deelnemers uit de gemeenschap tijdens de tour.",
+      "Binnen is de ruimte opgezet als een wandvullende presentatie van 1.000 ansichtkaartformaat-beelden die via het project Solidarity Park zijn gemaakt. Buiten kunnen de straatgerichte muren nog eens 1.000 nieuwe beelden verzamelen, gemaakt door bezoekers, scholen, hogescholen en deelnemers uit de gemeenschap tijdens de tour.",
     commissionsTitle: "Internationale kunstopdrachten",
     commissionsBody:
       "Rond de Solidariteitsruimte komt een samengesteld programma, geïnspireerd op miljoenen verhalen tegen het fascisme, met film, animatie, beeldhouwkunst, schilderkunst, illustratie en poëzie.",
@@ -84,9 +84,9 @@ export const nl: TranslationOverride = {
     contributeCta: "Kunstwerk bijdragen",
   },
   tourDates: {
-    heroTitle: "Internationale tour van het Solidariteitspark.",
+    heroTitle: "Internationale tour van Solidarity Park.",
     heroSubtitle:
-      "De tour is opgezet rond scholen, vakbonden, kunstlocaties, groepen van de Internationale Brigades, koren, hogescholen en maatschappelijke partners, en werkt toe naar het Festival van het Solidariteitspark in Catalonië.",
+      "De tour is opgezet rond scholen, vakbonden, kunstlocaties, groepen van de Internationale Brigades, koren, hogescholen en maatschappelijke partners, en werkt toe naar het Festival van Solidarity Park in Catalonië.",
     heroPrimaryCta: "Route bekijken",
     heroSecondaryCta: "Gastheer zijn",
     routeBadge: "Route-opmerkingen",
@@ -111,12 +111,12 @@ export const nl: TranslationOverride = {
         body: "Als een beeld duizend woorden zegt, maken duizend kunstenaars een miljoen woorden. Elke bijdrage is een uniek perspectief en samen vormen ze een internationaal, collectief antwoord op extreemrechtse en fascistische ideologieën.",
       },
       {
-        heading: "Geworteld in het project Solidariteitspark",
-        body: "De tentoonstelling komt voort uit het educatieve initiatief van het project Solidariteitspark, dat jongeren kennis laat maken met de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit. Tegen juni 2026 zal het project meer dan 1.000 beeldende werken van jongeren hebben gefaciliteerd.",
+        heading: "Geworteld in het project Solidarity Park",
+        body: "De tentoonstelling komt voort uit het educatieve initiatief van het project Solidarity Park, dat jongeren kennis laat maken met de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit. Tegen juni 2026 zal het project meer dan 1.000 beeldende werken van jongeren hebben gefaciliteerd.",
       },
       {
         heading: "Naar de verjaardag van de Ciudad de Barcelona",
-        body: "De tour van 2027 werkt toe naar de 90e verjaardag van het zinken van de Ciudad de Barcelona op 30 mei 2027: het verhaal dat het werk van de Vereniging Solidariteitspark in kunst, herinnering en educatie mede op gang bracht.",
+        body: "De tour van 2027 werkt toe naar de 90e verjaardag van het zinken van de Ciudad de Barcelona op 30 mei 2027: het verhaal dat het werk van de Vereniging Solidarity Park in kunst, herinnering en educatie mede op gang bracht.",
       },
       {
         heading: "Kunst, herinnering en educatie",
@@ -212,7 +212,7 @@ export const nl: TranslationOverride = {
       "Vertel ons over de locatie, het publiek, onderwijsverbindingen, lokale geschiedenis en de data die je overweegt.",
     conditionsCta: "Lees de voorwaarden voor gastheerschap",
     features: [
-      "De tentoonstelling draait om de Solidariteitsruimte, een installatie van ansichtkaartformaat-werken gemaakt via het project Solidariteitspark.",
+      "De tentoonstelling draait om de Solidariteitsruimte, een installatie van ansichtkaartformaat-werken gemaakt via het project Solidarity Park.",
       "Naar buiten gerichte muren kunnen tijdens de tour nieuwe ansichtkaarten verzamelen, gemaakt door bezoekers, scholen en deelnemers uit de gemeenschap.",
       "Locaties kunnen lokale geschiedenis, kunstopdrachten, poëzie, muziek, workshops en lokaal antifascistisch werk toevoegen waar de ruimte dat toelaat.",
     ],
@@ -282,7 +282,7 @@ export const nl: TranslationOverride = {
   gallery: {
     heroTitle: "Galerij",
     heroSubtitle:
-      "Een selectie van werken uit het project Solidariteitspark en de reizende tentoonstelling. Er worden beelden toegevoegd naarmate de collectie groeit.",
+      "Een selectie van werken uit het project Solidarity Park en de reizende tentoonstelling. Er worden beelden toegevoegd naarmate de collectie groeit.",
     placeholderTitle: "Galerij binnenkort",
     placeholderBody:
       "Naarmate werken van jonge kunstenaars en opdrachtstukken voor de tour worden bevestigd, wordt hier een selectie getoond. Bijdragen die via de beveiligde link worden ingediend, worden privé beoordeeld en niet automatisch gepubliceerd.",
@@ -291,13 +291,13 @@ export const nl: TranslationOverride = {
   links: {
     heroTitle: "Links",
     heroSubtitle:
-      "Partners, medewerkers en verdere lectuur verbonden met het project Solidariteitspark en de antifascistische herinnering waaruit het put.",
+      "Partners, medewerkers en verdere lectuur verbonden met het project Solidarity Park en de antifascistische herinnering waaruit het put.",
     groups: {
       project: {
         title: "Het project",
         items: {
-          association: { label: "Vereniging Solidariteitspark", note: "De organisatie achter de tentoonstelling." },
-          festival: { label: "Festival van het Solidariteitspark, Catalonië", note: "Het festival waar de tour van 2027 naartoe werkt." },
+          association: { label: "Vereniging Solidarity Park", note: "De organisatie achter de tentoonstelling." },
+          festival: { label: "Festival van Solidarity Park, Catalonië", note: "Het festival waar de tour van 2027 naartoe werkt." },
         },
       },
       memory: {
@@ -317,7 +317,7 @@ export const nl: TranslationOverride = {
     },
   },
   footer: {
-    tagline: "Europese reizende tentoonstelling van het project Solidariteitspark.",
+    tagline: "Europese reizende tentoonstelling van het project Solidarity Park.",
     navTitle: "Ontdekken",
   },
 };
