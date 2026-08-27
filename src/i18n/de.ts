@@ -20,6 +20,7 @@ export const de: TranslationOverride = {
     donate: "Spenden",
     host: "Gastgeben",
     gallery: "Galerie",
+    collaborators: "Mitwirkende",
     links: "Links",
   },
   langSwitcher: { label: "Sprache wählen", current: "Aktuelle Sprache" },
@@ -131,9 +132,10 @@ export const de: TranslationOverride = {
     ],
   },
   contribute: {
-    heroTitle: "Kunst, Poesie oder lokales Material beitragen.",
+    heroTitle:
+      "Bring deine Kunst ein",
     heroSubtitle:
-      "Wo Veranstaltungsorte Platz haben, kann die Tour neben der Kernausstellung lokale antifaschistische Kunstschaffende, Dichter:innen, Filmemacher:innen, Animator:innen, Bildhauer:innen, Maler:innen und Beiträge aus der Gemeinschaft einbeziehen.",
+      "Wir wollen deine antifaschistische künstlerische Stimme zu den Millions hinzufügen. Im Folgenden nennen wir einige Bedingungen. Angenommene Arbeiten werden Teil der Hauptinstallation der Wanderausstellung und/oder der begleitenden Online-Galerien. Besonders interessieren uns Bilder und gesprochenes Wort, wir sind aber offen für alle künstlerischen Ausdrucksformen. Wo Veranstaltungsorte Platz und Zeit haben, versuchen wir, deine Arbeit oder Performance live zu zeigen.",
     heroPrimaryCta: "Link anfordern",
     heroSecondaryCta: "Tourdaten",
     notesTitle: "Hinweise zum Beitrag",
@@ -148,6 +150,7 @@ export const de: TranslationOverride = {
       "Kunstschaffende, Dichter:innen, Filmemacher:innen, Animator:innen, Bildhauer:innen, Maler:innen und Beitragende aus der Gemeinschaft können dieses Formular nutzen, um Vorschaumaterial oder Links zu senden.",
       "Reichen Sie nur Vorschaudateien ein: JPG, JPEG, PNG, WebP, PDF, MP3, M4A oder WAV. Videovorschauen teilen Sie am besten als Links.",
       "Laden Sie bis zu fünf Vorschaudateien hoch, maximal 20 MB pro Datei und 75 MB insgesamt. Ausgewählte Kunstschaffende werden ggf. separat um produktionsfertige Originale gebeten.",
+      "Wenn deine Arbeit zu einer teilnehmenden Schule, Hochschule oder Organisation gehört, fordere bitte einen mit deiner Einrichtung verknüpften Google-Drive-Link an, damit Upload und Prüfung schneller gehen.",
     ],
   },
   contributeConditions: {
@@ -206,7 +209,23 @@ export const de: TranslationOverride = {
   host: {
     heroTitle: "Eine Million Worte gegen den Faschismus gastgeben.",
     heroSubtitle:
-      "Teilen Sie die Eckdaten zu Ihrem Veranstaltungsort, Publikum, Bildungspartnern und Wunschterminen. Die Tour kann den Solidaritätsraum, die straßenseitige Postkartenaktion, lokale Geschichte und das Live-Programm an jeden Rahmen anpassen.",
+      "Teile die wichtigsten Angaben zu eurem Ort, Publikum, Bildungspartnern und Wunschterminen mit uns. Wir melden uns so schnell wie möglich.",
+    proposalTitle: "Was in eure Anfrage gehört",
+    proposalItems: [
+      "Eure Organisation oder euer Veranstaltungsort und wem wir antworten sollen.",
+      "Wo ihr seid und um was für einen Raum es sich handelt – Galerie, Bibliothek, Schule, Gewerkschaftshaus, Festival oder anderes.",
+      "Die Termine oder den Zeitraum, den ihr in Betracht zieht.",
+      "Die Größe des Raums: Wandlänge, Raummaße und eventuelle zur Straße gerichtete Wände.",
+      "Öffnungszeiten, Zugang für Schulen oder Gruppen und Barrierefreiheitsbedarf.",
+      "Ungefähr wie viele Besucherinnen und Besucher ihr erwartet.",
+      "Lokale Geschichte der Internationalen Brigaden, Partner oder Programmideen, die ihr einbringen möchtet.",
+    ],
+    revealTitle: "Schickt uns eure Anfrage",
+    revealBody:
+      "Bestätigt, dass ihr ein Mensch seid, und wir zeigen euch die Adresse. So bleibt sie automatisierten Sammlern verborgen.",
+    revealButton: "E-Mail-Adresse anzeigen",
+    revealPending: "Wird geprüft…",
+    revealError: "Die Prüfung wurde nicht abgeschlossen. Bitte versucht es erneut.",
     heroPrimaryCta: "Anfrage starten",
     heroSecondaryCta: "Tourdaten",
     formatsTitle: "Formate für Gastgeber",
@@ -294,6 +313,13 @@ export const de: TranslationOverride = {
       "Sobald Werke junger Kunstschaffender und Auftragsarbeiten für die Tour bestätigt sind, wird hier eine Auswahl gezeigt. Über den sicheren Link eingereichte Beiträge werden privat geprüft und nicht automatisch veröffentlicht.",
     contributeCta: "Kunstwerk beitragen",
   },
+  collaborators: {
+    heroTitle: "Mitwirkende",
+    heroSubtitle:
+      "Die Kunstschaffenden, Historikerinnen, Bildungsarbeiter und Organisationen, die Ausstellung und Tour aufbauen.",
+    empty: "Die Profile werden gesammelt und hier veröffentlicht, sobald sie bestätigt sind.",
+  },
+
   links: {
     heroTitle: "Links",
     heroSubtitle:
@@ -304,6 +330,7 @@ export const de: TranslationOverride = {
         items: {
           association: { label: "Vereinigung Solidarity Park", note: "Die Organisation hinter der Ausstellung." },
           festival: { label: "Festival von Solidarity Park, Katalonien", note: "Das Festival, auf das die Tour 2027 hinführt." },
+          sunderland: { label: "Solidarity Sunderland History Hub", note: "Die Interbrigadisten aus Sunderland, die Schiffe und die baskischen Kinder von 1937." },
         },
       },
       memory: {
@@ -311,6 +338,7 @@ export const de: TranslationOverride = {
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Die Erinnerung an die Internationalen Brigaden wachhalten." },
           basqueChildren: { label: "Vereinigung Baskische Kinder von '37", note: "Die Geschichte der während des Spanischen Bürgerkriegs evakuierten Kinder." },
+          alba: { label: "Abraham Lincoln Brigade Archives", note: "Die US-amerikanischen Freiwilligen der Internationalen Brigaden und das Archiv, das ihre Geschichte bewahrt." },
         },
       },
       getInvolved: {

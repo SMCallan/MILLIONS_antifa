@@ -37,6 +37,7 @@ export type PagesContext = {
   request: Request;
   env: {
     BYPASS_TURNSTILE_IN_DEV?: string;
+    CONTACT_EMAIL?: string;
     EMAIL_PROVIDER_API_KEY?: string;
     MAGIC_LINK_SECRET?: string;
     PUBLIC_SITE_URL?: string;

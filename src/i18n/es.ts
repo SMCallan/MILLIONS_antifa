@@ -20,6 +20,7 @@ export const es: TranslationOverride = {
     donate: "Donar",
     host: "Acoger",
     gallery: "Galería",
+    collaborators: "Colaboradores",
     links: "Enlaces",
   },
   langSwitcher: { label: "Elegir idioma", current: "Idioma actual" },
@@ -131,9 +132,10 @@ export const es: TranslationOverride = {
     ],
   },
   contribute: {
-    heroTitle: "Contribuye con obra, poesía o material local.",
+    heroTitle:
+      "Aporta tu arte",
     heroSubtitle:
-      "Cuando las salas tienen espacio, la gira puede incluir artistas antifascistas locales, poetas, cineastas, animadores, escultores, pintores y participantes de la comunidad junto a la exposición principal.",
+      "Queremos sumar tu voz artística antifascista a los Millions. A continuación establecemos algunas condiciones. Las obras aceptadas formarán parte de la instalación principal de la exposición itinerante y/o de las galerías en línea paralelas. Nos interesan especialmente las imágenes y la palabra hablada, pero estamos abiertos a todas las expresiones artísticas. Donde los espacios tengan sitio y tiempo, intentaremos mostrar tu obra o actuación en directo.",
     heroPrimaryCta: "Solicitar enlace",
     heroSecondaryCta: "Fechas de la gira",
     notesTitle: "Notas para contribuir",
@@ -148,6 +150,7 @@ export const es: TranslationOverride = {
       "Artistas, poetas, cineastas, animadores, escultores, pintores y participantes de la comunidad pueden usar este formulario para enviar material de vista previa o enlaces.",
       "Envía solo archivos de vista previa: JPG, JPEG, PNG, WebP, PDF, MP3, M4A o WAV. Las vistas previas de vídeo se comparten mejor como enlaces.",
       "Sube hasta cinco archivos de vista previa, máximo 20 MB cada uno y 75 MB en total. A los artistas preseleccionados se les podrán pedir aparte los originales listos para producción.",
+      "Si tu obra forma parte de una escuela, instituto u organización participante, solicita un enlace de Google Drive vinculado a tu institución para agilizar la subida y la revisión.",
     ],
   },
   contributeConditions: {
@@ -206,7 +209,23 @@ export const es: TranslationOverride = {
   host: {
     heroTitle: "Acoge Un millón de palabras contra el fascismo.",
     heroSubtitle:
-      "Cuéntanos lo básico sobre tu sala, público, socios educativos y fechas preferidas. La gira puede adaptar la Sala de la Solidaridad, la actividad de postales en la calle, la historia local y el programa en directo a cada contexto.",
+      "Comparte la información básica sobre tu espacio, el público, los socios educativos y las fechas preferidas. Te responderemos lo antes posible.",
+    proposalTitle: "Qué incluir en tu propuesta",
+    proposalItems: [
+      "Tu organización o espacio, y a quién debemos responder.",
+      "Dónde estáis y qué tipo de espacio es: galería, biblioteca, escuela, local sindical, festival u otro.",
+      "Las fechas o el periodo que estás considerando.",
+      "El tamaño del espacio: longitud de pared, dimensiones de la sala y paredes que den a la calle.",
+      "Horarios de apertura al público, acceso de escuelas o grupos y necesidades de accesibilidad.",
+      "Aproximadamente cuántos visitantes esperas.",
+      "Historia local de las Brigadas Internacionales, socios o ideas de programación que quieras incluir.",
+    ],
+    revealTitle: "Envía tu propuesta",
+    revealBody:
+      "Confirma que eres una persona y te mostraremos la dirección a la que enviarla. Así la mantenemos fuera del alcance de los robots.",
+    revealButton: "Mostrar la dirección de correo",
+    revealPending: "Verificando…",
+    revealError: "La verificación no se ha completado. Inténtalo de nuevo.",
     heroPrimaryCta: "Iniciar consulta",
     heroSecondaryCta: "Fechas de la gira",
     formatsTitle: "Formatos de acogida",
@@ -294,6 +313,13 @@ export const es: TranslationOverride = {
       "A medida que se confirmen para la gira las obras de jóvenes artistas y las piezas encargadas, aquí se mostrará una selección. Las contribuciones enviadas mediante el enlace seguro se revisan de forma privada y no se publican automáticamente.",
     contributeCta: "Contribuir con obra",
   },
+  collaborators: {
+    heroTitle: "Colaboradores",
+    heroSubtitle:
+      "Los artistas, historiadores, educadores y organizaciones que construyen la exposición y la gira.",
+    empty: "Estamos reuniendo los perfiles y se publicarán aquí a medida que se confirmen.",
+  },
+
   links: {
     heroTitle: "Enlaces",
     heroSubtitle:
@@ -304,6 +330,7 @@ export const es: TranslationOverride = {
         items: {
           association: { label: "Asociación Solidarity Park", note: "La organización que hay detrás de la exposición." },
           festival: { label: "Festival de Solidarity Park, Cataluña", note: "El festival hacia el que avanza la gira de 2027." },
+          sunderland: { label: "Solidarity Sunderland History Hub", note: "Los brigadistas de Sunderland, los barcos y los niños vascos de 1937." },
         },
       },
       memory: {
@@ -311,6 +338,7 @@ export const es: TranslationOverride = {
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Mantener viva la memoria de las Brigadas Internacionales." },
           basqueChildren: { label: "Asociación Niños Vascos del 37", note: "La historia de los niños evacuados durante la Guerra Civil española." },
+          alba: { label: "Abraham Lincoln Brigade Archives", note: "Los voluntarios estadounidenses de las Brigadas Internacionales y el archivo que conserva su memoria." },
         },
       },
       getInvolved: {
