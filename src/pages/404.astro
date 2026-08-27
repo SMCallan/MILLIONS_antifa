@@ -1,0 +1,12 @@
+---
+import NotFoundBody from "@/components/pages/NotFound.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n";
+
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout title={t.notFound.title} description={t.notFound.body}>
+  <NotFoundBody />
+</Layout>

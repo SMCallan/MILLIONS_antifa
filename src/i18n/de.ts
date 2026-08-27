@@ -322,6 +322,12 @@ export const de: TranslationOverride = {
     empty: "Die Profile werden gesammelt und hier veröffentlicht, sobald sie bestätigt sind.",
   },
 
+  notFound: {
+    title: "Seite nicht gefunden",
+    body:
+      "Diese Seite gibt es nicht, oder sie ist umgezogen. Die Links unten bringen dich zurück.",
+  },
+
   links: {
     heroTitle: "Links",
     heroSubtitle:

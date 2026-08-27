@@ -322,6 +322,12 @@ export const fr: TranslationOverride = {
     empty: "Les profils sont en cours de collecte et seront publiés ici au fur et à mesure.",
   },
 
+  notFound: {
+    title: "Page introuvable",
+    body:
+      "Cette page n’existe pas, ou elle a été déplacée. Les liens ci-dessous vous remettront sur la bonne voie.",
+  },
+
   links: {
     heroTitle: "Liens",
     heroSubtitle:

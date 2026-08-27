@@ -322,6 +322,12 @@ export const ca: TranslationOverride = {
     empty: "Estem recollint els perfils i es publicaran aquí a mesura que es confirmin.",
   },
 
+  notFound: {
+    title: "Pàgina no trobada",
+    body:
+      "Aquesta pàgina no existeix o s’ha mogut. Els enllaços següents et tornaran a orientar.",
+  },
+
   links: {
     heroTitle: "Enllaços",
     heroSubtitle:

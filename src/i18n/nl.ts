@@ -322,6 +322,12 @@ export const nl: TranslationOverride = {
     empty: "De profielen worden verzameld en verschijnen hier zodra ze bevestigd zijn.",
   },
 
+  notFound: {
+    title: "Pagina niet gevonden",
+    body:
+      "Deze pagina bestaat niet, of is verplaatst. De links hieronder helpen je verder.",
+  },
+
   links: {
     heroTitle: "Links",
     heroSubtitle:

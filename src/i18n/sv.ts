@@ -322,6 +322,12 @@ export const sv: TranslationOverride = {
     empty: "Profilerna samlas in och publiceras här efter hand som de bekräftas.",
   },
 
+  notFound: {
+    title: "Sidan hittades inte",
+    body:
+      "Sidan finns inte, eller så har den flyttat. Länkarna nedan leder dig rätt igen.",
+  },
+
   links: {
     heroTitle: "Länkar",
     heroSubtitle:

@@ -322,6 +322,12 @@ export const es: TranslationOverride = {
     empty: "Estamos reuniendo los perfiles y se publicarán aquí a medida que se confirmen.",
   },
 
+  notFound: {
+    title: "Página no encontrada",
+    body:
+      "Esta página no existe o se ha movido. Los enlaces de abajo te devolverán al buen camino.",
+  },
+
   links: {
     heroTitle: "Enlaces",
     heroSubtitle:
