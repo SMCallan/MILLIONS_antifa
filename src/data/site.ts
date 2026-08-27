@@ -18,6 +18,11 @@ export const site = {
 // canonical (English-root) path and is localised at render time.
 export type NavItem = { key: string; href: string };
 
+// Donate goes straight out to the crowdfunding project rather than to a page
+// on this site. localizePath passes absolute URLs through untouched, so this
+// works from every nav that renders a NavItem.
+export const donateUrl = "https://chuffed.org/project/197805-millions-of-words-against-fascism";
+
 export const primaryNav: NavItem[] = [
   { key: "tourDates", href: "/tour-dates" },
 ];
@@ -25,9 +30,10 @@ export const primaryNav: NavItem[] = [
 export const moreInfoNav: NavItem[] = [
   { key: "concept", href: "/concept" },
   { key: "contribute", href: "/contribute" },
-  { key: "donate", href: "/donate" },
+  { key: "donate", href: donateUrl },
   { key: "host", href: "/host" },
   { key: "gallery", href: "/gallery" },
+  { key: "collaborators", href: "/collaborators" },
   { key: "links", href: "/links" },
 ];
 
@@ -47,6 +53,7 @@ export const linkGroups: LinkGroup[] = [
     items: [
       { key: "association", href: "https://solidaritypark.com/about/", external: true },
       { key: "festival", href: "https://solidaritypark.com/", external: true },
+      { key: "sunderland", href: "https://solidaritypark.com/solidarity-sunderland/", external: true },
     ],
   },
   {
@@ -54,6 +61,7 @@ export const linkGroups: LinkGroup[] = [
     items: [
       { key: "ibmt", href: "https://international-brigades.org.uk/", external: true },
       { key: "basqueChildren", href: "https://www.basquechildren.org/", external: true },
+      { key: "alba", href: "https://alba-valb.org/", external: true },
     ],
   },
   {

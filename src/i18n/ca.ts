@@ -20,6 +20,7 @@ export const ca: TranslationOverride = {
     donate: "Donar",
     host: "Acollir",
     gallery: "Galeria",
+    collaborators: "Col·laboradors",
     links: "Enllaços",
   },
   langSwitcher: { label: "Trieu l'idioma", current: "Idioma actual" },
@@ -131,9 +132,10 @@ export const ca: TranslationOverride = {
     ],
   },
   contribute: {
-    heroTitle: "Contribueix amb obra, poesia o material local.",
+    heroTitle:
+      "Aporta el teu art",
     heroSubtitle:
-      "Quan les sales tenen espai, la gira pot incloure artistes antifeixistes locals, poetes, cineastes, animadors, escultors, pintors i participants de la comunitat al costat de l'exposició principal.",
+      "Volem sumar la teva veu artística antifeixista als Millions. A continuació establim algunes condicions. Les obres acceptades formaran part de la instal·lació principal de l’exposició itinerant i/o de les galeries en línia paral·leles. Ens interessen especialment les imatges i la paraula dita, però estem oberts a totes les expressions artístiques. Allà on els espais tinguin lloc i temps, intentarem mostrar la teva obra o actuació en directe.",
     heroPrimaryCta: "Sol·licitar enllaç",
     heroSecondaryCta: "Dates de la gira",
     notesTitle: "Notes per contribuir",
@@ -148,6 +150,7 @@ export const ca: TranslationOverride = {
       "Artistes, poetes, cineastes, animadors, escultors, pintors i participants de la comunitat poden fer servir aquest formulari per enviar material de vista prèvia o enllaços.",
       "Envia només fitxers de vista prèvia: JPG, JPEG, PNG, WebP, PDF, MP3, M4A o WAV. Les vistes prèvies de vídeo es comparteixen millor com a enllaços.",
       "Puja fins a cinc fitxers de vista prèvia, màxim 20 MB cadascun i 75 MB en total. Als artistes preseleccionats se'ls podran demanar a part els originals a punt per a producció.",
+      "Si la teva obra forma part d’una escola, institut o organització participant, demana un enllaç de Google Drive vinculat a la teva institució per accelerar la pujada i la revisió.",
     ],
   },
   contributeConditions: {
@@ -206,7 +209,23 @@ export const ca: TranslationOverride = {
   host: {
     heroTitle: "Acull Un milió de paraules contra el feixisme.",
     heroSubtitle:
-      "Explica'ns el bàsic sobre la teva sala, públic, socis educatius i dates preferides. La gira pot adaptar la Sala de la Solidaritat, l'activitat de postals al carrer, la història local i el programa en directe a cada context.",
+      "Comparteix la informació bàsica sobre el teu espai, el públic, els socis educatius i les dates preferides. Et respondrem tan aviat com puguem.",
+    proposalTitle: "Què has d’incloure a la teva proposta",
+    proposalItems: [
+      "La teva organització o espai, i a qui hem de respondre.",
+      "On sou i quin tipus d’espai és: galeria, biblioteca, escola, local sindical, festival o un altre.",
+      "Les dates o el període que estàs considerant.",
+      "La mida de l’espai: llargada de paret, dimensions de la sala i parets que donin al carrer.",
+      "Horaris d’obertura al públic, accés d’escoles o grups i necessitats d’accessibilitat.",
+      "Aproximadament quants visitants esperes.",
+      "Història local de les Brigades Internacionals, socis o idees de programació que vulguis incloure.",
+    ],
+    revealTitle: "Envia la teva proposta",
+    revealBody:
+      "Confirma que ets una persona i et mostrarem l’adreça on enviar-la. Així la mantenim fora de l’abast dels robots.",
+    revealButton: "Mostra l’adreça de correu",
+    revealPending: "Verificant…",
+    revealError: "La verificació no s’ha completat. Torna-ho a provar.",
     heroPrimaryCta: "Iniciar consulta",
     heroSecondaryCta: "Dates de la gira",
     formatsTitle: "Formats d'acollida",
@@ -294,6 +313,13 @@ export const ca: TranslationOverride = {
       "A mesura que es confirmin per a la gira les obres de joves artistes i les peces encarregades, aquí es mostrarà una selecció. Les contribucions enviades mitjançant l'enllaç segur es revisen de manera privada i no es publiquen automàticament.",
     contributeCta: "Contribuir amb obra",
   },
+  collaborators: {
+    heroTitle: "Col·laboradors",
+    heroSubtitle:
+      "Els artistes, historiadors, educadors i organitzacions que construeixen l’exposició i la gira.",
+    empty: "Estem recollint els perfils i es publicaran aquí a mesura que es confirmin.",
+  },
+
   links: {
     heroTitle: "Enllaços",
     heroSubtitle:
@@ -304,6 +330,7 @@ export const ca: TranslationOverride = {
         items: {
           association: { label: "Associació Solidarity Park", note: "L'organització que hi ha darrere de l'exposició." },
           festival: { label: "Festival de Solidarity Park, Catalunya", note: "El festival cap al qual avança la gira de 2027." },
+          sunderland: { label: "Solidarity Sunderland History Hub", note: "Els brigadistes de Sunderland, els vaixells i els nens bascos del 1937." },
         },
       },
       memory: {
@@ -311,6 +338,7 @@ export const ca: TranslationOverride = {
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Mantenir viva la memòria de les Brigades Internacionals." },
           basqueChildren: { label: "Associació Nens Bascos del 37", note: "La història dels nens evacuats durant la Guerra Civil espanyola." },
+          alba: { label: "Abraham Lincoln Brigade Archives", note: "Els voluntaris nord-americans de les Brigades Internacionals i l’arxiu que en conserva la memòria." },
         },
       },
       getInvolved: {
