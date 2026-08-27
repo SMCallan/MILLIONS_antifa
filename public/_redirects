@@ -1,0 +1,19 @@
+# Donate moved off the site to the crowdfunding project, so /donate no longer
+# builds. Without these rules Cloudflare Pages answers the old paths with the
+# home page and a 200, which silently strands anyone holding a saved link.
+# Both the bare and trailing-slash forms are listed because either can be
+# bookmarked.
+/donate        https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/donate/       https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/ca/donate     https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/ca/donate/    https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/es/donate     https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/es/donate/    https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/de/donate     https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/de/donate/    https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/sv/donate     https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/sv/donate/    https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/nl/donate     https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/nl/donate/    https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/fr/donate     https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+/fr/donate/    https://chuffed.org/project/197805-millions-of-words-against-fascism  301
