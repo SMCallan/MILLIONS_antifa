@@ -33,6 +33,11 @@ export const ca: TranslationOverride = {
     comingSoon: "Ben aviat",
     close: "Tanca",
     opensInNewTab: "S’obre en una pestanya nova",
+    revealBody:
+      "Confirma que ets una persona i et mostrarem l’adreça on enviar-la. Així la mantenim fora de l’abast dels robots.",
+    revealButton: "Mostra l’adreça de correu",
+    revealPending: "Verificant…",
+    revealError: "La verificació no s’ha completat. Torna-ho a provar.",
   },
   hero: {
     title: "Un milió de paraules contra el feixisme",
@@ -136,6 +141,7 @@ export const ca: TranslationOverride = {
       "Aporta el teu art",
     heroSubtitle:
       "Volem sumar la teva veu artística antifeixista als Millions. A continuació establim algunes condicions. Les obres acceptades formaran part de la instal·lació principal de l’exposició itinerant i/o de les galeries en línia paral·leles. Ens interessen especialment les imatges i la paraula dita, però estem oberts a totes les expressions artístiques. Allà on els espais tinguin lloc i temps, intentarem mostrar la teva obra o actuació en directe.",
+    revealTitle: "Envia’ns la teva obra",
     heroPrimaryCta: "Sol·licitar enllaç",
     heroSecondaryCta: "Dates de la gira",
     notesTitle: "Notes per contribuir",
@@ -221,11 +227,6 @@ export const ca: TranslationOverride = {
       "Història local de les Brigades Internacionals, socis o idees de programació que vulguis incloure.",
     ],
     revealTitle: "Envia la teva proposta",
-    revealBody:
-      "Confirma que ets una persona i et mostrarem l’adreça on enviar-la. Així la mantenim fora de l’abast dels robots.",
-    revealButton: "Mostra l’adreça de correu",
-    revealPending: "Verificant…",
-    revealError: "La verificació no s’ha completat. Torna-ho a provar.",
     heroPrimaryCta: "Iniciar consulta",
     heroSecondaryCta: "Dates de la gira",
     formatsTitle: "Formats d'acollida",

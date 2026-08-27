@@ -235,27 +235,6 @@
     translate: 0;
   }
 
-  .prototype-ribbon {
-    position: fixed;
-    inset-block-start: 1.45rem;
-    inset-inline-start: -3.75rem;
-    z-index: 90;
-    width: 13rem;
-    rotate: -45deg;
-    border-block: 2px solid var(--foreground);
-    background: var(--signal-yellow);
-    box-shadow: 0 0.2rem 0 color-mix(in oklch, var(--foreground) 28%, transparent);
-    color: var(--foreground);
-    padding-block: 0.35rem;
-    pointer-events: none;
-    text-align: center;
-    font-size: 0.65rem;
-    font-weight: 900;
-    letter-spacing: 0.16em;
-    line-height: 1;
-    text-transform: uppercase;
-  }
-
   .display-type {
     font-family: var(--font-display);
     font-stretch: condensed;

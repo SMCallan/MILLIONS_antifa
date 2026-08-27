@@ -1,0 +1,93 @@
+---
+import { Mail } from "lucide-react";
+
+import TurnstileWidget from "@/components/TurnstileWidget.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n";
+
+// Shows the project contact address, but only after a Turnstile challenge.
+//
+// The address is deliberately absent from the rendered markup: it is fetched
+// from /api/contact-email, which verifies the token server-side, and injected
+// into the DOM at runtime. Address-harvesting crawlers reading the HTML find
+// nothing. Keep it that way — putting the address in the markup and merely
+// hiding it would make this decorative.
+//
+// `title` differs per page; everything else is shared wording from `common`.
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<div class="print-shadow border-2 border-foreground bg-card p-6">
+  <h2 class="flex items-center gap-2 text-xl font-black">
+    <Mail className="size-5 text-primary" aria-hidden="true" />
+    {title}
+  </h2>
+  <p class="mt-3 text-sm leading-6 text-muted-foreground">{t.common.revealBody}</p>
+
+  <form
+    data-contact-reveal
+    data-pending={t.common.revealPending}
+    data-failed={t.common.revealError}
+    class="mt-5 grid gap-4"
+  >
+    <TurnstileWidget />
+    <button
+      type="submit"
+      class="inline-flex min-h-12 cursor-pointer items-center justify-center gap-2 border border-primary bg-primary px-5 text-sm font-black uppercase tracking-[0.13em] text-primary-foreground transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+    >
+      {t.common.revealButton}
+    </button>
+  </form>
+
+  <p data-contact-status role="status" aria-live="polite" class="mt-4 text-sm leading-6"></p>
+  <p data-contact-result hidden class="mt-2 break-words text-lg font-black"></p>
+</div>
+
+<script is:inline>
+  (() => {
+    const form = document.querySelector("[data-contact-reveal]");
+    const status = document.querySelector("[data-contact-status]");
+    const result = document.querySelector("[data-contact-result]");
+    if (!form || !status || !result) return;
+
+    const button = form.querySelector("button[type=submit]");
+    const pending = form.dataset.pending || "";
+    const failed = form.dataset.failed || "";
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      status.textContent = pending;
+      if (button) button.disabled = true;
+
+      try {
+        const response = await fetch("/api/contact-email", {
+          method: "POST",
+          body: new FormData(form),
+        });
+        const data = await response.json();
+
+        if (!response.ok || !data.ok || !data.email) {
+          throw new Error(data.error || "failed");
+        }
+
+        status.textContent = "";
+        form.hidden = true;
+        result.hidden = false;
+        // Built at runtime so the address never appears in the served HTML.
+        const link = document.createElement("a");
+        link.href = "mailto:" + data.email;
+        link.textContent = data.email;
+        link.className = "text-primary underline underline-offset-4";
+        result.replaceChildren(link);
+      } catch {
+        status.textContent = failed;
+        if (button) button.disabled = false;
+        if (window.turnstile) window.turnstile.reset();
+      }
+    });
+  })();
+</script>

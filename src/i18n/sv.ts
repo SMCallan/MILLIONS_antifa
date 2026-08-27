@@ -33,6 +33,11 @@ export const sv: TranslationOverride = {
     comingSoon: "Kommer snart",
     close: "Stäng",
     opensInNewTab: "Öppnas i en ny flik",
+    revealBody:
+      "Bekräfta att du är en människa så visar vi adressen att skicka det till. Det håller den borta från automatiska insamlare.",
+    revealButton: "Visa e-postadressen",
+    revealPending: "Kontrollerar…",
+    revealError: "Kontrollen slutfördes inte. Försök igen.",
   },
   hero: {
     title: "En miljon ord mot fascismen",
@@ -136,6 +141,7 @@ export const sv: TranslationOverride = {
       "Bidra med din konst",
     heroSubtitle:
       "Vi vill lägga till din antifascistiska konstnärliga röst till Millions. Nedan anger vi några villkor. Antagna verk blir en del av den turnerande utställningens huvudinstallation och/eller de parallella galleriera online. Vi är särskilt intresserade av bilder och talat ord, men vi är öppna för alla konstnärliga uttryck. Där spelplatserna har plats och tid försöker vi visa ditt verk eller framförande live.",
+    revealTitle: "Skicka ditt verk till oss",
     heroPrimaryCta: "Begär länk",
     heroSecondaryCta: "Turnédatum",
     notesTitle: "Anteckningar om att bidra",
@@ -221,11 +227,6 @@ export const sv: TranslationOverride = {
       "Lokal historia om Internationella brigaderna, samarbetspartner eller programidéer ni vill ha med.",
     ],
     revealTitle: "Skicka ditt förslag",
-    revealBody:
-      "Bekräfta att du är en människa så visar vi adressen att skicka det till. Det håller den borta från automatiska insamlare.",
-    revealButton: "Visa e-postadressen",
-    revealPending: "Kontrollerar…",
-    revealError: "Kontrollen slutfördes inte. Försök igen.",
     heroPrimaryCta: "Starta förfrågan",
     heroSecondaryCta: "Turnédatum",
     formatsTitle: "Format för värdskap",

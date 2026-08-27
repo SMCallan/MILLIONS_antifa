@@ -1,8 +1,8 @@
 ---
-import { Check, Mail } from "lucide-react";
+import { Check } from "lucide-react";
 
+import ContactReveal from "@/components/ContactReveal.astro";
 import { SignalFieldHero } from "@/components/SignalFieldHero";
-import TurnstileWidget from "@/components/TurnstileWidget.astro";
 import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
 
 const lang = getLangFromUrl(Astro.url);
@@ -34,79 +34,7 @@ const t = useTranslations(lang);
       </ul>
     </div>
 
-    <!--
-      The address is not in this page's markup. It is fetched from
-      /api/contact-email only after Turnstile verifies server-side, so
-      address-harvesting crawlers reading the HTML find nothing.
-    -->
-    <div class="border-2 border-foreground bg-card p-6 print-shadow">
-      <h2 class="flex items-center gap-2 text-xl font-black">
-        <Mail className="size-5 text-primary" aria-hidden="true" />
-        {t.host.revealTitle}
-      </h2>
-      <p class="mt-3 text-sm leading-6 text-muted-foreground">{t.host.revealBody}</p>
-
-      <form
-        data-contact-reveal
-        data-pending={t.host.revealPending}
-        data-failed={t.host.revealError}
-        class="mt-5 grid gap-4">
-        <TurnstileWidget />
-        <button
-          type="submit"
-          class="inline-flex min-h-12 cursor-pointer items-center justify-center gap-2 border border-primary bg-primary px-5 text-sm font-black uppercase tracking-[0.13em] text-primary-foreground transition-transform hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
-        >
-          {t.host.revealButton}
-        </button>
-      </form>
-
-      <p data-contact-status role="status" aria-live="polite" class="mt-4 text-sm leading-6"></p>
-      <p data-contact-result hidden class="mt-2 break-words text-lg font-black"></p>
-    </div>
+    <ContactReveal title={t.host.revealTitle} />
   </div>
 </section>
 
-<script is:inline>
-  (() => {
-    const form = document.querySelector("[data-contact-reveal]");
-    const status = document.querySelector("[data-contact-status]");
-    const result = document.querySelector("[data-contact-result]");
-    if (!form || !status || !result) return;
-
-    const button = form.querySelector("button[type=submit]");
-    const pending = form.dataset.pending || "";
-    const failed = form.dataset.failed || "";
-
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      status.textContent = pending;
-      if (button) button.disabled = true;
-
-      try {
-        const response = await fetch("/api/contact-email", {
-          method: "POST",
-          body: new FormData(form),
-        });
-        const data = await response.json();
-
-        if (!response.ok || !data.ok || !data.email) {
-          throw new Error(data.error || "failed");
-        }
-
-        status.textContent = "";
-        form.hidden = true;
-        result.hidden = false;
-        // Built at runtime so the address never appears in the served HTML.
-        const link = document.createElement("a");
-        link.href = "mailto:" + data.email;
-        link.textContent = data.email;
-        link.className = "text-primary underline underline-offset-4";
-        result.replaceChildren(link);
-      } catch {
-        status.textContent = failed;
-        if (button) button.disabled = false;
-        if (window.turnstile) window.turnstile.reset();
-      }
-    });
-  })();
-</script>

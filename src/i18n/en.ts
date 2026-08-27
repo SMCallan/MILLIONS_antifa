@@ -41,6 +41,11 @@ export const en = {
     comingSoon: "Coming soon",
     close: "Close",
     opensInNewTab: "Opens in a new tab",
+    revealBody:
+      "Confirm you are human and we will show you the address to send it to. This keeps it away from automated scrapers.",
+    revealButton: "Show the email address",
+    revealPending: "Checking…",
+    revealError: "That check did not complete. Please try again.",
   },
 
   // Hero used on the home page (logo left, title + sub text right).
@@ -152,6 +157,7 @@ export const en = {
       "Contribute your Art",
     heroSubtitle:
       "We want to add your anti-fascist artistic voice to the Millions. Below we set out some conditions. Accepted works will form part of the physical touring exhibition main installation and/or parallel online galleries. We are especially interested in images and spoken words, but we are open to all artistic expressions. Where venues have space and time we will try to show your work or performance in real time.",
+    revealTitle: "Send us your work",
     heroPrimaryCta: "Request link",
     heroSecondaryCta: "Tour dates",
     notesTitle: "Contribution notes",
@@ -240,11 +246,6 @@ export const en = {
       "Any local International Brigades history, partners, or programme ideas you would like to include.",
     ],
     revealTitle: "Send your proposal",
-    revealBody:
-      "Confirm you are human and we will show you the address to send it to. This keeps it away from automated scrapers.",
-    revealButton: "Show the email address",
-    revealPending: "Checking…",
-    revealError: "That check did not complete. Please try again.",
     heroPrimaryCta: "Start enquiry",
     heroSecondaryCta: "Tour dates",
     formatsTitle: "Hosting formats",

@@ -33,6 +33,11 @@ export const nl: TranslationOverride = {
     comingSoon: "Binnenkort",
     close: "Sluiten",
     opensInNewTab: "Opent in een nieuw tabblad",
+    revealBody:
+      "Bevestig dat je een mens bent, dan tonen we het adres waar je het naartoe kunt sturen. Zo blijft het buiten bereik van geautomatiseerde verzamelaars.",
+    revealButton: "Toon het e-mailadres",
+    revealPending: "Bezig met controleren…",
+    revealError: "De controle is niet voltooid. Probeer het opnieuw.",
   },
   hero: {
     title: "Een miljoen woorden tegen het fascisme",
@@ -136,6 +141,7 @@ export const nl: TranslationOverride = {
       "Draag je kunst bij",
     heroSubtitle:
       "We willen jouw antifascistische artistieke stem toevoegen aan de Millions. Hieronder staan enkele voorwaarden. Geaccepteerd werk wordt onderdeel van de hoofdinstallatie van de reizende tentoonstelling en/of van de parallelle online galerieën. We zijn vooral geïnteresseerd in beeld en gesproken woord, maar staan open voor alle artistieke uitingen. Waar locaties ruimte en tijd hebben, proberen we je werk of performance live te tonen.",
+    revealTitle: "Stuur ons je werk",
     heroPrimaryCta: "Link aanvragen",
     heroSecondaryCta: "Tourdata",
     notesTitle: "Opmerkingen over bijdragen",
@@ -221,11 +227,6 @@ export const nl: TranslationOverride = {
       "Lokale geschiedenis van de Internationale Brigades, partners of programma-ideeën die jullie willen toevoegen.",
     ],
     revealTitle: "Stuur je voorstel",
-    revealBody:
-      "Bevestig dat je een mens bent, dan tonen we het adres waar je het naartoe kunt sturen. Zo blijft het buiten bereik van geautomatiseerde verzamelaars.",
-    revealButton: "Toon het e-mailadres",
-    revealPending: "Bezig met controleren…",
-    revealError: "De controle is niet voltooid. Probeer het opnieuw.",
     heroPrimaryCta: "Aanvraag starten",
     heroSecondaryCta: "Tourdata",
     formatsTitle: "Formats voor gastheerschap",
