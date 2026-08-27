@@ -44,7 +44,7 @@ const defaultPrimaryCta = {
 
 const defaultSecondaryCta = {
   label: "Contribute artwork",
-  href: "/submit",
+  href: "/contribute",
 };
 
 type HeroFieldCanvasComponent = React.ComponentType;

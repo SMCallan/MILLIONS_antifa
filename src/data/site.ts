@@ -109,12 +109,6 @@ export const tourDates: { city: string; date?: string; venue?: string }[] = [
   { city: "Hull", venue: "Hull Art School" },
 ];
 
-export const submissionGuidelines = [
-  "The tour may include local anti-fascist artists where venue space allows, alongside the core Solidarity Room and commissioned international works.",
-  "Artists, poets, film-makers, animators, sculptors, painters, and community contributors can use this form to send preview material or links.",
-  "Submit preview files only: JPG, JPEG, PNG, WebP, PDF, MP3, M4A, or WAV. Video previews are best shared as links.",
-  "Upload up to five preview files, maximum 20MB each and 75MB total. Shortlisted artists may be asked separately for production-ready originals.",
-];
 
 export const bookingFeatures = [
   "The central Solidarity Room is planned as a 4 x 4m space with walls covered by 1,000 postcard-sized images created through Solidarity Park.",
