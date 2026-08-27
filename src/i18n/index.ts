@@ -85,6 +85,11 @@ export function getLangFromUrl(url: URL): LanguageCode {
  * The default locale is served without a prefix.
  */
 export function localizePath(path: string, lang: LanguageCode): string {
+  // Absolute URLs pass straight through: a nav entry may point off-site (the
+  // donate link goes directly to the crowdfunding page), and those must not be
+  // prefixed with a locale segment.
+  if (/^https?:\/\//i.test(path)) return path;
+
   const clean = path.startsWith("/") ? path : `/${path}`;
   if (lang === defaultLang) return clean;
   if (clean === "/") return `/${lang}/`;
@@ -102,7 +107,6 @@ export const localizedBasePaths: readonly string[] = [
   "/tour-dates",
   "/concept",
   "/contribute",
-  "/donate",
   "/host",
   "/gallery",
   "/links",
