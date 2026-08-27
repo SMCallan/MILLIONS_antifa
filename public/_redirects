@@ -17,3 +17,11 @@
 /nl/donate/    https://chuffed.org/project/197805-millions-of-words-against-fascism  301
 /fr/donate     https://chuffed.org/project/197805-millions-of-words-against-fascism  301
 /fr/donate/    https://chuffed.org/project/197805-millions-of-words-against-fascism  301
+
+# The artwork submission flow was removed and contributing now starts with an
+# email from /contribute. Without these, Cloudflare Pages answers the old paths
+# with the home page and a 200, which strands anyone following an old link.
+/submit          /contribute  301
+/submit/         /contribute  301
+/submit/access   /contribute  301
+/submit/access/  /contribute  301
