@@ -152,39 +152,39 @@ export const de: TranslationOverride = {
     submitButton: "Sicheren Beitrags-Link senden",
     conditionsCta: "Beitragsbedingungen lesen",
     guidelines: [
-      "Die Tour kann lokale antifaschistische Kunstschaffende einbeziehen, wo der Platz es zulässt, neben dem zentralen Solidaritätsraum und den beauftragten internationalen Werken.",
-      "Kunstschaffende, Dichter:innen, Filmemacher:innen, Animator:innen, Bildhauer:innen, Maler:innen und Beitragende aus der Gemeinschaft können dieses Formular nutzen, um Vorschaumaterial oder Links zu senden.",
-      "Reichen Sie nur Vorschaudateien ein: JPG, JPEG, PNG, WebP, PDF, MP3, M4A oder WAV. Videovorschauen teilen Sie am besten als Links.",
-      "Laden Sie bis zu fünf Vorschaudateien hoch, maximal 20 MB pro Datei und 75 MB insgesamt. Ausgewählte Kunstschaffende werden ggf. separat um produktionsfertige Originale gebeten.",
-      "Wenn deine Arbeit zu einer teilnehmenden Schule, Hochschule oder Organisation gehört, fordere bitte einen mit deiner Einrichtung verknüpften Google-Drive-Link an, damit Upload und Prüfung schneller gehen.",
+      "Die Tour kann lokale antifaschistische Kunstschaffende einbeziehen, wo der Raum es zulässt, neben dem Solidaritätsraum und den international beauftragten Arbeiten.",
+      "Kunstschaffende, Dichterinnen und Dichter, Filmemacher, Animatorinnen, Bildhauer, Malerinnen und Mitwirkende aus der Nachbarschaft können Arbeiten oder Links per E-Mail schicken.",
+      "Schick Bilder und Audio als JPG, PNG, WebP, PDF, MP3, M4A oder WAV. Video und alles Große bitte als Link teilen.",
+      "Halte Anhänge insgesamt unter etwa 20 MB und schick für alles Größere einen Link. Bei Arbeiten in der engeren Wahl fragen wir produktionsfertige Originale gesondert an.",
+      "Gehört deine Arbeit zu einer teilnehmenden Schule, Hochschule oder Organisation, frag bitte nach einem mit deiner Einrichtung verknüpften Google-Drive-Link, damit Versand und Prüfung schneller gehen.",
     ],
   },
   contributeConditions: {
     heroTitle: "Beitragsbedingungen",
     heroSubtitle:
-      "Bitte lesen Sie diese Bedingungen, bevor Sie einen sicheren Beitrags-Link anfordern und Vorschaumaterial hochladen.",
+      "Bitte lies diese Bedingungen, bevor du deine Arbeit per E-Mail schickst.",
     intro:
-      "Der öffentliche Beitragsweg akzeptiert ausschließlich Prüf- und Vorschaumaterial. Er darf nicht für endgültige Dateien oder Master verwendet werden.",
+      "Beiträge werden per E-Mail geschickt. Wir bitten ausschließlich um Sichtungsmaterial, nicht um fertige Produktionsdateien oder Master.",
     sections: [
       {
-        heading: "Akzeptierte Vorschauformate",
-        body: "JPG/JPEG, PNG, WebP und PDF für Bilder und Dokumente; MP3, M4A oder WAV für Audiovorschauen. Videovorschauen teilen Sie am besten als Links (Vimeo, YouTube, Google Drive, Dropbox oder WeTransfer).",
+        heading: "Was du schicken solltest",
+        body: "Bilder und Dokumente als JPG, PNG, WebP oder PDF. Audio als MP3, M4A oder WAV. Video und alles Große bitte als Link — Vimeo, YouTube, Google Drive, Dropbox und WeTransfer funktionieren alle.",
       },
       {
-        heading: "Upload-Grenzen",
-        body: "Bis zu 5 Vorschaudateien pro Beitrag, maximal 20 MB pro Datei und 75 MB insgesamt. Die Auswahl neuer Dateien ersetzt nach der Prüfung Ihren bisherigen Vorschausatz.",
+        heading: "Anhänge klein halten, oder einen Link schicken",
+        body: "Halte Anhänge insgesamt unter etwa 20 MB, da größere Nachrichten oft abgewiesen werden, bevor sie bei uns ankommen. Darüber schick stattdessen einen Link. Für einen Link gibt es keine Größenbeschränkung.",
       },
       {
-        heading: "Über das öffentliche Formular nicht akzeptiert",
-        body: "Laden Sie keine PSD-, TIFF-, ZIP-, EXE-Dateien, beliebige Binärdateien, mehrschichtige Master, druckfertige Master oder Audio- bzw. Video-Master hoch. Ausgewählte Kunstschaffende werden über einen kontrollierten Prozess separat für produktionsfertige Originale kontaktiert.",
+        heading: "Was du nicht schicken solltest",
+        body: "Bitte keine Ebenen-, Druck-, Audio- oder Video-Master und keine Archive wie ZIP anhängen. Schick zuerst Material in Sichtungsqualität. Kommt deine Arbeit in die engere Wahl, fragen wir die produktionsfertigen Originale gesondert an.",
       },
       {
-        heading: "Wie Ihr Material behandelt wird",
-        body: "Vorschaudateien werden privat gespeichert und nur zur Prüfung Ihres Beitrags zur Ausstellung verwendet. Die Dateien werden nicht öffentlich gemacht und gemäß der Aufbewahrungsrichtlinie des Projekts aufbewahrt.",
+        heading: "Wie wir mit deinem Material umgehen",
+        body: "Was du schickst, wird ausschließlich verwendet, um deine Arbeit für die Ausstellung zu prüfen. Nichts wird automatisch veröffentlicht, und nichts wird ohne dein Einverständnis öffentlich gemacht.",
       },
       {
         heading: "Rechte und Einwilligung",
-        body: "Mit dem Einreichen bestätigen Sie, dass Sie das Werk geschaffen haben oder die Erlaubnis haben, es zu teilen, und Sie stimmen zu, dass es für die Präsentation innerhalb der Ausstellung und ihrer Bewerbung in Betracht gezogen werden darf. Das Urheberrecht an Ihrem Werk bleibt bei Ihnen.",
+        body: "Mit dem Einsenden bestätigst du, dass du die Arbeit selbst geschaffen hast oder die Erlaubnis hast, sie zu teilen, und du erklärst dich damit einverstanden, dass sie für die Ausstellung und deren Bewerbung in Betracht gezogen werden darf. Das Urheberrecht bleibt bei dir.",
       },
     ],
     uploaderTitle: "Der Uploader",

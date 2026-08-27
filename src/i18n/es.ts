@@ -152,39 +152,39 @@ export const es: TranslationOverride = {
     submitButton: "Enviar enlace seguro para contribuir",
     conditionsCta: "Leer las condiciones de contribución",
     guidelines: [
-      "La gira puede incluir artistas antifascistas locales cuando el espacio de la sala lo permita, junto a la Sala de la Solidaridad principal y las obras internacionales encargadas.",
-      "Artistas, poetas, cineastas, animadores, escultores, pintores y participantes de la comunidad pueden usar este formulario para enviar material de vista previa o enlaces.",
-      "Envía solo archivos de vista previa: JPG, JPEG, PNG, WebP, PDF, MP3, M4A o WAV. Las vistas previas de vídeo se comparten mejor como enlaces.",
-      "Sube hasta cinco archivos de vista previa, máximo 20 MB cada uno y 75 MB en total. A los artistas preseleccionados se les podrán pedir aparte los originales listos para producción.",
-      "Si tu obra forma parte de una escuela, instituto u organización participante, solicita un enlace de Google Drive vinculado a tu institución para agilizar la subida y la revisión.",
+      "La gira puede incluir artistas antifascistas locales donde el espacio de la sala lo permita, junto a la Sala de la Solidaridad y las obras internacionales encargadas.",
+      "Artistas, poetas, cineastas, animadores, escultores, pintores y participantes de la comunidad podéis enviar obra o enlaces por correo electrónico.",
+      "Envía imágenes y audio en JPG, PNG, WebP, PDF, MP3, M4A o WAV. Comparte el vídeo, y cualquier archivo grande, como enlace.",
+      "Mantén los adjuntos por debajo de unos 20 MB en total y envía un enlace para cualquier cosa mayor. A los artistas preseleccionados se les pueden pedir aparte los originales listos para producción.",
+      "Si tu obra forma parte de una escuela, instituto u organización participante, solicita un enlace de Google Drive vinculado a tu institución para agilizar el envío y la revisión.",
     ],
   },
   contributeConditions: {
     heroTitle: "Condiciones de contribución",
     heroSubtitle:
-      "Lee estas condiciones antes de solicitar un enlace seguro para contribuir y subir material de vista previa.",
+      "Lee estas condiciones antes de enviar tu obra por correo electrónico.",
     intro:
-      "El flujo público de contribución acepta únicamente material de revisión y vista previa. No debe usarse para archivos finales ni másteres.",
+      "Las aportaciones se envían por correo electrónico. Pedimos solo material de revisión, no archivos finales ni masters.",
     sections: [
       {
-        heading: "Formatos de vista previa aceptados",
-        body: "JPG/JPEG, PNG, WebP y PDF para imágenes y documentos; MP3, M4A o WAV para vistas previas de audio. Las vistas previas de vídeo se comparten mejor como enlaces (Vimeo, YouTube, Google Drive, Dropbox o WeTransfer).",
+        heading: "Qué enviar",
+        body: "Imágenes y documentos en JPG, PNG, WebP o PDF. Audio en MP3, M4A o WAV. Envía el vídeo, o cualquier archivo grande, como enlace: Vimeo, YouTube, Google Drive, Dropbox y WeTransfer sirven todos.",
       },
       {
-        heading: "Límites de subida",
-        body: "Hasta 5 archivos de vista previa por contribución, un máximo de 20 MB por archivo y 75 MB en total. Al seleccionar archivos nuevos se reemplaza el conjunto de vista previa anterior tras la validación.",
+        heading: "Adjuntos pequeños, o mejor un enlace",
+        body: "Mantén los adjuntos por debajo de unos 20 MB en total, porque los mensajes más grandes suelen rechazarse antes de llegarnos. Por encima de ese tamaño, envía un enlace. Un enlace no tiene límite de tamaño.",
       },
       {
-        heading: "No se acepta a través del formulario público",
-        body: "No subas PSD, TIFF, ZIP, EXE, binarios arbitrarios, másteres por capas, másteres listos para imprenta ni másteres de audio o vídeo. A los artistas preseleccionados se les contacta aparte para los originales listos para producción mediante un proceso controlado.",
+        heading: "Qué no enviar",
+        body: "No adjuntes masters por capas, de preimpresión, de audio o de vídeo, ni archivos comprimidos como ZIP. Envía primero material con calidad de revisión. Si tu obra es preseleccionada, te pediremos los originales listos para producción aparte.",
       },
       {
-        heading: "Cómo se trata tu material",
-        body: "Los archivos de vista previa se almacenan de forma privada y se usan solo para revisar tu contribución a la exposición. Los archivos no se hacen públicos y se conservan según la política de retención del proyecto.",
+        heading: "Cómo tratamos tu material",
+        body: "Lo que envíes se utiliza únicamente para valorar tu obra para la exposición. No se publica nada automáticamente ni se hace público nada sin tu acuerdo.",
       },
       {
         heading: "Derechos y consentimiento",
-        body: "Al enviar, confirmas que has creado la obra o que tienes permiso para compartirla, y aceptas que pueda considerarse para su exhibición dentro de la exposición y su difusión. Conservas los derechos de autor de tu obra.",
+        body: "Al enviar una obra confirmas que la has creado tú, o que tienes permiso para compartirla, y aceptas que pueda valorarse para exponerla dentro de la exposición y su difusión. Conservas los derechos de autor de tu obra.",
       },
     ],
     uploaderTitle: "El cargador de archivos",

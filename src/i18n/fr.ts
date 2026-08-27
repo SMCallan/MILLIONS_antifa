@@ -152,39 +152,39 @@ export const fr: TranslationOverride = {
     submitButton: "Envoyer le lien de contribution sécurisé",
     conditionsCta: "Lire les conditions de contribution",
     guidelines: [
-      "La tournée peut inclure des artistes antifascistes locaux là où l'espace du lieu le permet, aux côtés de la Salle de la Solidarité principale et des œuvres internationales commandées.",
-      "Artistes, poètes, cinéastes, animateurs, sculpteurs, peintres et contributeurs de la communauté peuvent utiliser ce formulaire pour envoyer du matériel d'aperçu ou des liens.",
-      "Soumettez uniquement des fichiers d'aperçu : JPG, JPEG, PNG, WebP, PDF, MP3, M4A ou WAV. Les aperçus vidéo se partagent mieux sous forme de liens.",
-      "Téléversez jusqu'à cinq fichiers d'aperçu, 20 Mo maximum chacun et 75 Mo au total. Les artistes présélectionnés pourront être invités séparément à fournir les originaux prêts pour la production.",
+      "La tournée peut accueillir des artistes antifascistes locaux là où le lieu le permet, aux côtés de la Salle de la Solidarité et des œuvres internationales commandées.",
+      "Artistes, poètes, cinéastes, animateurs, sculpteurs, peintres et participants des quartiers peuvent tous envoyer des œuvres ou des liens par e-mail.",
+      "Envoyez images et audio en JPG, PNG, WebP, PDF, MP3, M4A ou WAV. Partagez la vidéo, et tout fichier volumineux, sous forme de lien.",
+      "Gardez les pièces jointes sous environ 20 Mo au total et envoyez un lien pour tout ce qui dépasse. Il pourra être demandé séparément aux artistes retenus les originaux prêts pour la production.",
       "Si votre travail s’inscrit dans une école, une école d’art ou une organisation partenaire, demandez un lien Google Drive rattaché à votre établissement pour accélérer l’envoi et la relecture.",
     ],
   },
   contributeConditions: {
     heroTitle: "Conditions de contribution",
     heroSubtitle:
-      "Veuillez lire ces conditions avant de demander un lien de contribution sécurisé et de téléverser du matériel d'aperçu.",
+      "Merci de lire ces conditions avant d’envoyer votre travail par e-mail.",
     intro:
-      "Le parcours de contribution public n'accepte que du matériel de relecture et d'aperçu. Il ne doit pas être utilisé pour des fichiers finaux ou des masters.",
+      "Les contributions s’envoient par e-mail. Nous demandons uniquement du matériel de relecture, pas de fichiers de production finaux ni de masters.",
     sections: [
       {
-        heading: "Formats d'aperçu acceptés",
-        body: "JPG/JPEG, PNG, WebP et PDF pour les images et documents ; MP3, M4A ou WAV pour les aperçus audio. Les aperçus vidéo se partagent mieux sous forme de liens (Vimeo, YouTube, Google Drive, Dropbox ou WeTransfer).",
+        heading: "Ce qu’il faut envoyer",
+        body: "Images et documents en JPG, PNG, WebP ou PDF. Audio en MP3, M4A ou WAV. Envoyez la vidéo, et tout fichier volumineux, sous forme de lien : Vimeo, YouTube, Google Drive, Dropbox et WeTransfer conviennent tous.",
       },
       {
-        heading: "Limites de téléversement",
-        body: "Jusqu'à 5 fichiers d'aperçu par contribution, 20 Mo maximum par fichier et 75 Mo au total. Sélectionner de nouveaux fichiers remplace votre lot d'aperçu précédent après validation.",
+        heading: "Des pièces jointes légères, ou un lien",
+        body: "Gardez les pièces jointes sous environ 20 Mo au total, car les messages plus lourds sont souvent rejetés avant de nous parvenir. Au-delà, envoyez plutôt un lien. Un lien n’a pas de limite de taille.",
       },
       {
-        heading: "Non accepté via le formulaire public",
-        body: "Ne téléversez pas de fichiers PSD, TIFF, ZIP, EXE, de binaires arbitraires, de masters en calques, de masters prêts pour l'impression, ni de masters audio ou vidéo. Les artistes présélectionnés sont contactés séparément pour les originaux prêts pour la production via un processus contrôlé.",
+        heading: "Ce qu’il ne faut pas envoyer",
+        body: "N’attachez pas de fichiers à calques, de fichiers prêts à imprimer, de masters audio ou vidéo, ni d’archives comme les ZIP. Envoyez d’abord du matériel de qualité relecture. Si votre travail est retenu, nous demanderons les originaux prêts pour la production séparément.",
       },
       {
         heading: "Comment votre matériel est traité",
-        body: "Les fichiers d'aperçu sont stockés de façon privée et ne servent qu'à évaluer votre contribution à l'exposition. Les fichiers ne sont pas rendus publics et sont conservés selon la politique de conservation du projet.",
+        body: "Ce que vous envoyez sert uniquement à examiner votre travail pour l’exposition. Rien n’est publié automatiquement et rien n’est rendu public sans votre accord.",
       },
       {
         heading: "Droits et consentement",
-        body: "En soumettant, vous confirmez avoir créé l'œuvre ou avoir l'autorisation de la partager, et vous acceptez qu'elle puisse être envisagée pour une présentation dans l'exposition et sa promotion. Vous conservez les droits d'auteur de votre œuvre.",
+        body: "En envoyant une œuvre, vous confirmez que vous l’avez créée, ou que vous avez l’autorisation de la partager, et vous acceptez qu’elle puisse être considérée pour être montrée dans l’exposition et sa promotion. Vous conservez le droit d’auteur sur votre œuvre.",
       },
     ],
     uploaderTitle: "L'outil de téléversement",
