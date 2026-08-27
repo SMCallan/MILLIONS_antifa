@@ -343,6 +343,12 @@ export const en = {
     empty: "Profiles are being gathered and will be published here as they are confirmed.",
   },
 
+  notFound: {
+    title: "Page not found",
+    body:
+      "That page does not exist, or it has moved. The links below will get you back on track.",
+  },
+
   links: {
     heroTitle: "Links",
     heroSubtitle:
