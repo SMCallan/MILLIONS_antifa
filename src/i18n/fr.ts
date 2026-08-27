@@ -42,7 +42,7 @@ export const fr: TranslationOverride = {
     secondaryCta: "Contribuer une œuvre",
     badges: [
       "Solidarity Park",
-      "Tournée internationale",
+      "Brigades internationales",
       "1 000 jeunes artistes",
       "Brigades internationales",
       "Art, mémoire, éducation",
@@ -84,15 +84,17 @@ export const fr: TranslationOverride = {
     contributeCta: "Contribuer une œuvre",
   },
   tourDates: {
-    heroTitle: "Tournée internationale de Solidarity Park.",
+    heroTitle:
+      "Tournée Million Words Against Fascism.",
     heroSubtitle:
-      "La tournée s'organise autour d'écoles, de syndicats, de lieux d'art, de groupes des Brigades internationales, de chorales, de lycées et de partenaires civiques, en direction du Festival de Solidarity Park en Catalogne.",
+      "La tournée est menée en collaboration avec des artistes du monde entier, des écoles, des écoles d’art, des syndicats, des lieux d’art, des groupes liés aux Brigades internationales, des poètes, des chorales militantes et des campagnes de solidarité, tous en chemin vers le Festival de Solidarity Park en Catalogne en mai 2027.",
     heroPrimaryCta: "Voir l'itinéraire",
     heroSecondaryCta: "Accueillir l'exposition",
     routeBadge: "Notes d'itinéraire",
-    routeTitle: "Lieux prévus et principaux collaborateurs.",
+    routeTitle:
+      "Lieux",
     routeBody:
-      "Les lieux sont indicatifs. Les dates et les détails seront confirmés avec chaque lieu et publiés ici.",
+      "Les lieux, horaires et activités complets seront publiés dès qu’ils seront confirmés.",
     stop: "Étape",
     pause: "Pause",
     tbc: "À confirmer",
@@ -104,23 +106,27 @@ export const fr: TranslationOverride = {
   concept: {
     heroTitle: "Le concept",
     heroSubtitle:
-      "Mille jeunes artistes répondant à la montée du fascisme par un million de mots, rassemblés en une seule exposition itinérante.",
+      "Mille jeunes artistes répondant à la montée du fascisme, rassemblés en une exposition itinérante à laquelle 1 000 autres ajouteront leur art.",
     sections: [
       {
         heading: "Un million de mots",
-        body: "Si une image dit mille mots, mille artistes créent un million de mots. Chaque contribution est une perspective unique et, ensemble, elles forment une réponse internationale et collective aux idéologies d'extrême droite et fascistes.",
+        body: "Le dicton veut qu’une image vaille mille mots. Si c’est le cas, mille jeunes artistes internationaux réunis dans cette exposition itinérante créeront un million de mots. Chaque contribution est leur compréhension historique et critique singulière et, ensemble, elles forment une réponse internationale et collective aux idéologies d’extrême droite et fascistes d’aujourd’hui.",
       },
       {
-        heading: "Ancré dans le projet Solidarity Park",
-        body: "L'exposition naît de l'initiative éducative du projet Solidarity Park, qui fait découvrir aux jeunes la guerre civile espagnole, les Brigades internationales et les leçons de la solidarité internationale. D'ici juin 2026, le projet aura permis plus de 1 000 œuvres visuelles de jeunes.",
+        heading: "Enraciné dans le projet Solidarity Park",
+        body: "L’exposition naît de l’initiative éducative du projet Solidarity Park, qui fait découvrir aux jeunes la guerre civile espagnole, les Brigades internationales et les leçons de la solidarité internationale. En juin 2026, le projet a permis la réalisation de plus de 1 000 œuvres visuelles par des jeunes. Elles constitueront l’installation principale de l’exposition. L’exposition est dirigée par le directeur artistique de Solidarity Park, Rob MacDonald.",
       },
       {
-        heading: "Vers l'anniversaire du Ciudad de Barcelona",
-        body: "La tournée 2027 mène au 90e anniversaire du naufrage du Ciudad de Barcelona, le 30 mai 2027 : l'histoire qui a contribué à lancer le travail de l'Association Solidarity Park en art, mémoire et éducation.",
+        heading: "Mille images de plus",
+        body: "À mesure que la tournée traverse l’Europe, nous invitons les jeunes et le public à ajouter 1 000 images à l’exposition, créant un mouvement de millions et de millions de mots contre la montée de l’idéologie fasciste.",
       },
       {
-        heading: "Art, mémoire et éducation",
-        body: "Autour de la Salle de la Solidarité centrale, un programme organisé de cinéma, d'animation, de sculpture, de peinture, d'illustration et de poésie porte des millions d'histoires contre le fascisme, reliant la mémoire historique au travail d'une nouvelle génération.",
+        heading: "Artistes internationaux",
+        body: "Des artistes internationaux reconnus ont également été invités à exposer peintures, sculptures, performances et pièces multimédias inspirées du titre de l’exposition et du travail de l’Artists’ International Association des années 1930.",
+      },
+      {
+        heading: "Vers le Festival de Solidarity Park, le 30 mai 2027 en Catalogne",
+        body: "La tournée de six mois mène au 90e anniversaire du naufrage du navire Ciudad de Barcelona, le 30 mai 1937 : une histoire oubliée des Brigades internationales dans la guerre civile espagnole qui a inspiré la création de l’Association Solidarity Park, son monument de participation communautaire et, depuis 2022, le festival international annuel d’art, de mémoire et d’éducation.",
       },
     ],
   },
