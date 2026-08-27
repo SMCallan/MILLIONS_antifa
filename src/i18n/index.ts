@@ -98,7 +98,7 @@ export function localizePath(path: string, lang: LanguageCode): string {
 
 /**
  * App paths that have localized `[lang]` route mirrors. Keep in sync with the
- * files under `src/pages/[lang]/`. The functional pages (`/submit`, `/booking`,
+ * files under `src/pages/[lang]/`. The functional pages (`/submit`,
  * `/submit/access`, `/admin/*`) are intentionally English-only and are NOT
  * listed here — they have no locale-prefixed version to link to.
  */
