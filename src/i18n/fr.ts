@@ -25,6 +25,7 @@ export const fr: TranslationOverride = {
   },
   langSwitcher: { label: "Choisir la langue", current: "Langue actuelle" },
   common: {
+    skipToContent: "Aller au contenu",
     viewAllDates: "Voir toutes les dates",
     learnMore: "En savoir plus",
     readConditions: "Lire les conditions",
