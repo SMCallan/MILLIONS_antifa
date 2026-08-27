@@ -67,6 +67,63 @@ Then refresh the poster from a frame where the medallion is on screen:
 ffmpeg -i public/media/millions-home-desktop-720.mp4 -vf "select='eq(n\,240)',scale=960:540:flags=lanczos" -frames:v 1 -q:v 5 public/media/millions-home-poster.jpg
 ```
 
+## Pages and Content
+
+Copy lives in `src/i18n/`. English (`en.ts`) is the source of truth and the
+canonical shape; the other six locales are deep-partial overrides merged over it.
+
+**Objects merge key by key, but arrays are replaced wholesale.** So a locale that
+overrides one entry of an array replaces the entire array for that language. If
+you add an item to an English array, add it to all seven files or those visitors
+silently keep the old list. This is how the concept page once served four
+sections in English and five everywhere else.
+
+Structural data sits beside the copy in `src/data/site.ts`, keyed so the
+dictionaries supply the words and the data file supplies everything else:
+
+- `primaryNav` / `moreInfoNav` / `footerNav` — `key` indexes `nav` in the
+  dictionaries, `href` is the canonical path, localised at render time.
+- `tourDates` — the route. `date` and `venue` are optional; a stop without
+  them renders as TBC.
+- `linkGroups` — the links page. Destinations live here once rather than seven
+  times, so fixing a URL is one edit. External destinations were verified live
+  in August 2026.
+
+### Donate
+
+The Donate nav entry points straight at the Chuffed crowdfunding project
+(`donateUrl` in `src/data/site.ts`). There is no `/donate` page. `localizePath`
+returns absolute URLs untouched, which is what lets a nav entry leave the site
+without picking up a locale prefix.
+
+The `donate` block remains in the dictionaries although nothing renders it. It
+is kept so restoring a donate page is a matter of re-adding the route rather
+than rewriting seven translations.
+
+### Collaborators
+
+`/collaborators` renders `src/data/collaborators.ts`. Each entry takes a name,
+optional role, roughly 100 words of bio, an optional image under
+`public/collaborators/`, and an optional link. A profile with no image gets
+initials; one with no link renders as text rather than a dead anchor. An empty
+list renders the empty state.
+
+Bios are deliberately outside the dictionaries: they are published as the
+collaborator wrote them, in their own language.
+
+### Host
+
+The host page has no form. It lists what a proposal should contain and reveals
+the contact address behind a Turnstile challenge.
+
+The address is **not** in the markup. `POST /api/contact-email` returns it only
+after verifying the Turnstile token server-side, and the page injects it into
+the DOM at runtime, so address harvesters reading the HTML find nothing.
+
+**Set `CONTACT_EMAIL` in the Pages project.** This repository is public, so the
+fallback literal in `functions/api/contact-email.ts` is visible here. The
+fallback exists only so the page works before the variable is configured.
+
 ## Cloudflare Pages
 
 This project is configured for Cloudflare Pages as a static Astro build with Pages Functions for form posts.
@@ -80,7 +137,7 @@ Cloudflare Pages settings:
 
 The form routes are implemented as Pages Functions:
 
-- `POST /api/booking`
+- `POST /api/contact-email`
 - `POST /api/submission/request-link`
 - `POST /api/submission/verify-token`
 - `GET /api/submission/current`
@@ -174,6 +231,7 @@ Required Cloudflare bindings and variables:
 - `PUBLIC_SITE_URL`: production site URL used when building magic links.
 - `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by static form widgets.
 - `TURNSTILE_SECRET_KEY`: private Turnstile secret used by Pages Functions.
+- `CONTACT_EMAIL`: address returned by `POST /api/contact-email` after a Turnstile challenge, used by the host page. Set this so the address is not committed to a public repository; the endpoint falls back to a literal if it is unset.
 
 Optional future email settings:
 
@@ -220,8 +278,8 @@ To configure Turnstile:
 
 Required variables:
 
-- `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by the artwork and booking form widgets.
-- `TURNSTILE_SECRET_KEY`: private Turnstile secret key used by `POST /api/submission/request-link`, `POST /api/submission/save`, and `POST /api/booking` to call Cloudflare Siteverify.
+- `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by the artwork submission widget and the host page contact gate.
+- `TURNSTILE_SECRET_KEY`: private Turnstile secret key used by `POST /api/submission/request-link`, `POST /api/submission/save`, and `POST /api/contact-email` to call Cloudflare Siteverify.
 
 Development-only bypass:
 
