@@ -20,6 +20,7 @@ export const nl: TranslationOverride = {
     donate: "Doneren",
     host: "Gastheer zijn",
     gallery: "Galerij",
+    collaborators: "Medewerkers",
     links: "Links",
   },
   langSwitcher: { label: "Kies taal", current: "Huidige taal" },
@@ -131,9 +132,10 @@ export const nl: TranslationOverride = {
     ],
   },
   contribute: {
-    heroTitle: "Draag een kunstwerk, poëzie of lokaal materiaal bij.",
+    heroTitle:
+      "Draag je kunst bij",
     heroSubtitle:
-      "Waar locaties ruimte hebben, kan de tour lokale antifascistische kunstenaars, dichters, filmmakers, animatoren, beeldhouwers, schilders en bijdragers uit de gemeenschap opnemen naast de kerntentoonstelling.",
+      "We willen jouw antifascistische artistieke stem toevoegen aan de Millions. Hieronder staan enkele voorwaarden. Geaccepteerd werk wordt onderdeel van de hoofdinstallatie van de reizende tentoonstelling en/of van de parallelle online galerieën. We zijn vooral geïnteresseerd in beeld en gesproken woord, maar staan open voor alle artistieke uitingen. Waar locaties ruimte en tijd hebben, proberen we je werk of performance live te tonen.",
     heroPrimaryCta: "Link aanvragen",
     heroSecondaryCta: "Tourdata",
     notesTitle: "Opmerkingen over bijdragen",
@@ -148,6 +150,7 @@ export const nl: TranslationOverride = {
       "Kunstenaars, dichters, filmmakers, animatoren, beeldhouwers, schilders en bijdragers uit de gemeenschap kunnen dit formulier gebruiken om previewmateriaal of links te sturen.",
       "Stuur alleen previewbestanden: JPG, JPEG, PNG, WebP, PDF, MP3, M4A of WAV. Videopreviews deel je het best als links.",
       "Upload maximaal vijf previewbestanden, elk maximaal 20 MB en 75 MB in totaal. Geselecteerde kunstenaars kan apart worden gevraagd om productieklare originelen.",
+      "Hoort je werk bij een deelnemende school, hogeschool of organisatie, vraag dan een Google Drive-link aan die aan je instelling is gekoppeld, voor een snellere upload en beoordeling.",
     ],
   },
   contributeConditions: {
@@ -206,7 +209,23 @@ export const nl: TranslationOverride = {
   host: {
     heroTitle: "Wees gastheer van Een miljoen woorden tegen het fascisme.",
     heroSubtitle:
-      "Deel de basisgegevens over je locatie, publiek, onderwijspartners en voorkeursdata. De tour kan de Solidariteitsruimte, de straatgerichte ansichtkaartactiviteit, lokale geschiedenis en het live-programma aan elke context aanpassen.",
+      "Deel de basisgegevens over jullie locatie, publiek, onderwijspartners en gewenste data. We nemen zo snel mogelijk contact op.",
+    proposalTitle: "Wat je voorstel moet bevatten",
+    proposalItems: [
+      "Jullie organisatie of locatie, en aan wie we moeten antwoorden.",
+      "Waar jullie zitten en wat voor ruimte het is – galerie, bibliotheek, school, vakbondsgebouw, festival of iets anders.",
+      "De data of periode die jullie overwegen.",
+      "De afmetingen van de ruimte: wandlengte, kamermaten en eventuele wanden aan de straatkant.",
+      "Openingstijden, toegang voor scholen of groepen en eventuele toegankelijkheidswensen.",
+      "Ongeveer hoeveel bezoekers jullie verwachten.",
+      "Lokale geschiedenis van de Internationale Brigades, partners of programma-ideeën die jullie willen toevoegen.",
+    ],
+    revealTitle: "Stuur je voorstel",
+    revealBody:
+      "Bevestig dat je een mens bent, dan tonen we het adres waar je het naartoe kunt sturen. Zo blijft het buiten bereik van geautomatiseerde verzamelaars.",
+    revealButton: "Toon het e-mailadres",
+    revealPending: "Bezig met controleren…",
+    revealError: "De controle is niet voltooid. Probeer het opnieuw.",
     heroPrimaryCta: "Aanvraag starten",
     heroSecondaryCta: "Tourdata",
     formatsTitle: "Formats voor gastheerschap",
@@ -294,6 +313,13 @@ export const nl: TranslationOverride = {
       "Naarmate werken van jonge kunstenaars en opdrachtstukken voor de tour worden bevestigd, wordt hier een selectie getoond. Bijdragen die via de beveiligde link worden ingediend, worden privé beoordeeld en niet automatisch gepubliceerd.",
     contributeCta: "Kunstwerk bijdragen",
   },
+  collaborators: {
+    heroTitle: "Medewerkers",
+    heroSubtitle:
+      "De kunstenaars, historici, educatoren en organisaties die de tentoonstelling en de tournee bouwen.",
+    empty: "De profielen worden verzameld en verschijnen hier zodra ze bevestigd zijn.",
+  },
+
   links: {
     heroTitle: "Links",
     heroSubtitle:
@@ -304,6 +330,7 @@ export const nl: TranslationOverride = {
         items: {
           association: { label: "Vereniging Solidarity Park", note: "De organisatie achter de tentoonstelling." },
           festival: { label: "Festival van Solidarity Park, Catalonië", note: "Het festival waar de tour van 2027 naartoe werkt." },
+          sunderland: { label: "Solidarity Sunderland History Hub", note: "De brigadisten uit Sunderland, de schepen en de Baskische kinderen van 1937." },
         },
       },
       memory: {
@@ -311,6 +338,7 @@ export const nl: TranslationOverride = {
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "De herinnering aan de Internationale Brigades levend houden." },
           basqueChildren: { label: "Vereniging Baskische Kinderen van '37", note: "Het verhaal van kinderen die tijdens de Spaanse Burgeroorlog werden geëvacueerd." },
+          alba: { label: "Abraham Lincoln Brigade Archives", note: "De Amerikaanse vrijwilligers van de Internationale Brigades en het archief dat hun geschiedenis bewaart." },
         },
       },
       getInvolved: {
