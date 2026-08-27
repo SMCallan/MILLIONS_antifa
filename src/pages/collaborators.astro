@@ -1,0 +1,11 @@
+---
+import CollaboratorsBody from "@/components/pages/Collaborators.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "@/i18n";
+
+const t = useTranslations(getLangFromUrl(Astro.url));
+---
+
+<Layout title={t.nav.collaborators} description={t.collaborators.heroSubtitle}>
+  <CollaboratorsBody />
+</Layout>

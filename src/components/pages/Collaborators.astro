@@ -1,0 +1,89 @@
+---
+import { ArrowUpRight } from "lucide-react";
+
+import { SignalFieldHero } from "@/components/SignalFieldHero";
+import { collaborators } from "@/data/collaborators";
+import { getLangFromUrl, useTranslations } from "@/i18n";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const initials = (name: string) =>
+  name
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((part) => part[0] ?? "")
+    .join("")
+    .toUpperCase();
+---
+
+<SignalFieldHero
+  client:load
+  compact
+  headline={t.collaborators.heroTitle}
+  subtitle={t.collaborators.heroSubtitle}
+  showCtas={false}
+/>
+
+<section class="section-y bg-background">
+  <div class="container-page">
+    {
+      collaborators.length === 0 ? (
+        <p class="max-w-2xl text-base leading-8 text-muted-foreground">{t.collaborators.empty}</p>
+      ) : (
+        <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {collaborators.map((person) => (
+            <li class="flex flex-col border-2 border-foreground bg-card p-5">
+              <div class="flex items-center gap-4">
+                {person.image ? (
+                  <img
+                    src={person.image}
+                    alt=""
+                    width="96"
+                    height="96"
+                    loading="lazy"
+                    decoding="async"
+                    class="size-16 shrink-0 border border-foreground/25 bg-white object-cover"
+                  />
+                ) : (
+                  <span
+                    class="display-type grid size-16 shrink-0 place-items-center border border-foreground/25 bg-muted text-lg uppercase text-muted-foreground"
+                    aria-hidden="true"
+                  >
+                    {initials(person.name)}
+                  </span>
+                )}
+                <div class="min-w-0">
+                  <h2 class="text-lg font-black leading-tight">{person.name}</h2>
+                  {person.role && (
+                    <p class="mt-1 text-[0.62rem] font-bold uppercase tracking-[0.14em] text-muted-foreground">
+                      {person.role}
+                    </p>
+                  )}
+                </div>
+              </div>
+
+              <p class="mt-4 flex-1 text-sm leading-6 text-muted-foreground">{person.bio}</p>
+
+              {person.href && (
+                <a
+                  href={person.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group mt-4 inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.1em] text-primary transition-colors hover:text-foreground"
+                >
+                  {t.common.learnMore}
+                  <ArrowUpRight
+                    className="size-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    aria-hidden="true"
+                  />
+                  <span class="sr-only">({t.common.opensInNewTab})</span>
+                </a>
+              )}
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</section>

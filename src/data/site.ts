@@ -28,6 +28,7 @@ export const moreInfoNav: NavItem[] = [
   { key: "donate", href: "/donate" },
   { key: "host", href: "/host" },
   { key: "gallery", href: "/gallery" },
+  { key: "collaborators", href: "/collaborators" },
   { key: "links", href: "/links" },
 ];
 
@@ -47,6 +48,7 @@ export const linkGroups: LinkGroup[] = [
     items: [
       { key: "association", href: "https://solidaritypark.com/about/", external: true },
       { key: "festival", href: "https://solidaritypark.com/", external: true },
+      { key: "sunderland", href: "https://solidaritypark.com/solidarity-sunderland/", external: true },
     ],
   },
   {
@@ -54,6 +56,7 @@ export const linkGroups: LinkGroup[] = [
     items: [
       { key: "ibmt", href: "https://international-brigades.org.uk/", external: true },
       { key: "basqueChildren", href: "https://www.basquechildren.org/", external: true },
+      { key: "alba", href: "https://alba-valb.org/", external: true },
     ],
   },
   {

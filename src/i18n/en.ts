@@ -22,6 +22,7 @@ export const en = {
     donate: "Donate",
     host: "Host",
     gallery: "Gallery",
+    collaborators: "Collaborators",
     links: "Links",
   },
 
@@ -147,9 +148,10 @@ export const en = {
   },
 
   contribute: {
-    heroTitle: "Contribute artwork, poetry, or local material.",
+    heroTitle:
+      "Contribute your Art",
     heroSubtitle:
-      "Where venues have space, the tour can include local anti-fascist artists, poets, film-makers, animators, sculptors, painters, and community contributors alongside the core exhibition.",
+      "We want to add your anti-fascist artistic voice to the Millions. Below we set out some conditions. Accepted works will form part of the physical touring exhibition main installation and/or parallel online galleries. We are especially interested in images and spoken words, but we are open to all artistic expressions. Where venues have space and time we will try to show your work or performance in real time.",
     heroPrimaryCta: "Request link",
     heroSecondaryCta: "Tour dates",
     notesTitle: "Contribution notes",
@@ -164,6 +166,7 @@ export const en = {
       "Artists, poets, film-makers, animators, sculptors, painters, and community contributors can use this form to send preview material or links.",
       "Submit preview files only: JPG, JPEG, PNG, WebP, PDF, MP3, M4A, or WAV. Video previews are best shared as links.",
       "Upload up to five preview files, maximum 20MB each and 75MB total. Shortlisted artists may be asked separately for production-ready originals.",
+      "If your work is part of a participating school, college or organisation, please request a Google Drive link connected to your institution for a quicker upload and review process.",
     ],
   },
 
@@ -225,7 +228,23 @@ export const en = {
   host: {
     heroTitle: "Host A Million Words Against Fascism.",
     heroSubtitle:
-      "Share the basics about your venue, audience, education partners, and preferred dates. The tour can adapt the Solidarity Room, street-facing postcard activity, local history, and live programme to each setting.",
+      "Share the basics about your venue, audience, education partners, and preferred dates. We will get back to you as soon as possible.",
+    proposalTitle: "What to include in your proposal",
+    proposalItems: [
+      "Your organisation or venue, and who we should reply to.",
+      "Where you are, and what kind of space it is — gallery, library, school, union hall, festival, or something else.",
+      "The dates or period you are considering.",
+      "The size of the space: wall length, room dimensions, and any street-facing walls.",
+      "Public opening times, school or group access, and any access needs.",
+      "Roughly how many visitors you expect.",
+      "Any local International Brigades history, partners, or programme ideas you would like to include.",
+    ],
+    revealTitle: "Send your proposal",
+    revealBody:
+      "Confirm you are human and we will show you the address to send it to. This keeps it away from automated scrapers.",
+    revealButton: "Show the email address",
+    revealPending: "Checking…",
+    revealError: "That check did not complete. Please try again.",
     heroPrimaryCta: "Start enquiry",
     heroSecondaryCta: "Tour dates",
     formatsTitle: "Hosting formats",
@@ -316,6 +335,13 @@ export const en = {
     contributeCta: "Contribute artwork",
   },
 
+  collaborators: {
+    heroTitle: "Collaborators",
+    heroSubtitle:
+      "The artists, historians, educators, and organisations building the exhibition and the tour.",
+    empty: "Profiles are being gathered and will be published here as they are confirmed.",
+  },
+
   links: {
     heroTitle: "Links",
     heroSubtitle:
@@ -330,6 +356,7 @@ export const en = {
         items: {
           association: { label: "Association Solidarity Park", note: "The organisation behind the exhibition." },
           festival: { label: "Solidarity Park Festival, Catalunya", note: "The festival the 2027 tour builds toward." },
+          sunderland: { label: "Solidarity Sunderland History Hub", note: "Sunderland’s International Brigaders, the ships, and the Basque children of 1937." },
         },
       },
       memory: {
@@ -337,6 +364,7 @@ export const en = {
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Keeping the memory of the International Brigades alive." },
           basqueChildren: { label: "Basque Children of '37 Association", note: "The story of children evacuated during the Spanish Civil War." },
+          alba: { label: "Abraham Lincoln Brigade Archives", note: "The American volunteers of the International Brigades, and the archive that keeps their record." },
         },
       },
       getInvolved: {

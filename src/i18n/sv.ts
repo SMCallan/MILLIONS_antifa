@@ -20,6 +20,7 @@ export const sv: TranslationOverride = {
     donate: "Donera",
     host: "Var värd",
     gallery: "Galleri",
+    collaborators: "Medverkande",
     links: "Länkar",
   },
   langSwitcher: { label: "Välj språk", current: "Aktuellt språk" },
@@ -131,9 +132,10 @@ export const sv: TranslationOverride = {
     ],
   },
   contribute: {
-    heroTitle: "Bidra med konst, poesi eller lokalt material.",
+    heroTitle:
+      "Bidra med din konst",
     heroSubtitle:
-      "Där lokaler har utrymme kan turnén inkludera lokala antifascistiska konstnärer, poeter, filmskapare, animatörer, skulptörer, målare och deltagare från lokalsamhället vid sidan av kärnutställningen.",
+      "Vi vill lägga till din antifascistiska konstnärliga röst till Millions. Nedan anger vi några villkor. Antagna verk blir en del av den turnerande utställningens huvudinstallation och/eller de parallella galleriera online. Vi är särskilt intresserade av bilder och talat ord, men vi är öppna för alla konstnärliga uttryck. Där spelplatserna har plats och tid försöker vi visa ditt verk eller framförande live.",
     heroPrimaryCta: "Begär länk",
     heroSecondaryCta: "Turnédatum",
     notesTitle: "Anteckningar om att bidra",
@@ -148,6 +150,7 @@ export const sv: TranslationOverride = {
       "Konstnärer, poeter, filmskapare, animatörer, skulptörer, målare och bidragsgivare från lokalsamhället kan använda detta formulär för att skicka förhandsmaterial eller länkar.",
       "Skicka endast förhandsfiler: JPG, JPEG, PNG, WebP, PDF, MP3, M4A eller WAV. Videoförhandsvisningar delas bäst som länkar.",
       "Ladda upp högst fem förhandsfiler, max 20 MB var och 75 MB totalt. Utvalda konstnärer kan tillfrågas separat om produktionsklara original.",
+      "Om ditt verk hör till en deltagande skola, högskola eller organisation, be om en Google Drive-länk kopplad till din institution för snabbare uppladdning och granskning.",
     ],
   },
   contributeConditions: {
@@ -206,7 +209,23 @@ export const sv: TranslationOverride = {
   host: {
     heroTitle: "Var värd för En miljon ord mot fascismen.",
     heroSubtitle:
-      "Dela det grundläggande om din lokal, publik, utbildningspartner och önskade datum. Turnén kan anpassa Solidaritetsrummet, den gatuvända vykortsaktiviteten, lokal historia och liveprogrammet till varje sammanhang.",
+      "Berätta det viktigaste om er lokal, publik, utbildningspartner och önskade datum. Vi återkommer så snart vi kan.",
+    proposalTitle: "Det här bör förslaget innehålla",
+    proposalItems: [
+      "Er organisation eller lokal, och vem vi ska svara.",
+      "Var ni finns och vilken typ av lokal det är – galleri, bibliotek, skola, fackföreningslokal, festival eller något annat.",
+      "De datum eller den period ni överväger.",
+      "Lokalens storlek: vägglängd, rummets mått och eventuella väggar mot gatan.",
+      "Öppettider, tillgång för skolor eller grupper och eventuella tillgänglighetsbehov.",
+      "Ungefär hur många besökare ni räknar med.",
+      "Lokal historia om Internationella brigaderna, samarbetspartner eller programidéer ni vill ha med.",
+    ],
+    revealTitle: "Skicka ditt förslag",
+    revealBody:
+      "Bekräfta att du är en människa så visar vi adressen att skicka det till. Det håller den borta från automatiska insamlare.",
+    revealButton: "Visa e-postadressen",
+    revealPending: "Kontrollerar…",
+    revealError: "Kontrollen slutfördes inte. Försök igen.",
     heroPrimaryCta: "Starta förfrågan",
     heroSecondaryCta: "Turnédatum",
     formatsTitle: "Format för värdskap",
@@ -294,6 +313,13 @@ export const sv: TranslationOverride = {
       "Allteftersom unga konstnärers verk och beställda stycken bekräftas för turnén visas ett urval här. Bidrag som skickas via den säkra länken granskas privat och publiceras inte automatiskt.",
     contributeCta: "Bidra med konst",
   },
+  collaborators: {
+    heroTitle: "Medverkande",
+    heroSubtitle:
+      "Konstnärerna, historikerna, pedagogerna och organisationerna som bygger utställningen och turnén.",
+    empty: "Profilerna samlas in och publiceras här efter hand som de bekräftas.",
+  },
+
   links: {
     heroTitle: "Länkar",
     heroSubtitle:
@@ -304,6 +330,7 @@ export const sv: TranslationOverride = {
         items: {
           association: { label: "Föreningen Solidarity Park", note: "Organisationen bakom utställningen." },
           festival: { label: "Festivalen för Solidarity Park, Katalonien", note: "Festivalen som turnén 2027 leder fram till." },
+          sunderland: { label: "Solidarity Sunderland History Hub", note: "Sunderlands brigadister, fartygen och de baskiska barnen 1937." },
         },
       },
       memory: {
@@ -311,6 +338,7 @@ export const sv: TranslationOverride = {
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Att hålla minnet av Internationella brigaderna levande." },
           basqueChildren: { label: "Föreningen Baskiska barn från -37", note: "Berättelsen om barn som evakuerades under spanska inbördeskriget." },
+          alba: { label: "Abraham Lincoln Brigade Archives", note: "De amerikanska frivilliga i Internationella brigaderna och arkivet som bevarar deras historia." },
         },
       },
       getInvolved: {

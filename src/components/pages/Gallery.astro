@@ -39,7 +39,7 @@ const tiles = [0, 1, 2, 3, 4, 5];
           >
             <ImageOff className="relative z-10 size-7 text-white/35 transition-transform group-hover:scale-110" aria-hidden="true" />
             <span class="absolute left-3 top-3 z-10 text-[0.6rem] font-bold uppercase tracking-[0.14em] text-white/55">
-              MWAF / {String(tile + 1).padStart(2, "0")}
+              {String(tile + 1).padStart(2, "0")}
             </span>
             <span class="absolute bottom-3 right-3 z-10 border border-white/30 bg-black/35 px-2 py-1 text-[0.58rem] font-bold uppercase tracking-[0.12em] text-white/55 backdrop-blur-sm">
               {t.common.comingSoon}
