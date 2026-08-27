@@ -98,9 +98,7 @@ export function localizePath(path: string, lang: LanguageCode): string {
 
 /**
  * App paths that have localized `[lang]` route mirrors. Keep in sync with the
- * files under `src/pages/[lang]/`. The functional pages (`/submit`,
- * `/submit/access`, `/admin/*`) are intentionally English-only and are NOT
- * listed here — they have no locale-prefixed version to link to.
+ * files under `src/pages/[lang]/`. Every page currently has a localized mirror.
  */
 export const localizedBasePaths: readonly string[] = [
   "/",
@@ -129,8 +127,8 @@ export function isLocalizedPath(pathname: string): boolean {
 /**
  * Given the current pathname, return the equivalent path in another locale so a
  * language switch keeps the visitor on the same page. Pages without a localized
- * mirror (the functional form/admin pages) fall back to that locale's home so
- * the switcher never links to a non-existent `/{lang}/...` route.
+ * mirror fall back to that locale's home, so the switcher never links to a
+ * non-existent `/{lang}/...` route.
  */
 export function switchLocalePath(pathname: string, target: LanguageCode): string {
   const logical = getLogicalPath(pathname);

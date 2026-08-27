@@ -126,7 +126,7 @@ fallback exists only so the page works before the variable is configured.
 
 ## Cloudflare Pages
 
-This project is configured for Cloudflare Pages as a static Astro build with Pages Functions for form posts.
+This project is configured for Cloudflare Pages as a static Astro build with a single Pages Function.
 
 Cloudflare Pages settings:
 
@@ -135,137 +135,30 @@ Cloudflare Pages settings:
 - Production branch: `main`
 - Project name suggestion: `millions-antifa`
 
-The form routes are implemented as Pages Functions:
+The only Pages Function is the contact endpoint:
 
-- `POST /api/contact-email`
-- `POST /api/submission/request-link`
-- `POST /api/submission/verify-token`
-- `GET /api/submission/current`
-- `POST /api/submission/save`
-- `GET /admin/api/submissions`
-- `POST /admin/api/submissions`
-- `POST /api/artwork` remains as a closed legacy route that redirects to the verified-link flow.
+- `POST /api/contact-email` — returns the contact address after verifying a Turnstile token. See the Host section above.
 
-### Artwork Preview Upload Policy
+There are no D1 or R2 bindings. The artwork submission flow that used them was
+removed; if the database and bucket still exist in the Cloudflare account they
+are no longer read by anything here.
 
-The public artwork form accepts review/preview material only. It must not be used for final production or master files.
+### Environment variables
 
-Accepted public upload formats:
+Set these in the Pages project settings:
 
-- JPG/JPEG
-- PNG
-- WebP
-- PDF
-- MP3, M4A, or WAV audio previews
-
-Current limits:
-
-- Maximum files per submission: 5
-- Maximum individual file size: 20MB
-- Maximum total upload size: 75MB
-
-Do not accept PSD, TIFF, ZIP, EXE, arbitrary binary files, huge layered documents, print-ready masters, audio masters, or video masters through the public form. Video previews should preferably be shared as links such as Vimeo, YouTube, Google Drive, Dropbox, or WeTransfer. Selected or shortlisted artists can be contacted later for high-resolution, print-ready, layered, audio-master, or video-master originals through a more controlled process.
-
-Keeping the public upload ceiling at 75MB leaves headroom below Cloudflare's 100MB Free/Pro request body limit and keeps storage costs predictable.
-
-### R2 Storage
-
-For live submission storage, add an R2 binding named `SUBMISSIONS` to the Pages project. A suitable bucket name is `millions-antifa-submissions`.
-
-Without that binding, valid form posts redirect with `?storage=unconfigured` and are not stored. This keeps preview deploys from failing while the storage binding is being set up.
-
-The R2 bucket should remain private. Store uploaded files and metadata references only; do not email file attachments from form handlers. If notification email is added later, send metadata and private object references for reviewers instead of attachments.
-
-Configure lifecycle deletion in Cloudflare R2 so preview submissions are automatically expired according to the project's retention policy.
-
-### Verified Artwork Submission Flow
-
-Artwork submissions use a lightweight verified-email flow, not full user accounts:
-
-- Artists request a secure email magic link from `/submit`.
-- The link opens `/submit/access?token=...`.
-- `POST /api/submission/verify-token` exchanges a valid link for a short-lived HttpOnly submission session cookie.
-- The artist can create or update one active submission for the open-call campaign.
-- `POST /api/submission/save` stores metadata in D1 and private preview files in R2.
-- Resubmitting with new preview files replaces the previous active preview set after validation.
-- Final, master, layered, high-resolution, audio-master, or video-master files are requested later outside the public upload flow.
-
-The legacy anonymous artwork upload endpoint `POST /api/artwork` is closed and redirects artists to the verified-link flow.
-
-### Protected Submission Review
-
-The minimal reviewer interface lives at `/admin/submissions`. It lists D1 submission metadata for reviewers:
-
-- title
-- email
-- portfolio link
-- preview link
-- file count
-- total preview size
-- review status
-- submitted and updated timestamps
-
-Reviewers can update the status to `new`, `reviewed`, `shortlisted`, `rejected`, or `contacted`.
-
-Before production use, protect `/admin/*` with Cloudflare Access. The metadata API is intentionally under `/admin/api/submissions` so the same Access policy covers the page and the Pages Function endpoint. Do not expose `/admin/*` publicly.
-
-Recommended Cloudflare Access setup:
-
-1. In Cloudflare Zero Trust, create a **Self-hosted** Access application.
-2. Set the application domain/path to the production Pages hostname plus `/admin/*`.
-3. Add allow policies for named reviewer emails, an identity provider group, or a short-lived one-time PIN policy for approved reviewers.
-4. Confirm both `/admin/submissions` and `/admin/api/submissions` are blocked in a private browser before login.
-5. Repeat the policy for any Pages preview hostname that should be used for review testing.
-
-The current app intentionally does not include password auth. If the admin API is ever moved outside `/admin/*`, add runtime Cloudflare Access JWT validation in the Pages Function before returning D1 data. Use Cloudflare Access's signed JWT from the `Cf-Access-Jwt-Assertion` header or `CF_Authorization` cookie, verify it against the Access team JWKS endpoint, and check the expected audience tag before listing or updating submissions.
-
-The reviewer page does not expose private R2 object keys or public file URLs. If preview file downloads are added later, keep the endpoint under `/admin/*`, require Cloudflare Access, and generate short-lived links scoped to a single submission/file instead of making the R2 bucket public.
-
-Status changes currently update the submission's `updated_at` value. If production review needs separate artist-edit and reviewer-action timestamps, add a D1 migration for `status_updated_at` and update `POST /admin/api/submissions` to write that field instead.
-
-Required Cloudflare bindings and variables:
-
-- `SUBMISSIONS`: private R2 bucket binding for preview files.
-- `SUBMISSIONS_DB`: D1 database binding for campaigns, submissions, and magic links.
-- `MAGIC_LINK_SECRET`: random secret used to hash magic-link tokens and sign submission session cookies.
-- `PUBLIC_SITE_URL`: production site URL used when building magic links.
-- `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by static form widgets.
-- `TURNSTILE_SECRET_KEY`: private Turnstile secret used by Pages Functions.
-- `CONTACT_EMAIL`: address returned by `POST /api/contact-email` after a Turnstile challenge, used by the host page. Set this so the address is not committed to a public repository; the endpoint falls back to a literal if it is unset.
-
-Optional future email settings:
-
-- `EMAIL_PROVIDER_API_KEY`: reserved for a future email provider adapter.
-- `SUBMISSION_NOTIFICATION_EMAIL`: reserved for future reviewer notifications.
-
-No email vendor is implemented yet. In local development, missing email provider settings cause the magic link to be logged only for local requests. Production fails closed if no adapter can send the link, so artists are not told that an email was sent when none was delivered.
-
-Before production use, implement the adapter in `functions/api/_email.ts` with a transactional email provider. Keep it vendor-neutral in the rest of the app:
-
-1. Store provider secrets in Cloudflare Pages environment variables, never in the repository.
-2. Send the magic-link URL in the email body to the normalized recipient address only.
-3. Return `{ ok: true }` from `sendMagicLinkEmail` only after the provider accepts the message.
-4. Log provider errors without logging the full magic-link token in production.
-5. Keep notification emails metadata-only; do not attach R2 files.
-
-After creating the D1 database and adding the `SUBMISSIONS_DB` binding in Wrangler/Pages settings, apply all D1 migrations before production use:
-
-```bash
-npx wrangler d1 migrations apply <your-submissions-d1-database-name> --remote
-```
-
-For local Pages Function testing with a configured local D1 binding, apply the migrations to the local D1 database and bind D1/R2/dev variables:
-
-```bash
-npx wrangler d1 migrations apply <your-submissions-d1-database-name> --local
-npm run preview:pages -- --d1 SUBMISSIONS_DB --r2 SUBMISSIONS --binding MAGIC_LINK_SECRET=dev-secret --binding BYPASS_TURNSTILE_IN_DEV=true
-```
-
-Use a strong generated `MAGIC_LINK_SECRET` in Cloudflare Pages. Do not commit `.dev.vars`, production secrets, D1 ids, R2 credentials, Turnstile secrets, or email provider keys.
+- `CONTACT_EMAIL`: the address `POST /api/contact-email` returns after a
+  successful Turnstile challenge. Set it so the address is not committed to this
+  public repository — the endpoint falls back to a literal if it is unset.
+- `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key. Read during the static
+  build, so a change needs a rebuild.
+- `TURNSTILE_SECRET_KEY`: private Turnstile secret, used by the Pages Function.
+  Never commit this.
+- `PUBLIC_SITE_URL`: production site URL.
 
 ### Turnstile Form Protection
 
-Public form posts are protected with Cloudflare Turnstile. Client-side widgets are useful for UX, but server-side validation in the Pages Functions is required and must remain enabled.
+The contact gate is protected with Cloudflare Turnstile. Client-side widgets are useful for UX, but server-side validation in the Pages Functions is required and must remain enabled.
 
 To configure Turnstile:
 
@@ -278,8 +171,8 @@ To configure Turnstile:
 
 Required variables:
 
-- `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by the artwork submission widget and the host page contact gate.
-- `TURNSTILE_SECRET_KEY`: private Turnstile secret key used by `POST /api/submission/request-link`, `POST /api/submission/save`, and `POST /api/contact-email` to call Cloudflare Siteverify.
+- `PUBLIC_TURNSTILE_SITE_KEY`: public Turnstile site key used by the contact gate on the host and contribute pages.
+- `TURNSTILE_SECRET_KEY`: private Turnstile secret key used by `POST /api/contact-email` to call Cloudflare Siteverify.
 
 Development-only bypass:
 
@@ -299,7 +192,7 @@ Example local test with a real Turnstile secret:
 npm run preview:pages -- --binding TURNSTILE_SECRET_KEY=<your-local-secret>
 ```
 
-If `TURNSTILE_SECRET_KEY` is missing outside the explicit local bypass path, form submissions fail closed and nothing is stored.
+If `TURNSTILE_SECRET_KEY` is missing outside the explicit local bypass path, the contact endpoint fails closed and the address is not returned.
 
 ## Useful Commands
 

@@ -6,23 +6,5 @@
   "vars": {
     "PUBLIC_SITE_URL": "https://millions-antifa.pages.dev",
     "PUBLIC_TURNSTILE_SITE_KEY": "0x4AAAAAADRFT7L2bMh6kj8a"
-  },
-
-  "d1_databases": [
-    {
-      "binding": "SUBMISSIONS_DB",
-      "database_name": "millions-antifa-submissions",
-      "database_id": "254b3404-5f9d-48c5-86e7-f6cf19800767",
-      "migrations_dir": "migrations",
-      "remote": true
-    }
-  ],
-
-  "r2_buckets": [
-    {
-      "binding": "SUBMISSIONS",
-      "bucket_name": "millions-antifa-submissions",
-      "remote": true
-    }
-  ]
+  }
 }
