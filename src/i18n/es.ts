@@ -33,6 +33,11 @@ export const es: TranslationOverride = {
     comingSoon: "Próximamente",
     close: "Cerrar",
     opensInNewTab: "Se abre en una pestaña nueva",
+    revealBody:
+      "Confirma que eres una persona y te mostraremos la dirección a la que enviarla. Así la mantenemos fuera del alcance de los robots.",
+    revealButton: "Mostrar la dirección de correo",
+    revealPending: "Verificando…",
+    revealError: "La verificación no se ha completado. Inténtalo de nuevo.",
   },
   hero: {
     title: "Un millón de palabras contra el fascismo",
@@ -136,6 +141,7 @@ export const es: TranslationOverride = {
       "Aporta tu arte",
     heroSubtitle:
       "Queremos sumar tu voz artística antifascista a los Millions. A continuación establecemos algunas condiciones. Las obras aceptadas formarán parte de la instalación principal de la exposición itinerante y/o de las galerías en línea paralelas. Nos interesan especialmente las imágenes y la palabra hablada, pero estamos abiertos a todas las expresiones artísticas. Donde los espacios tengan sitio y tiempo, intentaremos mostrar tu obra o actuación en directo.",
+    revealTitle: "Envíanos tu obra",
     heroPrimaryCta: "Solicitar enlace",
     heroSecondaryCta: "Fechas de la gira",
     notesTitle: "Notas para contribuir",
@@ -221,11 +227,6 @@ export const es: TranslationOverride = {
       "Historia local de las Brigadas Internacionales, socios o ideas de programación que quieras incluir.",
     ],
     revealTitle: "Envía tu propuesta",
-    revealBody:
-      "Confirma que eres una persona y te mostraremos la dirección a la que enviarla. Así la mantenemos fuera del alcance de los robots.",
-    revealButton: "Mostrar la dirección de correo",
-    revealPending: "Verificando…",
-    revealError: "La verificación no se ha completado. Inténtalo de nuevo.",
     heroPrimaryCta: "Iniciar consulta",
     heroSecondaryCta: "Fechas de la gira",
     formatsTitle: "Formatos de acogida",

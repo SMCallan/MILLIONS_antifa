@@ -33,6 +33,11 @@ export const fr: TranslationOverride = {
     comingSoon: "Bientôt disponible",
     close: "Fermer",
     opensInNewTab: "S’ouvre dans un nouvel onglet",
+    revealBody:
+      "Confirmez que vous êtes une personne et nous vous montrerons l’adresse où l’envoyer. Cela la tient à l’écart des collecteurs automatiques.",
+    revealButton: "Afficher l’adresse e-mail",
+    revealPending: "Vérification…",
+    revealError: "La vérification n’a pas abouti. Veuillez réessayer.",
   },
   hero: {
     title: "Un million de mots contre le fascisme",
@@ -136,6 +141,7 @@ export const fr: TranslationOverride = {
       "Proposez votre art",
     heroSubtitle:
       "Nous voulons ajouter votre voix artistique antifasciste aux Millions. Nous exposons ci-dessous quelques conditions. Les œuvres retenues feront partie de l’installation principale de l’exposition itinérante et/ou des galeries en ligne qui l’accompagnent. Nous nous intéressons particulièrement aux images et à la parole dite, mais nous sommes ouverts à toutes les expressions artistiques. Là où les lieux disposent d’espace et de temps, nous essaierons de montrer votre œuvre ou votre performance en direct.",
+    revealTitle: "Envoyez-nous votre œuvre",
     heroPrimaryCta: "Demander un lien",
     heroSecondaryCta: "Dates de la tournée",
     notesTitle: "Notes pour contribuer",
@@ -221,11 +227,6 @@ export const fr: TranslationOverride = {
       "L’histoire locale des Brigades internationales, les partenaires ou les idées de programmation que vous souhaitez inclure.",
     ],
     revealTitle: "Envoyez votre proposition",
-    revealBody:
-      "Confirmez que vous êtes une personne et nous vous montrerons l’adresse où l’envoyer. Cela la tient à l’écart des collecteurs automatiques.",
-    revealButton: "Afficher l’adresse e-mail",
-    revealPending: "Vérification…",
-    revealError: "La vérification n’a pas abouti. Veuillez réessayer.",
     heroPrimaryCta: "Démarrer la demande",
     heroSecondaryCta: "Dates de la tournée",
     formatsTitle: "Formats d'accueil",

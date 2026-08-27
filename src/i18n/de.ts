@@ -33,6 +33,11 @@ export const de: TranslationOverride = {
     comingSoon: "Demnächst",
     close: "Schließen",
     opensInNewTab: "Wird in einem neuen Tab geöffnet",
+    revealBody:
+      "Bestätigt, dass ihr ein Mensch seid, und wir zeigen euch die Adresse. So bleibt sie automatisierten Sammlern verborgen.",
+    revealButton: "E-Mail-Adresse anzeigen",
+    revealPending: "Wird geprüft…",
+    revealError: "Die Prüfung wurde nicht abgeschlossen. Bitte versucht es erneut.",
   },
   hero: {
     title: "Eine Million Worte gegen den Faschismus",
@@ -136,6 +141,7 @@ export const de: TranslationOverride = {
       "Bring deine Kunst ein",
     heroSubtitle:
       "Wir wollen deine antifaschistische künstlerische Stimme zu den Millions hinzufügen. Im Folgenden nennen wir einige Bedingungen. Angenommene Arbeiten werden Teil der Hauptinstallation der Wanderausstellung und/oder der begleitenden Online-Galerien. Besonders interessieren uns Bilder und gesprochenes Wort, wir sind aber offen für alle künstlerischen Ausdrucksformen. Wo Veranstaltungsorte Platz und Zeit haben, versuchen wir, deine Arbeit oder Performance live zu zeigen.",
+    revealTitle: "Schick uns deine Arbeit",
     heroPrimaryCta: "Link anfordern",
     heroSecondaryCta: "Tourdaten",
     notesTitle: "Hinweise zum Beitrag",
@@ -221,11 +227,6 @@ export const de: TranslationOverride = {
       "Lokale Geschichte der Internationalen Brigaden, Partner oder Programmideen, die ihr einbringen möchtet.",
     ],
     revealTitle: "Schickt uns eure Anfrage",
-    revealBody:
-      "Bestätigt, dass ihr ein Mensch seid, und wir zeigen euch die Adresse. So bleibt sie automatisierten Sammlern verborgen.",
-    revealButton: "E-Mail-Adresse anzeigen",
-    revealPending: "Wird geprüft…",
-    revealError: "Die Prüfung wurde nicht abgeschlossen. Bitte versucht es erneut.",
     heroPrimaryCta: "Anfrage starten",
     heroSecondaryCta: "Tourdaten",
     formatsTitle: "Formate für Gastgeber",
