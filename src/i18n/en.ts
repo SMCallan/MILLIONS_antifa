@@ -169,39 +169,39 @@ export const en = {
     conditionsCta: "Read the contribution conditions",
     guidelines: [
       "The tour may include local anti-fascist artists where venue space allows, alongside the core Solidarity Room and commissioned international works.",
-      "Artists, poets, film-makers, animators, sculptors, painters, and community contributors can use this form to send preview material or links.",
-      "Submit preview files only: JPG, JPEG, PNG, WebP, PDF, MP3, M4A, or WAV. Video previews are best shared as links.",
-      "Upload up to five preview files, maximum 20MB each and 75MB total. Shortlisted artists may be asked separately for production-ready originals.",
-      "If your work is part of a participating school, college or organisation, please request a Google Drive link connected to your institution for a quicker upload and review process.",
+      "Artists, poets, film-makers, animators, sculptors, painters and community contributors are all welcome to send work or links by email.",
+      "Send images and audio as JPG, PNG, WebP, PDF, MP3, M4A or WAV. Share video, and anything large, as a link.",
+      "Keep attachments under roughly 20MB in total and send a link for anything bigger. Shortlisted artists may be asked separately for production-ready originals.",
+      "If your work is part of a participating school, college or organisation, please ask for a Google Drive link connected to your institution for a quicker send and review process.",
     ],
   },
 
   contributeConditions: {
     heroTitle: "Contribution conditions",
     heroSubtitle:
-      "Please read these conditions before requesting a secure contribution link and uploading preview material.",
+      "Please read these conditions before sending your work by email.",
     intro:
-      "The public contribution flow accepts review and preview material only. It must not be used for final production or master files.",
+      "Contributions are sent by email. We ask for review material only — not final production or master files.",
     sections: [
       {
-        heading: "Accepted preview formats",
-        body: "JPG/JPEG, PNG, WebP, PDF for images and documents; MP3, M4A, or WAV for audio previews. Video previews are best shared as links (Vimeo, YouTube, Google Drive, Dropbox, or WeTransfer).",
+        heading: "What to send",
+        body: "Images and documents as JPG, PNG, WebP or PDF. Audio as MP3, M4A or WAV. Send video, or anything large, as a link — Vimeo, YouTube, Google Drive, Dropbox and WeTransfer all work.",
       },
       {
-        heading: "Upload limits",
-        body: "Up to 5 preview files per contribution, a maximum of 20MB per file, and 75MB in total. Selecting new files replaces your previous preview set after validation.",
+        heading: "Keep attachments small, or send a link",
+        body: "Keep attachments under roughly 20MB in total, since larger messages are often bounced before they reach us. Above that, send a link instead. There is no limit on what a link can hold.",
       },
       {
-        heading: "Not accepted through the public form",
-        body: "Do not upload PSD, TIFF, ZIP, EXE, arbitrary binaries, layered masters, print-ready masters, audio masters, or video masters. Shortlisted artists are contacted separately for production-ready originals through a controlled process.",
+        heading: "What not to send",
+        body: "Please do not attach layered, print-ready, audio or video masters, or archives such as ZIP. Send review-quality material first. If your work is shortlisted we will ask for production-ready originals separately.",
       },
       {
         heading: "How your material is handled",
-        body: "Preview files are stored privately and are used only for reviewing your contribution to the exhibition. Files are not made public and are retained according to the project's retention policy.",
+        body: "What you send is used only to consider your work for the exhibition. Nothing is published automatically, and nothing is made public without your agreement.",
       },
       {
         heading: "Rights and consent",
-        body: "By submitting, you confirm you created the work or have permission to share it, and you agree it may be considered for display within the exhibition and its promotion. You keep the copyright in your work.",
+        body: "By sending work you confirm that you created it, or that you have permission to share it, and you agree it may be considered for display in the exhibition and its promotion. You keep the copyright in your work.",
       },
     ],
     uploaderTitle: "The uploader",

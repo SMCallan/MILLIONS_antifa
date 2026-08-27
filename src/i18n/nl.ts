@@ -152,39 +152,39 @@ export const nl: TranslationOverride = {
     submitButton: "Beveiligde bijdragelink sturen",
     conditionsCta: "Lees de bijdragevoorwaarden",
     guidelines: [
-      "De tour kan lokale antifascistische kunstenaars opnemen waar de ruimte van de locatie dat toelaat, naast de centrale Solidariteitsruimte en de internationale opdrachtwerken.",
-      "Kunstenaars, dichters, filmmakers, animatoren, beeldhouwers, schilders en bijdragers uit de gemeenschap kunnen dit formulier gebruiken om previewmateriaal of links te sturen.",
-      "Stuur alleen previewbestanden: JPG, JPEG, PNG, WebP, PDF, MP3, M4A of WAV. Videopreviews deel je het best als links.",
-      "Upload maximaal vijf previewbestanden, elk maximaal 20 MB en 75 MB in totaal. Geselecteerde kunstenaars kan apart worden gevraagd om productieklare originelen.",
-      "Hoort je werk bij een deelnemende school, hogeschool of organisatie, vraag dan een Google Drive-link aan die aan je instelling is gekoppeld, voor een snellere upload en beoordeling.",
+      "De tournee kan lokale antifascistische kunstenaars opnemen waar de locatie ruimte heeft, naast de Solidariteitsruimte en de internationale opdrachtwerken.",
+      "Kunstenaars, dichters, filmmakers, animatoren, beeldhouwers, schilders en buurtdeelnemers mogen allemaal werk of links per e-mail sturen.",
+      "Stuur beeld en audio als JPG, PNG, WebP, PDF, MP3, M4A of WAV. Deel video, en alles wat groot is, als link.",
+      "Houd bijlagen onder ongeveer 20 MB in totaal en stuur een link voor alles wat groter is. Geselecteerde kunstenaars kan apart om productieklare originelen worden gevraagd.",
+      "Hoort je werk bij een deelnemende school, hogeschool of organisatie, vraag dan een Google Drive-link die aan je instelling is gekoppeld, voor sneller insturen en beoordelen.",
     ],
   },
   contributeConditions: {
     heroTitle: "Bijdragevoorwaarden",
     heroSubtitle:
-      "Lees deze voorwaarden voordat je een beveiligde bijdragelink aanvraagt en previewmateriaal uploadt.",
+      "Lees deze voorwaarden voordat je je werk per e-mail stuurt.",
     intro:
-      "De publieke bijdrageroute accepteert alleen beoordelings- en previewmateriaal. Deze mag niet worden gebruikt voor definitieve bestanden of masters.",
+      "Bijdragen worden per e-mail gestuurd. We vragen alleen om beoordelingsmateriaal, geen definitieve productiebestanden of masters.",
     sections: [
       {
-        heading: "Geaccepteerde previewformaten",
-        body: "JPG/JPEG, PNG, WebP en PDF voor afbeeldingen en documenten; MP3, M4A of WAV voor audiopreviews. Videopreviews deel je het best als links (Vimeo, YouTube, Google Drive, Dropbox of WeTransfer).",
+        heading: "Wat je stuurt",
+        body: "Beeld en documenten als JPG, PNG, WebP of PDF. Audio als MP3, M4A of WAV. Stuur video, en alles wat groot is, als link — Vimeo, YouTube, Google Drive, Dropbox en WeTransfer werken allemaal.",
       },
       {
-        heading: "Uploadlimieten",
-        body: "Maximaal 5 previewbestanden per bijdrage, maximaal 20 MB per bestand en 75 MB in totaal. Nieuwe bestanden selecteren vervangt na validatie je vorige previewset.",
+        heading: "Houd bijlagen klein, of stuur een link",
+        body: "Houd bijlagen onder ongeveer 20 MB in totaal, want grotere berichten worden vaak geweigerd voordat ze ons bereiken. Stuur daarboven liever een link. Een link kent geen groottelimiet.",
       },
       {
-        heading: "Niet geaccepteerd via het publieke formulier",
-        body: "Upload geen PSD, TIFF, ZIP, EXE, willekeurige binaire bestanden, gelaagde masters, drukklare masters of audio- of videomasters. Geselecteerde kunstenaars worden via een gecontroleerd proces apart benaderd voor productieklare originelen.",
+        heading: "Wat je niet stuurt",
+        body: "Stuur geen gelaagde bestanden, drukklare bestanden, audio- of videomasters, en geen archieven zoals ZIP. Stuur eerst materiaal op beoordelingskwaliteit. Wordt je werk geselecteerd, dan vragen we de productieklare originelen apart op.",
       },
       {
-        heading: "Hoe je materiaal wordt behandeld",
-        body: "Previewbestanden worden privé opgeslagen en alleen gebruikt om je bijdrage aan de tentoonstelling te beoordelen. Bestanden worden niet openbaar gemaakt en worden bewaard volgens het bewaarbeleid van het project.",
+        heading: "Hoe we met je materiaal omgaan",
+        body: "Wat je stuurt gebruiken we uitsluitend om je werk voor de tentoonstelling te beoordelen. Er wordt niets automatisch gepubliceerd en niets openbaar gemaakt zonder jouw akkoord.",
       },
       {
         heading: "Rechten en toestemming",
-        body: "Door in te dienen bevestig je dat je het werk hebt gemaakt of toestemming hebt om het te delen, en ga je ermee akkoord dat het kan worden overwogen voor vertoning binnen de tentoonstelling en de promotie ervan. Je behoudt het auteursrecht op je werk.",
+        body: "Door werk te sturen bevestig je dat je het zelf hebt gemaakt, of dat je toestemming hebt om het te delen, en ga je ermee akkoord dat het overwogen mag worden voor de tentoonstelling en de promotie ervan. Het auteursrecht op je werk blijft bij jou.",
       },
     ],
     uploaderTitle: "De uploader",

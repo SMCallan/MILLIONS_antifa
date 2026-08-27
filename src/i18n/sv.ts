@@ -152,39 +152,39 @@ export const sv: TranslationOverride = {
     submitButton: "Skicka säker bidragslänk",
     conditionsCta: "Läs villkoren för bidrag",
     guidelines: [
-      "Turnén kan inkludera lokala antifascistiska konstnärer där lokalens utrymme tillåter, vid sidan av det centrala Solidaritetsrummet och de beställda internationella verken.",
-      "Konstnärer, poeter, filmskapare, animatörer, skulptörer, målare och bidragsgivare från lokalsamhället kan använda detta formulär för att skicka förhandsmaterial eller länkar.",
-      "Skicka endast förhandsfiler: JPG, JPEG, PNG, WebP, PDF, MP3, M4A eller WAV. Videoförhandsvisningar delas bäst som länkar.",
-      "Ladda upp högst fem förhandsfiler, max 20 MB var och 75 MB totalt. Utvalda konstnärer kan tillfrågas separat om produktionsklara original.",
-      "Om ditt verk hör till en deltagande skola, högskola eller organisation, be om en Google Drive-länk kopplad till din institution för snabbare uppladdning och granskning.",
+      "Turnén kan inkludera lokala antifascistiska konstnärer där lokalen har plats, vid sidan av Solidaritetsrummet och de internationella beställningsverken.",
+      "Konstnärer, poeter, filmare, animatörer, skulptörer, målare och deltagare från lokalsamhället är alla välkomna att skicka verk eller länkar med e-post.",
+      "Skicka bilder och ljud som JPG, PNG, WebP, PDF, MP3, M4A eller WAV. Dela video, och allt som är stort, som en länk.",
+      "Håll bilagorna under ungefär 20 MB totalt och skicka en länk för allt som är större. Konstnärer som går vidare kan få frågan om produktionsfärdiga original separat.",
+      "Om ditt verk hör till en deltagande skola, högskola eller organisation, be om en Google Drive-länk kopplad till din institution för snabbare inskick och granskning.",
     ],
   },
   contributeConditions: {
     heroTitle: "Villkor för bidrag",
     heroSubtitle:
-      "Läs dessa villkor innan du begär en säker bidragslänk och laddar upp förhandsmaterial.",
+      "Läs de här villkoren innan du skickar ditt verk med e-post.",
     intro:
-      "Det publika bidragsflödet tar endast emot gransknings- och förhandsmaterial. Det får inte användas för slutliga filer eller master.",
+      "Bidrag skickas med e-post. Vi ber enbart om granskningsmaterial, inte färdiga produktionsfiler eller masters.",
     sections: [
       {
-        heading: "Godkända förhandsformat",
-        body: "JPG/JPEG, PNG, WebP och PDF för bilder och dokument; MP3, M4A eller WAV för ljudförhandsvisningar. Videoförhandsvisningar delas bäst som länkar (Vimeo, YouTube, Google Drive, Dropbox eller WeTransfer).",
+        heading: "Vad du skickar",
+        body: "Bilder och dokument som JPG, PNG, WebP eller PDF. Ljud som MP3, M4A eller WAV. Skicka video, och allt som är stort, som en länk — Vimeo, YouTube, Google Drive, Dropbox och WeTransfer fungerar alla.",
       },
       {
-        heading: "Uppladdningsgränser",
-        body: "Upp till 5 förhandsfiler per bidrag, max 20 MB per fil och 75 MB totalt. Att välja nya filer ersätter din tidigare förhandsuppsättning efter validering.",
+        heading: "Håll bilagor små, eller skicka en länk",
+        body: "Håll bilagorna under ungefär 20 MB totalt, eftersom större meddelanden ofta studsar innan de når oss. Skicka en länk i stället för allt däröver. En länk har ingen storleksgräns.",
       },
       {
-        heading: "Tas inte emot via det publika formuläret",
-        body: "Ladda inte upp PSD, TIFF, ZIP, EXE, godtyckliga binärfiler, lagerbaserade master, tryckfärdiga master eller ljud- eller videomaster. Utvalda konstnärer kontaktas separat för produktionsklara original genom en kontrollerad process.",
+        heading: "Vad du inte ska skicka",
+        body: "Bifoga inte lagrade original, tryckfärdiga filer, ljud- eller videomasters, och inte arkiv som ZIP. Skicka granskningsmaterial först. Om ditt verk går vidare ber vi om produktionsfärdiga original separat.",
       },
       {
-        heading: "Hur ditt material hanteras",
-        body: "Förhandsfiler lagras privat och används endast för att granska ditt bidrag till utställningen. Filerna görs inte offentliga och bevaras enligt projektets bevarandepolicy.",
+        heading: "Så hanterar vi ditt material",
+        body: "Det du skickar används enbart för att bedöma ditt verk för utställningen. Ingenting publiceras automatiskt och ingenting görs offentligt utan ditt medgivande.",
       },
       {
         heading: "Rättigheter och samtycke",
-        body: "Genom att skicka in bekräftar du att du har skapat verket eller har tillstånd att dela det, och du godtar att det kan övervägas för visning inom utställningen och dess marknadsföring. Du behåller upphovsrätten till ditt verk.",
+        body: "Genom att skicka in ett verk bekräftar du att du har skapat det, eller att du har tillstånd att dela det, och du godkänner att det får övervägas för visning i utställningen och dess marknadsföring. Du behåller upphovsrätten till ditt verk.",
       },
     ],
     uploaderTitle: "Uppladdaren",

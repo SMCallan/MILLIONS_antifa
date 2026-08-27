@@ -152,39 +152,39 @@ export const ca: TranslationOverride = {
     submitButton: "Enviar enllaç segur per contribuir",
     conditionsCta: "Llegir les condicions de contribució",
     guidelines: [
-      "La gira pot incloure artistes antifeixistes locals quan l'espai de la sala ho permeti, al costat de la Sala de la Solidaritat principal i les obres internacionals encarregades.",
-      "Artistes, poetes, cineastes, animadors, escultors, pintors i participants de la comunitat poden fer servir aquest formulari per enviar material de vista prèvia o enllaços.",
-      "Envia només fitxers de vista prèvia: JPG, JPEG, PNG, WebP, PDF, MP3, M4A o WAV. Les vistes prèvies de vídeo es comparteixen millor com a enllaços.",
-      "Puja fins a cinc fitxers de vista prèvia, màxim 20 MB cadascun i 75 MB en total. Als artistes preseleccionats se'ls podran demanar a part els originals a punt per a producció.",
-      "Si la teva obra forma part d’una escola, institut o organització participant, demana un enllaç de Google Drive vinculat a la teva institució per accelerar la pujada i la revisió.",
+      "La gira pot incloure artistes antifeixistes locals allà on l’espai de la sala ho permeti, al costat de la Sala de la Solidaritat i les obres internacionals encarregades.",
+      "Artistes, poetes, cineastes, animadors, escultors, pintors i participants de la comunitat podeu enviar obra o enllaços per correu electrònic.",
+      "Envia imatges i àudio en JPG, PNG, WebP, PDF, MP3, M4A o WAV. Comparteix el vídeo, i qualsevol fitxer gran, com a enllaç.",
+      "Mantén els adjunts per sota d’uns 20 MB en total i envia un enllaç per a qualsevol cosa més gran. Als artistes seleccionats se’ls poden demanar a part els originals llestos per a producció.",
+      "Si la teva obra forma part d’una escola, institut o organització participant, demana un enllaç de Google Drive vinculat a la teva institució per accelerar l’enviament i la revisió.",
     ],
   },
   contributeConditions: {
     heroTitle: "Condicions de contribució",
     heroSubtitle:
-      "Llegeix aquestes condicions abans de sol·licitar un enllaç segur per contribuir i pujar material de vista prèvia.",
+      "Llegeix aquestes condicions abans d’enviar la teva obra per correu electrònic.",
     intro:
-      "El flux públic de contribució accepta únicament material de revisió i vista prèvia. No s'ha de fer servir per a fitxers finals ni màsters.",
+      "Les aportacions s’envien per correu electrònic. Demanem només material de revisió, no fitxers finals ni masters.",
     sections: [
       {
-        heading: "Formats de vista prèvia acceptats",
-        body: "JPG/JPEG, PNG, WebP i PDF per a imatges i documents; MP3, M4A o WAV per a vistes prèvies d'àudio. Les vistes prèvies de vídeo es comparteixen millor com a enllaços (Vimeo, YouTube, Google Drive, Dropbox o WeTransfer).",
+        heading: "Què enviar",
+        body: "Imatges i documents en JPG, PNG, WebP o PDF. Àudio en MP3, M4A o WAV. Envia el vídeo, o qualsevol fitxer gran, com a enllaç: Vimeo, YouTube, Google Drive, Dropbox i WeTransfer funcionen tots.",
       },
       {
-        heading: "Límits de pujada",
-        body: "Fins a 5 fitxers de vista prèvia per contribució, un màxim de 20 MB per fitxer i 75 MB en total. En seleccionar fitxers nous es reemplaça el conjunt de vista prèvia anterior després de la validació.",
+        heading: "Adjunts petits, o millor un enllaç",
+        body: "Mantén els adjunts per sota d’uns 20 MB en total, perquè els missatges més grans sovint es rebutgen abans d’arribar-nos. Per sobre d’aquesta mida, envia un enllaç. Un enllaç no té límit de mida.",
       },
       {
-        heading: "No s'accepta a través del formulari públic",
-        body: "No pugis PSD, TIFF, ZIP, EXE, binaris arbitraris, màsters per capes, màsters a punt d'impremta ni màsters d'àudio o vídeo. Als artistes preseleccionats se'ls contacta a part per als originals a punt per a producció mitjançant un procés controlat.",
+        heading: "Què no cal enviar",
+        body: "No adjuntis masters per capes, de preimpressió, d’àudio o de vídeo, ni arxius comprimits com ara ZIP. Envia primer material de qualitat de revisió. Si la teva obra queda seleccionada, et demanarem els originals llestos per a producció a part.",
       },
       {
-        heading: "Com es tracta el teu material",
-        body: "Els fitxers de vista prèvia s'emmagatzemen de manera privada i es fan servir només per revisar la teva contribució a l'exposició. Els fitxers no es fan públics i es conserven segons la política de retenció del projecte.",
+        heading: "Com tractem el teu material",
+        body: "El que enviïs s’utilitza únicament per valorar la teva obra per a l’exposició. No es publica res automàticament ni es fa públic res sense el teu acord.",
       },
       {
         heading: "Drets i consentiment",
-        body: "En enviar, confirmes que has creat l'obra o que tens permís per compartir-la, i acceptes que pugui considerar-se per a la seva exhibició dins l'exposició i la seva difusió. Conserves els drets d'autor de la teva obra.",
+        body: "En enviar una obra confirmes que l’has creada tu, o que tens permís per compartir-la, i acceptes que es pugui valorar per exposar-la dins l’exposició i la seva difusió. Conserves els drets d’autor de la teva obra.",
       },
     ],
     uploaderTitle: "El carregador de fitxers",
