@@ -25,6 +25,7 @@ export const sv: TranslationOverride = {
   },
   langSwitcher: { label: "Välj språk", current: "Aktuellt språk" },
   common: {
+    skipToContent: "Hoppa till innehållet",
     viewAllDates: "Visa alla datum",
     learnMore: "Läs mer",
     readConditions: "Läs villkoren",

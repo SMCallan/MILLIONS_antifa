@@ -25,6 +25,7 @@ export const nl: TranslationOverride = {
   },
   langSwitcher: { label: "Kies taal", current: "Huidige taal" },
   common: {
+    skipToContent: "Naar de inhoud",
     viewAllDates: "Alle data bekijken",
     learnMore: "Meer weten",
     readConditions: "Lees de voorwaarden",
