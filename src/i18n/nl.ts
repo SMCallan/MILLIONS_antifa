@@ -42,7 +42,7 @@ export const nl: TranslationOverride = {
     secondaryCta: "Kunstwerk bijdragen",
     badges: [
       "Solidarity Park",
-      "Internationale tour",
+      "Internationale Brigades",
       "1.000 jonge kunstenaars",
       "Internationale Brigades",
       "Kunst, herinnering, educatie",
@@ -84,15 +84,17 @@ export const nl: TranslationOverride = {
     contributeCta: "Kunstwerk bijdragen",
   },
   tourDates: {
-    heroTitle: "Internationale tour van Solidarity Park.",
+    heroTitle:
+      "Million Words Against Fascism-tournee.",
     heroSubtitle:
-      "De tour is opgezet rond scholen, vakbonden, kunstlocaties, groepen van de Internationale Brigades, koren, hogescholen en maatschappelijke partners, en werkt toe naar het Festival van Solidarity Park in Catalonië.",
+      "De tournee komt tot stand in samenwerking met kunstenaars over de hele wereld, scholen, kunstacademies, vakbonden, kunstlocaties, groepen rond de Internationale Brigades, dichters, radicale koren en solidariteitscampagnes – allemaal op weg naar het Solidarity Park Festival in Catalonië in mei 2027.",
     heroPrimaryCta: "Route bekijken",
     heroSecondaryCta: "Gastheer zijn",
     routeBadge: "Route-opmerkingen",
-    routeTitle: "Geplande locaties en belangrijkste medewerkers.",
+    routeTitle:
+      "Locaties",
     routeBody:
-      "De locaties zijn indicatief. Data en details worden met elke locatie bevestigd en hier gepubliceerd.",
+      "Volledige locaties, tijden en activiteiten worden gepubliceerd zodra ze bevestigd zijn.",
     stop: "Halte",
     pause: "Pauze",
     tbc: "Nog te bevestigen",
@@ -104,23 +106,27 @@ export const nl: TranslationOverride = {
   concept: {
     heroTitle: "Het concept",
     heroSubtitle:
-      "Duizend jonge kunstenaars die de opkomst van het fascisme beantwoorden met een miljoen woorden, samengebracht in één reizende tentoonstelling.",
+      "Duizend jonge kunstenaars antwoorden op de opkomst van het fascisme, samengebracht in één reizende tentoonstelling waar 1.000 anderen hun kunst aan toevoegen.",
     sections: [
       {
         heading: "Een miljoen woorden",
-        body: "Als een beeld duizend woorden zegt, maken duizend kunstenaars een miljoen woorden. Elke bijdrage is een uniek perspectief en samen vormen ze een internationaal, collectief antwoord op extreemrechtse en fascistische ideologieën.",
+        body: "Het gezegde luidt dat een beeld meer zegt dan duizend woorden. Als dat zo is, maken duizend jonge internationale kunstenaars op deze tentoonstellingstournee samen een miljoen woorden. Elke bijdrage is hun eigen kritische historische inzicht, en samen vormen ze een internationaal, collectief antwoord op extreemrechtse en fascistische ideologieën van vandaag.",
       },
       {
         heading: "Geworteld in het project Solidarity Park",
-        body: "De tentoonstelling komt voort uit het educatieve initiatief van het project Solidarity Park, dat jongeren kennis laat maken met de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit. Tegen juni 2026 zal het project meer dan 1.000 beeldende werken van jongeren hebben gefaciliteerd.",
+        body: "De tentoonstelling komt voort uit het educatieve initiatief van het project Solidarity Park, dat jongeren kennis laat maken met de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit. In juni 2026 heeft het project meer dan 1.000 visuele werken van jongeren mogelijk gemaakt. Deze vormen de hoofdinstallatie van de tentoonstelling. De tentoonstelling is samengesteld door Solidarity Park-artistiek directeur Rob MacDonald.",
       },
       {
-        heading: "Naar de verjaardag van de Ciudad de Barcelona",
-        body: "De tour van 2027 werkt toe naar de 90e verjaardag van het zinken van de Ciudad de Barcelona op 30 mei 2027: het verhaal dat het werk van de Vereniging Solidarity Park in kunst, herinnering en educatie mede op gang bracht.",
+        heading: "Duizend beelden erbij",
+        body: "Terwijl de tournee door Europa trekt, nodigen we jongeren en het publiek uit om 1.000 beelden aan de tentoonstelling toe te voegen en zo een beweging te vormen van miljoenen en miljoenen woorden tegen de opkomst van fascistische ideologie.",
       },
       {
-        heading: "Kunst, herinnering en educatie",
-        body: "Rond de centrale Solidariteitsruimte draagt een samengesteld programma van film, animatie, beeldhouwkunst, schilderkunst, illustratie en poëzie miljoenen verhalen tegen het fascisme, en verbindt zo de historische herinnering met het werk van een nieuwe generatie.",
+        heading: "Internationale kunstenaars",
+        body: "Gevestigde internationale kunstenaars zijn ook uitgenodigd om schilderijen, sculpturen, performances en multimediawerk te tonen, geïnspireerd op de titel van de tentoonstelling en op het werk van de Artists’ International Association uit de jaren dertig.",
+      },
+      {
+        heading: "Op weg naar het Solidarity Park Festival op 30 mei 2027 in Catalonië",
+        body: "De tournee van zes maanden werkt toe naar de 90e verjaardag van het zinken van het schip Ciudad de Barcelona op 30 mei 1937 – een vergeten verhaal over de Internationale Brigades in de Spaanse Burgeroorlog dat de oprichting inspireerde van de Solidarity Park Association, haar monument voor gemeenschapsparticipatie en, sinds 2022, het jaarlijkse internationale festival voor kunst, herinnering en educatie.",
       },
     ],
   },

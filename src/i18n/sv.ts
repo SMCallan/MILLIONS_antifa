@@ -42,7 +42,7 @@ export const sv: TranslationOverride = {
     secondaryCta: "Bidra med konst",
     badges: [
       "Solidarity Park",
-      "Internationell turné",
+      "Internationella brigaderna",
       "1 000 unga konstnärer",
       "Internationella brigaderna",
       "Konst, minne, utbildning",
@@ -84,15 +84,17 @@ export const sv: TranslationOverride = {
     contributeCta: "Bidra med konst",
   },
   tourDates: {
-    heroTitle: "Den internationella turnén för Solidarity Park.",
+    heroTitle:
+      "Turnén Million Words Against Fascism.",
     heroSubtitle:
-      "Turnén är planerad kring skolor, fackförbund, konstlokaler, grupper från Internationella brigaderna, körer, högskolor och medborgarpartner, och leder fram till festivalen för Solidarity Park i Katalonien.",
+      "Turnén sker i samarbete med konstnärer världen över, skolor, konsthögskolor, fackförbund, konsthallar, grupper kopplade till Internationella brigaderna, poeter, radikala körer och solidaritetskampanjer – alla på väg mot Solidarity Park Festival i Katalonien i maj 2027.",
     heroPrimaryCta: "Visa vägen",
     heroSecondaryCta: "Var värd för utställningen",
     routeBadge: "Anteckningar om vägen",
-    routeTitle: "Planerade platser och huvudsakliga medverkande.",
+    routeTitle:
+      "Platser",
     routeBody:
-      "Platserna är preliminära. Datum och detaljer bekräftas med varje lokal och publiceras här.",
+      "Fullständiga spelplatser, tider och aktiviteter publiceras när de är bekräftade.",
     stop: "Stopp",
     pause: "Paus",
     tbc: "Meddelas senare",
@@ -104,23 +106,27 @@ export const sv: TranslationOverride = {
   concept: {
     heroTitle: "Konceptet",
     heroSubtitle:
-      "Tusen unga konstnärer svarar på fascismens framväxt med en miljon ord, samlade i en enda vandringsutställning.",
+      "Tusen unga konstnärer svarar på fascismens frammarsch, samlade i en turnerande utställning där 1 000 till kommer att bidra med sin konst.",
     sections: [
       {
         heading: "En miljon ord",
-        body: "Om en bild säger tusen ord skapar tusen konstnärer en miljon ord. Varje bidrag är ett enskilt perspektiv, och tillsammans bildar de ett internationellt, kollektivt svar på högerextrema och fascistiska ideologier.",
+        body: "Det sägs att en bild säger mer än tusen ord. Om det stämmer skapar tusen unga internationella konstnärer på den här utställningsturnén en miljon ord. Varje bidrag är deras egen kritiska historiska förståelse, och tillsammans bildar de ett internationellt, kollektivt svar på dagens högerextrema och fascistiska ideologier.",
       },
       {
-        heading: "Förankrat i projektet Solidarity Park",
-        body: "Utställningen växer ur utbildningsinitiativet inom Solidarity Park, som introducerar unga till spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet. Till juni 2026 kommer projektet att ha möjliggjort mer än 1 000 visuella verk av unga.",
+        heading: "Rotad i projektet Solidarity Park",
+        body: "Utställningen växer ur utbildningsinitiativet i projektet Solidarity Park, som introducerar unga för spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet. Fram till juni 2026 har projektet möjliggjort mer än 1 000 visuella verk av unga. Dessa utgör utställningens huvudinstallation. Utställningen är curerad av Solidarity Parks konstnärliga ledare Rob MacDonald.",
       },
       {
-        heading: "Mot Ciudad de Barcelona-minnet",
-        body: "Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027 – berättelsen som bidrog till att starta arbetet inom Föreningen Solidarity Park med konst, minne och utbildning.",
+        heading: "Tusen bilder till",
+        body: "När turnén rullar ut över Europa bjuder vi in unga och allmänheten att lägga till 1 000 bilder till utställningen och skapa en rörelse av miljoner och åter miljoner ord mot den fascistiska ideologins frammarsch.",
       },
       {
-        heading: "Konst, minne och utbildning",
-        body: "Runt det centrala Solidaritetsrummet bär ett kurerat program av film, animation, skulptur, måleri, illustration och poesi miljontals berättelser mot fascismen, och förbinder det historiska minnet med en ny generations arbete.",
+        heading: "Internationella konstnärer",
+        body: "Etablerade internationella konstnärer har också bjudits in att visa måleri, skulptur, performance och multimediaverk inspirerade av utställningens titel och av Artists’ International Associations arbete på 1930-talet.",
+      },
+      {
+        heading: "Mot Solidarity Park Festival den 30 maj 2027 i Katalonien",
+        body: "Den sex månader långa turnén leder fram till 90-årsdagen av sänkningen av fartyget Ciudad de Barcelona den 30 maj 1937 – en bortglömd historia om Internationella brigaderna i spanska inbördeskriget som inspirerade grundandet av Solidarity Park Association, dess monument för gemensamt deltagande och, sedan 2022, den årliga internationella festivalen för konst, minne och utbildning.",
       },
     ],
   },
