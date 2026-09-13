@@ -1,7 +1,7 @@
 # Spanish (español) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-08-27.
+Generated 2026-09-13.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**235 strings.** 228 differ from the English; 7 are identical (see the end of this file).
+**237 strings.** 228 differ from the English; 9 are identical (see the end of this file).
 
 ---
 
@@ -193,7 +193,7 @@ Things worth watching for:
 
 ### title
 
-- **English:** Million words against Fascism
+- **English:** A Million Words Against Fascism
 - **Spanish:** Un millón de palabras contra el fascismo
 
 ### subtitle
@@ -209,7 +209,7 @@ Things worth watching for:
 ### lede
 
 - **English:** If a picture tells a thousand words, what do a thousand artists create? A million words, each told from a unique perspective, forming an international touring exhibition against fascism.
-- **Spanish:** Si una imagen dice mil palabras, ¿qué crean mil artistas? Un millón de palabras, cada una desde una perspectiva única, formando una exposición itinerante internacional contra el fascismo.
+- **Spanish:** Si una imagen vale más que mil palabras, ¿qué pueden crear mil artistas? Un millón de palabras, cada una desde una perspectiva única, formando una exposición itinerante internacional contra el fascismo.
 
 ### primaryCta
 
@@ -259,8 +259,8 @@ Things worth watching for:
 
 ### statusLines[2]
 
-- **English:** Inspired by the Artists International Association and the legacy of anti-fascist solidarity
-- **Spanish:** Inspirada en la Artists International Association y en el legado de la solidaridad antifascista
+- **English:** Inspired by the Artists' International Association and the legacy of anti-fascist solidarity
+- **Spanish:** Inspirada en la Artists’ International Association y en el legado de la solidaridad antifascista
 
 ## Home page — body
 
@@ -277,17 +277,17 @@ Things worth watching for:
 ### conceptBody[1]
 
 - **English:** If a picture tells a thousand words, a thousand artists create a million words. The exhibition brings those voices together as an international response to the rise of far-right and fascist ideologies.
-- **Spanish:** Si una imagen dice mil palabras, mil artistas crean un millón de palabras. La exposición reúne esas voces como respuesta internacional al auge de las ideologías de extrema derecha y fascistas.
+- **Spanish:** Si una imagen vale más que mil palabras, mil artistas crean un millón de palabras. La exposición reúne esas voces como respuesta internacional al auge de las ideologías de extrema derecha y fascistas.
 
 ### conceptBody[2]
 
-- **English:** By June 2026, the Solidarity Park Project will have facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
-- **Spanish:** Para junio de 2026, el proyecto Solidarity Park habrá facilitado más de 1.000 obras visuales de jóvenes a través de su iniciativa educativa sobre la Guerra Civil española, las Brigadas Internacionales y las lecciones de la solidaridad internacional.
+- **English:** By June 2026, the Solidarity Park Project had facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
+- **Spanish:** Para junio de 2026, el proyecto Solidarity Park había facilitado más de 1.000 obras visuales de jóvenes a través de su iniciativa educativa sobre la Guerra Civil española, las Brigadas Internacionales y las lecciones de la solidaridad internacional.
 
 ### conceptBody[3]
 
-- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Association Solidarity Park's work in art, memory, and education.
-- **Spanish:** La gira de 2027 avanza hacia el 90.º aniversario del hundimiento del Ciudad de Barcelona, el 30 de mayo de 2027, la historia que ayudó a poner en marcha el trabajo de la Asociación Solidarity Park en arte, memoria y educación.
+- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Associació Solidarity Park's work in art, memory, and education.
+- **Spanish:** La gira de 2027 avanza hacia el 90.º aniversario del hundimiento del Ciudad de Barcelona, el 30 de mayo de 2027, la historia que ayudó a poner en marcha el trabajo de la Associació Solidarity Park en arte, memoria y educación.
 
 ### stats[1] › value
 
@@ -395,7 +395,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** The tour is in collaboration with Artists across the world, Schools, Art Colleges, Trade Unions, Arts Venues, International Brigade groups, Poets, Radical Choirs, and Solidarity Campaign groups all building toward the Solidarity Park Festival in Catalunya May 2027.
-- **Spanish:** La gira se realiza en colaboración con artistas de todo el mundo, escuelas, escuelas de arte, sindicatos, salas de arte, grupos de las Brigadas Internacionales, poetas, coros reivindicativos y grupos de campañas solidarias, todos avanzando hacia el Festival de Solidarity Park en Cataluña en mayo de 2027.
+- **Spanish:** La gira se realiza en colaboración con artistas de todo el mundo, escuelas, escuelas de arte, sindicatos, salas de arte, grupos de las Brigadas Internacionales, poetas, coros reivindicativos y grupos de campañas solidarias, todos avanzando hacia el Festival Solidarity Park en Cataluña en mayo de 2027.
 
 ### heroPrimaryCta
 
@@ -445,7 +445,7 @@ Things worth watching for:
 ### ctaTitle
 
 - **English:** Interested in hosting or partnering with a future event?
-- **Spanish:** ¿Te interesa acoger o colaborar en un evento futuro?
+- **Spanish:** ¿Te interesa acoger o colaborar en un futuro evento?
 
 ### ctaButton
 
@@ -496,8 +496,8 @@ Things worth watching for:
 
 ### sections[2] › body
 
-- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project has facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
-- **Spanish:** La exposición surge de la iniciativa educativa del proyecto Solidarity Park, que acerca a los jóvenes a la Guerra Civil española, las Brigadas Internacionales y las lecciones de la solidaridad internacional. En junio de 2026 el proyecto ha facilitado más de 1.000 obras visuales de jóvenes. Esta será la instalación principal de la exposición. La exposición está comisariada por el director artístico de Solidarity Park, Rob MacDonald.
+- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project had facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
+- **Spanish:** La exposición surge de la iniciativa educativa del proyecto Solidarity Park, que acerca a los jóvenes a la Guerra Civil española, las Brigadas Internacionales y las lecciones de la solidaridad internacional. En junio de 2026 el proyecto había facilitado más de 1.000 obras visuales de jóvenes. Esta será la instalación principal de la exposición. La exposición está comisariada por el director artístico de Solidarity Park, Rob MacDonald.
 
 ### sections[3] › heading
 
@@ -522,12 +522,12 @@ Things worth watching for:
 ### sections[5] › heading
 
 - **English:** Towards Solidarity Park Festival 30th May 2027 in Catalunya
-- **Spanish:** Hacia el Festival de Solidarity Park, 30 de mayo de 2027 en Cataluña
+- **Spanish:** Hacia el Festival Solidarity Park, 30 de mayo de 2027 en Cataluña
 
 ### sections[5] › body
 
-- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of the Solidarity Park Association, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
-- **Spanish:** La gira de seis meses avanza hacia el 90.º aniversario del hundimiento del barco Ciudad de Barcelona, el 30 de mayo de 1937: una historia olvidada de las Brigadas Internacionales en la Guerra Civil española que inspiró la creación de la Asociación Solidarity Park, su monumento de participación comunitaria y, desde 2022, el festival internacional anual de arte, memoria y educación.
+- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of Associació Solidarity Park, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
+- **Spanish:** La gira de seis meses avanza hacia el 90.º aniversario del hundimiento del barco Ciudad de Barcelona, el 30 de mayo de 1937: una historia olvidada de las Brigadas Internacionales en la Guerra Civil española que inspiró la creación de la Associació Solidarity Park, su monumento de participación comunitaria y, desde 2022, el festival internacional anual de arte, memoria y educación.
 
 ## Contribute page
 
@@ -539,7 +539,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** We want to add your anti-fascist artistic voice to the Millions. Below we set out some conditions. Accepted works will form part of the physical touring exhibition main installation and/or parallel online galleries. We are especially interested in images and spoken words, but we are open to all artistic expressions. Where venues have space and time we will try to show your work or performance in real time.
-- **Spanish:** Queremos sumar tu voz artística antifascista a los Millions. A continuación establecemos algunas condiciones. Las obras aceptadas formarán parte de la instalación principal de la exposición itinerante y/o de las galerías en línea paralelas. Nos interesan especialmente las imágenes y la palabra hablada, pero estamos abiertos a todas las expresiones artísticas. Donde los espacios tengan sitio y tiempo, intentaremos mostrar tu obra o actuación en directo.
+- **Spanish:** Queremos sumar tu voz artística antifascista a este millón de palabras. A continuación establecemos algunas condiciones. Las obras aceptadas formarán parte de la instalación principal de la exposición itinerante y/o de las galerías en línea paralelas. Nos interesan especialmente las imágenes y la palabra hablada, pero estamos abiertos a todas las expresiones artísticas. Donde los espacios tengan sitio y tiempo, intentaremos mostrar tu obra o actuación en directo.
 
 ### revealTitle
 
@@ -548,7 +548,7 @@ Things worth watching for:
 
 ### heroPrimaryCta
 
-- **English:** Request link
+- **English:** Request a link
 - **Spanish:** Solicitar enlace
 
 ### heroSecondaryCta
@@ -569,7 +569,7 @@ Things worth watching for:
 ### formDescription
 
 - **English:** Enter the email address you want attached to the contribution. The link lets you create or update one active preview contribution for the tour.
-- **Spanish:** Introduce la dirección de correo que quieres asociar a la contribución. El enlace te permite crear o actualizar una contribución de vista previa activa para la gira.
+- **Spanish:** Introduce la dirección de correo que quieres asociar a la contribución. El enlace te permite crear o actualizar una vista previa activa de tu contribución para la gira.
 
 ### emailLabel
 
@@ -594,17 +594,17 @@ Things worth watching for:
 ### guidelines[2]
 
 - **English:** Artists, poets, film-makers, animators, sculptors, painters and community contributors are all welcome to send work or links by email.
-- **Spanish:** Artistas, poetas, cineastas, animadores, escultores, pintores y participantes de la comunidad podéis enviar obra o enlaces por correo electrónico.
+- **Spanish:** Invitamos a artistas, poetas, cineastas, animadores, escultores, pintores y participantes de la comunidad a enviar obras o enlaces por correo electrónico.
 
 ### guidelines[3]
 
 - **English:** Send images and audio as JPG, PNG, WebP, PDF, MP3, M4A or WAV. Share video, and anything large, as a link.
-- **Spanish:** Envía imágenes y audio en JPG, PNG, WebP, PDF, MP3, M4A o WAV. Comparte el vídeo, y cualquier archivo grande, como enlace.
+- **Spanish:** Envía tus imágenes y audios en formato JPG, PNG, WebP, PDF, MP3, M4A o WAV. Comparte vídeos, y cualquier archivo grande, como enlace.
 
 ### guidelines[4]
 
 - **English:** Keep attachments under roughly 20MB in total and send a link for anything bigger. Shortlisted artists may be asked separately for production-ready originals.
-- **Spanish:** Mantén los adjuntos por debajo de unos 20 MB en total y envía un enlace para cualquier cosa mayor. A los artistas preseleccionados se les pueden pedir aparte los originales listos para producción.
+- **Spanish:** Mantén los adjuntos por debajo de unos 20 MB en total y envía un enlace para archivos mayores. A los artistas preseleccionados se les pueden pedir aparte los originales listos para producción.
 
 ### guidelines[5]
 
@@ -636,12 +636,12 @@ Things worth watching for:
 ### sections[1] › body
 
 - **English:** Images and documents as JPG, PNG, WebP or PDF. Audio as MP3, M4A or WAV. Send video, or anything large, as a link — Vimeo, YouTube, Google Drive, Dropbox and WeTransfer all work.
-- **Spanish:** Imágenes y documentos en JPG, PNG, WebP o PDF. Audio en MP3, M4A o WAV. Envía el vídeo, o cualquier archivo grande, como enlace: Vimeo, YouTube, Google Drive, Dropbox y WeTransfer sirven todos.
+- **Spanish:** Imágenes y documentos en JPG, PNG, WebP o PDF. Audio en MP3, M4A o WAV. Envía vídeos, o cualquier archivo grande, como enlace: Vimeo, YouTube, Google Drive, Dropbox y WeTransfer son todas opciones válidas.
 
 ### sections[2] › heading
 
 - **English:** Keep attachments small, or send a link
-- **Spanish:** Adjuntos pequeños, o mejor un enlace
+- **Spanish:** Envía archivos adjuntos pequeños, o un enlace
 
 ### sections[2] › body
 
@@ -666,7 +666,7 @@ Things worth watching for:
 ### sections[4] › body
 
 - **English:** What you send is used only to consider your work for the exhibition. Nothing is published automatically, and nothing is made public without your agreement.
-- **Spanish:** Lo que envíes se utiliza únicamente para valorar tu obra para la exposición. No se publica nada automáticamente ni se hace público nada sin tu acuerdo.
+- **Spanish:** Lo que envíes se utiliza únicamente para valorar tu obra para la exposición. No se publica nada automáticamente ni se hace público nada sin tu consentimiento.
 
 ### sections[5] › heading
 
@@ -686,7 +686,7 @@ Things worth watching for:
 ### uploaderBody
 
 - **English:** Contributions are made through a secure email link. Request a link on the Contribute page; opening it lets you create or update one active preview contribution.
-- **Spanish:** Las contribuciones se realizan mediante un enlace seguro por correo. Solicita un enlace en la página Contribuir; al abrirlo podrás crear o actualizar una contribución de vista previa activa.
+- **Spanish:** Las contribuciones se realizan mediante un enlace seguro por correo. Solicita un enlace en la página Contribuir; al abrirlo podrás crear o actualizar una vista previa activa de tu contribución.
 
 ### uploaderCta
 
@@ -713,7 +713,7 @@ Things worth watching for:
 ### introBody
 
 - **English:** The exhibition travels across Europe with a core Solidarity Room, street-facing postcard activity, and a programme of commissioned work. Your support keeps the tour free or low-cost for schools, colleges, unions, and community venues.
-- **Spanish:** La exposición recorre Europa con una Sala de la Solidaridad central, actividad de postales en la calle y un programa de obra encargada. Tu apoyo mantiene la gira gratuita o de bajo coste para escuelas, institutos, sindicatos y salas comunitarias.
+- **Spanish:** La exposición recorre Europa con una Sala de la Solidaridad central, actividad de postales en la calle y un programa de obras encargadas. Tu apoyo mantiene la gira gratuita o de bajo coste para escuelas, institutos, sindicatos y salas comunitarias.
 
 ### usesTitle
 
@@ -738,7 +738,7 @@ Things worth watching for:
 ### uses[4]
 
 - **English:** Commissioned work from anti-fascist artists, poets, and film-makers.
-- **Spanish:** Obra encargada a artistas, poetas y cineastas antifascistas.
+- **Spanish:** Obras encargadas a artistas, poetas y cineastas antifascistas.
 
 ### ctaTitle
 
@@ -748,7 +748,7 @@ Things worth watching for:
 ### ctaBody
 
 - **English:** A donation link will be published here. In the meantime, please get in touch to discuss supporting the tour or partnering with a stop near you.
-- **Spanish:** Aquí se publicará un enlace de donación. Mientras tanto, ponte en contacto para hablar sobre cómo apoyar la gira o colaborar en una parada cerca de ti.
+- **Spanish:** Aquí se publicará un enlace de donación. Mientras tanto, ponte en contacto para consultar sobre cómo apoyar la gira o colaborar en una parada cercana a ti.
 
 ### ctaButton
 
@@ -870,7 +870,7 @@ Things worth watching for:
 ### features[3]
 
 - **English:** Venues can add local history, artist commissions, poetry, music, workshops, and local anti-fascist work where space allows.
-- **Spanish:** Las salas pueden añadir historia local, encargos artísticos, poesía, música, talleres y obra antifascista local cuando el espacio lo permita.
+- **Spanish:** Las salas pueden añadir historia local, encargos artísticos, poesía, música, talleres y arte antifascista local cuando el espacio lo permita.
 
 ### fields › organisation
 
@@ -980,7 +980,7 @@ Things worth watching for:
 ### venueTypes[5]
 
 - **English:** Union or workplace venue
-- **Spanish:** Sindicato o espacio laboral
+- **Spanish:** Sindicato o lugar de trabajo
 
 ### venueTypes[6]
 
@@ -1027,7 +1027,7 @@ Things worth watching for:
 ### sections[2] › body
 
 - **English:** Event length and programme are shaped around each venue, from short runs to longer exhibitions, with school and community participation welcome.
-- **Spanish:** La duración y el programa de cada evento se adaptan a cada sala, desde estancias cortas hasta exposiciones más largas, y la participación de escuelas y de la comunidad es bienvenida.
+- **Spanish:** La duración y el programa de cada evento se adaptan a cada sala, desde estancias cortas hasta exposiciones más largas, e invitamos a la participación de escuelas y de la comunidad.
 
 ### sections[3] › heading
 
@@ -1037,7 +1037,7 @@ Things worth watching for:
 ### sections[3] › body
 
 - **English:** Hosts are encouraged to add local International Brigades history, workshops, live music, poetry, and local anti-fascist artists. The project can help connect you with regional partners.
-- **Spanish:** Se anima a las salas a añadir historia local de las Brigadas Internacionales, talleres, música en directo, poesía y artistas antifascistas locales. El proyecto puede ayudar a conectarte con socios regionales.
+- **Spanish:** Se anima a las salas a añadir historia local de las Brigadas Internacionales, talleres, música en directo, poesía y artistas antifascistas locales. El proyecto puede ayudarte a contactar con compañeros de la región.
 
 ### sections[4] › heading
 
@@ -1047,7 +1047,7 @@ Things worth watching for:
 ### sections[4] › body
 
 - **English:** Venues are asked to provide a secure, weather-appropriate space and reasonable supervision during opening hours. Insurance and handling arrangements are agreed per venue.
-- **Spanish:** Se pide a las salas que ofrezcan un espacio seguro y adecuado frente al clima y una supervisión razonable durante el horario de apertura. Los acuerdos de seguro y manipulación se pactan por sala.
+- **Spanish:** Se pide a las salas que ofrezcan un espacio seguro y adecuado al clima y una supervisión razonable durante el horario de apertura. Los acuerdos de seguro y gestión se pactan por sala.
 
 ### sections[5] › heading
 
@@ -1057,7 +1057,7 @@ Things worth watching for:
 ### sections[5] › body
 
 - **English:** The project aims to keep hosting free or low-cost for schools, unions, and community venues. Transport, installation, and any shared costs are discussed during your enquiry.
-- **Spanish:** El proyecto busca mantener la acogida gratuita o de bajo coste para escuelas, sindicatos y salas comunitarias. El transporte, la instalación y cualquier coste compartido se tratan durante tu consulta.
+- **Spanish:** El proyecto busca que la acogida sea gratuita o de bajo coste para escuelas, sindicatos y salas comunitarias. El transporte, la instalación y cualquier coste compartido se tratan durante tu consulta.
 
 ### ctaTitle
 
@@ -1067,7 +1067,7 @@ Things worth watching for:
 ### ctaBody
 
 - **English:** Send the basics about your venue and preferred dates and the team will follow up.
-- **Spanish:** Envía lo básico sobre tu sala y las fechas preferidas y el equipo te responderá.
+- **Spanish:** Envía información básica sobre tu sala y las fechas preferidas y el equipo te responderá.
 
 ### ctaButton
 
@@ -1118,6 +1118,18 @@ Things worth watching for:
 - **English:** Profiles are being gathered and will be published here as they are confirmed.
 - **Spanish:** Estamos reuniendo los perfiles y se publicarán aquí a medida que se confirmen.
 
+## notFound
+
+### title
+
+- **English:** Page not found
+- **Spanish:** Página no encontrada
+
+### body
+
+- **English:** That page does not exist, or it has moved. The links below will get you back on track.
+- **Spanish:** Esta página no existe o se ha movido. Los enlaces de abajo te devolverán al buen camino.
+
 ## Links page
 
 ### heroTitle
@@ -1137,8 +1149,9 @@ Things worth watching for:
 
 ### groups › project › items › association › label
 
-- **English:** Association Solidarity Park
-- **Spanish:** Asociación Solidarity Park
+- **English:** Associació Solidarity Park
+- **Spanish:** Associació Solidarity Park
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › project › items › association › note
 
@@ -1148,7 +1161,7 @@ Things worth watching for:
 ### groups › project › items › festival › label
 
 - **English:** Solidarity Park Festival, Catalunya
-- **Spanish:** Festival de Solidarity Park, Cataluña
+- **Spanish:** Festival Solidarity Park, Cataluña
 
 ### groups › project › items › festival › note
 
@@ -1180,12 +1193,13 @@ Things worth watching for:
 ### groups › memory › items › ibmt › note
 
 - **English:** Keeping the memory of the International Brigades alive.
-- **Spanish:** Mantener viva la memoria de las Brigadas Internacionales.
+- **Spanish:** Manteniendo viva la memoria de las Brigadas Internacionales.
 
 ### groups › memory › items › basqueChildren › label
 
 - **English:** Basque Children of '37 Association
-- **Spanish:** Asociación Niños Vascos del 37
+- **Spanish:** Basque Children of '37 Association
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › memory › items › basqueChildren › note
 
@@ -1251,6 +1265,8 @@ English name. Others may simply never have been translated. Worth a look:
 - Site name and description › shortName
 - Home page — headline area › badges[1]
 - Home page — body › stats[3] › value
+- Links page › groups › project › items › association › label
 - Links page › groups › project › items › sunderland › label
 - Links page › groups › memory › items › ibmt › label
+- Links page › groups › memory › items › basqueChildren › label
 - Links page › groups › memory › items › alba › label

@@ -1,7 +1,7 @@
 # German (Deutsch) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-08-27.
+Generated 2026-09-13.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**235 strings.** 222 differ from the English; 13 are identical (see the end of this file).
+**237 strings.** 222 differ from the English; 15 are identical (see the end of this file).
 
 ---
 
@@ -46,7 +46,7 @@ Things worth watching for:
 ### description
 
 - **English:** An international touring exhibition of art, memory, and education responding to the rise of far-right and fascist ideologies.
-- **German:** Eine internationale Wanderausstellung über Kunst, Erinnerung und Bildung als Antwort auf den Aufstieg rechtsextremer und faschistischer Ideologien.
+- **German:** Eine internationale Wanderausstellung der Kunst, Erinnerung und Bildung als Antwort auf den Aufstieg rechtsextremer und faschistischer Ideologien.
 
 ## Navigation and menu labels
 
@@ -94,7 +94,7 @@ Things worth watching for:
 ### host
 
 - **English:** Host
-- **German:** Gastgeben
+- **German:** Ausrichten
 
 ### gallery
 
@@ -174,7 +174,7 @@ Things worth watching for:
 ### revealBody
 
 - **English:** Confirm you are human and we will show you the address to send it to. This keeps it away from automated scrapers.
-- **German:** Bestätigt, dass ihr ein Mensch seid, und wir zeigen euch die Adresse. So bleibt sie automatisierten Sammlern verborgen.
+- **German:** Bestätige, dass du ein Mensch bist, und wir zeigen dir die Adresse. So bleibt sie automatisierten Sammlern verborgen.
 
 ### revealButton
 
@@ -189,14 +189,14 @@ Things worth watching for:
 ### revealError
 
 - **English:** That check did not complete. Please try again.
-- **German:** Die Prüfung wurde nicht abgeschlossen. Bitte versucht es erneut.
+- **German:** Die Prüfung wurde nicht abgeschlossen. Bitte versuch es erneut.
 
 ## Home page — headline area
 
 ### title
 
-- **English:** Million words against Fascism
-- **German:** Eine Million Worte gegen den Faschismus
+- **English:** A Million Words Against Fascism
+- **German:** Eine Million Worte gegen Faschismus
 
 ### subtitle
 
@@ -211,7 +211,7 @@ Things worth watching for:
 ### lede
 
 - **English:** If a picture tells a thousand words, what do a thousand artists create? A million words, each told from a unique perspective, forming an international touring exhibition against fascism.
-- **German:** Wenn ein Bild tausend Worte sagt, was schaffen dann tausend Künstlerinnen und Künstler? Eine Million Worte, jedes aus einer einzigartigen Perspektive, die zu einer internationalen Wanderausstellung gegen den Faschismus werden.
+- **German:** Wenn ein Bild tausend Worte sagt, was schaffen dann tausend Künstler*innen? Eine Million Worte, jedes aus einer einzigartigen Perspektive, die zu einer internationalen Wanderausstellung gegen Faschismus werden.
 
 ### primaryCta
 
@@ -261,8 +261,8 @@ Things worth watching for:
 
 ### statusLines[2]
 
-- **English:** Inspired by the Artists International Association and the legacy of anti-fascist solidarity
-- **German:** Inspiriert von der Artists International Association und dem Erbe antifaschistischer Solidarität
+- **English:** Inspired by the Artists' International Association and the legacy of anti-fascist solidarity
+- **German:** Inspiriert von der Artists’ International Association und dem Erbe antifaschistischer Solidarität
 
 ## Home page — body
 
@@ -283,13 +283,13 @@ Things worth watching for:
 
 ### conceptBody[2]
 
-- **English:** By June 2026, the Solidarity Park Project will have facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
-- **German:** Bis Juni 2026 wird das Projekt Solidarity Park über seine Bildungsinitiative zum Spanischen Bürgerkrieg, zu den Internationalen Brigaden und zu den Lehren internationaler Solidarität mehr als 1.000 visuelle Werke junger Menschen ermöglicht haben.
+- **English:** By June 2026, the Solidarity Park Project had facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
+- **German:** Bis Juni 2026 hatte das Projekt Solidarity Park über seine Bildungsinitiative zum Spanischen Bürgerkrieg, zu den Internationalen Brigaden und zu den Lehren internationaler Solidarität mehr als 1.000 visuelle Werke junger Menschen ermöglicht.
 
 ### conceptBody[3]
 
-- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Association Solidarity Park's work in art, memory, and education.
-- **German:** Die Tour 2027 führt zum 90. Jahrestag des Untergangs der Ciudad de Barcelona am 30. Mai 2027 — die Geschichte, die die Arbeit der Vereinigung Solidarity Park in Kunst, Erinnerung und Bildung mit angestoßen hat.
+- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Associació Solidarity Park's work in art, memory, and education.
+- **German:** Die Tour 2027 führt zum 90. Jahrestag des Untergangs der Ciudad de Barcelona am 30. Mai 2027 — die Geschichte, die die Arbeit der Associació Solidarity Park in Kunst, Erinnerung und Bildung mit angestoßen hat.
 
 ### stats[1] › value
 
@@ -309,7 +309,7 @@ Things worth watching for:
 ### stats[2] › label
 
 - **English:** Solidarity Room plan
-- **German:** Plan des Solidaritätsraums
+- **German:** Plan des Solidarity Rooms
 
 ### stats[3] › value
 
@@ -331,12 +331,12 @@ Things worth watching for:
 ### installationTitle
 
 - **English:** The Solidarity Room sits at the centre of the exhibition.
-- **German:** Der Solidaritätsraum steht im Zentrum der Ausstellung.
+- **German:** Der Solidarity Room steht im Zentrum der Ausstellung.
 
 ### installationBody
 
 - **English:** Inside, the room is planned as a wall-to-wall display of 1,000 postcard-sized images made through the Solidarity Park project. Outside, the street-facing walls can gather another 1,000 new images created by visitors, schools, colleges, and community participants during the tour.
-- **German:** Im Inneren ist der Raum als wandfüllende Präsentation von 1.000 postkartengroßen Bildern geplant, die durch das Projekt Solidarity Park entstanden sind. Draußen können die zur Straße gewandten Wände weitere 1.000 neue Bilder sammeln, die während der Tour von Besucher:innen, Schulen, Hochschulen und Gemeinschaftsteilnehmenden geschaffen werden.
+- **German:** Im Inneren ist der Raum als wandfüllende Präsentation von 1.000 postkartengroßen Bildern geplant, die durch das Projekt Solidarity Park entstanden sind. Draußen können an den Wänden zur Straßenseite hin weitere 1.000 neue Bilder Platz finden, die während der Tour von Besucher*innen, Schulen, Hochschulen und Gemeinschaftsteilnehmenden geschaffen werden.
 
 ### commissionsTitle
 
@@ -346,7 +346,7 @@ Things worth watching for:
 ### commissionsBody
 
 - **English:** Surrounding the Solidarity Room will be a curated programme inspired by millions of stories against fascism, including film, animation, sculpture, painting, illustration, and poetry.
-- **German:** Rund um den Solidaritätsraum entsteht ein kuratiertes Programm, inspiriert von Millionen Geschichten gegen den Faschismus, mit Film, Animation, Skulptur, Malerei, Illustration und Poesie.
+- **German:** Rund um den Solidarity Room entsteht ein kuratiertes Programm, inspiriert von Millionen Geschichten gegen den Faschismus, mit Film, Animation, Skulptur, Malerei, Illustration und Poesie.
 
 ### tourBadge
 
@@ -366,17 +366,17 @@ Things worth watching for:
 ### hostBadge
 
 - **English:** Host the exhibition
-- **German:** Ausstellung gastgeben
+- **German:** Ausstellung zeigen
 
 ### hostTitle
 
 - **English:** Bring the tour to a school, union, venue, festival, or civic space.
-- **German:** Bringen Sie die Tour an eine Schule, Gewerkschaft, einen Veranstaltungsort, ein Festival oder einen zivilgesellschaftlichen Raum.
+- **German:** Bring die Tour an eine Schule, in eine Gewerkschaft, an einen Veranstaltungsort, ein Festival oder in einen zivilgesellschaftlichen Raum.
 
 ### hostBody
 
 - **English:** Each event can combine the core installation with local International Brigades history, workshops, live music, poetry, and local anti-fascist artists where space allows.
-- **German:** Jede Veranstaltung kann die Kerninstallation mit lokaler Geschichte der Internationalen Brigaden, Workshops, Livemusik, Poesie und lokalen antifaschistischen Kunstschaffenden verbinden, wo der Platz es zulässt.
+- **German:** Jede Veranstaltung kann die Kerninstallation mit lokaler Geschichte der Internationalen Brigaden, Workshops, Livemusik, Poesie und lokalen antifaschistischen Künstler*innen verbinden, wo der Platz es zulässt.
 
 ### hostCta
 
@@ -399,7 +399,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** The tour is in collaboration with Artists across the world, Schools, Art Colleges, Trade Unions, Arts Venues, International Brigade groups, Poets, Radical Choirs, and Solidarity Campaign groups all building toward the Solidarity Park Festival in Catalunya May 2027.
-- **German:** Die Tour entsteht in Zusammenarbeit mit Kunstschaffenden aus aller Welt, Schulen, Kunsthochschulen, Gewerkschaften, Kunstorten, Gruppen der Internationalen Brigaden, Dichterinnen und Dichtern, politischen Chören und Solidaritätskampagnen – alle auf dem Weg zum Solidarity Park Festival in Katalonien im Mai 2027.
+- **German:** Die Tour entsteht in Zusammenarbeit mit Kunstschaffenden aus aller Welt, Schulen, Kunsthochschulen, Gewerkschaften, Kunstorten, Gruppen der Internationalen Brigaden, Dichter*innen, politischen Chören und Solidaritätskampagnen – alle auf dem Weg zum Solidarity Park Festival in Katalonien im Mai 2027.
 
 ### heroPrimaryCta
 
@@ -409,7 +409,7 @@ Things worth watching for:
 ### heroSecondaryCta
 
 - **English:** Host the exhibition
-- **German:** Ausstellung gastgeben
+- **German:** Ausstellung zeigen
 
 ### routeBadge
 
@@ -492,7 +492,7 @@ Things worth watching for:
 ### sections[1] › body
 
 - **English:** The saying goes, ‘an image is worth a thousand words.’ If so, then a thousand young international artists in this exhibition tour will create a million words. Each contribution is their unique critical historical understanding, and together they form an international, collective answer to far-right and fascist ideologies today.
-- **German:** Es heißt, ein Bild sage mehr als tausend Worte. Wenn das stimmt, schaffen tausend junge internationale Kunstschaffende auf dieser Ausstellungstour eine Million Worte. Jeder Beitrag ist ihr eigenes kritisches historisches Verständnis, und zusammen bilden sie eine internationale, kollektive Antwort auf rechtsextreme und faschistische Ideologien von heute.
+- **German:** Es heißt, ein Bild sage mehr als tausend Worte. Wenn das stimmt, schaffen tausend junge internationale Künstler*innen auf dieser Ausstellungstour eine Million Worte. Jeder Beitrag ist ihr eigenes kritisches historisches Verständnis, und zusammen bilden sie eine internationale, kollektive Antwort auf rechtsextreme und faschistische Ideologien von heute.
 
 ### sections[2] › heading
 
@@ -501,8 +501,8 @@ Things worth watching for:
 
 ### sections[2] › body
 
-- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project has facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
-- **German:** Die Ausstellung geht aus der Bildungsinitiative des Projekts Solidarity Park hervor, die jungen Menschen den Spanischen Bürgerkrieg, die Internationalen Brigaden und die Lehren internationaler Solidarität nahebringt. Bis Juni 2026 hat das Projekt mehr als 1.000 visuelle Arbeiten junger Menschen ermöglicht. Diese bilden die Hauptinstallation der Ausstellung. Kuratiert wird die Ausstellung vom künstlerischen Leiter von Solidarity Park, Rob MacDonald.
+- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project had facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
+- **German:** Die Ausstellung geht aus der Bildungsinitiative des Projekts Solidarity Park hervor, die jungen Menschen den Spanischen Bürgerkrieg, die Internationalen Brigaden und die Lehren internationaler Solidarität nahebringt. Bis Juni 2026 hatte das Projekt mehr als 1.000 visuelle Arbeiten junger Menschen ermöglicht. Diese bilden die Hauptinstallation der Ausstellung. Kuratiert wird die Ausstellung vom künstlerischen Leiter von Solidarity Park, Rob MacDonald.
 
 ### sections[3] › heading
 
@@ -531,8 +531,8 @@ Things worth watching for:
 
 ### sections[5] › body
 
-- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of the Solidarity Park Association, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
-- **German:** Die sechsmonatige Tour führt auf den 90. Jahrestag der Versenkung des Schiffes Ciudad de Barcelona am 30. Mai 1937 zu – eine vergessene Geschichte der Internationalen Brigaden im Spanischen Bürgerkrieg, die zur Gründung der Solidarity Park Association, ihres Denkmals der gemeinschaftlichen Beteiligung und, seit 2022, des jährlichen internationalen Festivals für Kunst, Erinnerung und Bildung führte.
+- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of Associació Solidarity Park, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
+- **German:** Die sechsmonatige Tour führt auf den 90. Jahrestag der Versenkung des Schiffes Ciudad de Barcelona am 30. Mai 1937 zu – eine vergessene Geschichte der Internationalen Brigaden im Spanischen Bürgerkrieg, die zur Gründung der Associació Solidarity Park, ihres Denkmals der gemeinschaftlichen Beteiligung und, seit 2022, des jährlichen internationalen Festivals für Kunst, Erinnerung und Bildung führte.
 
 ## Contribute page
 
@@ -544,7 +544,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** We want to add your anti-fascist artistic voice to the Millions. Below we set out some conditions. Accepted works will form part of the physical touring exhibition main installation and/or parallel online galleries. We are especially interested in images and spoken words, but we are open to all artistic expressions. Where venues have space and time we will try to show your work or performance in real time.
-- **German:** Wir wollen deine antifaschistische künstlerische Stimme zu den Millions hinzufügen. Im Folgenden nennen wir einige Bedingungen. Angenommene Arbeiten werden Teil der Hauptinstallation der Wanderausstellung und/oder der begleitenden Online-Galerien. Besonders interessieren uns Bilder und gesprochenes Wort, wir sind aber offen für alle künstlerischen Ausdrucksformen. Wo Veranstaltungsorte Platz und Zeit haben, versuchen wir, deine Arbeit oder Performance live zu zeigen.
+- **German:** Wir wollen deine antifaschistische künstlerische Stimme zu den Millionen hinzufügen. Im Folgenden nennen wir einige Bedingungen. Angenommene Arbeiten werden Teil der Hauptinstallation der Wanderausstellung und/oder der begleitenden Online-Galerien. Besonders interessieren uns Bilder und gesprochenes Wort, wir sind aber offen für alle künstlerischen Ausdrucksformen. Wo Veranstaltungsorte Platz und Zeit haben, versuchen wir, deine Arbeit oder Performance live zu zeigen.
 
 ### revealTitle
 
@@ -553,7 +553,7 @@ Things worth watching for:
 
 ### heroPrimaryCta
 
-- **English:** Request link
+- **English:** Request a link
 - **German:** Link anfordern
 
 ### heroSecondaryCta
@@ -574,7 +574,7 @@ Things worth watching for:
 ### formDescription
 
 - **English:** Enter the email address you want attached to the contribution. The link lets you create or update one active preview contribution for the tour.
-- **German:** Geben Sie die E-Mail-Adresse ein, die mit dem Beitrag verknüpft werden soll. Über den Link können Sie einen aktiven Vorschau-Beitrag für die Tour erstellen oder aktualisieren.
+- **German:** Gib die E-Mail-Adresse ein, die mit dem Beitrag verknüpft werden soll. Über den Link kannst du einen aktiven Vorschau-Beitrag für die Tour erstellen oder aktualisieren.
 
 ### emailLabel
 
@@ -594,12 +594,12 @@ Things worth watching for:
 ### guidelines[1]
 
 - **English:** The tour may include local anti-fascist artists where venue space allows, alongside the core Solidarity Room and commissioned international works.
-- **German:** Die Tour kann lokale antifaschistische Kunstschaffende einbeziehen, wo der Raum es zulässt, neben dem Solidaritätsraum und den international beauftragten Arbeiten.
+- **German:** Die Tour kann lokale antifaschistische Kunstschaffende einbeziehen, wo der Raum es zulässt, neben dem Solidarity Room und den international beauftragten Arbeiten.
 
 ### guidelines[2]
 
 - **English:** Artists, poets, film-makers, animators, sculptors, painters and community contributors are all welcome to send work or links by email.
-- **German:** Kunstschaffende, Dichterinnen und Dichter, Filmemacher, Animatorinnen, Bildhauer, Malerinnen und Mitwirkende aus der Nachbarschaft können Arbeiten oder Links per E-Mail schicken.
+- **German:** Kunstschaffende, Dichter*innen, Filmemacher*innen, Animator*innen, Bildhauer*innen, Maler*innen und Mitwirkende aus der Nachbarschaft können Arbeiten oder Links per E-Mail schicken.
 
 ### guidelines[3]
 
@@ -651,7 +651,7 @@ Things worth watching for:
 ### sections[2] › body
 
 - **English:** Keep attachments under roughly 20MB in total, since larger messages are often bounced before they reach us. Above that, send a link instead. There is no limit on what a link can hold.
-- **German:** Halte Anhänge insgesamt unter etwa 20 MB, da größere Nachrichten oft abgewiesen werden, bevor sie bei uns ankommen. Darüber schick stattdessen einen Link. Für einen Link gibt es keine Größenbeschränkung.
+- **German:** Halte Anhänge insgesamt unter etwa 20 MB, da größere Nachrichten oft abgewiesen werden, bevor sie bei uns ankommen. Schick stattdessen einen Link. Für einen Link gibt es keine Größenbeschränkung.
 
 ### sections[3] › heading
 
@@ -691,7 +691,7 @@ Things worth watching for:
 ### uploaderBody
 
 - **English:** Contributions are made through a secure email link. Request a link on the Contribute page; opening it lets you create or update one active preview contribution.
-- **German:** Beiträge erfolgen über einen sicheren E-Mail-Link. Fordern Sie auf der Seite „Beitragen“ einen Link an; beim Öffnen können Sie einen aktiven Vorschau-Beitrag erstellen oder aktualisieren.
+- **German:** Beiträge erfolgen über einen sicheren E-Mail-Link. Fordere auf der Seite „Beitragen“ einen Link an; beim Öffnen kannst du einen aktiven Vorschau-Beitrag erstellen oder aktualisieren.
 
 ### uploaderCta
 
@@ -708,7 +708,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** A Million Words Against Fascism is a not-for-profit touring project. Donations help cover transport, installation, materials, and the participation of young artists and community groups.
-- **German:** Eine Million Worte gegen den Faschismus ist ein gemeinnütziges Wanderprojekt. Spenden helfen, Transport, Aufbau, Materialien und die Teilnahme junger Kunstschaffender und Gemeinschaftsgruppen zu decken.
+- **German:** Eine Million Worte gegen Faschismus ist ein gemeinnütziges Wanderprojekt. Spenden helfen, Transport, Aufbau, Materialien und die Teilnahme junger Kunstschaffender und Gruppen zu decken.
 
 ### introTitle
 
@@ -718,12 +718,12 @@ Things worth watching for:
 ### introBody
 
 - **English:** The exhibition travels across Europe with a core Solidarity Room, street-facing postcard activity, and a programme of commissioned work. Your support keeps the tour free or low-cost for schools, colleges, unions, and community venues.
-- **German:** Die Ausstellung reist mit einem zentralen Solidaritätsraum, straßenseitiger Postkartenaktion und einem Programm beauftragter Arbeiten durch Europa. Ihre Unterstützung hält die Tour für Schulen, Hochschulen, Gewerkschaften und Gemeinschaftsorte kostenlos oder kostengünstig.
+- **German:** Die Ausstellung reist mit einem zentralen Solidarity Room, einer Postkartenaktion und einem Programm beauftragter Arbeiten durch Europa. Deine Unterstützung hält die Tour für Schulen, Hochschulen, Gewerkschaften und Gemeinschaftsorte kostenlos oder kostengünstig.
 
 ### usesTitle
 
 - **English:** What your support pays for
-- **German:** Wofür Ihre Unterstützung verwendet wird
+- **German:** Wofür deine Unterstützung verwendet wird
 
 ### uses[1]
 
@@ -733,7 +733,7 @@ Things worth watching for:
 ### uses[2]
 
 - **English:** Materials for the 1,000 postcard-sized artworks and street-facing activity.
-- **German:** Materialien für die 1.000 postkartengroßen Werke und die straßenseitige Aktion.
+- **German:** Materialien für die 1.000 postkartengroßen Werke und die Aktion an der Straße.
 
 ### uses[3]
 
@@ -743,7 +743,7 @@ Things worth watching for:
 ### uses[4]
 
 - **English:** Commissioned work from anti-fascist artists, poets, and film-makers.
-- **German:** Beauftragte Arbeiten von antifaschistischen Kunstschaffenden, Dichter:innen und Filmemacher:innen.
+- **German:** Beauftragte Arbeiten von antifaschistischen Kunstschaffenden, Dichter*innen und Filmemacher*innen.
 
 ### ctaTitle
 
@@ -753,7 +753,7 @@ Things worth watching for:
 ### ctaBody
 
 - **English:** A donation link will be published here. In the meantime, please get in touch to discuss supporting the tour or partnering with a stop near you.
-- **German:** Hier wird ein Spendenlink veröffentlicht. Nehmen Sie in der Zwischenzeit Kontakt auf, um über die Unterstützung der Tour oder eine Partnerschaft für eine Station in Ihrer Nähe zu sprechen.
+- **German:** Hier wird ein Spendenlink veröffentlicht. Nimm in der Zwischenzeit Kontakt auf, um über die Unterstützung der Tour oder eine Partnerschaft für eine Station in deiner Nähe zu sprechen.
 
 ### ctaButton
 
@@ -770,32 +770,32 @@ Things worth watching for:
 ### heroTitle
 
 - **English:** Host A Million Words Against Fascism.
-- **German:** Eine Million Worte gegen den Faschismus gastgeben.
+- **German:** Eine Million Worte gegen Faschismus ausrichten.
 
 ### heroSubtitle
 
 - **English:** Share the basics about your venue, audience, education partners, and preferred dates. We will get back to you as soon as possible.
-- **German:** Teile die wichtigsten Angaben zu eurem Ort, Publikum, Bildungspartnern und Wunschterminen mit uns. Wir melden uns so schnell wie möglich.
+- **German:** Teile die wichtigsten Angaben zu deinem Ort, Publikum, Bildungspartnern und Wunschterminen mit uns. Wir melden uns so schnell wie möglich.
 
 ### proposalTitle
 
 - **English:** What to include in your proposal
-- **German:** Was in eure Anfrage gehört
+- **German:** Was in deine Anfrage gehört
 
 ### proposalItems[1]
 
 - **English:** Your organisation or venue, and who we should reply to.
-- **German:** Eure Organisation oder euer Veranstaltungsort und wem wir antworten sollen.
+- **German:** Deine Organisation oder dein Veranstaltungsort und wem wir antworten sollen.
 
 ### proposalItems[2]
 
 - **English:** Where you are, and what kind of space it is — gallery, library, school, union hall, festival, or something else.
-- **German:** Wo ihr seid und um was für einen Raum es sich handelt – Galerie, Bibliothek, Schule, Gewerkschaftshaus, Festival oder anderes.
+- **German:** Wo du bist und um was für einen Raum es sich handelt – Galerie, Bibliothek, Schule, Gewerkschaftshaus, Festival oder anderes.
 
 ### proposalItems[3]
 
 - **English:** The dates or period you are considering.
-- **German:** Die Termine oder den Zeitraum, den ihr in Betracht zieht.
+- **German:** Die Termine oder den Zeitraum, den du in Betracht ziehst.
 
 ### proposalItems[4]
 
@@ -810,17 +810,17 @@ Things worth watching for:
 ### proposalItems[6]
 
 - **English:** Roughly how many visitors you expect.
-- **German:** Ungefähr wie viele Besucherinnen und Besucher ihr erwartet.
+- **German:** Ungefähr wie viele Besucher*innen du erwartest.
 
 ### proposalItems[7]
 
 - **English:** Any local International Brigades history, partners, or programme ideas you would like to include.
-- **German:** Lokale Geschichte der Internationalen Brigaden, Partner oder Programmideen, die ihr einbringen möchtet.
+- **German:** Lokale Geschichte der Internationalen Brigaden, Partner oder Programmideen, die du einbringen möchtest.
 
 ### revealTitle
 
 - **English:** Send your proposal
-- **German:** Schickt uns eure Anfrage
+- **German:** Schick uns deine Anfrage
 
 ### heroPrimaryCta
 
@@ -835,7 +835,7 @@ Things worth watching for:
 ### formatsTitle
 
 - **English:** Hosting formats
-- **German:** Formate für Gastgeber
+- **German:** Formate für Gastgeber*innen
 
 ### leadTimeTitle
 
@@ -850,27 +850,27 @@ Things worth watching for:
 ### formTitle
 
 - **English:** Host enquiry form
-- **German:** Anfrageformular für Gastgeber
+- **German:** Anfrageformular für Gastgeber*innen
 
 ### formDescription
 
 - **English:** Tell us about the venue, audience, education links, local history, and dates you are considering.
-- **German:** Erzählen Sie uns von Ort, Publikum, Bildungsverbindungen, lokaler Geschichte und den Terminen, die Sie in Betracht ziehen.
+- **German:** Erzähl uns von Ort, Publikum, Bildungsverbindungen, lokaler Geschichte und den Terminen, die du in Betracht ziehst.
 
 ### conditionsCta
 
 - **English:** Read the hosting conditions
-- **German:** Bedingungen für Gastgeber lesen
+- **German:** Bedingungen für Gastgeber*innen lesen
 
 ### features[1]
 
 - **English:** The exhibition centres on the Solidarity Room, an installation of postcard-sized artworks made through the Solidarity Park project.
-- **German:** Im Zentrum der Ausstellung steht der Solidaritätsraum, eine Installation postkartengroßer Werke aus dem Projekt Solidarity Park.
+- **German:** Im Zentrum der Ausstellung steht der Solidarity Room, eine Installation postkartengroßer Werke aus dem Projekt Solidarity Park.
 
 ### features[2]
 
 - **English:** Outward-facing walls can gather new postcards made by visitors, schools, and community participants during the tour.
-- **German:** Nach außen gerichtete Wände können während der Tour neue Postkarten von Besucher:innen, Schulen und Gemeinschaftsteilnehmenden sammeln.
+- **German:** Nach außen gerichtete Wände können während der Tour neue Postkarten von Besucher*innen, Schulen und weiteren Teilnehmenden sammeln.
 
 ### features[3]
 
@@ -930,7 +930,7 @@ Things worth watching for:
 ### fields › expectedAudiencePlaceholder
 
 - **English:** e.g. 150 visitors
-- **German:** z. B. 150 Besucher:innen
+- **German:** z. B. 150 Besucher*innen
 
 ### fields › spaceDetails
 
@@ -950,7 +950,7 @@ Things worth watching for:
 ### fields › messagePlaceholder
 
 - **English:** Tell us what you would like to host, any local International Brigades history, programme ideas, and what support you need.
-- **German:** Erzählen Sie uns, was Sie ausrichten möchten, jede lokale Geschichte der Internationalen Brigaden, Programmideen und welche Unterstützung Sie brauchen.
+- **German:** Erzähl uns, was du ausrichten möchtest, jede lokale Geschichte der Internationalen Brigaden, Programmideen und welche Unterstützung du brauchst.
 
 ### fields › submit
 
@@ -1002,7 +1002,7 @@ Things worth watching for:
 ### heroTitle
 
 - **English:** Hosting conditions
-- **German:** Bedingungen für Gastgeber
+- **German:** Bedingungen für Gastgeber*innen
 
 ### heroSubtitle
 
@@ -1012,7 +1012,7 @@ Things worth watching for:
 ### intro
 
 - **English:** These conditions give partners a sense of what is needed to host the exhibition. Nothing here is a fixed contract — each stop is confirmed by written agreement.
-- **German:** Diese Bedingungen geben Partnern ein Gefühl dafür, was zum Ausrichten der Ausstellung nötig ist. Nichts davon ist ein fester Vertrag — jede Station wird durch schriftliche Vereinbarung bestätigt.
+- **German:** Diese Bedingungen geben Partner*innen ein Gefühl dafür, was zum Ausrichten der Ausstellung nötig ist. Nichts davon ist ein fester Vertrag — jede Station wird durch schriftliche Vereinbarung bestätigt.
 
 ### sections[1] › heading
 
@@ -1022,7 +1022,7 @@ Things worth watching for:
 ### sections[1] › body
 
 - **English:** The exhibition adapts to the available space. Wall space for the Solidarity Room, participant postcards, and local or commissioned work is agreed with each venue.
-- **German:** Die Ausstellung passt sich dem verfügbaren Raum an. Wandfläche für den Solidaritätsraum, Teilnehmer-Postkarten sowie lokale oder beauftragte Arbeiten wird mit jedem Ort vereinbart.
+- **German:** Die Ausstellung passt sich dem verfügbaren Raum an. Wandfläche für den Solidarity Room, Teilnehmer*innen-Postkarten sowie lokale oder beauftragte Arbeiten werden mit jedem Ort vereinbart.
 
 ### sections[2] › heading
 
@@ -1042,7 +1042,7 @@ Things worth watching for:
 ### sections[3] › body
 
 - **English:** Hosts are encouraged to add local International Brigades history, workshops, live music, poetry, and local anti-fascist artists. The project can help connect you with regional partners.
-- **German:** Gastgeber sind eingeladen, lokale Geschichte der Internationalen Brigaden, Workshops, Livemusik, Poesie und lokale antifaschistische Kunstschaffende zu ergänzen. Das Projekt kann helfen, Sie mit regionalen Partnern zu verbinden.
+- **German:** Gastgeber*innen sind eingeladen, lokale Geschichte der Internationalen Brigaden, Workshops, Livemusik, Poesie und lokale antifaschistische Kunstschaffende zu ergänzen. Das Projekt kann helfen, dich mit regionalen Partnern zu verbinden.
 
 ### sections[4] › heading
 
@@ -1062,7 +1062,7 @@ Things worth watching for:
 ### sections[5] › body
 
 - **English:** The project aims to keep hosting free or low-cost for schools, unions, and community venues. Transport, installation, and any shared costs are discussed during your enquiry.
-- **German:** Das Projekt strebt an, das Gastgeben für Schulen, Gewerkschaften und Gemeinschaftsorte kostenlos oder kostengünstig zu halten. Transport, Aufbau und geteilte Kosten werden während Ihrer Anfrage besprochen.
+- **German:** Das Projekt möchte die Ausrichtung für Schulen, Gewerkschaften und Gemeinschaftsorte kostenlos oder kostengünstig halten. Transport, Aufbau und geteilte Kosten werden während deiner Anfrage besprochen.
 
 ### ctaTitle
 
@@ -1072,7 +1072,7 @@ Things worth watching for:
 ### ctaBody
 
 - **English:** Send the basics about your venue and preferred dates and the team will follow up.
-- **German:** Senden Sie die Eckdaten zu Ihrem Ort und Ihren Wunschterminen, und das Team meldet sich.
+- **German:** Sende die Eckdaten zu deinem Ort und deinen Wunschterminen, und das Team meldet sich.
 
 ### ctaButton
 
@@ -1116,12 +1116,24 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** The artists, historians, educators, and organisations building the exhibition and the tour.
-- **German:** Die Kunstschaffenden, Historikerinnen, Bildungsarbeiter und Organisationen, die Ausstellung und Tour aufbauen.
+- **German:** Die Kunstschaffenden, Historiker*innen, Beschäftigte im Bildungsbereich und Organisationen, die Ausstellung und Tour aufbauen.
 
 ### empty
 
 - **English:** Profiles are being gathered and will be published here as they are confirmed.
 - **German:** Die Profile werden gesammelt und hier veröffentlicht, sobald sie bestätigt sind.
+
+## notFound
+
+### title
+
+- **English:** Page not found
+- **German:** Seite nicht gefunden
+
+### body
+
+- **English:** That page does not exist, or it has moved. The links below will get you back on track.
+- **German:** Diese Seite gibt es nicht, oder sie ist umgezogen. Die Links unten bringen dich zurück.
 
 ## Links page
 
@@ -1143,8 +1155,9 @@ Things worth watching for:
 
 ### groups › project › items › association › label
 
-- **English:** Association Solidarity Park
-- **German:** Vereinigung Solidarity Park
+- **English:** Associació Solidarity Park
+- **German:** Associació Solidarity Park
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › project › items › association › note
 
@@ -1154,7 +1167,7 @@ Things worth watching for:
 ### groups › project › items › festival › label
 
 - **English:** Solidarity Park Festival, Catalunya
-- **German:** Festival von Solidarity Park, Katalonien
+- **German:** Solidarity Park Festival, Katalonien
 
 ### groups › project › items › festival › note
 
@@ -1191,7 +1204,8 @@ Things worth watching for:
 ### groups › memory › items › basqueChildren › label
 
 - **English:** Basque Children of '37 Association
-- **German:** Vereinigung Baskische Kinder von '37
+- **German:** Basque Children of '37 Association
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › memory › items › basqueChildren › note
 
@@ -1227,12 +1241,12 @@ Things worth watching for:
 ### groups › getInvolved › items › host › label
 
 - **English:** Host the exhibition
-- **German:** Ausstellung gastgeben
+- **German:** Ausstellung ausrichten
 
 ### groups › getInvolved › items › host › note
 
 - **English:** Bring a stop on the tour to your venue.
-- **German:** Bringen Sie eine Tourstation an Ihren Ort.
+- **German:** Bring eine Tourstation an deinen Ort.
 
 ## footer
 
@@ -1263,6 +1277,8 @@ English name. Others may simply never have been translated. Worth a look:
 - Tour dates page › heroTitle
 - Tour dates page › pause
 - Links page › heroTitle
+- Links page › groups › project › items › association › label
 - Links page › groups › project › items › sunderland › label
 - Links page › groups › memory › items › ibmt › label
+- Links page › groups › memory › items › basqueChildren › label
 - Links page › groups › memory › items › alba › label

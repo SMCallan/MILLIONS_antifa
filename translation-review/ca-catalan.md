@@ -1,7 +1,7 @@
 # Catalan (català) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-08-27.
+Generated 2026-09-13.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**235 strings.** 227 differ from the English; 8 are identical (see the end of this file).
+**237 strings.** 227 differ from the English; 10 are identical (see the end of this file).
 
 ---
 
@@ -127,7 +127,7 @@ Things worth watching for:
 ### skipToContent
 
 - **English:** Skip to content
-- **Catalan:** Vés al contingut
+- **Catalan:** Ves al contingut
 
 ### viewAllDates
 
@@ -193,7 +193,7 @@ Things worth watching for:
 
 ### title
 
-- **English:** Million words against Fascism
+- **English:** A Million Words Against Fascism
 - **Catalan:** Un milió de paraules contra el feixisme
 
 ### subtitle
@@ -260,8 +260,8 @@ Things worth watching for:
 
 ### statusLines[2]
 
-- **English:** Inspired by the Artists International Association and the legacy of anti-fascist solidarity
-- **Catalan:** Inspirada en l'Artists International Association i en el llegat de la solidaritat antifeixista
+- **English:** Inspired by the Artists' International Association and the legacy of anti-fascist solidarity
+- **Catalan:** Inspirada en l'Artists’ International Association i en el llegat de la solidaritat antifeixista
 
 ## Home page — body
 
@@ -282,12 +282,12 @@ Things worth watching for:
 
 ### conceptBody[2]
 
-- **English:** By June 2026, the Solidarity Park Project will have facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
-- **Catalan:** Al juny de 2026, el projecte Solidarity Park haurà facilitat més de 1.000 obres visuals de joves a través de la seva iniciativa educativa sobre la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional.
+- **English:** By June 2026, the Solidarity Park Project had facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
+- **Catalan:** Al juny de 2026, el projecte Solidarity Park havia facilitat més de 1.000 obres visuals de joves a través de la seva iniciativa educativa sobre la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional.
 
 ### conceptBody[3]
 
-- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Association Solidarity Park's work in art, memory, and education.
+- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Associació Solidarity Park's work in art, memory, and education.
 - **Catalan:** La gira de 2027 avança cap al 90è aniversari de l'enfonsament del Ciudad de Barcelona, el 30 de maig de 2027, la història que va ajudar a posar en marxa la tasca de l'Associació Solidarity Park en art, memòria i educació.
 
 ### stats[1] › value
@@ -396,7 +396,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** The tour is in collaboration with Artists across the world, Schools, Art Colleges, Trade Unions, Arts Venues, International Brigade groups, Poets, Radical Choirs, and Solidarity Campaign groups all building toward the Solidarity Park Festival in Catalunya May 2027.
-- **Catalan:** La gira es fa en col·laboració amb artistes de tot el món, escoles, escoles d’art, sindicats, sales d’art, grups de les Brigades Internacionals, poetes, corals reivindicatives i grups de campanyes solidàries, tots avançant cap al Festival de Solidarity Park a Catalunya el maig de 2027.
+- **Catalan:** La gira es fa en col·laboració amb artistes de tot el món, escoles, escoles d’art, sindicats, sales d’art, grups de les Brigades Internacionals, poetes, corals reivindicatives i grups de campanyes solidàries, tots avançant cap al Festival Solidarity Park a Catalunya el maig de 2027.
 
 ### heroPrimaryCta
 
@@ -497,8 +497,8 @@ Things worth watching for:
 
 ### sections[2] › body
 
-- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project has facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
-- **Catalan:** L’exposició sorgeix de la iniciativa educativa del projecte Solidarity Park, que apropa els joves a la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional. Al juny de 2026 el projecte ha facilitat més de 1.000 obres visuals de joves. Aquesta serà la instal·lació principal de l’exposició. L’exposició està comissariada pel director artístic de Solidarity Park, Rob MacDonald.
+- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project had facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
+- **Catalan:** L’exposició sorgeix de la iniciativa educativa del projecte Solidarity Park, que apropa els joves a la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional. Al juny de 2026 el projecte havia facilitat més de 1.000 obres visuals de joves. Aquesta serà la instal·lació principal de l’exposició. L’exposició està comissariada pel director artístic de Solidarity Park, Rob MacDonald.
 
 ### sections[3] › heading
 
@@ -523,11 +523,11 @@ Things worth watching for:
 ### sections[5] › heading
 
 - **English:** Towards Solidarity Park Festival 30th May 2027 in Catalunya
-- **Catalan:** Cap al Festival de Solidarity Park, 30 de maig de 2027 a Catalunya
+- **Catalan:** Cap al Festival Solidarity Park, 30 de maig de 2027 a Catalunya
 
 ### sections[5] › body
 
-- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of the Solidarity Park Association, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
+- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of Associació Solidarity Park, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
 - **Catalan:** La gira de sis mesos avança cap al 90è aniversari de l’enfonsament del vaixell Ciudad de Barcelona, el 30 de maig de 1937: una història oblidada de les Brigades Internacionals a la Guerra Civil espanyola que va inspirar la creació de l’Associació Solidarity Park, el seu monument de participació comunitària i, des del 2022, el festival internacional anual d’art, memòria i educació.
 
 ## Contribute page
@@ -540,7 +540,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** We want to add your anti-fascist artistic voice to the Millions. Below we set out some conditions. Accepted works will form part of the physical touring exhibition main installation and/or parallel online galleries. We are especially interested in images and spoken words, but we are open to all artistic expressions. Where venues have space and time we will try to show your work or performance in real time.
-- **Catalan:** Volem sumar la teva veu artística antifeixista als Millions. A continuació establim algunes condicions. Les obres acceptades formaran part de la instal·lació principal de l’exposició itinerant i/o de les galeries en línia paral·leles. Ens interessen especialment les imatges i la paraula dita, però estem oberts a totes les expressions artístiques. Allà on els espais tinguin lloc i temps, intentarem mostrar la teva obra o actuació en directe.
+- **Catalan:** Volem sumar la teva veu artística antifeixista a aquest milió de paraules. A continuació establim algunes condicions. Les obres acceptades formaran part de la instal·lació principal de l’exposició itinerant i/o de les galeries en línia paral·leles. Ens interessen especialment les imatges i la paraula dita, però estem oberts a totes les expressions artístiques. Allà on els espais tinguin lloc i temps, intentarem mostrar la teva obra o actuació en directe.
 
 ### revealTitle
 
@@ -549,7 +549,7 @@ Things worth watching for:
 
 ### heroPrimaryCta
 
-- **English:** Request link
+- **English:** Request a link
 - **Catalan:** Sol·licitar enllaç
 
 ### heroSecondaryCta
@@ -699,7 +699,7 @@ Things worth watching for:
 ### heroTitle
 
 - **English:** Support the tour
-- **Catalan:** Dóna suport a la gira
+- **Catalan:** Dona suport a la gira
 
 ### heroSubtitle
 
@@ -1119,6 +1119,18 @@ Things worth watching for:
 - **English:** Profiles are being gathered and will be published here as they are confirmed.
 - **Catalan:** Estem recollint els perfils i es publicaran aquí a mesura que es confirmin.
 
+## notFound
+
+### title
+
+- **English:** Page not found
+- **Catalan:** Pàgina no trobada
+
+### body
+
+- **English:** That page does not exist, or it has moved. The links below will get you back on track.
+- **Catalan:** Aquesta pàgina no existeix o s’ha mogut. Els enllaços següents et tornaran a orientar.
+
 ## Links page
 
 ### heroTitle
@@ -1138,8 +1150,9 @@ Things worth watching for:
 
 ### groups › project › items › association › label
 
-- **English:** Association Solidarity Park
+- **English:** Associació Solidarity Park
 - **Catalan:** Associació Solidarity Park
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › project › items › association › note
 
@@ -1149,7 +1162,7 @@ Things worth watching for:
 ### groups › project › items › festival › label
 
 - **English:** Solidarity Park Festival, Catalunya
-- **Catalan:** Festival de Solidarity Park, Catalunya
+- **Catalan:** Festival Solidarity Park, Catalunya
 
 ### groups › project › items › festival › note
 
@@ -1186,7 +1199,8 @@ Things worth watching for:
 ### groups › memory › items › basqueChildren › label
 
 - **English:** Basque Children of '37 Association
-- **Catalan:** Associació Nens Bascos del 37
+- **Catalan:** Basque Children of '37 Association
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › memory › items › basqueChildren › note
 
@@ -1253,6 +1267,8 @@ English name. Others may simply never have been translated. Worth a look:
 - Home page — headline area › badges[1]
 - Home page — headline area › badges[6]
 - Home page — body › stats[3] › value
+- Links page › groups › project › items › association › label
 - Links page › groups › project › items › sunderland › label
 - Links page › groups › memory › items › ibmt › label
+- Links page › groups › memory › items › basqueChildren › label
 - Links page › groups › memory › items › alba › label
