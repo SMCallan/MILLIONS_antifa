@@ -57,7 +57,7 @@ export const sv: TranslationOverride = {
     ],
     statusLines: [
       "På turné mot 90-årsminnet av Ciudad de Barcelonas förlisning",
-      "Inspirerad av Artists International Association och arvet av antifascistisk solidaritet",
+      "Inspirerad av Artists’ International Association och arvet av antifascistisk solidaritet",
     ],
   },
   home: {
@@ -65,8 +65,8 @@ export const sv: TranslationOverride = {
     conceptTitle: "Tusen unga konstnärer. En miljon ord mot fascismen.",
     conceptBody: [
       "Om en bild säger tusen ord skapar tusen konstnärer en miljon ord. Utställningen för samman dessa röster som ett internationellt svar på framväxten av högerextrema och fascistiska ideologier.",
-      "Till juni 2026 kommer projektet Solidarity Park att ha möjliggjort mer än 1 000 visuella verk av unga genom sitt utbildningsinitiativ om spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet.",
-      "Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027, berättelsen som bidrog till att starta arbetet inom Föreningen Solidarity Park med konst, minne och utbildning.",
+      "Fram till juni 2026 hade projektet Solidarity Park möjliggjort mer än 1 000 visuella verk av unga genom sitt utbildningsinitiativ om spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet.",
+      "Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027, berättelsen som bidrog till att starta arbetet inom Associació Solidarity Park med konst, minne och utbildning.",
     ],
     stats: [
       { value: "1 000+", label: "verk av unga konstnärer" },
@@ -80,7 +80,7 @@ export const sv: TranslationOverride = {
     commissionsTitle: "Internationella konstuppdrag",
     commissionsBody:
       "Runt Solidaritetsrummet finns ett kurerat program inspirerat av miljontals berättelser mot fascismen, med film, animation, skulptur, måleri, illustration och poesi.",
-    tourBadge: "Turnéväg",
+    tourBadge: "Turnérutt",
     tourTitle: "Internationella turnédatum",
     tourBody: "Datum och medverkande sker med förbehåll för slutliga överenskommelser och bekräftelser.",
     hostBadge: "Var värd för utställningen",
@@ -95,9 +95,9 @@ export const sv: TranslationOverride = {
       "Turnén Million Words Against Fascism.",
     heroSubtitle:
       "Turnén sker i samarbete med konstnärer världen över, skolor, konsthögskolor, fackförbund, konsthallar, grupper kopplade till Internationella brigaderna, poeter, radikala körer och solidaritetskampanjer – alla på väg mot Solidarity Park Festival i Katalonien i maj 2027.",
-    heroPrimaryCta: "Visa vägen",
+    heroPrimaryCta: "Visa rutten",
     heroSecondaryCta: "Var värd för utställningen",
-    routeBadge: "Anteckningar om vägen",
+    routeBadge: "Om rutten",
     routeTitle:
       "Platser",
     routeBody:
@@ -121,11 +121,11 @@ export const sv: TranslationOverride = {
       },
       {
         heading: "Rotad i projektet Solidarity Park",
-        body: "Utställningen växer ur utbildningsinitiativet i projektet Solidarity Park, som introducerar unga för spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet. Fram till juni 2026 har projektet möjliggjort mer än 1 000 visuella verk av unga. Dessa utgör utställningens huvudinstallation. Utställningen är curerad av Solidarity Parks konstnärliga ledare Rob MacDonald.",
+        body: "Utställningen växer ur utbildningsinitiativet i projektet Solidarity Park, som introducerar unga till spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet. Fram till juni 2026 hade projektet möjliggjort mer än 1 000 visuella verk av unga. Dessa utgör utställningens huvudinstallation. Utställningen är curerad av Solidarity Parks konstnärliga ledare Rob MacDonald.",
       },
       {
         heading: "Tusen bilder till",
-        body: "När turnén rullar ut över Europa bjuder vi in unga och allmänheten att lägga till 1 000 bilder till utställningen och skapa en rörelse av miljoner och åter miljoner ord mot den fascistiska ideologins frammarsch.",
+        body: "När turnén reser över Europa bjuder vi in unga och allmänheten att lägga till 1 000 bilder till utställningen och skapa en rörelse av miljoner och åter miljoner ord mot den fascistiska ideologins frammarsch.",
       },
       {
         heading: "Internationella konstnärer",
@@ -133,7 +133,7 @@ export const sv: TranslationOverride = {
       },
       {
         heading: "Mot Solidarity Park Festival den 30 maj 2027 i Katalonien",
-        body: "Den sex månader långa turnén leder fram till 90-årsdagen av sänkningen av fartyget Ciudad de Barcelona den 30 maj 1937 – en bortglömd historia om Internationella brigaderna i spanska inbördeskriget som inspirerade grundandet av Solidarity Park Association, dess monument för gemensamt deltagande och, sedan 2022, den årliga internationella festivalen för konst, minne och utbildning.",
+        body: "Den sex månader långa turnén leder fram till 90-årsdagen av sänkningen av fartyget Ciudad de Barcelona den 30 maj 1937 – en bortglömd historia om Internationella brigaderna i spanska inbördeskriget som inspirerade grundandet av Associació Solidarity Park, dess monument för gemensamt deltagande och, sedan 2022, den årliga internationella festivalen för konst, minne och utbildning.",
       },
     ],
   },
@@ -141,7 +141,7 @@ export const sv: TranslationOverride = {
     heroTitle:
       "Bidra med din konst",
     heroSubtitle:
-      "Vi vill lägga till din antifascistiska konstnärliga röst till Millions. Nedan anger vi några villkor. Antagna verk blir en del av den turnerande utställningens huvudinstallation och/eller de parallella galleriera online. Vi är särskilt intresserade av bilder och talat ord, men vi är öppna för alla konstnärliga uttryck. Där spelplatserna har plats och tid försöker vi visa ditt verk eller framförande live.",
+      "Vi vill lägga till din antifascistiska konstnärliga röst till miljonerna. Nedan anger vi några villkor. Antagna verk blir en del av den turnerande utställningens huvudinstallation och/eller de parallella gallerierna online. Vi är särskilt intresserade av bilder och talat ord, men vi är öppna för alla konstnärliga uttryck. Där spelplatserna har plats och tid försöker vi visa ditt verk eller framförande live.",
     revealTitle: "Skicka ditt verk till oss",
     heroPrimaryCta: "Begär länk",
     heroSecondaryCta: "Turnédatum",
@@ -177,7 +177,7 @@ export const sv: TranslationOverride = {
       },
       {
         heading: "Vad du inte ska skicka",
-        body: "Bifoga inte lagrade original, tryckfärdiga filer, ljud- eller videomasters, och inte arkiv som ZIP. Skicka granskningsmaterial först. Om ditt verk går vidare ber vi om produktionsfärdiga original separat.",
+        body: "Bifoga inte original med lager, tryckfärdiga filer, ljud- eller videomasters, och inte arkiv som ZIP. Skicka granskningsmaterial först. Om ditt verk går vidare ber vi om produktionsfärdiga original separat.",
       },
       {
         heading: "Så hanterar vi ditt material",
@@ -336,8 +336,8 @@ export const sv: TranslationOverride = {
       project: {
         title: "Projektet",
         items: {
-          association: { label: "Föreningen Solidarity Park", note: "Organisationen bakom utställningen." },
-          festival: { label: "Festivalen för Solidarity Park, Katalonien", note: "Festivalen som turnén 2027 leder fram till." },
+          association: { label: "Associació Solidarity Park", note: "Organisationen bakom utställningen." },
+          festival: { label: "Solidarity Park Festival, Katalonien", note: "Festivalen som turnén 2027 leder fram till." },
           sunderland: { label: "Solidarity Sunderland History Hub", note: "Sunderlands brigadister, fartygen och de baskiska barnen 1937." },
         },
       },
@@ -345,7 +345,7 @@ export const sv: TranslationOverride = {
         title: "Historia och minne",
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Att hålla minnet av Internationella brigaderna levande." },
-          basqueChildren: { label: "Föreningen Baskiska barn från -37", note: "Berättelsen om barn som evakuerades under spanska inbördeskriget." },
+          basqueChildren: { label: "Basque Children of '37 Association", note: "Berättelsen om barn som evakuerades under spanska inbördeskriget." },
           alba: { label: "Abraham Lincoln Brigade Archives", note: "De amerikanska frivilliga i Internationella brigaderna och arkivet som bevarar deras historia." },
         },
       },

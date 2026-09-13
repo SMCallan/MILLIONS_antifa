@@ -36,17 +36,17 @@ export const fr: TranslationOverride = {
     opensInNewTab: "S’ouvre dans un nouvel onglet",
     revealBody:
       "Confirmez que vous êtes une personne et nous vous montrerons l’adresse où l’envoyer. Cela la tient à l’écart des collecteurs automatiques.",
-    revealButton: "Afficher l’adresse e-mail",
+    revealButton: "Affichez l’adresse e-mail",
     revealPending: "Vérification…",
     revealError: "La vérification n’a pas abouti. Veuillez réessayer.",
   },
   hero: {
-    title: "Un million de mots contre le fascisme",
+    title: "A Million Words Against Fascism",
     subtitle: "Exposition itinérante européenne du projet Solidarity Park.",
-    artworkCredit: "Animation et logo : Roberto Ford",
-    lede: "Si une image dit mille mots, que créent mille artistes ? Un million de mots, chacun exprimé depuis une perspective unique, formant une exposition itinérante internationale contre le fascisme.",
+    artworkCredit: "Animation et logo : Roberto Ford",
+    lede: "Si une image dit mille mots, que créent mille artistes ? Un million de mots, chacun exprimé d’un point de vue unique, formant une exposition itinérante internationale contre le fascisme.",
     primaryCta: "Dates de la tournée",
-    secondaryCta: "Contribuer une œuvre",
+    secondaryCta: "Proposez une œuvre",
     badges: [
       "Solidarity Park",
       "Brigades internationales",
@@ -57,7 +57,7 @@ export const fr: TranslationOverride = {
     ],
     statusLines: [
       "En tournée vers le 90e anniversaire du naufrage du Ciudad de Barcelona",
-      "Inspirée par l'Artists International Association et l'héritage de la solidarité antifasciste",
+      "Inspirée par l'Artists’ International Association et l'héritage de la solidarité antifasciste",
     ],
   },
   home: {
@@ -65,8 +65,8 @@ export const fr: TranslationOverride = {
     conceptTitle: "Mille jeunes artistes. Un million de mots contre le fascisme.",
     conceptBody: [
       "Si une image dit mille mots, mille artistes créent un million de mots. L'exposition rassemble ces voix comme une réponse internationale à la montée des idéologies d'extrême droite et fascistes.",
-      "D'ici juin 2026, le projet Solidarity Park aura permis plus de 1 000 œuvres visuelles de jeunes grâce à son initiative éducative sur la guerre civile espagnole, les Brigades internationales et les leçons de la solidarité internationale.",
-      "La tournée 2027 mène au 90e anniversaire du naufrage du Ciudad de Barcelona, le 30 mai 2027, l'histoire qui a contribué à lancer le travail de l'Association Solidarity Park en art, mémoire et éducation.",
+      "En juin 2026, le projet Solidarity Park avait permis la réalisation de plus de 1 000 œuvres visuelles par des jeunes grâce à son initiative éducative sur la guerre civile espagnole, les Brigades internationales et les leçons de la solidarité internationale.",
+      "La tournée 2027 mène au 90e anniversaire du naufrage du Ciudad de Barcelona, le 30 mai 2027, l'histoire qui a contribué à lancer le travail de l'Associació Solidarity Park en art, mémoire et éducation.",
     ],
     stats: [
       { value: "1 000+", label: "œuvres de jeunes artistes" },
@@ -84,19 +84,19 @@ export const fr: TranslationOverride = {
     tourTitle: "Dates de la tournée internationale",
     tourBody: "Les dates et les collaborateurs sont sous réserve d'accords et de confirmations définitifs.",
     hostBadge: "Accueillir l'exposition",
-    hostTitle: "Amenez la tournée dans une école, un syndicat, une salle, un festival ou un espace civique.",
+    hostTitle: "Amenez la tournée dans un collège, un lycée, un syndicat, une salle, un festival ou un espace civique.",
     hostBody:
-      "Chaque événement peut associer l'installation principale à l'histoire locale des Brigades internationales, à des ateliers, à de la musique live, à de la poesie et à des artistes antifascistes locaux là où l'espace le permet.",
+      "Chaque événement peut associer l'installation principale à l'histoire locale des Brigades internationales, à des ateliers, à de la musique live, à de la poésie et à des artistes antifascistes locaux là où l'espace le permet.",
     hostCta: "Envoyer une demande de réservation",
-    contributeCta: "Contribuer une œuvre",
+    contributeCta: "Proposez une œuvre",
   },
   tourDates: {
     heroTitle:
       "Tournée Million Words Against Fascism.",
     heroSubtitle:
-      "La tournée est menée en collaboration avec des artistes du monde entier, des écoles, des écoles d’art, des syndicats, des lieux d’art, des groupes liés aux Brigades internationales, des poètes, des chorales militantes et des campagnes de solidarité, tous en chemin vers le Festival de Solidarity Park en Catalogne en mai 2027.",
+      "La tournée est menée en collaboration avec des artistes du monde entier, des écoles, des écoles d’art, des syndicats, des espaces d’art, des groupes liés aux Brigades internationales, des poètes, des chorales militantes et des campagnes de solidarité, tous en chemin vers le Solidarity Park Festival en Catalogne en mai 2027.",
     heroPrimaryCta: "Voir l'itinéraire",
-    heroSecondaryCta: "Accueillir l'exposition",
+    heroSecondaryCta: "Accueillez l'exposition",
     routeBadge: "Notes d'itinéraire",
     routeTitle:
       "Lieux",
@@ -106,8 +106,8 @@ export const fr: TranslationOverride = {
     pause: "Pause",
     tbc: "À confirmer",
     ctaEyebrow: "L'itinéraire est en cours de finalisation avec des partenaires à travers l'Europe",
-    ctaTitle: "Envie d'accueillir un futur événement ou d'y participer ?",
-    ctaButton: "Lancer une demande de réservation",
+    ctaTitle: "Envie d'accueillir un futur événement ou d'y participer ?",
+    ctaButton: "Lancez une demande de réservation",
     status: { Booked: "Confirmé", "In agreement": "En accord", Break: "Pause" },
   },
   concept: {
@@ -121,7 +121,7 @@ export const fr: TranslationOverride = {
       },
       {
         heading: "Enraciné dans le projet Solidarity Park",
-        body: "L’exposition naît de l’initiative éducative du projet Solidarity Park, qui fait découvrir aux jeunes la guerre civile espagnole, les Brigades internationales et les leçons de la solidarité internationale. En juin 2026, le projet a permis la réalisation de plus de 1 000 œuvres visuelles par des jeunes. Elles constitueront l’installation principale de l’exposition. L’exposition est dirigée par le directeur artistique de Solidarity Park, Rob MacDonald.",
+        body: "L’exposition naît de l’initiative éducative du projet Solidarity Park, qui fait découvrir aux jeunes la guerre civile espagnole, les Brigades internationales et les leçons de la solidarité internationale. En juin 2026, le projet avait permis la réalisation de plus de 1 000 œuvres visuelles par des jeunes. Elles constitueront l’installation principale de l’exposition. L’exposition est dirigée par le directeur artistique de Solidarity Park, Rob MacDonald.",
       },
       {
         heading: "Mille images de plus",
@@ -132,8 +132,8 @@ export const fr: TranslationOverride = {
         body: "Des artistes internationaux reconnus ont également été invités à exposer peintures, sculptures, performances et pièces multimédias inspirées du titre de l’exposition et du travail de l’Artists’ International Association des années 1930.",
       },
       {
-        heading: "Vers le Festival de Solidarity Park, le 30 mai 2027 en Catalogne",
-        body: "La tournée de six mois mène au 90e anniversaire du naufrage du navire Ciudad de Barcelona, le 30 mai 1937 : une histoire oubliée des Brigades internationales dans la guerre civile espagnole qui a inspiré la création de l’Association Solidarity Park, son monument de participation communautaire et, depuis 2022, le festival international annuel d’art, de mémoire et d’éducation.",
+        heading: "Vers le Solidarity Park Festival, le 30 mai 2027 en Catalogne",
+        body: "La tournée de six mois mène au 90e anniversaire du naufrage du navire Ciudad de Barcelona, le 30 mai 1937 : une histoire oubliée des Brigades internationales dans la guerre civile espagnole qui a inspiré la création de l’Associació Solidarity Park, son monument de participation communautaire et, depuis 2022, le festival international annuel d’art, de mémoire et d’éducation.",
       },
     ],
   },
@@ -141,17 +141,17 @@ export const fr: TranslationOverride = {
     heroTitle:
       "Proposez votre art",
     heroSubtitle:
-      "Nous voulons ajouter votre voix artistique antifasciste aux Millions. Nous exposons ci-dessous quelques conditions. Les œuvres retenues feront partie de l’installation principale de l’exposition itinérante et/ou des galeries en ligne qui l’accompagnent. Nous nous intéressons particulièrement aux images et à la parole dite, mais nous sommes ouverts à toutes les expressions artistiques. Là où les lieux disposent d’espace et de temps, nous essaierons de montrer votre œuvre ou votre performance en direct.",
+      "Nous voulons ajouter votre voix artistique antifasciste aux millions. Nous exposons ci-dessous quelques conditions. Les œuvres retenues feront partie de l’installation principale de l’exposition itinérante et/ou des galeries en ligne qui l’accompagnent. Nous nous intéressons particulièrement aux images et à la parole dite, mais nous sommes ouverts à toutes les expressions artistiques. Là où les lieux disposent d’espace et de temps, nous essaierons de montrer votre œuvre ou votre performance en direct.",
     revealTitle: "Envoyez-nous votre œuvre",
-    heroPrimaryCta: "Demander un lien",
+    heroPrimaryCta: "Demandez un lien",
     heroSecondaryCta: "Dates de la tournée",
     notesTitle: "Notes pour contribuer",
     formTitle: "Demandez un lien de contribution sécurisé",
     formDescription:
       "Saisissez l'adresse e-mail que vous souhaitez associer à la contribution. Le lien vous permet de créer ou de mettre à jour une contribution d'aperçu active pour la tournée.",
     emailLabel: "E-mail",
-    submitButton: "Envoyer le lien de contribution sécurisé",
-    conditionsCta: "Lire les conditions de contribution",
+    submitButton: "Envoyez le lien de contribution sécurisé",
+    conditionsCta: "Lisez les conditions de contribution",
     guidelines: [
       "La tournée peut accueillir des artistes antifascistes locaux là où le lieu le permet, aux côtés de la Salle de la Solidarité et des œuvres internationales commandées.",
       "Artistes, poètes, cinéastes, animateurs, sculpteurs, peintres et participants des quartiers peuvent tous envoyer des œuvres ou des liens par e-mail.",
@@ -169,7 +169,7 @@ export const fr: TranslationOverride = {
     sections: [
       {
         heading: "Ce qu’il faut envoyer",
-        body: "Images et documents en JPG, PNG, WebP ou PDF. Audio en MP3, M4A ou WAV. Envoyez la vidéo, et tout fichier volumineux, sous forme de lien : Vimeo, YouTube, Google Drive, Dropbox et WeTransfer conviennent tous.",
+        body: "Images et documents en JPG, PNG, WebP ou PDF. Audio en MP3, M4A ou WAV. Envoyez la vidéo, et tout fichier volumineux, sous forme de lien : Vimeo, YouTube, Google Drive, Dropbox et WeTransfer conviennent tous.",
       },
       {
         heading: "Des pièces jointes légères, ou un lien",
@@ -190,13 +190,13 @@ export const fr: TranslationOverride = {
     ],
     uploaderTitle: "L'outil de téléversement",
     uploaderBody:
-      "Les contributions se font via un lien sécurisé par e-mail. Demandez un lien sur la page Contribuer ; en l'ouvrant, vous pourrez créer ou mettre à jour une contribution d'aperçu active.",
+      "Les contributions se font via un lien sécurisé par e-mail. Demandez un lien sur la page Contribuer ; en l'ouvrant, vous pourrez créer ou mettre à jour une contribution d'aperçu active.",
     uploaderCta: "Aller à Contribuer",
   },
   donate: {
-    heroTitle: "Soutenir la tournée",
+    heroTitle: "Soutenez la tournée",
     heroSubtitle:
-      "Un million de mots contre le fascisme est un projet itinérant à but non lucratif. Les dons aident à couvrir le transport, l'installation, le matériel et la participation de jeunes artistes et de groupes communautaires.",
+      "« A Million Words Against Fascism » est un projet itinérant à but non lucratif. Les dons aident à couvrir le transport, l'installation, le matériel et la participation de jeunes artistes et de groupes communautaires.",
     introTitle: "Pourquoi faire un don",
     introBody:
       "L'exposition parcourt l'Europe avec une Salle de la Solidarité centrale, une activité de cartes postales sur rue et un programme d'œuvres commandées. Votre soutien maintient la tournée gratuite ou à faible coût pour les écoles, lycées, syndicats et lieux communautaires.",
@@ -207,28 +207,28 @@ export const fr: TranslationOverride = {
       "Frais de participation des écoles, lycées et groupes communautaires.",
       "Œuvres commandées à des artistes, poètes et cinéastes antifascistes.",
     ],
-    ctaTitle: "Faire un don",
+    ctaTitle: "Faites un don",
     ctaBody:
       "Un lien de don sera publié ici. En attendant, contactez-nous pour discuter du soutien à la tournée ou d'un partenariat pour une étape près de chez vous.",
-    ctaButton: "Contacter le projet",
+    ctaButton: "Contactez le projet",
     ctaPending: "Lien de don bientôt disponible.",
   },
   host: {
-    heroTitle: "Accueillir Un million de mots contre le fascisme.",
+    heroTitle: "Accueillez « A Million Words Against Fascism ».",
     heroSubtitle:
       "Partagez l’essentiel sur votre lieu, votre public, vos partenaires éducatifs et vos dates souhaitées. Nous vous répondrons dès que possible.",
     proposalTitle: "Ce que votre proposition doit contenir",
     proposalItems: [
       "Votre organisation ou votre lieu, et la personne à qui répondre.",
-      "Où vous êtes et de quel type d’espace il s’agit : galerie, bibliothèque, école, local syndical, festival ou autre.",
+      "Où vous êtes et de quel type d’espace il s’agit : galerie, bibliothèque, école, local syndical, festival ou autre.",
       "Les dates ou la période que vous envisagez.",
-      "La taille de l’espace : longueur de mur, dimensions de la salle et murs donnant sur la rue.",
+      "La taille de l’espace : longueur de mur, dimensions de la salle et murs donnant sur la rue.",
       "Les horaires d’ouverture au public, l’accès des scolaires ou des groupes et les besoins d’accessibilité.",
       "Le nombre approximatif de visiteurs attendus.",
       "L’histoire locale des Brigades internationales, les partenaires ou les idées de programmation que vous souhaitez inclure.",
     ],
     revealTitle: "Envoyez votre proposition",
-    heroPrimaryCta: "Démarrer la demande",
+    heroPrimaryCta: "Démarrez la demande",
     heroSecondaryCta: "Dates de la tournée",
     formatsTitle: "Formats d'accueil",
     leadTimeTitle: "Formats flexibles",
@@ -237,7 +237,7 @@ export const fr: TranslationOverride = {
     formTitle: "Formulaire de demande d'accueil",
     formDescription:
       "Parlez-nous du lieu, du public, des liens éducatifs, de l'histoire locale et des dates que vous envisagez.",
-    conditionsCta: "Lire les conditions d'accueil",
+    conditionsCta: "Lisez les conditions d'accueil",
     features: [
       "L'exposition s'articule autour de la Salle de la Solidarité, une installation d'œuvres au format carte postale réalisées grâce au projet Solidarity Park.",
       "Les murs tournés vers l'extérieur peuvent rassembler de nouvelles cartes postales réalisées par les visiteurs, les écoles et les participants de la communauté pendant la tournée.",
@@ -261,7 +261,7 @@ export const fr: TranslationOverride = {
       message: "Détails de la demande",
       messagePlaceholder:
         "Dites-nous ce que vous aimeriez accueillir, toute histoire locale des Brigades internationales, des idées de programme et le soutien dont vous avez besoin.",
-      submit: "Envoyer la demande d'accueil",
+      submit: "Envoyez la demande d'accueil",
       required: "obligatoire",
     },
     venueTypes: [
@@ -302,9 +302,9 @@ export const fr: TranslationOverride = {
         body: "Le projet vise à maintenir l'accueil gratuit ou à faible coût pour les écoles, les syndicats et les lieux communautaires. Le transport, l'installation et tout coût partagé sont discutés lors de votre demande.",
       },
     ],
-    ctaTitle: "Prêt à faire une demande ?",
+    ctaTitle: "Prêt à faire une demande ?",
     ctaBody: "Envoyez l'essentiel sur votre lieu et vos dates préférées et l'équipe vous recontactera.",
-    ctaButton: "Lancer une demande d'accueil",
+    ctaButton: "Lancez une demande d'accueil",
   },
   gallery: {
     heroTitle: "Galerie",
@@ -313,13 +313,13 @@ export const fr: TranslationOverride = {
     placeholderTitle: "Galerie bientôt disponible",
     placeholderBody:
       "À mesure que les œuvres de jeunes artistes et les pièces commandées sont confirmées pour la tournée, une sélection sera présentée ici. Les contributions soumises via le lien sécurisé sont examinées de façon privée et ne sont pas publiées automatiquement.",
-    contributeCta: "Contribuer une œuvre",
+    contributeCta: "Proposez une œuvre",
   },
   collaborators: {
     heroTitle: "Collaborateurs",
     heroSubtitle:
       "Les artistes, historiens, éducateurs et organisations qui construisent l’exposition et la tournée.",
-    empty: "Les profils sont en cours de collecte et seront publiés ici au fur et à mesure.",
+    empty: "Les profils sont en cours de collecte et seront publiés ici au fur et à mesure qu’ils sont confirmés.",
   },
 
   notFound: {
@@ -336,24 +336,24 @@ export const fr: TranslationOverride = {
       project: {
         title: "Le projet",
         items: {
-          association: { label: "Association Solidarity Park", note: "L'organisation derrière l'exposition." },
-          festival: { label: "Festival de Solidarity Park, Catalogne", note: "Le festival vers lequel mène la tournée 2027." },
-          sunderland: { label: "Solidarity Sunderland History Hub", note: "Les brigadistes de Sunderland, les navires et les enfants basques de 1937." },
+          association: { label: "Associació Solidarity Park", note: "L'organisation derrière l'exposition." },
+          festival: { label: "Solidarity Park Festival, Catalogne", note: "Le festival vers lequel mène la tournée 2027." },
+          sunderland: { label: "Solidarity Sunderland History Hub", note: "Les brigadistes internationaux de Sunderland, les navires et les enfants basques de 1937." },
         },
       },
       memory: {
         title: "Histoire et mémoire",
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Perpétuer la mémoire des Brigades internationales." },
-          basqueChildren: { label: "Association des enfants basques de 37", note: "L'histoire des enfants évacués pendant la guerre civile espagnole." },
+          basqueChildren: { label: "Basque Children of '37 Association", note: "L'histoire des enfants évacués pendant la guerre civile espagnole." },
           alba: { label: "Abraham Lincoln Brigade Archives", note: "Les volontaires américains des Brigades internationales et les archives qui en conservent la mémoire." },
         },
       },
       getInvolved: {
-        title: "Participer",
+        title: "Participez",
         items: {
-          contribute: { label: "Contribuer une œuvre", note: "Envoyez du matériel d'aperçu via un lien sécurisé." },
-          host: { label: "Accueillir l'exposition", note: "Amenez une étape de la tournée dans votre lieu." },
+          contribute: { label: "Proposez une œuvre", note: "Envoyez du matériel d'aperçu via un lien sécurisé." },
+          host: { label: "Accueillez l'exposition", note: "Amenez une étape de la tournée dans votre lieu." },
         },
       },
     },
