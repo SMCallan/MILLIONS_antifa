@@ -4,11 +4,27 @@ import { ArrowRight, CalendarDays, MapPin } from "lucide-react";
 import { SignalFieldHero } from "@/components/SignalFieldHero";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
-import { tourDates } from "@/data/site";
+import { tourDates, type TourStop } from "@/data/site";
 import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+// Place names stay native (see site.ts); only the words around them are
+// localised. The English copy is British, so "en" formats day-first.
+const locale = lang === "en" ? "en-GB" : lang;
+const dayMonth = new Intl.DateTimeFormat(locale, { day: "numeric", month: "long", timeZone: "UTC" });
+const conjunction = new Intl.ListFormat(locale, { type: "conjunction" });
+
+// en-GB's range pattern puts thin spaces around the dash ("1 – 17 December").
+// Dropping them keeps the site's "1–17 December" style, which fits the date
+// column on one line where the spaced form wraps.
+const formatDates = ({ start, end }: NonNullable<TourStop["dates"]>) =>
+  dayMonth
+    .formatRange(new Date(`${start}T00:00:00Z`), new Date(`${end}T00:00:00Z`))
+    .replace(/\u2009–\u2009/g, "–");
+const formatPlace = (stop: TourStop) =>
+  [conjunction.format(stop.places), stop.region].filter(Boolean).join(", ");
 ---
 
 <SignalFieldHero
@@ -41,17 +57,17 @@ const t = useTranslations(lang);
               </p>
               <p class:list={[
                 "mt-1 inline-block px-2 py-1 text-xs font-black uppercase tracking-[0.12em]",
-                event.date
+                event.dates
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-muted-foreground",
               ]}>
-                {event.date ?? t.tourDates.tbc}
+                {event.dates ? formatDates(event.dates) : t.tourDates.tbc}
               </p>
             </div>
 
             <div>
               <h3 class="display-type text-2xl uppercase leading-none transition-transform group-hover:translate-x-1 sm:text-3xl">
-                {event.city}
+                {formatPlace(event)}
               </h3>
               {event.venue && (
                 <p class="mt-2 flex items-center gap-2 text-sm font-medium text-muted-foreground">
