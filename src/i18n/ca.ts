@@ -25,7 +25,7 @@ export const ca: TranslationOverride = {
   },
   langSwitcher: { label: "Trieu l'idioma", current: "Idioma actual" },
   common: {
-    skipToContent: "Vés al contingut",
+    skipToContent: "Ves al contingut",
     viewAllDates: "Veure totes les dates",
     learnMore: "Saber-ne més",
     readConditions: "Llegir les condicions",
@@ -57,7 +57,7 @@ export const ca: TranslationOverride = {
     ],
     statusLines: [
       "De gira cap al 90è aniversari de l'enfonsament del Ciudad de Barcelona",
-      "Inspirada en l'Artists International Association i en el llegat de la solidaritat antifeixista",
+      "Inspirada en l'Artists’ International Association i en el llegat de la solidaritat antifeixista",
     ],
   },
   home: {
@@ -65,7 +65,7 @@ export const ca: TranslationOverride = {
     conceptTitle: "Mil joves artistes. Un milió de paraules contra el feixisme.",
     conceptBody: [
       "Si una imatge diu mil paraules, mil artistes creen un milió de paraules. L'exposició reuneix aquestes veus com a resposta internacional a l'auge de les ideologies d'extrema dreta i feixistes.",
-      "Al juny de 2026, el projecte Solidarity Park haurà facilitat més de 1.000 obres visuals de joves a través de la seva iniciativa educativa sobre la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional.",
+      "Al juny de 2026, el projecte Solidarity Park havia facilitat més de 1.000 obres visuals de joves a través de la seva iniciativa educativa sobre la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional.",
       "La gira de 2027 avança cap al 90è aniversari de l'enfonsament del Ciudad de Barcelona, el 30 de maig de 2027, la història que va ajudar a posar en marxa la tasca de l'Associació Solidarity Park en art, memòria i educació.",
     ],
     stats: [
@@ -94,7 +94,7 @@ export const ca: TranslationOverride = {
     heroTitle:
       "Gira Million Words Against Fascism.",
     heroSubtitle:
-      "La gira es fa en col·laboració amb artistes de tot el món, escoles, escoles d’art, sindicats, sales d’art, grups de les Brigades Internacionals, poetes, corals reivindicatives i grups de campanyes solidàries, tots avançant cap al Festival de Solidarity Park a Catalunya el maig de 2027.",
+      "La gira es fa en col·laboració amb artistes de tot el món, escoles, escoles d’art, sindicats, sales d’art, grups de les Brigades Internacionals, poetes, corals reivindicatives i grups de campanyes solidàries, tots avançant cap al Festival Solidarity Park a Catalunya el maig de 2027.",
     heroPrimaryCta: "Veure ruta",
     heroSecondaryCta: "Acollir l'exposició",
     routeBadge: "Notes de la ruta",
@@ -121,7 +121,7 @@ export const ca: TranslationOverride = {
       },
       {
         heading: "Arrelat al projecte Solidarity Park",
-        body: "L’exposició sorgeix de la iniciativa educativa del projecte Solidarity Park, que apropa els joves a la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional. Al juny de 2026 el projecte ha facilitat més de 1.000 obres visuals de joves. Aquesta serà la instal·lació principal de l’exposició. L’exposició està comissariada pel director artístic de Solidarity Park, Rob MacDonald.",
+        body: "L’exposició sorgeix de la iniciativa educativa del projecte Solidarity Park, que apropa els joves a la Guerra Civil espanyola, les Brigades Internacionals i les lliçons de la solidaritat internacional. Al juny de 2026 el projecte havia facilitat més de 1.000 obres visuals de joves. Aquesta serà la instal·lació principal de l’exposició. L’exposició està comissariada pel director artístic de Solidarity Park, Rob MacDonald.",
       },
       {
         heading: "Mil imatges més",
@@ -132,7 +132,7 @@ export const ca: TranslationOverride = {
         body: "També s’ha convidat artistes internacionals consagrats a exposar pintures, escultures, performances i peces multimèdia inspirades en el títol de l’exposició i en l’obra de l’Artists’ International Association dels anys trenta.",
       },
       {
-        heading: "Cap al Festival de Solidarity Park, 30 de maig de 2027 a Catalunya",
+        heading: "Cap al Festival Solidarity Park, 30 de maig de 2027 a Catalunya",
         body: "La gira de sis mesos avança cap al 90è aniversari de l’enfonsament del vaixell Ciudad de Barcelona, el 30 de maig de 1937: una història oblidada de les Brigades Internacionals a la Guerra Civil espanyola que va inspirar la creació de l’Associació Solidarity Park, el seu monument de participació comunitària i, des del 2022, el festival internacional anual d’art, memòria i educació.",
       },
     ],
@@ -141,7 +141,7 @@ export const ca: TranslationOverride = {
     heroTitle:
       "Aporta el teu art",
     heroSubtitle:
-      "Volem sumar la teva veu artística antifeixista als Millions. A continuació establim algunes condicions. Les obres acceptades formaran part de la instal·lació principal de l’exposició itinerant i/o de les galeries en línia paral·leles. Ens interessen especialment les imatges i la paraula dita, però estem oberts a totes les expressions artístiques. Allà on els espais tinguin lloc i temps, intentarem mostrar la teva obra o actuació en directe.",
+      "Volem sumar la teva veu artística antifeixista a aquest milió de paraules. A continuació establim algunes condicions. Les obres acceptades formaran part de la instal·lació principal de l’exposició itinerant i/o de les galeries en línia paral·leles. Ens interessen especialment les imatges i la paraula dita, però estem oberts a totes les expressions artístiques. Allà on els espais tinguin lloc i temps, intentarem mostrar la teva obra o actuació en directe.",
     revealTitle: "Envia’ns la teva obra",
     heroPrimaryCta: "Sol·licitar enllaç",
     heroSecondaryCta: "Dates de la gira",
@@ -194,7 +194,7 @@ export const ca: TranslationOverride = {
     uploaderCta: "Anar a Contribuir",
   },
   donate: {
-    heroTitle: "Dóna suport a la gira",
+    heroTitle: "Dona suport a la gira",
     heroSubtitle:
       "Un milió de paraules contra el feixisme és un projecte itinerant sense ànim de lucre. Les donacions ajuden a cobrir el transport, la instal·lació, els materials i la participació de joves artistes i grups comunitaris.",
     introTitle: "Per què donar",
@@ -337,7 +337,7 @@ export const ca: TranslationOverride = {
         title: "El projecte",
         items: {
           association: { label: "Associació Solidarity Park", note: "L'organització que hi ha darrere de l'exposició." },
-          festival: { label: "Festival de Solidarity Park, Catalunya", note: "El festival cap al qual avança la gira de 2027." },
+          festival: { label: "Festival Solidarity Park, Catalunya", note: "El festival cap al qual avança la gira de 2027." },
           sunderland: { label: "Solidarity Sunderland History Hub", note: "Els brigadistes de Sunderland, els vaixells i els nens bascos del 1937." },
         },
       },
@@ -345,7 +345,7 @@ export const ca: TranslationOverride = {
         title: "Història i memòria",
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Mantenir viva la memòria de les Brigades Internacionals." },
-          basqueChildren: { label: "Associació Nens Bascos del 37", note: "La història dels nens evacuats durant la Guerra Civil espanyola." },
+          basqueChildren: { label: "Basque Children of '37 Association", note: "La història dels nens evacuats durant la Guerra Civil espanyola." },
           alba: { label: "Abraham Lincoln Brigade Archives", note: "Els voluntaris nord-americans de les Brigades Internacionals i l’arxiu que en conserva la memòria." },
         },
       },

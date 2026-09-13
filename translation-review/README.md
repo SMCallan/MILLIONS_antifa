@@ -1,7 +1,7 @@
 # Translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-08-27.
+Generated 2026-09-13.
 
 One file per language. Each shows every piece of text on the site, with the
 English source above the current translation.
@@ -12,12 +12,12 @@ reads as machine-translated.
 
 | Language | File | Strings | Translated | Same as English |
 | --- | --- | --- | --- | --- |
-| Catalan (ca) | [ca-catalan.md](ca-catalan.md) | 235 | 227 | 8 |
-| Spanish (es) | [es-spanish.md](es-spanish.md) | 235 | 228 | 7 |
-| German (de) | [de-german.md](de-german.md) | 235 | 222 | 13 |
-| Swedish (sv) | [sv-swedish.md](sv-swedish.md) | 235 | 227 | 8 |
-| Dutch (nl) | [nl-dutch.md](nl-dutch.md) | 235 | 222 | 13 |
-| French (fr) | [fr-french.md](fr-french.md) | 235 | 223 | 12 |
+| Catalan (ca) | [ca-catalan.md](ca-catalan.md) | 237 | 227 | 10 |
+| Spanish (es) | [es-spanish.md](es-spanish.md) | 237 | 228 | 9 |
+| German (de) | [de-german.md](de-german.md) | 237 | 222 | 15 |
+| Swedish (sv) | [sv-swedish.md](sv-swedish.md) | 237 | 227 | 10 |
+| Dutch (nl) | [nl-dutch.md](nl-dutch.md) | 237 | 222 | 15 |
+| French (fr) | [fr-french.md](fr-french.md) | 237 | 223 | 14 |
 
 ## Notes for reviewers
 

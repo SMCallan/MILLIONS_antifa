@@ -1,7 +1,7 @@
 # Dutch (Nederlands) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-08-27.
+Generated 2026-09-13.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**235 strings.** 222 differ from the English; 13 are identical (see the end of this file).
+**237 strings.** 222 differ from the English; 15 are identical (see the end of this file).
 
 ---
 
@@ -87,12 +87,12 @@ Things worth watching for:
 ### contribute
 
 - **English:** Contribute
-- **Dutch:** Bijdragen
+- **Dutch:** Draag bij
 
 ### donate
 
 - **English:** Donate
-- **Dutch:** Doneren
+- **Dutch:** Doneer
 
 ### host
 
@@ -132,7 +132,7 @@ Things worth watching for:
 ### skipToContent
 
 - **English:** Skip to content
-- **Dutch:** Naar de inhoud
+- **Dutch:** Direct naar de inhoud
 
 ### viewAllDates
 
@@ -198,7 +198,7 @@ Things worth watching for:
 
 ### title
 
-- **English:** Million words against Fascism
+- **English:** A Million Words Against Fascism
 - **Dutch:** Een miljoen woorden tegen het fascisme
 
 ### subtitle
@@ -214,7 +214,7 @@ Things worth watching for:
 ### lede
 
 - **English:** If a picture tells a thousand words, what do a thousand artists create? A million words, each told from a unique perspective, forming an international touring exhibition against fascism.
-- **Dutch:** Als een beeld duizend woorden zegt, wat maken dan duizend kunstenaars? Een miljoen woorden, elk vanuit een uniek perspectief, samen een internationale reizende tentoonstelling tegen het fascisme.
+- **Dutch:** Als een beeld meer zegt dan duizend woorden, wat maken dan duizend kunstenaars? Een miljoen woorden, elk vanuit een uniek perspectief, samen een internationale reizende tentoonstelling tegen het fascisme.
 
 ### primaryCta
 
@@ -260,12 +260,12 @@ Things worth watching for:
 ### statusLines[1]
 
 - **English:** Touring toward the 90th anniversary of the Ciudad de Barcelona sinking
-- **Dutch:** Op tour naar de 90e verjaardag van het zinken van de Ciudad de Barcelona
+- **Dutch:** Op tour naar de 90e verjaardag van het vergaan van de Ciudad de Barcelona
 
 ### statusLines[2]
 
-- **English:** Inspired by the Artists International Association and the legacy of anti-fascist solidarity
-- **Dutch:** Geïnspireerd door de Artists International Association en de erfenis van antifascistische solidariteit
+- **English:** Inspired by the Artists' International Association and the legacy of anti-fascist solidarity
+- **Dutch:** Geïnspireerd door de Artists’ International Association en de traditie van antifascistische solidariteit
 
 ## Home page — body
 
@@ -286,13 +286,13 @@ Things worth watching for:
 
 ### conceptBody[2]
 
-- **English:** By June 2026, the Solidarity Park Project will have facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
-- **Dutch:** Tegen juni 2026 zal het project Solidarity Park via zijn educatieve initiatief over de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit meer dan 1.000 beeldende werken van jongeren hebben gefaciliteerd.
+- **English:** By June 2026, the Solidarity Park Project had facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
+- **Dutch:** Tegen juni 2026 had het project Solidarity Park via zijn educatieve initiatief over de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit meer dan 1.000 beeldende werken van jongeren voortgebracht.
 
 ### conceptBody[3]
 
-- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Association Solidarity Park's work in art, memory, and education.
-- **Dutch:** De tour van 2027 werkt toe naar de 90e verjaardag van het zinken van de Ciudad de Barcelona op 30 mei 2027, het verhaal dat het werk van de Vereniging Solidarity Park in kunst, herinnering en educatie mede op gang bracht.
+- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Associació Solidarity Park's work in art, memory, and education.
+- **Dutch:** De tour van 2027 werkt toe naar de 90e verjaardag van het vergaan van de Ciudad de Barcelona op 30 mei 2027, de geschiedenis die het werk van de Associació Solidarity Park in kunst, herinnering en educatie op gang bracht.
 
 ### stats[1] › value
 
@@ -312,7 +312,7 @@ Things worth watching for:
 ### stats[2] › label
 
 - **English:** Solidarity Room plan
-- **Dutch:** plan van de Solidariteitsruimte
+- **Dutch:** plattegrond van de Solidarity Room
 
 ### stats[3] › value
 
@@ -333,12 +333,12 @@ Things worth watching for:
 ### installationTitle
 
 - **English:** The Solidarity Room sits at the centre of the exhibition.
-- **Dutch:** De Solidariteitsruimte staat in het hart van de tentoonstelling.
+- **Dutch:** De Solidarity Room staat in het hart van de tentoonstelling.
 
 ### installationBody
 
 - **English:** Inside, the room is planned as a wall-to-wall display of 1,000 postcard-sized images made through the Solidarity Park project. Outside, the street-facing walls can gather another 1,000 new images created by visitors, schools, colleges, and community participants during the tour.
-- **Dutch:** Binnen is de ruimte opgezet als een wandvullende presentatie van 1.000 ansichtkaartformaat-beelden die via het project Solidarity Park zijn gemaakt. Buiten kunnen de straatgerichte muren nog eens 1.000 nieuwe beelden verzamelen, gemaakt door bezoekers, scholen, hogescholen en deelnemers uit de gemeenschap tijdens de tour.
+- **Dutch:** Binnen is de ruimte opgezet als een wandvullende presentatie van 1.000 ansichtkaartformaat-beelden die door het project Solidarity Park zijn gemaakt. Op de muren aan de buitenzijde passen nog eens 1.000 nieuwe beelden, gemaakt door bezoekers, scholen, hogescholen en deelnemers uit de plaatselijke gemeenschap tijdens de tour.
 
 ### commissionsTitle
 
@@ -348,7 +348,7 @@ Things worth watching for:
 ### commissionsBody
 
 - **English:** Surrounding the Solidarity Room will be a curated programme inspired by millions of stories against fascism, including film, animation, sculpture, painting, illustration, and poetry.
-- **Dutch:** Rond de Solidariteitsruimte komt een samengesteld programma, geïnspireerd op miljoenen verhalen tegen het fascisme, met film, animatie, beeldhouwkunst, schilderkunst, illustratie en poëzie.
+- **Dutch:** Rond de Solidarity Room komt een gevarieerd programma, geïnspireerd door miljoenen verhalen tegen het fascisme, met film, animatie, beeldhouwkunst, schilderkunst, illustraties en poëzie.
 
 ### tourBadge
 
@@ -400,7 +400,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** The tour is in collaboration with Artists across the world, Schools, Art Colleges, Trade Unions, Arts Venues, International Brigade groups, Poets, Radical Choirs, and Solidarity Campaign groups all building toward the Solidarity Park Festival in Catalunya May 2027.
-- **Dutch:** De tournee komt tot stand in samenwerking met kunstenaars over de hele wereld, scholen, kunstacademies, vakbonden, kunstlocaties, groepen rond de Internationale Brigades, dichters, radicale koren en solidariteitscampagnes – allemaal op weg naar het Solidarity Park Festival in Catalonië in mei 2027.
+- **Dutch:** De tournee komt tot stand in samenwerking met kunstenaars over de hele wereld, scholen, kunstacademies, vakbonden, kunstlocaties, groepen rond de Internationale Brigades, dichters, strijdkoren en solidariteitscampagnes – allemaal op weg naar het Solidarity Park Festival in Catalonië in mei 2027.
 
 ### heroPrimaryCta
 
@@ -445,7 +445,7 @@ Things worth watching for:
 ### ctaEyebrow
 
 - **English:** The route is being finalised with partners across Europe
-- **Dutch:** De route wordt afgerond met partners in heel Europa
+- **Dutch:** De route wordt gerealiseerd met partners in heel Europa
 
 ### ctaTitle
 
@@ -482,7 +482,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** A thousand young artists answering the rise of fascism gathered into one touring exhibition where 1,000 more will add their art.
-- **Dutch:** Duizend jonge kunstenaars antwoorden op de opkomst van het fascisme, samengebracht in één reizende tentoonstelling waar 1.000 anderen hun kunst aan toevoegen.
+- **Dutch:** Duizend jonge kunstenaars beantwoorden de opkomst van het fascisme, samengebracht in één reizende tentoonstelling waar 1.000 anderen hun kunst aan toevoegen.
 
 ### sections[1] › heading
 
@@ -501,8 +501,8 @@ Things worth watching for:
 
 ### sections[2] › body
 
-- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project has facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
-- **Dutch:** De tentoonstelling komt voort uit het educatieve initiatief van het project Solidarity Park, dat jongeren kennis laat maken met de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit. In juni 2026 heeft het project meer dan 1.000 visuele werken van jongeren mogelijk gemaakt. Deze vormen de hoofdinstallatie van de tentoonstelling. De tentoonstelling is samengesteld door Solidarity Park-artistiek directeur Rob MacDonald.
+- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project had facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
+- **Dutch:** De tentoonstelling komt voort uit het educatieve initiatief van het project Solidarity Park, dat jongeren kennis laat maken met de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit. Tegen juni 2026 had het project meer dan 1.000 visuele werken van jongeren mogelijk gemaakt. Deze vormen de hoofdinstallatie van de tentoonstelling. De tentoonstelling is samengesteld door Solidarity Park-artistiek directeur Rob MacDonald.
 
 ### sections[3] › heading
 
@@ -522,7 +522,7 @@ Things worth watching for:
 ### sections[4] › body
 
 - **English:** Established international artists have also been invited to exhibit paintings, sculptures, performances, and multimedia pieces inspired by the exhibition title and the work of the Artists' International Association of the 1930s.
-- **Dutch:** Gevestigde internationale kunstenaars zijn ook uitgenodigd om schilderijen, sculpturen, performances en multimediawerk te tonen, geïnspireerd op de titel van de tentoonstelling en op het werk van de Artists’ International Association uit de jaren dertig.
+- **Dutch:** Gevestigde internationale kunstenaars zijn ook uitgenodigd om schilderijen, sculpturen, performances en multimediawerk te tonen, geïnspireerd door de titel van de tentoonstelling en door het werk van de Artists’ International Association uit de jaren dertig.
 
 ### sections[5] › heading
 
@@ -531,8 +531,8 @@ Things worth watching for:
 
 ### sections[5] › body
 
-- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of the Solidarity Park Association, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
-- **Dutch:** De tournee van zes maanden werkt toe naar de 90e verjaardag van het zinken van het schip Ciudad de Barcelona op 30 mei 1937 – een vergeten verhaal over de Internationale Brigades in de Spaanse Burgeroorlog dat de oprichting inspireerde van de Solidarity Park Association, haar monument voor gemeenschapsparticipatie en, sinds 2022, het jaarlijkse internationale festival voor kunst, herinnering en educatie.
+- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of Associació Solidarity Park, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
+- **Dutch:** De tournee van zes maanden werkt toe naar de 90e verjaardag van het tot zinken brengen van het schip Ciudad de Barcelona op 30 mei 1937 – een vergeten verhaal over de Internationale Brigades in de Spaanse Burgeroorlog dat de oprichting inspireerde van de Associació Solidarity Park, haar plaatselijke monument en, sinds 2022, het jaarlijkse internationale festival voor kunst, herinnering en educatie.
 
 ## Contribute page
 
@@ -544,7 +544,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** We want to add your anti-fascist artistic voice to the Millions. Below we set out some conditions. Accepted works will form part of the physical touring exhibition main installation and/or parallel online galleries. We are especially interested in images and spoken words, but we are open to all artistic expressions. Where venues have space and time we will try to show your work or performance in real time.
-- **Dutch:** We willen jouw antifascistische artistieke stem toevoegen aan de Millions. Hieronder staan enkele voorwaarden. Geaccepteerd werk wordt onderdeel van de hoofdinstallatie van de reizende tentoonstelling en/of van de parallelle online galerieën. We zijn vooral geïnteresseerd in beeld en gesproken woord, maar staan open voor alle artistieke uitingen. Waar locaties ruimte en tijd hebben, proberen we je werk of performance live te tonen.
+- **Dutch:** We willen jouw antifascistische artistieke stem toevoegen aan de miljoenen. Hieronder staan enkele voorwaarden. Geaccepteerd werk wordt onderdeel van de hoofdinstallatie van de reizende tentoonstelling en/of van de parallelle online galerieën. We zijn vooral geïnteresseerd in beeld en gesproken woord, maar staan open voor alle artistieke uitingen. Waar locaties ruimte en tijd hebben, proberen we je werk of performance live te tonen.
 
 ### revealTitle
 
@@ -553,7 +553,7 @@ Things worth watching for:
 
 ### heroPrimaryCta
 
-- **English:** Request link
+- **English:** Request a link
 - **Dutch:** Link aanvragen
 
 ### heroSecondaryCta
@@ -594,7 +594,7 @@ Things worth watching for:
 ### guidelines[1]
 
 - **English:** The tour may include local anti-fascist artists where venue space allows, alongside the core Solidarity Room and commissioned international works.
-- **Dutch:** De tournee kan lokale antifascistische kunstenaars opnemen waar de locatie ruimte heeft, naast de Solidariteitsruimte en de internationale opdrachtwerken.
+- **Dutch:** De tournee kan lokale antifascistische kunstenaars opnemen waar de locatie ruimte heeft, naast de Solidarity Room en de internationale werken in opdracht.
 
 ### guidelines[2]
 
@@ -651,7 +651,7 @@ Things worth watching for:
 ### sections[2] › body
 
 - **English:** Keep attachments under roughly 20MB in total, since larger messages are often bounced before they reach us. Above that, send a link instead. There is no limit on what a link can hold.
-- **Dutch:** Houd bijlagen onder ongeveer 20 MB in totaal, want grotere berichten worden vaak geweigerd voordat ze ons bereiken. Stuur daarboven liever een link. Een link kent geen groottelimiet.
+- **Dutch:** Houd bijlagen onder ongeveer 20 MB in totaal, want grotere berichten worden vaak geweigerd voordat ze ons bereiken. Stuur daarboven liever een link. Een link kent geen omvangslimiet.
 
 ### sections[3] › heading
 
@@ -671,7 +671,7 @@ Things worth watching for:
 ### sections[4] › body
 
 - **English:** What you send is used only to consider your work for the exhibition. Nothing is published automatically, and nothing is made public without your agreement.
-- **Dutch:** Wat je stuurt gebruiken we uitsluitend om je werk voor de tentoonstelling te beoordelen. Er wordt niets automatisch gepubliceerd en niets openbaar gemaakt zonder jouw akkoord.
+- **Dutch:** Wat je stuurt, gebruiken we uitsluitend om je werk voor de tentoonstelling te beoordelen. Er wordt niets automatisch gepubliceerd en niets openbaar gemaakt zonder jouw akkoord.
 
 ### sections[5] › heading
 
@@ -718,7 +718,7 @@ Things worth watching for:
 ### introBody
 
 - **English:** The exhibition travels across Europe with a core Solidarity Room, street-facing postcard activity, and a programme of commissioned work. Your support keeps the tour free or low-cost for schools, colleges, unions, and community venues.
-- **Dutch:** De tentoonstelling reist door Europa met een centrale Solidariteitsruimte, straatgerichte ansichtkaartactiviteit en een programma van opdrachtwerken. Jouw steun houdt de tour gratis of goedkoop voor scholen, hogescholen, vakbonden en gemeenschapslocaties.
+- **Dutch:** De tentoonstelling reist door Europa met een centrale Solidarity Room, straatgerichte ansichtkaartactiviteit en een programma van werken in opdracht. Jouw steun houdt de tour gratis of goedkoop voor scholen, hogescholen, vakbonden en gemeenschapslocaties.
 
 ### usesTitle
 
@@ -800,7 +800,7 @@ Things worth watching for:
 ### proposalItems[4]
 
 - **English:** The size of the space: wall length, room dimensions, and any street-facing walls.
-- **Dutch:** De afmetingen van de ruimte: wandlengte, kamermaten en eventuele wanden aan de straatkant.
+- **Dutch:** De afmetingen van de ruimte: wandlengte, binnenmaten en eventuele wanden aan de buitenkant.
 
 ### proposalItems[5]
 
@@ -865,7 +865,7 @@ Things worth watching for:
 ### features[1]
 
 - **English:** The exhibition centres on the Solidarity Room, an installation of postcard-sized artworks made through the Solidarity Park project.
-- **Dutch:** De tentoonstelling draait om de Solidariteitsruimte, een installatie van ansichtkaartformaat-werken gemaakt via het project Solidarity Park.
+- **Dutch:** De tentoonstelling draait om de Solidarity Room, een installatie van ansichtkaartformaat-werken gemaakt via het project Solidarity Park.
 
 ### features[2]
 
@@ -1022,7 +1022,7 @@ Things worth watching for:
 ### sections[1] › body
 
 - **English:** The exhibition adapts to the available space. Wall space for the Solidarity Room, participant postcards, and local or commissioned work is agreed with each venue.
-- **Dutch:** De tentoonstelling past zich aan de beschikbare ruimte aan. Wandruimte voor de Solidariteitsruimte, deelnemers-ansichtkaarten en lokaal of opdrachtwerk wordt met elke locatie afgesproken.
+- **Dutch:** De tentoonstelling past zich aan de beschikbare ruimte aan. Wandruimte voor de Solidarity Room, deelnemers-ansichtkaarten en lokaal of opdrachtwerk wordt met elke locatie afgesproken.
 
 ### sections[2] › heading
 
@@ -1042,7 +1042,7 @@ Things worth watching for:
 ### sections[3] › body
 
 - **English:** Hosts are encouraged to add local International Brigades history, workshops, live music, poetry, and local anti-fascist artists. The project can help connect you with regional partners.
-- **Dutch:** Gastheren worden aangemoedigd om lokale geschiedenis van de Internationale Brigades, workshops, livemuziek, poëzie en lokale antifascistische kunstenaars toe te voegen. Het project kan helpen je met regionale partners te verbinden.
+- **Dutch:** Gastheren worden aangemoedigd om lokale geschiedenis van de Internationale Brigades, workshops, livemuziek, poëzie en lokale antifascistische kunstenaars toe te voegen. Het project kan helpen je met regionale partners in contact te brengen.
 
 ### sections[4] › heading
 
@@ -1123,6 +1123,18 @@ Things worth watching for:
 - **English:** Profiles are being gathered and will be published here as they are confirmed.
 - **Dutch:** De profielen worden verzameld en verschijnen hier zodra ze bevestigd zijn.
 
+## notFound
+
+### title
+
+- **English:** Page not found
+- **Dutch:** Pagina niet gevonden
+
+### body
+
+- **English:** That page does not exist, or it has moved. The links below will get you back on track.
+- **Dutch:** Deze pagina bestaat niet, of is verplaatst. De links hieronder helpen je verder.
+
 ## Links page
 
 ### heroTitle
@@ -1134,7 +1146,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** Partners, collaborators, and further reading connected to the Solidarity Park project and the anti-fascist memory it draws on.
-- **Dutch:** Partners, medewerkers en verdere lectuur verbonden met het project Solidarity Park en de antifascistische herinnering waaruit het put.
+- **Dutch:** Partners, medewerkers en verdere lectuur verbonden met het project Solidarity Park en de antifascistische traditie waaruit het put.
 
 ### groups › project › title
 
@@ -1143,8 +1155,9 @@ Things worth watching for:
 
 ### groups › project › items › association › label
 
-- **English:** Association Solidarity Park
-- **Dutch:** Vereniging Solidarity Park
+- **English:** Associació Solidarity Park
+- **Dutch:** Associació Solidarity Park
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › project › items › association › note
 
@@ -1154,7 +1167,7 @@ Things worth watching for:
 ### groups › project › items › festival › label
 
 - **English:** Solidarity Park Festival, Catalunya
-- **Dutch:** Festival van Solidarity Park, Catalonië
+- **Dutch:** Solidarity Park Festival, Catalonië
 
 ### groups › project › items › festival › note
 
@@ -1191,7 +1204,8 @@ Things worth watching for:
 ### groups › memory › items › basqueChildren › label
 
 - **English:** Basque Children of '37 Association
-- **Dutch:** Vereniging Baskische Kinderen van '37
+- **Dutch:** Basque Children of '37 Association
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › memory › items › basqueChildren › note
 
@@ -1263,6 +1277,8 @@ English name. Others may simply never have been translated. Worth a look:
 - Home page — headline area › badges[1]
 - Home page — body › stats[3] › value
 - Links page › heroTitle
+- Links page › groups › project › items › association › label
 - Links page › groups › project › items › sunderland › label
 - Links page › groups › memory › items › ibmt › label
+- Links page › groups › memory › items › basqueChildren › label
 - Links page › groups › memory › items › alba › label

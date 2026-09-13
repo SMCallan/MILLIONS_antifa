@@ -82,31 +82,48 @@ export const footerNav: NavItem[] = [
 
 // Planned route for the touring exhibition. Dates and venues are shown when
 // confirmed; stops without either remain visibly marked TBC.
-export const tourDates: { city: string; date?: string; venue?: string }[] = [
-  { city: "Hull", date: "1–17 December" },
+//
+// Place and venue names are written in their native form and shown that way
+// in every locale. Only the words around them are localised, at render time:
+// month names and day order, and the "and" joining two places.
+export type TourStop = {
+  /** Native place names. Two or more are joined with the locale's "and". */
+  places: string[];
+  /** Native region or country name, shown after the places. */
+  region?: string;
+  /** First and last day. Only day and month are displayed; the year keeps the dates real. */
+  dates?: { start: string; end: string };
+  venue?: string;
+};
+
+export const tourDates: TourStop[] = [
+  { places: ["Hull"], dates: { start: "2026-12-01", end: "2026-12-17" } },
   {
-    city: "Dundee, Scotland",
-    date: "29–31 January",
+    places: ["Dundee"],
+    region: "Scotland",
+    dates: { start: "2027-01-29", end: "2027-01-31" },
     venue: "Generator Projects, Units 25–26, Mid Wynd Industrial Estate, Dundee, DD1 4JG",
   },
-  { city: "Sunderland" },
+  { places: ["Sunderland"] },
   {
-    city: "Pontypridd, South Wales",
-    date: "13–27 February",
+    places: ["Pontypridd"],
+    region: "South Wales",
+    dates: { start: "2027-02-13", end: "2027-02-27" },
     venue: "Llyfrgell Pontypridd Library, 1 Gas Road, Taff Street, Pontypridd, CF37 4TH",
   },
-  { city: "Midlands, England" },
-  { city: "London and South East, UK" },
-  { city: "Leeuwarden, Holland" },
-  { city: "Stockholm, Sweden" },
-  { city: "Cologne, Germany" },
-  { city: "Toulouse, France" },
+  { places: ["Midlands"], region: "England" },
+  { places: ["London", "South East"], region: "UK" },
+  { places: ["Leeuwarden"], region: "Nederland" },
+  { places: ["Stockholm"], region: "Sverige" },
+  { places: ["Köln"], region: "Deutschland" },
+  { places: ["Toulouse"], region: "France" },
   {
-    city: "Malgrat de Mar, Catalunya",
-    date: "26–30 May",
-    venue: "Solidarity Park Festival — Municipal Archives, Carrer de Mar",
+    places: ["Malgrat de Mar"],
+    region: "Catalunya",
+    dates: { start: "2027-05-26", end: "2027-05-30" },
+    venue: "Festival Solidarity Park — Arxiu Municipal, Carrer de Mar",
   },
-  { city: "Hull", venue: "Hull Art School" },
+  { places: ["Hull"], venue: "Hull Art School" },
 ];
 
 

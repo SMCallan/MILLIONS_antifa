@@ -50,7 +50,7 @@ export const en = {
 
   // Hero used on the home page (logo left, title + sub text right).
   hero: {
-    title: "Million words against Fascism",
+    title: "A Million Words Against Fascism",
     subtitle: "European touring exhibition from the Solidarity Park project.",
     artworkCredit: "Animation & logo: Roberto Ford",
     lede: "If a picture tells a thousand words, what do a thousand artists create? A million words, each told from a unique perspective, forming an international touring exhibition against fascism.",
@@ -66,7 +66,7 @@ export const en = {
     ],
     statusLines: [
       "Touring toward the 90th anniversary of the Ciudad de Barcelona sinking",
-      "Inspired by the Artists International Association and the legacy of anti-fascist solidarity",
+      "Inspired by the Artists' International Association and the legacy of anti-fascist solidarity",
     ],
   },
 
@@ -75,8 +75,8 @@ export const en = {
     conceptTitle: "A thousand young artists. A million words against fascism.",
     conceptBody: [
       "If a picture tells a thousand words, a thousand artists create a million words. The exhibition brings those voices together as an international response to the rise of far-right and fascist ideologies.",
-      "By June 2026, the Solidarity Park Project will have facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.",
-      "The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Association Solidarity Park's work in art, memory, and education.",
+      "By June 2026, the Solidarity Park Project had facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.",
+      "The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Associació Solidarity Park's work in art, memory, and education.",
     ],
     stats: [
       { value: "1,000+", label: "young artists' works" },
@@ -135,7 +135,7 @@ export const en = {
       },
       {
         heading: "Rooted in the Solidarity Park project",
-        body: "The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project has facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.",
+        body: "The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project had facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.",
       },
       {
         heading: "A thousand more images",
@@ -147,7 +147,7 @@ export const en = {
       },
       {
         heading: "Towards Solidarity Park Festival 30th May 2027 in Catalunya",
-        body: "The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of the Solidarity Park Association, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.",
+        body: "The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of Associació Solidarity Park, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.",
       },
     ],
   },
@@ -158,7 +158,7 @@ export const en = {
     heroSubtitle:
       "We want to add your anti-fascist artistic voice to the Millions. Below we set out some conditions. Accepted works will form part of the physical touring exhibition main installation and/or parallel online galleries. We are especially interested in images and spoken words, but we are open to all artistic expressions. Where venues have space and time we will try to show your work or performance in real time.",
     revealTitle: "Send us your work",
-    heroPrimaryCta: "Request link",
+    heroPrimaryCta: "Request a link",
     heroSecondaryCta: "Tour dates",
     notesTitle: "Contribution notes",
     formTitle: "Request a secure contribution link",
@@ -361,7 +361,7 @@ export const en = {
       project: {
         title: "The project",
         items: {
-          association: { label: "Association Solidarity Park", note: "The organisation behind the exhibition." },
+          association: { label: "Associació Solidarity Park", note: "The organisation behind the exhibition." },
           festival: { label: "Solidarity Park Festival, Catalunya", note: "The festival the 2027 tour builds toward." },
           sunderland: { label: "Solidarity Sunderland History Hub", note: "Sunderland’s International Brigaders, the ships, and the Basque children of 1937." },
         },

@@ -1,7 +1,7 @@
 # Swedish (svenska) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-08-27.
+Generated 2026-09-13.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**235 strings.** 227 differ from the English; 8 are identical (see the end of this file).
+**237 strings.** 227 differ from the English; 10 are identical (see the end of this file).
 
 ---
 
@@ -193,7 +193,7 @@ Things worth watching for:
 
 ### title
 
-- **English:** Million words against Fascism
+- **English:** A Million Words Against Fascism
 - **Swedish:** En miljon ord mot fascismen
 
 ### subtitle
@@ -259,8 +259,8 @@ Things worth watching for:
 
 ### statusLines[2]
 
-- **English:** Inspired by the Artists International Association and the legacy of anti-fascist solidarity
-- **Swedish:** Inspirerad av Artists International Association och arvet av antifascistisk solidaritet
+- **English:** Inspired by the Artists' International Association and the legacy of anti-fascist solidarity
+- **Swedish:** Inspirerad av Artists’ International Association och arvet av antifascistisk solidaritet
 
 ## Home page — body
 
@@ -281,13 +281,13 @@ Things worth watching for:
 
 ### conceptBody[2]
 
-- **English:** By June 2026, the Solidarity Park Project will have facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
-- **Swedish:** Till juni 2026 kommer projektet Solidarity Park att ha möjliggjort mer än 1 000 visuella verk av unga genom sitt utbildningsinitiativ om spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet.
+- **English:** By June 2026, the Solidarity Park Project had facilitated more than 1,000 visual artworks by young people through its porthole education initiative about the Spanish Civil War, the International Brigades, and the lessons of international solidarity.
+- **Swedish:** Fram till juni 2026 hade projektet Solidarity Park möjliggjort mer än 1 000 visuella verk av unga genom sitt utbildningsinitiativ om spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet.
 
 ### conceptBody[3]
 
-- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Association Solidarity Park's work in art, memory, and education.
-- **Swedish:** Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027, berättelsen som bidrog till att starta arbetet inom Föreningen Solidarity Park med konst, minne och utbildning.
+- **English:** The 2027 tour builds toward the 90th anniversary of the sinking of the Ciudad de Barcelona on 30 May 2027, the story that helped launch Associació Solidarity Park's work in art, memory, and education.
+- **Swedish:** Turnén 2027 leder fram till 90-årsminnet av Ciudad de Barcelonas förlisning den 30 maj 2027, berättelsen som bidrog till att starta arbetet inom Associació Solidarity Park med konst, minne och utbildning.
 
 ### stats[1] › value
 
@@ -349,7 +349,7 @@ Things worth watching for:
 ### tourBadge
 
 - **English:** Tour route
-- **Swedish:** Turnéväg
+- **Swedish:** Turnérutt
 
 ### tourTitle
 
@@ -401,7 +401,7 @@ Things worth watching for:
 ### heroPrimaryCta
 
 - **English:** View route
-- **Swedish:** Visa vägen
+- **Swedish:** Visa rutten
 
 ### heroSecondaryCta
 
@@ -411,7 +411,7 @@ Things worth watching for:
 ### routeBadge
 
 - **English:** Route notes
-- **Swedish:** Anteckningar om vägen
+- **Swedish:** Om rutten
 
 ### routeTitle
 
@@ -497,8 +497,8 @@ Things worth watching for:
 
 ### sections[2] › body
 
-- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project has facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
-- **Swedish:** Utställningen växer ur utbildningsinitiativet i projektet Solidarity Park, som introducerar unga för spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet. Fram till juni 2026 har projektet möjliggjort mer än 1 000 visuella verk av unga. Dessa utgör utställningens huvudinstallation. Utställningen är curerad av Solidarity Parks konstnärliga ledare Rob MacDonald.
+- **English:** The exhibition grows out of the Solidarity Park project's porthole education initiative, which introduces young people to the Spanish Civil War, the International Brigades, and the lessons of international solidarity. By June 2026 the project had facilitated more than 1,000 visual artworks by young people. This will be the main installation at the exhibition. The exhibition is curated by Solidarity Park artistic director Rob MacDonald.
+- **Swedish:** Utställningen växer ur utbildningsinitiativet i projektet Solidarity Park, som introducerar unga till spanska inbördeskriget, Internationella brigaderna och lärdomarna av internationell solidaritet. Fram till juni 2026 hade projektet möjliggjort mer än 1 000 visuella verk av unga. Dessa utgör utställningens huvudinstallation. Utställningen är curerad av Solidarity Parks konstnärliga ledare Rob MacDonald.
 
 ### sections[3] › heading
 
@@ -508,7 +508,7 @@ Things worth watching for:
 ### sections[3] › body
 
 - **English:** As the tour rolls out across Europe, we invite young people and the public to add 1,000 more images to the exhibition, creating a movement of millions and millions of words against the rise of fascistic ideology.
-- **Swedish:** När turnén rullar ut över Europa bjuder vi in unga och allmänheten att lägga till 1 000 bilder till utställningen och skapa en rörelse av miljoner och åter miljoner ord mot den fascistiska ideologins frammarsch.
+- **Swedish:** När turnén reser över Europa bjuder vi in unga och allmänheten att lägga till 1 000 bilder till utställningen och skapa en rörelse av miljoner och åter miljoner ord mot den fascistiska ideologins frammarsch.
 
 ### sections[4] › heading
 
@@ -527,8 +527,8 @@ Things worth watching for:
 
 ### sections[5] › body
 
-- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of the Solidarity Park Association, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
-- **Swedish:** Den sex månader långa turnén leder fram till 90-årsdagen av sänkningen av fartyget Ciudad de Barcelona den 30 maj 1937 – en bortglömd historia om Internationella brigaderna i spanska inbördeskriget som inspirerade grundandet av Solidarity Park Association, dess monument för gemensamt deltagande och, sedan 2022, den årliga internationella festivalen för konst, minne och utbildning.
+- **English:** The six-month tour builds towards the 90th anniversary of the sinking of the ship Ciudad de Barcelona on 30 May 1937—a forgotten story of the International Brigades in the Spanish Civil War that inspired the launching of Associació Solidarity Park, its community participation monument, and, since 2022, the annual international festival of art, memory, and education.
+- **Swedish:** Den sex månader långa turnén leder fram till 90-årsdagen av sänkningen av fartyget Ciudad de Barcelona den 30 maj 1937 – en bortglömd historia om Internationella brigaderna i spanska inbördeskriget som inspirerade grundandet av Associació Solidarity Park, dess monument för gemensamt deltagande och, sedan 2022, den årliga internationella festivalen för konst, minne och utbildning.
 
 ## Contribute page
 
@@ -540,7 +540,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** We want to add your anti-fascist artistic voice to the Millions. Below we set out some conditions. Accepted works will form part of the physical touring exhibition main installation and/or parallel online galleries. We are especially interested in images and spoken words, but we are open to all artistic expressions. Where venues have space and time we will try to show your work or performance in real time.
-- **Swedish:** Vi vill lägga till din antifascistiska konstnärliga röst till Millions. Nedan anger vi några villkor. Antagna verk blir en del av den turnerande utställningens huvudinstallation och/eller de parallella galleriera online. Vi är särskilt intresserade av bilder och talat ord, men vi är öppna för alla konstnärliga uttryck. Där spelplatserna har plats och tid försöker vi visa ditt verk eller framförande live.
+- **Swedish:** Vi vill lägga till din antifascistiska konstnärliga röst till miljonerna. Nedan anger vi några villkor. Antagna verk blir en del av den turnerande utställningens huvudinstallation och/eller de parallella gallerierna online. Vi är särskilt intresserade av bilder och talat ord, men vi är öppna för alla konstnärliga uttryck. Där spelplatserna har plats och tid försöker vi visa ditt verk eller framförande live.
 
 ### revealTitle
 
@@ -549,7 +549,7 @@ Things worth watching for:
 
 ### heroPrimaryCta
 
-- **English:** Request link
+- **English:** Request a link
 - **Swedish:** Begär länk
 
 ### heroSecondaryCta
@@ -657,7 +657,7 @@ Things worth watching for:
 ### sections[3] › body
 
 - **English:** Please do not attach layered, print-ready, audio or video masters, or archives such as ZIP. Send review-quality material first. If your work is shortlisted we will ask for production-ready originals separately.
-- **Swedish:** Bifoga inte lagrade original, tryckfärdiga filer, ljud- eller videomasters, och inte arkiv som ZIP. Skicka granskningsmaterial först. Om ditt verk går vidare ber vi om produktionsfärdiga original separat.
+- **Swedish:** Bifoga inte original med lager, tryckfärdiga filer, ljud- eller videomasters, och inte arkiv som ZIP. Skicka granskningsmaterial först. Om ditt verk går vidare ber vi om produktionsfärdiga original separat.
 
 ### sections[4] › heading
 
@@ -1119,6 +1119,18 @@ Things worth watching for:
 - **English:** Profiles are being gathered and will be published here as they are confirmed.
 - **Swedish:** Profilerna samlas in och publiceras här efter hand som de bekräftas.
 
+## notFound
+
+### title
+
+- **English:** Page not found
+- **Swedish:** Sidan hittades inte
+
+### body
+
+- **English:** That page does not exist, or it has moved. The links below will get you back on track.
+- **Swedish:** Sidan finns inte, eller så har den flyttat. Länkarna nedan leder dig rätt igen.
+
 ## Links page
 
 ### heroTitle
@@ -1138,8 +1150,9 @@ Things worth watching for:
 
 ### groups › project › items › association › label
 
-- **English:** Association Solidarity Park
-- **Swedish:** Föreningen Solidarity Park
+- **English:** Associació Solidarity Park
+- **Swedish:** Associació Solidarity Park
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › project › items › association › note
 
@@ -1149,7 +1162,7 @@ Things worth watching for:
 ### groups › project › items › festival › label
 
 - **English:** Solidarity Park Festival, Catalunya
-- **Swedish:** Festivalen för Solidarity Park, Katalonien
+- **Swedish:** Solidarity Park Festival, Katalonien
 
 ### groups › project › items › festival › note
 
@@ -1186,7 +1199,8 @@ Things worth watching for:
 ### groups › memory › items › basqueChildren › label
 
 - **English:** Basque Children of '37 Association
-- **Swedish:** Föreningen Baskiska barn från -37
+- **Swedish:** Basque Children of '37 Association
+- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
 
 ### groups › memory › items › basqueChildren › note
 
@@ -1253,6 +1267,8 @@ English name. Others may simply never have been translated. Worth a look:
 - Home page — headline area › badges[1]
 - Home page — body › stats[3] › value
 - Home page — body › installationBadge
+- Links page › groups › project › items › association › label
 - Links page › groups › project › items › sunderland › label
 - Links page › groups › memory › items › ibmt › label
+- Links page › groups › memory › items › basqueChildren › label
 - Links page › groups › memory › items › alba › label

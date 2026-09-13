@@ -7,7 +7,7 @@ export const de: TranslationOverride = {
   meta: {
     tagline: "Europäische Wanderausstellung des Projekts Solidarity Park",
     description:
-      "Eine internationale Wanderausstellung über Kunst, Erinnerung und Bildung als Antwort auf den Aufstieg rechtsextremer und faschistischer Ideologien.",
+      "Eine internationale Wanderausstellung der Kunst, Erinnerung und Bildung als Antwort auf den Aufstieg rechtsextremer und faschistischer Ideologien.",
   },
   nav: {
     home: "Start",
@@ -18,7 +18,7 @@ export const de: TranslationOverride = {
     concept: "Konzept",
     contribute: "Beitragen",
     donate: "Spenden",
-    host: "Gastgeben",
+    host: "Ausrichten",
     gallery: "Galerie",
     collaborators: "Mitwirkende",
     links: "Links",
@@ -35,16 +35,16 @@ export const de: TranslationOverride = {
     close: "Schließen",
     opensInNewTab: "Wird in einem neuen Tab geöffnet",
     revealBody:
-      "Bestätigt, dass ihr ein Mensch seid, und wir zeigen euch die Adresse. So bleibt sie automatisierten Sammlern verborgen.",
+      "Bestätige, dass du ein Mensch bist, und wir zeigen dir die Adresse. So bleibt sie automatisierten Sammlern verborgen.",
     revealButton: "E-Mail-Adresse anzeigen",
     revealPending: "Wird geprüft…",
-    revealError: "Die Prüfung wurde nicht abgeschlossen. Bitte versucht es erneut.",
+    revealError: "Die Prüfung wurde nicht abgeschlossen. Bitte versuch es erneut.",
   },
   hero: {
-    title: "Eine Million Worte gegen den Faschismus",
+    title: "Eine Million Worte gegen Faschismus",
     subtitle: "Europäische Wanderausstellung des Projekts Solidarity Park.",
     artworkCredit: "Animation und Logo: Roberto Ford",
-    lede: "Wenn ein Bild tausend Worte sagt, was schaffen dann tausend Künstlerinnen und Künstler? Eine Million Worte, jedes aus einer einzigartigen Perspektive, die zu einer internationalen Wanderausstellung gegen den Faschismus werden.",
+    lede: "Wenn ein Bild tausend Worte sagt, was schaffen dann tausend Künstler*innen? Eine Million Worte, jedes aus einer einzigartigen Perspektive, die zu einer internationalen Wanderausstellung gegen Faschismus werden.",
     primaryCta: "Tourdaten",
     secondaryCta: "Kunstwerk beitragen",
     badges: [
@@ -57,7 +57,7 @@ export const de: TranslationOverride = {
     ],
     statusLines: [
       "Auf Tour zum 90. Jahrestag des Untergangs der Ciudad de Barcelona",
-      "Inspiriert von der Artists International Association und dem Erbe antifaschistischer Solidarität",
+      "Inspiriert von der Artists’ International Association und dem Erbe antifaschistischer Solidarität",
     ],
   },
   home: {
@@ -65,28 +65,28 @@ export const de: TranslationOverride = {
     conceptTitle: "Tausend junge Kunstschaffende. Eine Million Worte gegen den Faschismus.",
     conceptBody: [
       "Wenn ein Bild tausend Worte sagt, schaffen tausend Kunstschaffende eine Million Worte. Die Ausstellung bringt diese Stimmen als internationale Antwort auf den Aufstieg rechtsextremer und faschistischer Ideologien zusammen.",
-      "Bis Juni 2026 wird das Projekt Solidarity Park über seine Bildungsinitiative zum Spanischen Bürgerkrieg, zu den Internationalen Brigaden und zu den Lehren internationaler Solidarität mehr als 1.000 visuelle Werke junger Menschen ermöglicht haben.",
-      "Die Tour 2027 führt zum 90. Jahrestag des Untergangs der Ciudad de Barcelona am 30. Mai 2027 — die Geschichte, die die Arbeit der Vereinigung Solidarity Park in Kunst, Erinnerung und Bildung mit angestoßen hat.",
+      "Bis Juni 2026 hatte das Projekt Solidarity Park über seine Bildungsinitiative zum Spanischen Bürgerkrieg, zu den Internationalen Brigaden und zu den Lehren internationaler Solidarität mehr als 1.000 visuelle Werke junger Menschen ermöglicht.",
+      "Die Tour 2027 führt zum 90. Jahrestag des Untergangs der Ciudad de Barcelona am 30. Mai 2027 — die Geschichte, die die Arbeit der Associació Solidarity Park in Kunst, Erinnerung und Bildung mit angestoßen hat.",
     ],
     stats: [
       { value: "1.000+", label: "Werke junger Kunstschaffender" },
-      { value: "4 x 4 m", label: "Plan des Solidaritätsraums" },
+      { value: "4 x 4 m", label: "Plan des Solidarity Rooms" },
       { value: "2027", label: "Jubiläumstour" },
     ],
     installationBadge: "Installation",
-    installationTitle: "Der Solidaritätsraum steht im Zentrum der Ausstellung.",
+    installationTitle: "Der Solidarity Room steht im Zentrum der Ausstellung.",
     installationBody:
-      "Im Inneren ist der Raum als wandfüllende Präsentation von 1.000 postkartengroßen Bildern geplant, die durch das Projekt Solidarity Park entstanden sind. Draußen können die zur Straße gewandten Wände weitere 1.000 neue Bilder sammeln, die während der Tour von Besucher:innen, Schulen, Hochschulen und Gemeinschaftsteilnehmenden geschaffen werden.",
+      "Im Inneren ist der Raum als wandfüllende Präsentation von 1.000 postkartengroßen Bildern geplant, die durch das Projekt Solidarity Park entstanden sind. Draußen können an den Wänden zur Straßenseite hin weitere 1.000 neue Bilder Platz finden, die während der Tour von Besucher*innen, Schulen, Hochschulen und Gemeinschaftsteilnehmenden geschaffen werden.",
     commissionsTitle: "Internationale Auftragsarbeiten",
     commissionsBody:
-      "Rund um den Solidaritätsraum entsteht ein kuratiertes Programm, inspiriert von Millionen Geschichten gegen den Faschismus, mit Film, Animation, Skulptur, Malerei, Illustration und Poesie.",
+      "Rund um den Solidarity Room entsteht ein kuratiertes Programm, inspiriert von Millionen Geschichten gegen den Faschismus, mit Film, Animation, Skulptur, Malerei, Illustration und Poesie.",
     tourBadge: "Tourroute",
     tourTitle: "Internationale Tourdaten",
     tourBody: "Termine und Mitwirkende stehen unter Vorbehalt endgültiger Vereinbarungen und Bestätigungen.",
-    hostBadge: "Ausstellung gastgeben",
-    hostTitle: "Bringen Sie die Tour an eine Schule, Gewerkschaft, einen Veranstaltungsort, ein Festival oder einen zivilgesellschaftlichen Raum.",
+    hostBadge: "Ausstellung zeigen",
+    hostTitle: "Bring die Tour an eine Schule, in eine Gewerkschaft, an einen Veranstaltungsort, ein Festival oder in einen zivilgesellschaftlichen Raum.",
     hostBody:
-      "Jede Veranstaltung kann die Kerninstallation mit lokaler Geschichte der Internationalen Brigaden, Workshops, Livemusik, Poesie und lokalen antifaschistischen Kunstschaffenden verbinden, wo der Platz es zulässt.",
+      "Jede Veranstaltung kann die Kerninstallation mit lokaler Geschichte der Internationalen Brigaden, Workshops, Livemusik, Poesie und lokalen antifaschistischen Künstler*innen verbinden, wo der Platz es zulässt.",
     hostCta: "Buchungsanfrage senden",
     contributeCta: "Kunstwerk beitragen",
   },
@@ -94,9 +94,9 @@ export const de: TranslationOverride = {
     heroTitle:
       "Million Words Against Fascism Tour.",
     heroSubtitle:
-      "Die Tour entsteht in Zusammenarbeit mit Kunstschaffenden aus aller Welt, Schulen, Kunsthochschulen, Gewerkschaften, Kunstorten, Gruppen der Internationalen Brigaden, Dichterinnen und Dichtern, politischen Chören und Solidaritätskampagnen – alle auf dem Weg zum Solidarity Park Festival in Katalonien im Mai 2027.",
+      "Die Tour entsteht in Zusammenarbeit mit Kunstschaffenden aus aller Welt, Schulen, Kunsthochschulen, Gewerkschaften, Kunstorten, Gruppen der Internationalen Brigaden, Dichter*innen, politischen Chören und Solidaritätskampagnen – alle auf dem Weg zum Solidarity Park Festival in Katalonien im Mai 2027.",
     heroPrimaryCta: "Route ansehen",
-    heroSecondaryCta: "Ausstellung gastgeben",
+    heroSecondaryCta: "Ausstellung zeigen",
     routeBadge: "Hinweise zur Route",
     routeTitle:
       "Orte",
@@ -117,11 +117,11 @@ export const de: TranslationOverride = {
     sections: [
       {
         heading: "Eine Million Worte",
-        body: "Es heißt, ein Bild sage mehr als tausend Worte. Wenn das stimmt, schaffen tausend junge internationale Kunstschaffende auf dieser Ausstellungstour eine Million Worte. Jeder Beitrag ist ihr eigenes kritisches historisches Verständnis, und zusammen bilden sie eine internationale, kollektive Antwort auf rechtsextreme und faschistische Ideologien von heute.",
+        body: "Es heißt, ein Bild sage mehr als tausend Worte. Wenn das stimmt, schaffen tausend junge internationale Künstler*innen auf dieser Ausstellungstour eine Million Worte. Jeder Beitrag ist ihr eigenes kritisches historisches Verständnis, und zusammen bilden sie eine internationale, kollektive Antwort auf rechtsextreme und faschistische Ideologien von heute.",
       },
       {
         heading: "Verwurzelt im Projekt Solidarity Park",
-        body: "Die Ausstellung geht aus der Bildungsinitiative des Projekts Solidarity Park hervor, die jungen Menschen den Spanischen Bürgerkrieg, die Internationalen Brigaden und die Lehren internationaler Solidarität nahebringt. Bis Juni 2026 hat das Projekt mehr als 1.000 visuelle Arbeiten junger Menschen ermöglicht. Diese bilden die Hauptinstallation der Ausstellung. Kuratiert wird die Ausstellung vom künstlerischen Leiter von Solidarity Park, Rob MacDonald.",
+        body: "Die Ausstellung geht aus der Bildungsinitiative des Projekts Solidarity Park hervor, die jungen Menschen den Spanischen Bürgerkrieg, die Internationalen Brigaden und die Lehren internationaler Solidarität nahebringt. Bis Juni 2026 hatte das Projekt mehr als 1.000 visuelle Arbeiten junger Menschen ermöglicht. Diese bilden die Hauptinstallation der Ausstellung. Kuratiert wird die Ausstellung vom künstlerischen Leiter von Solidarity Park, Rob MacDonald.",
       },
       {
         heading: "Tausend weitere Bilder",
@@ -133,7 +133,7 @@ export const de: TranslationOverride = {
       },
       {
         heading: "Auf dem Weg zum Solidarity Park Festival am 30. Mai 2027 in Katalonien",
-        body: "Die sechsmonatige Tour führt auf den 90. Jahrestag der Versenkung des Schiffes Ciudad de Barcelona am 30. Mai 1937 zu – eine vergessene Geschichte der Internationalen Brigaden im Spanischen Bürgerkrieg, die zur Gründung der Solidarity Park Association, ihres Denkmals der gemeinschaftlichen Beteiligung und, seit 2022, des jährlichen internationalen Festivals für Kunst, Erinnerung und Bildung führte.",
+        body: "Die sechsmonatige Tour führt auf den 90. Jahrestag der Versenkung des Schiffes Ciudad de Barcelona am 30. Mai 1937 zu – eine vergessene Geschichte der Internationalen Brigaden im Spanischen Bürgerkrieg, die zur Gründung der Associació Solidarity Park, ihres Denkmals der gemeinschaftlichen Beteiligung und, seit 2022, des jährlichen internationalen Festivals für Kunst, Erinnerung und Bildung führte.",
       },
     ],
   },
@@ -141,20 +141,20 @@ export const de: TranslationOverride = {
     heroTitle:
       "Bring deine Kunst ein",
     heroSubtitle:
-      "Wir wollen deine antifaschistische künstlerische Stimme zu den Millions hinzufügen. Im Folgenden nennen wir einige Bedingungen. Angenommene Arbeiten werden Teil der Hauptinstallation der Wanderausstellung und/oder der begleitenden Online-Galerien. Besonders interessieren uns Bilder und gesprochenes Wort, wir sind aber offen für alle künstlerischen Ausdrucksformen. Wo Veranstaltungsorte Platz und Zeit haben, versuchen wir, deine Arbeit oder Performance live zu zeigen.",
+      "Wir wollen deine antifaschistische künstlerische Stimme zu den Millionen hinzufügen. Im Folgenden nennen wir einige Bedingungen. Angenommene Arbeiten werden Teil der Hauptinstallation der Wanderausstellung und/oder der begleitenden Online-Galerien. Besonders interessieren uns Bilder und gesprochenes Wort, wir sind aber offen für alle künstlerischen Ausdrucksformen. Wo Veranstaltungsorte Platz und Zeit haben, versuchen wir, deine Arbeit oder Performance live zu zeigen.",
     revealTitle: "Schick uns deine Arbeit",
     heroPrimaryCta: "Link anfordern",
     heroSecondaryCta: "Tourdaten",
     notesTitle: "Hinweise zum Beitrag",
     formTitle: "Sicheren Beitrags-Link anfordern",
     formDescription:
-      "Geben Sie die E-Mail-Adresse ein, die mit dem Beitrag verknüpft werden soll. Über den Link können Sie einen aktiven Vorschau-Beitrag für die Tour erstellen oder aktualisieren.",
+      "Gib die E-Mail-Adresse ein, die mit dem Beitrag verknüpft werden soll. Über den Link kannst du einen aktiven Vorschau-Beitrag für die Tour erstellen oder aktualisieren.",
     emailLabel: "E-Mail",
     submitButton: "Sicheren Beitrags-Link senden",
     conditionsCta: "Beitragsbedingungen lesen",
     guidelines: [
-      "Die Tour kann lokale antifaschistische Kunstschaffende einbeziehen, wo der Raum es zulässt, neben dem Solidaritätsraum und den international beauftragten Arbeiten.",
-      "Kunstschaffende, Dichterinnen und Dichter, Filmemacher, Animatorinnen, Bildhauer, Malerinnen und Mitwirkende aus der Nachbarschaft können Arbeiten oder Links per E-Mail schicken.",
+      "Die Tour kann lokale antifaschistische Kunstschaffende einbeziehen, wo der Raum es zulässt, neben dem Solidarity Room und den international beauftragten Arbeiten.",
+      "Kunstschaffende, Dichter*innen, Filmemacher*innen, Animator*innen, Bildhauer*innen, Maler*innen und Mitwirkende aus der Nachbarschaft können Arbeiten oder Links per E-Mail schicken.",
       "Schick Bilder und Audio als JPG, PNG, WebP, PDF, MP3, M4A oder WAV. Video und alles Große bitte als Link teilen.",
       "Halte Anhänge insgesamt unter etwa 20 MB und schick für alles Größere einen Link. Bei Arbeiten in der engeren Wahl fragen wir produktionsfertige Originale gesondert an.",
       "Gehört deine Arbeit zu einer teilnehmenden Schule, Hochschule oder Organisation, frag bitte nach einem mit deiner Einrichtung verknüpften Google-Drive-Link, damit Versand und Prüfung schneller gehen.",
@@ -173,7 +173,7 @@ export const de: TranslationOverride = {
       },
       {
         heading: "Anhänge klein halten, oder einen Link schicken",
-        body: "Halte Anhänge insgesamt unter etwa 20 MB, da größere Nachrichten oft abgewiesen werden, bevor sie bei uns ankommen. Darüber schick stattdessen einen Link. Für einen Link gibt es keine Größenbeschränkung.",
+        body: "Halte Anhänge insgesamt unter etwa 20 MB, da größere Nachrichten oft abgewiesen werden, bevor sie bei uns ankommen. Schick stattdessen einen Link. Für einen Link gibt es keine Größenbeschränkung.",
       },
       {
         heading: "Was du nicht schicken solltest",
@@ -190,57 +190,57 @@ export const de: TranslationOverride = {
     ],
     uploaderTitle: "Der Uploader",
     uploaderBody:
-      "Beiträge erfolgen über einen sicheren E-Mail-Link. Fordern Sie auf der Seite „Beitragen“ einen Link an; beim Öffnen können Sie einen aktiven Vorschau-Beitrag erstellen oder aktualisieren.",
+      "Beiträge erfolgen über einen sicheren E-Mail-Link. Fordere auf der Seite „Beitragen“ einen Link an; beim Öffnen kannst du einen aktiven Vorschau-Beitrag erstellen oder aktualisieren.",
     uploaderCta: "Zu „Beitragen“",
   },
   donate: {
     heroTitle: "Die Tour unterstützen",
     heroSubtitle:
-      "Eine Million Worte gegen den Faschismus ist ein gemeinnütziges Wanderprojekt. Spenden helfen, Transport, Aufbau, Materialien und die Teilnahme junger Kunstschaffender und Gemeinschaftsgruppen zu decken.",
+      "Eine Million Worte gegen Faschismus ist ein gemeinnütziges Wanderprojekt. Spenden helfen, Transport, Aufbau, Materialien und die Teilnahme junger Kunstschaffender und Gruppen zu decken.",
     introTitle: "Warum spenden",
     introBody:
-      "Die Ausstellung reist mit einem zentralen Solidaritätsraum, straßenseitiger Postkartenaktion und einem Programm beauftragter Arbeiten durch Europa. Ihre Unterstützung hält die Tour für Schulen, Hochschulen, Gewerkschaften und Gemeinschaftsorte kostenlos oder kostengünstig.",
-    usesTitle: "Wofür Ihre Unterstützung verwendet wird",
+      "Die Ausstellung reist mit einem zentralen Solidarity Room, einer Postkartenaktion und einem Programm beauftragter Arbeiten durch Europa. Deine Unterstützung hält die Tour für Schulen, Hochschulen, Gewerkschaften und Gemeinschaftsorte kostenlos oder kostengünstig.",
+    usesTitle: "Wofür deine Unterstützung verwendet wird",
     uses: [
       "Transport und Aufbau der Ausstellung zwischen den Orten.",
-      "Materialien für die 1.000 postkartengroßen Werke und die straßenseitige Aktion.",
+      "Materialien für die 1.000 postkartengroßen Werke und die Aktion an der Straße.",
       "Teilnahmekosten für Schulen, Hochschulen und Gemeinschaftsgruppen.",
-      "Beauftragte Arbeiten von antifaschistischen Kunstschaffenden, Dichter:innen und Filmemacher:innen.",
+      "Beauftragte Arbeiten von antifaschistischen Kunstschaffenden, Dichter*innen und Filmemacher*innen.",
     ],
     ctaTitle: "Spenden",
     ctaBody:
-      "Hier wird ein Spendenlink veröffentlicht. Nehmen Sie in der Zwischenzeit Kontakt auf, um über die Unterstützung der Tour oder eine Partnerschaft für eine Station in Ihrer Nähe zu sprechen.",
+      "Hier wird ein Spendenlink veröffentlicht. Nimm in der Zwischenzeit Kontakt auf, um über die Unterstützung der Tour oder eine Partnerschaft für eine Station in deiner Nähe zu sprechen.",
     ctaButton: "Projekt kontaktieren",
     ctaPending: "Spendenlink demnächst.",
   },
   host: {
-    heroTitle: "Eine Million Worte gegen den Faschismus gastgeben.",
+    heroTitle: "Eine Million Worte gegen Faschismus ausrichten.",
     heroSubtitle:
-      "Teile die wichtigsten Angaben zu eurem Ort, Publikum, Bildungspartnern und Wunschterminen mit uns. Wir melden uns so schnell wie möglich.",
-    proposalTitle: "Was in eure Anfrage gehört",
+      "Teile die wichtigsten Angaben zu deinem Ort, Publikum, Bildungspartnern und Wunschterminen mit uns. Wir melden uns so schnell wie möglich.",
+    proposalTitle: "Was in deine Anfrage gehört",
     proposalItems: [
-      "Eure Organisation oder euer Veranstaltungsort und wem wir antworten sollen.",
-      "Wo ihr seid und um was für einen Raum es sich handelt – Galerie, Bibliothek, Schule, Gewerkschaftshaus, Festival oder anderes.",
-      "Die Termine oder den Zeitraum, den ihr in Betracht zieht.",
+      "Deine Organisation oder dein Veranstaltungsort und wem wir antworten sollen.",
+      "Wo du bist und um was für einen Raum es sich handelt – Galerie, Bibliothek, Schule, Gewerkschaftshaus, Festival oder anderes.",
+      "Die Termine oder den Zeitraum, den du in Betracht ziehst.",
       "Die Größe des Raums: Wandlänge, Raummaße und eventuelle zur Straße gerichtete Wände.",
       "Öffnungszeiten, Zugang für Schulen oder Gruppen und Barrierefreiheitsbedarf.",
-      "Ungefähr wie viele Besucherinnen und Besucher ihr erwartet.",
-      "Lokale Geschichte der Internationalen Brigaden, Partner oder Programmideen, die ihr einbringen möchtet.",
+      "Ungefähr wie viele Besucher*innen du erwartest.",
+      "Lokale Geschichte der Internationalen Brigaden, Partner oder Programmideen, die du einbringen möchtest.",
     ],
-    revealTitle: "Schickt uns eure Anfrage",
+    revealTitle: "Schick uns deine Anfrage",
     heroPrimaryCta: "Anfrage starten",
     heroSecondaryCta: "Tourdaten",
-    formatsTitle: "Formate für Gastgeber",
+    formatsTitle: "Formate für Gastgeber*innen",
     leadTimeTitle: "Flexible Formate",
     leadTimeBody:
       "Format und Dauer der Veranstaltungen sind flexibel und werden individuell mit jedem Ort und seinem Programm vereinbart.",
-    formTitle: "Anfrageformular für Gastgeber",
+    formTitle: "Anfrageformular für Gastgeber*innen",
     formDescription:
-      "Erzählen Sie uns von Ort, Publikum, Bildungsverbindungen, lokaler Geschichte und den Terminen, die Sie in Betracht ziehen.",
-    conditionsCta: "Bedingungen für Gastgeber lesen",
+      "Erzähl uns von Ort, Publikum, Bildungsverbindungen, lokaler Geschichte und den Terminen, die du in Betracht ziehst.",
+    conditionsCta: "Bedingungen für Gastgeber*innen lesen",
     features: [
-      "Im Zentrum der Ausstellung steht der Solidaritätsraum, eine Installation postkartengroßer Werke aus dem Projekt Solidarity Park.",
-      "Nach außen gerichtete Wände können während der Tour neue Postkarten von Besucher:innen, Schulen und Gemeinschaftsteilnehmenden sammeln.",
+      "Im Zentrum der Ausstellung steht der Solidarity Room, eine Installation postkartengroßer Werke aus dem Projekt Solidarity Park.",
+      "Nach außen gerichtete Wände können während der Tour neue Postkarten von Besucher*innen, Schulen und weiteren Teilnehmenden sammeln.",
       "Veranstaltungsorte können lokale Geschichte, Auftragsarbeiten, Poesie, Musik, Workshops und lokale antifaschistische Arbeit ergänzen, wo der Platz es zulässt.",
     ],
     fields: {
@@ -254,13 +254,13 @@ export const de: TranslationOverride = {
       dateRange: "Bevorzugter Zeitraum",
       dateRangePlaceholder: "z. B. September 2026",
       expectedAudience: "Erwartetes Publikum",
-      expectedAudiencePlaceholder: "z. B. 150 Besucher:innen",
+      expectedAudiencePlaceholder: "z. B. 150 Besucher*innen",
       spaceDetails: "Angaben zu Raum und Zugang",
       spaceDetailsPlaceholder:
         "Raumgröße, Wandlänge, straßenseitige Bereiche, öffentliche Öffnungszeiten, Schulzugang, Ausstattung oder Barrierefreiheitsbedarf.",
       message: "Angaben zur Anfrage",
       messagePlaceholder:
-        "Erzählen Sie uns, was Sie ausrichten möchten, jede lokale Geschichte der Internationalen Brigaden, Programmideen und welche Unterstützung Sie brauchen.",
+        "Erzähl uns, was du ausrichten möchtest, jede lokale Geschichte der Internationalen Brigaden, Programmideen und welche Unterstützung du brauchst.",
       submit: "Gastgeber-Anfrage senden",
       required: "erforderlich",
     },
@@ -275,15 +275,15 @@ export const de: TranslationOverride = {
     ],
   },
   hostConditions: {
-    heroTitle: "Bedingungen für Gastgeber",
+    heroTitle: "Bedingungen für Gastgeber*innen",
     heroSubtitle:
       "Ein Überblick, was das Ausrichten einer Tourstation bedeutet. Die endgültigen Bedingungen werden mit jedem Ort einzeln vereinbart.",
     intro:
-      "Diese Bedingungen geben Partnern ein Gefühl dafür, was zum Ausrichten der Ausstellung nötig ist. Nichts davon ist ein fester Vertrag — jede Station wird durch schriftliche Vereinbarung bestätigt.",
+      "Diese Bedingungen geben Partner*innen ein Gefühl dafür, was zum Ausrichten der Ausstellung nötig ist. Nichts davon ist ein fester Vertrag — jede Station wird durch schriftliche Vereinbarung bestätigt.",
     sections: [
       {
         heading: "Raum",
-        body: "Die Ausstellung passt sich dem verfügbaren Raum an. Wandfläche für den Solidaritätsraum, Teilnehmer-Postkarten sowie lokale oder beauftragte Arbeiten wird mit jedem Ort vereinbart.",
+        body: "Die Ausstellung passt sich dem verfügbaren Raum an. Wandfläche für den Solidarity Room, Teilnehmer*innen-Postkarten sowie lokale oder beauftragte Arbeiten werden mit jedem Ort vereinbart.",
       },
       {
         heading: "Programm und Dauer",
@@ -291,7 +291,7 @@ export const de: TranslationOverride = {
       },
       {
         heading: "Lokale Partnerschaft",
-        body: "Gastgeber sind eingeladen, lokale Geschichte der Internationalen Brigaden, Workshops, Livemusik, Poesie und lokale antifaschistische Kunstschaffende zu ergänzen. Das Projekt kann helfen, Sie mit regionalen Partnern zu verbinden.",
+        body: "Gastgeber*innen sind eingeladen, lokale Geschichte der Internationalen Brigaden, Workshops, Livemusik, Poesie und lokale antifaschistische Kunstschaffende zu ergänzen. Das Projekt kann helfen, dich mit regionalen Partnern zu verbinden.",
       },
       {
         heading: "Sorgfalt und Versicherung",
@@ -299,11 +299,11 @@ export const de: TranslationOverride = {
       },
       {
         heading: "Kosten",
-        body: "Das Projekt strebt an, das Gastgeben für Schulen, Gewerkschaften und Gemeinschaftsorte kostenlos oder kostengünstig zu halten. Transport, Aufbau und geteilte Kosten werden während Ihrer Anfrage besprochen.",
+        body: "Das Projekt möchte die Ausrichtung für Schulen, Gewerkschaften und Gemeinschaftsorte kostenlos oder kostengünstig halten. Transport, Aufbau und geteilte Kosten werden während deiner Anfrage besprochen.",
       },
     ],
     ctaTitle: "Bereit für eine Anfrage?",
-    ctaBody: "Senden Sie die Eckdaten zu Ihrem Ort und Ihren Wunschterminen, und das Team meldet sich.",
+    ctaBody: "Sende die Eckdaten zu deinem Ort und deinen Wunschterminen, und das Team meldet sich.",
     ctaButton: "Gastgeber-Anfrage starten",
   },
   gallery: {
@@ -318,7 +318,7 @@ export const de: TranslationOverride = {
   collaborators: {
     heroTitle: "Mitwirkende",
     heroSubtitle:
-      "Die Kunstschaffenden, Historikerinnen, Bildungsarbeiter und Organisationen, die Ausstellung und Tour aufbauen.",
+      "Die Kunstschaffenden, Historiker*innen, Beschäftigte im Bildungsbereich und Organisationen, die Ausstellung und Tour aufbauen.",
     empty: "Die Profile werden gesammelt und hier veröffentlicht, sobald sie bestätigt sind.",
   },
 
@@ -336,8 +336,8 @@ export const de: TranslationOverride = {
       project: {
         title: "Das Projekt",
         items: {
-          association: { label: "Vereinigung Solidarity Park", note: "Die Organisation hinter der Ausstellung." },
-          festival: { label: "Festival von Solidarity Park, Katalonien", note: "Das Festival, auf das die Tour 2027 hinführt." },
+          association: { label: "Associació Solidarity Park", note: "Die Organisation hinter der Ausstellung." },
+          festival: { label: "Solidarity Park Festival, Katalonien", note: "Das Festival, auf das die Tour 2027 hinführt." },
           sunderland: { label: "Solidarity Sunderland History Hub", note: "Die Interbrigadisten aus Sunderland, die Schiffe und die baskischen Kinder von 1937." },
         },
       },
@@ -345,7 +345,7 @@ export const de: TranslationOverride = {
         title: "Geschichte und Erinnerung",
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "Die Erinnerung an die Internationalen Brigaden wachhalten." },
-          basqueChildren: { label: "Vereinigung Baskische Kinder von '37", note: "Die Geschichte der während des Spanischen Bürgerkriegs evakuierten Kinder." },
+          basqueChildren: { label: "Basque Children of '37 Association", note: "Die Geschichte der während des Spanischen Bürgerkriegs evakuierten Kinder." },
           alba: { label: "Abraham Lincoln Brigade Archives", note: "Die US-amerikanischen Freiwilligen der Internationalen Brigaden und das Archiv, das ihre Geschichte bewahrt." },
         },
       },
@@ -353,7 +353,7 @@ export const de: TranslationOverride = {
         title: "Mitmachen",
         items: {
           contribute: { label: "Kunstwerk beitragen", note: "Vorschaumaterial über einen sicheren Link senden." },
-          host: { label: "Ausstellung gastgeben", note: "Bringen Sie eine Tourstation an Ihren Ort." },
+          host: { label: "Ausstellung ausrichten", note: "Bring eine Tourstation an deinen Ort." },
         },
       },
     },

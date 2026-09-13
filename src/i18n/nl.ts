@@ -16,8 +16,8 @@ export const nl: TranslationOverride = {
     menu: "Menu",
     tour: "Tour",
     concept: "Concept",
-    contribute: "Bijdragen",
-    donate: "Doneren",
+    contribute: "Draag bij",
+    donate: "Doneer",
     host: "Gastheer zijn",
     gallery: "Galerij",
     collaborators: "Medewerkers",
@@ -25,7 +25,7 @@ export const nl: TranslationOverride = {
   },
   langSwitcher: { label: "Kies taal", current: "Huidige taal" },
   common: {
-    skipToContent: "Naar de inhoud",
+    skipToContent: "Direct naar de inhoud",
     viewAllDates: "Alle data bekijken",
     learnMore: "Meer weten",
     readConditions: "Lees de voorwaarden",
@@ -44,7 +44,7 @@ export const nl: TranslationOverride = {
     title: "Een miljoen woorden tegen het fascisme",
     subtitle: "Europese reizende tentoonstelling van het project Solidarity Park.",
     artworkCredit: "Animatie en logo: Roberto Ford",
-    lede: "Als een beeld duizend woorden zegt, wat maken dan duizend kunstenaars? Een miljoen woorden, elk vanuit een uniek perspectief, samen een internationale reizende tentoonstelling tegen het fascisme.",
+    lede: "Als een beeld meer zegt dan duizend woorden, wat maken dan duizend kunstenaars? Een miljoen woorden, elk vanuit een uniek perspectief, samen een internationale reizende tentoonstelling tegen het fascisme.",
     primaryCta: "Tourdata",
     secondaryCta: "Kunstwerk bijdragen",
     badges: [
@@ -56,8 +56,8 @@ export const nl: TranslationOverride = {
       "Catalonië 2027",
     ],
     statusLines: [
-      "Op tour naar de 90e verjaardag van het zinken van de Ciudad de Barcelona",
-      "Geïnspireerd door de Artists International Association en de erfenis van antifascistische solidariteit",
+      "Op tour naar de 90e verjaardag van het vergaan van de Ciudad de Barcelona",
+      "Geïnspireerd door de Artists’ International Association en de traditie van antifascistische solidariteit",
     ],
   },
   home: {
@@ -65,21 +65,21 @@ export const nl: TranslationOverride = {
     conceptTitle: "Duizend jonge kunstenaars. Een miljoen woorden tegen het fascisme.",
     conceptBody: [
       "Als een beeld duizend woorden zegt, maken duizend kunstenaars een miljoen woorden. De tentoonstelling brengt deze stemmen samen als een internationaal antwoord op de opkomst van extreemrechtse en fascistische ideologieën.",
-      "Tegen juni 2026 zal het project Solidarity Park via zijn educatieve initiatief over de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit meer dan 1.000 beeldende werken van jongeren hebben gefaciliteerd.",
-      "De tour van 2027 werkt toe naar de 90e verjaardag van het zinken van de Ciudad de Barcelona op 30 mei 2027, het verhaal dat het werk van de Vereniging Solidarity Park in kunst, herinnering en educatie mede op gang bracht.",
+      "Tegen juni 2026 had het project Solidarity Park via zijn educatieve initiatief over de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit meer dan 1.000 beeldende werken van jongeren voortgebracht.",
+      "De tour van 2027 werkt toe naar de 90e verjaardag van het vergaan van de Ciudad de Barcelona op 30 mei 2027, de geschiedenis die het werk van de Associació Solidarity Park in kunst, herinnering en educatie op gang bracht.",
     ],
     stats: [
       { value: "1.000+", label: "werken van jonge kunstenaars" },
-      { value: "4 x 4 m", label: "plan van de Solidariteitsruimte" },
+      { value: "4 x 4 m", label: "plattegrond van de Solidarity Room" },
       { value: "2027", label: "jubileumtour" },
     ],
     installationBadge: "Installatie",
-    installationTitle: "De Solidariteitsruimte staat in het hart van de tentoonstelling.",
+    installationTitle: "De Solidarity Room staat in het hart van de tentoonstelling.",
     installationBody:
-      "Binnen is de ruimte opgezet als een wandvullende presentatie van 1.000 ansichtkaartformaat-beelden die via het project Solidarity Park zijn gemaakt. Buiten kunnen de straatgerichte muren nog eens 1.000 nieuwe beelden verzamelen, gemaakt door bezoekers, scholen, hogescholen en deelnemers uit de gemeenschap tijdens de tour.",
+      "Binnen is de ruimte opgezet als een wandvullende presentatie van 1.000 ansichtkaartformaat-beelden die door het project Solidarity Park zijn gemaakt. Op de muren aan de buitenzijde passen nog eens 1.000 nieuwe beelden, gemaakt door bezoekers, scholen, hogescholen en deelnemers uit de plaatselijke gemeenschap tijdens de tour.",
     commissionsTitle: "Internationale kunstopdrachten",
     commissionsBody:
-      "Rond de Solidariteitsruimte komt een samengesteld programma, geïnspireerd op miljoenen verhalen tegen het fascisme, met film, animatie, beeldhouwkunst, schilderkunst, illustratie en poëzie.",
+      "Rond de Solidarity Room komt een gevarieerd programma, geïnspireerd door miljoenen verhalen tegen het fascisme, met film, animatie, beeldhouwkunst, schilderkunst, illustraties en poëzie.",
     tourBadge: "Tourroute",
     tourTitle: "Internationale tourdata",
     tourBody: "Data en medewerkers zijn onder voorbehoud van definitieve afspraken en bevestigingen.",
@@ -94,7 +94,7 @@ export const nl: TranslationOverride = {
     heroTitle:
       "Million Words Against Fascism-tournee.",
     heroSubtitle:
-      "De tournee komt tot stand in samenwerking met kunstenaars over de hele wereld, scholen, kunstacademies, vakbonden, kunstlocaties, groepen rond de Internationale Brigades, dichters, radicale koren en solidariteitscampagnes – allemaal op weg naar het Solidarity Park Festival in Catalonië in mei 2027.",
+      "De tournee komt tot stand in samenwerking met kunstenaars over de hele wereld, scholen, kunstacademies, vakbonden, kunstlocaties, groepen rond de Internationale Brigades, dichters, strijdkoren en solidariteitscampagnes – allemaal op weg naar het Solidarity Park Festival in Catalonië in mei 2027.",
     heroPrimaryCta: "Route bekijken",
     heroSecondaryCta: "Gastheer zijn",
     routeBadge: "Route-opmerkingen",
@@ -105,7 +105,7 @@ export const nl: TranslationOverride = {
     stop: "Halte",
     pause: "Pauze",
     tbc: "Nog te bevestigen",
-    ctaEyebrow: "De route wordt afgerond met partners in heel Europa",
+    ctaEyebrow: "De route wordt gerealiseerd met partners in heel Europa",
     ctaTitle: "Interesse om een toekomstig evenement te hosten of eraan mee te werken?",
     ctaButton: "Een boekingsaanvraag starten",
     status: { Booked: "Bevestigd", "In agreement": "In overleg", Break: "Pauze" },
@@ -113,7 +113,7 @@ export const nl: TranslationOverride = {
   concept: {
     heroTitle: "Het concept",
     heroSubtitle:
-      "Duizend jonge kunstenaars antwoorden op de opkomst van het fascisme, samengebracht in één reizende tentoonstelling waar 1.000 anderen hun kunst aan toevoegen.",
+      "Duizend jonge kunstenaars beantwoorden de opkomst van het fascisme, samengebracht in één reizende tentoonstelling waar 1.000 anderen hun kunst aan toevoegen.",
     sections: [
       {
         heading: "Een miljoen woorden",
@@ -121,7 +121,7 @@ export const nl: TranslationOverride = {
       },
       {
         heading: "Geworteld in het project Solidarity Park",
-        body: "De tentoonstelling komt voort uit het educatieve initiatief van het project Solidarity Park, dat jongeren kennis laat maken met de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit. In juni 2026 heeft het project meer dan 1.000 visuele werken van jongeren mogelijk gemaakt. Deze vormen de hoofdinstallatie van de tentoonstelling. De tentoonstelling is samengesteld door Solidarity Park-artistiek directeur Rob MacDonald.",
+        body: "De tentoonstelling komt voort uit het educatieve initiatief van het project Solidarity Park, dat jongeren kennis laat maken met de Spaanse Burgeroorlog, de Internationale Brigades en de lessen van internationale solidariteit. Tegen juni 2026 had het project meer dan 1.000 visuele werken van jongeren mogelijk gemaakt. Deze vormen de hoofdinstallatie van de tentoonstelling. De tentoonstelling is samengesteld door Solidarity Park-artistiek directeur Rob MacDonald.",
       },
       {
         heading: "Duizend beelden erbij",
@@ -129,11 +129,11 @@ export const nl: TranslationOverride = {
       },
       {
         heading: "Internationale kunstenaars",
-        body: "Gevestigde internationale kunstenaars zijn ook uitgenodigd om schilderijen, sculpturen, performances en multimediawerk te tonen, geïnspireerd op de titel van de tentoonstelling en op het werk van de Artists’ International Association uit de jaren dertig.",
+        body: "Gevestigde internationale kunstenaars zijn ook uitgenodigd om schilderijen, sculpturen, performances en multimediawerk te tonen, geïnspireerd door de titel van de tentoonstelling en door het werk van de Artists’ International Association uit de jaren dertig.",
       },
       {
         heading: "Op weg naar het Solidarity Park Festival op 30 mei 2027 in Catalonië",
-        body: "De tournee van zes maanden werkt toe naar de 90e verjaardag van het zinken van het schip Ciudad de Barcelona op 30 mei 1937 – een vergeten verhaal over de Internationale Brigades in de Spaanse Burgeroorlog dat de oprichting inspireerde van de Solidarity Park Association, haar monument voor gemeenschapsparticipatie en, sinds 2022, het jaarlijkse internationale festival voor kunst, herinnering en educatie.",
+        body: "De tournee van zes maanden werkt toe naar de 90e verjaardag van het tot zinken brengen van het schip Ciudad de Barcelona op 30 mei 1937 – een vergeten verhaal over de Internationale Brigades in de Spaanse Burgeroorlog dat de oprichting inspireerde van de Associació Solidarity Park, haar plaatselijke monument en, sinds 2022, het jaarlijkse internationale festival voor kunst, herinnering en educatie.",
       },
     ],
   },
@@ -141,7 +141,7 @@ export const nl: TranslationOverride = {
     heroTitle:
       "Draag je kunst bij",
     heroSubtitle:
-      "We willen jouw antifascistische artistieke stem toevoegen aan de Millions. Hieronder staan enkele voorwaarden. Geaccepteerd werk wordt onderdeel van de hoofdinstallatie van de reizende tentoonstelling en/of van de parallelle online galerieën. We zijn vooral geïnteresseerd in beeld en gesproken woord, maar staan open voor alle artistieke uitingen. Waar locaties ruimte en tijd hebben, proberen we je werk of performance live te tonen.",
+      "We willen jouw antifascistische artistieke stem toevoegen aan de miljoenen. Hieronder staan enkele voorwaarden. Geaccepteerd werk wordt onderdeel van de hoofdinstallatie van de reizende tentoonstelling en/of van de parallelle online galerieën. We zijn vooral geïnteresseerd in beeld en gesproken woord, maar staan open voor alle artistieke uitingen. Waar locaties ruimte en tijd hebben, proberen we je werk of performance live te tonen.",
     revealTitle: "Stuur ons je werk",
     heroPrimaryCta: "Link aanvragen",
     heroSecondaryCta: "Tourdata",
@@ -153,7 +153,7 @@ export const nl: TranslationOverride = {
     submitButton: "Beveiligde bijdragelink sturen",
     conditionsCta: "Lees de bijdragevoorwaarden",
     guidelines: [
-      "De tournee kan lokale antifascistische kunstenaars opnemen waar de locatie ruimte heeft, naast de Solidariteitsruimte en de internationale opdrachtwerken.",
+      "De tournee kan lokale antifascistische kunstenaars opnemen waar de locatie ruimte heeft, naast de Solidarity Room en de internationale werken in opdracht.",
       "Kunstenaars, dichters, filmmakers, animatoren, beeldhouwers, schilders en buurtdeelnemers mogen allemaal werk of links per e-mail sturen.",
       "Stuur beeld en audio als JPG, PNG, WebP, PDF, MP3, M4A of WAV. Deel video, en alles wat groot is, als link.",
       "Houd bijlagen onder ongeveer 20 MB in totaal en stuur een link voor alles wat groter is. Geselecteerde kunstenaars kan apart om productieklare originelen worden gevraagd.",
@@ -173,7 +173,7 @@ export const nl: TranslationOverride = {
       },
       {
         heading: "Houd bijlagen klein, of stuur een link",
-        body: "Houd bijlagen onder ongeveer 20 MB in totaal, want grotere berichten worden vaak geweigerd voordat ze ons bereiken. Stuur daarboven liever een link. Een link kent geen groottelimiet.",
+        body: "Houd bijlagen onder ongeveer 20 MB in totaal, want grotere berichten worden vaak geweigerd voordat ze ons bereiken. Stuur daarboven liever een link. Een link kent geen omvangslimiet.",
       },
       {
         heading: "Wat je niet stuurt",
@@ -181,7 +181,7 @@ export const nl: TranslationOverride = {
       },
       {
         heading: "Hoe we met je materiaal omgaan",
-        body: "Wat je stuurt gebruiken we uitsluitend om je werk voor de tentoonstelling te beoordelen. Er wordt niets automatisch gepubliceerd en niets openbaar gemaakt zonder jouw akkoord.",
+        body: "Wat je stuurt, gebruiken we uitsluitend om je werk voor de tentoonstelling te beoordelen. Er wordt niets automatisch gepubliceerd en niets openbaar gemaakt zonder jouw akkoord.",
       },
       {
         heading: "Rechten en toestemming",
@@ -199,7 +199,7 @@ export const nl: TranslationOverride = {
       "Een miljoen woorden tegen het fascisme is een reizend project zonder winstoogmerk. Donaties helpen om transport, opbouw, materialen en de deelname van jonge kunstenaars en gemeenschapsgroepen te dekken.",
     introTitle: "Waarom doneren",
     introBody:
-      "De tentoonstelling reist door Europa met een centrale Solidariteitsruimte, straatgerichte ansichtkaartactiviteit en een programma van opdrachtwerken. Jouw steun houdt de tour gratis of goedkoop voor scholen, hogescholen, vakbonden en gemeenschapslocaties.",
+      "De tentoonstelling reist door Europa met een centrale Solidarity Room, straatgerichte ansichtkaartactiviteit en een programma van werken in opdracht. Jouw steun houdt de tour gratis of goedkoop voor scholen, hogescholen, vakbonden en gemeenschapslocaties.",
     usesTitle: "Waarvoor jouw steun wordt gebruikt",
     uses: [
       "Transport en opbouw van de tentoonstelling tussen locaties.",
@@ -222,7 +222,7 @@ export const nl: TranslationOverride = {
       "Jullie organisatie of locatie, en aan wie we moeten antwoorden.",
       "Waar jullie zitten en wat voor ruimte het is – galerie, bibliotheek, school, vakbondsgebouw, festival of iets anders.",
       "De data of periode die jullie overwegen.",
-      "De afmetingen van de ruimte: wandlengte, kamermaten en eventuele wanden aan de straatkant.",
+      "De afmetingen van de ruimte: wandlengte, binnenmaten en eventuele wanden aan de buitenkant.",
       "Openingstijden, toegang voor scholen of groepen en eventuele toegankelijkheidswensen.",
       "Ongeveer hoeveel bezoekers jullie verwachten.",
       "Lokale geschiedenis van de Internationale Brigades, partners of programma-ideeën die jullie willen toevoegen.",
@@ -239,7 +239,7 @@ export const nl: TranslationOverride = {
       "Vertel ons over de locatie, het publiek, onderwijsverbindingen, lokale geschiedenis en de data die je overweegt.",
     conditionsCta: "Lees de voorwaarden voor gastheerschap",
     features: [
-      "De tentoonstelling draait om de Solidariteitsruimte, een installatie van ansichtkaartformaat-werken gemaakt via het project Solidarity Park.",
+      "De tentoonstelling draait om de Solidarity Room, een installatie van ansichtkaartformaat-werken gemaakt via het project Solidarity Park.",
       "Naar buiten gerichte muren kunnen tijdens de tour nieuwe ansichtkaarten verzamelen, gemaakt door bezoekers, scholen en deelnemers uit de gemeenschap.",
       "Locaties kunnen lokale geschiedenis, kunstopdrachten, poëzie, muziek, workshops en lokaal antifascistisch werk toevoegen waar de ruimte dat toelaat.",
     ],
@@ -283,7 +283,7 @@ export const nl: TranslationOverride = {
     sections: [
       {
         heading: "Ruimte",
-        body: "De tentoonstelling past zich aan de beschikbare ruimte aan. Wandruimte voor de Solidariteitsruimte, deelnemers-ansichtkaarten en lokaal of opdrachtwerk wordt met elke locatie afgesproken.",
+        body: "De tentoonstelling past zich aan de beschikbare ruimte aan. Wandruimte voor de Solidarity Room, deelnemers-ansichtkaarten en lokaal of opdrachtwerk wordt met elke locatie afgesproken.",
       },
       {
         heading: "Programma en duur",
@@ -291,7 +291,7 @@ export const nl: TranslationOverride = {
       },
       {
         heading: "Lokale samenwerking",
-        body: "Gastheren worden aangemoedigd om lokale geschiedenis van de Internationale Brigades, workshops, livemuziek, poëzie en lokale antifascistische kunstenaars toe te voegen. Het project kan helpen je met regionale partners te verbinden.",
+        body: "Gastheren worden aangemoedigd om lokale geschiedenis van de Internationale Brigades, workshops, livemuziek, poëzie en lokale antifascistische kunstenaars toe te voegen. Het project kan helpen je met regionale partners in contact te brengen.",
       },
       {
         heading: "Zorg en verzekering",
@@ -331,13 +331,13 @@ export const nl: TranslationOverride = {
   links: {
     heroTitle: "Links",
     heroSubtitle:
-      "Partners, medewerkers en verdere lectuur verbonden met het project Solidarity Park en de antifascistische herinnering waaruit het put.",
+      "Partners, medewerkers en verdere lectuur verbonden met het project Solidarity Park en de antifascistische traditie waaruit het put.",
     groups: {
       project: {
         title: "Het project",
         items: {
-          association: { label: "Vereniging Solidarity Park", note: "De organisatie achter de tentoonstelling." },
-          festival: { label: "Festival van Solidarity Park, Catalonië", note: "Het festival waar de tour van 2027 naartoe werkt." },
+          association: { label: "Associació Solidarity Park", note: "De organisatie achter de tentoonstelling." },
+          festival: { label: "Solidarity Park Festival, Catalonië", note: "Het festival waar de tour van 2027 naartoe werkt." },
           sunderland: { label: "Solidarity Sunderland History Hub", note: "De brigadisten uit Sunderland, de schepen en de Baskische kinderen van 1937." },
         },
       },
@@ -345,7 +345,7 @@ export const nl: TranslationOverride = {
         title: "Geschiedenis en herinnering",
         items: {
           ibmt: { label: "International Brigade Memorial Trust", note: "De herinnering aan de Internationale Brigades levend houden." },
-          basqueChildren: { label: "Vereniging Baskische Kinderen van '37", note: "Het verhaal van kinderen die tijdens de Spaanse Burgeroorlog werden geëvacueerd." },
+          basqueChildren: { label: "Basque Children of '37 Association", note: "Het verhaal van kinderen die tijdens de Spaanse Burgeroorlog werden geëvacueerd." },
           alba: { label: "Abraham Lincoln Brigade Archives", note: "De Amerikaanse vrijwilligers van de Internationale Brigades en het archief dat hun geschiedenis bewaart." },
         },
       },
