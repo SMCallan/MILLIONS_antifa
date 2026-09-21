@@ -1,7 +1,7 @@
 # French (français) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-09-13.
+Generated 2026-09-21.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.

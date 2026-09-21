@@ -31,7 +31,7 @@ export const ca: TranslationOverride = {
     readConditions: "Llegir les condicions",
     backToHome: "Tornar a l'inici",
     getInTouch: "Contactar",
-    comingSoon: "Ben aviat",
+    comingSoon: "Properament",
     close: "Tanca",
     opensInNewTab: "S’obre en una pestanya nova",
     revealBody:
@@ -94,7 +94,7 @@ export const ca: TranslationOverride = {
     heroTitle:
       "Gira Million Words Against Fascism.",
     heroSubtitle:
-      "La gira es fa en col·laboració amb artistes de tot el món, escoles, escoles d’art, sindicats, sales d’art, grups de les Brigades Internacionals, poetes, corals reivindicatives i grups de campanyes solidàries, tots avançant cap al Festival Solidarity Park a Catalunya el maig de 2027.",
+      "La gira es fa en col·laboració amb artistes de tot el món, escoles, escoles d’art, sindicats, espais d’art, grups de les Brigades Internacionals, poetes, corals reivindicatives i grups de campanyes solidàries, tots avançant cap al Festival Solidarity Park a Catalunya el maig de 2027.",
     heroPrimaryCta: "Veure ruta",
     heroSecondaryCta: "Acollir l'exposició",
     routeBadge: "Notes de la ruta",
@@ -129,7 +129,7 @@ export const ca: TranslationOverride = {
       },
       {
         heading: "Artistes internacionals",
-        body: "També s’ha convidat artistes internacionals consagrats a exposar pintures, escultures, performances i peces multimèdia inspirades en el títol de l’exposició i en l’obra de l’Artists’ International Association dels anys trenta.",
+        body: "També s’ha convidat artistes internacionals de trajectòria consolidada a exposar pintures, escultures, performances i peces multimèdia inspirades en el títol de l’exposició i en l’obra de l’Artists’ International Association dels anys trenta.",
       },
       {
         heading: "Cap al Festival Solidarity Park, 30 de maig de 2027 a Catalunya",
@@ -154,9 +154,9 @@ export const ca: TranslationOverride = {
     conditionsCta: "Llegir les condicions de contribució",
     guidelines: [
       "La gira pot incloure artistes antifeixistes locals allà on l’espai de la sala ho permeti, al costat de la Sala de la Solidaritat i les obres internacionals encarregades.",
-      "Artistes, poetes, cineastes, animadors, escultors, pintors i participants de la comunitat podeu enviar obra o enllaços per correu electrònic.",
-      "Envia imatges i àudio en JPG, PNG, WebP, PDF, MP3, M4A o WAV. Comparteix el vídeo, i qualsevol fitxer gran, com a enllaç.",
-      "Mantén els adjunts per sota d’uns 20 MB en total i envia un enllaç per a qualsevol cosa més gran. Als artistes seleccionats se’ls poden demanar a part els originals llestos per a producció.",
+      "Artistes, poetes, cineastes, animadors, escultors, pintors i participants de la comunitat són benvinguts a enviar obra o enllaços per correu electrònic.",
+      "Envia imatges i àudio en JPG, PNG, WebP, PDF, MP3, M4A o WAV. Comparteix vídeos, i qualsevol fitxer gran, com a enllaç.",
+      "Mantén els adjunts per sota d’uns 20 MB en total i envia un enllaç per a qualsevol cosa més gran. Als artistes seleccionats se’ls poden demanar a part els originals llestos per a la producció.",
       "Si la teva obra forma part d’una escola, institut o organització participant, demana un enllaç de Google Drive vinculat a la teva institució per accelerar l’enviament i la revisió.",
     ],
   },
@@ -169,19 +169,19 @@ export const ca: TranslationOverride = {
     sections: [
       {
         heading: "Què enviar",
-        body: "Imatges i documents en JPG, PNG, WebP o PDF. Àudio en MP3, M4A o WAV. Envia el vídeo, o qualsevol fitxer gran, com a enllaç: Vimeo, YouTube, Google Drive, Dropbox i WeTransfer funcionen tots.",
+        body: "Imatges i documents en JPG, PNG, WebP o PDF. Àudio en MP3, M4A o WAV. Envia vídeos, o qualsevol fitxer gran, com a enllaç: Vimeo, YouTube, Google Drive, Dropbox i WeTransfer funcionen tots.",
       },
       {
-        heading: "Adjunts petits, o millor un enllaç",
+        heading: "Mantingues els fitxers adjunts petits, o envia un enllaç",
         body: "Mantén els adjunts per sota d’uns 20 MB en total, perquè els missatges més grans sovint es rebutgen abans d’arribar-nos. Per sobre d’aquesta mida, envia un enllaç. Un enllaç no té límit de mida.",
       },
       {
         heading: "Què no cal enviar",
-        body: "No adjuntis masters per capes, de preimpressió, d’àudio o de vídeo, ni arxius comprimits com ara ZIP. Envia primer material de qualitat de revisió. Si la teva obra queda seleccionada, et demanarem els originals llestos per a producció a part.",
+        body: "Si us plau, no adjuntis fitxers per capes, originals preparats per a impressió, màsters d’àudio o de vídeo, ni arxius comprimits (com ara ZIP). Envia primer material amb qualitat de revisió. Si la teva obra és seleccionada, et demanarem per separat els originals llestos per a la producció.",
       },
       {
         heading: "Com tractem el teu material",
-        body: "El que enviïs s’utilitza únicament per valorar la teva obra per a l’exposició. No es publica res automàticament ni es fa públic res sense el teu acord.",
+        body: "El que enviïs s’utilitza únicament per valorar la teva obra per a l’exposició. No es publica res automàticament ni es fa públic res sense el teu consentiment.",
       },
       {
         heading: "Drets i consentiment",
@@ -211,7 +211,7 @@ export const ca: TranslationOverride = {
     ctaBody:
       "Aquí es publicarà un enllaç de donació. Mentrestant, posa't en contacte per parlar sobre com donar suport a la gira o col·laborar en una parada a prop teu.",
     ctaButton: "Contactar amb el projecte",
-    ctaPending: "Enllaç de donació ben aviat.",
+    ctaPending: "Enllaç de donació properament.",
   },
   host: {
     heroTitle: "Acull Un milió de paraules contra el feixisme.",
@@ -220,12 +220,12 @@ export const ca: TranslationOverride = {
     proposalTitle: "Què has d’incloure a la teva proposta",
     proposalItems: [
       "La teva organització o espai, i a qui hem de respondre.",
-      "On sou i quin tipus d’espai és: galeria, biblioteca, escola, local sindical, festival o un altre.",
+      "On sou i quin tipus d’espai és: galeria, biblioteca, escola, local sindical, festival o altres.",
       "Les dates o el període que estàs considerant.",
       "La mida de l’espai: llargada de paret, dimensions de la sala i parets que donin al carrer.",
       "Horaris d’obertura al públic, accés d’escoles o grups i necessitats d’accessibilitat.",
       "Aproximadament quants visitants esperes.",
-      "Història local de les Brigades Internacionals, socis o idees de programació que vulguis incloure.",
+      "Qualsevol informació sobre història local de les Brigades Internacionals, col·laboradors o idees de programació que vulguis incloure.",
     ],
     revealTitle: "Envia la teva proposta",
     heroPrimaryCta: "Iniciar consulta",
@@ -234,7 +234,7 @@ export const ca: TranslationOverride = {
     leadTimeTitle: "Formats flexibles",
     leadTimeBody:
       "Els formats i la durada dels esdeveniments són flexibles i s'acorden individualment amb cada sala i el seu programa.",
-    formTitle: "Formulari de consulta per acollir",
+    formTitle: "Formulari de consulta per a amfitrions",
     formDescription:
       "Explica'ns sobre la sala, el públic, els vincles educatius, la història local i les dates que estàs considerant.",
     conditionsCta: "Llegir les condicions d'acollida",
@@ -251,7 +251,7 @@ export const ca: TranslationOverride = {
       location: "Ubicació de la sala",
       venueType: "Tipus de sala",
       venueTypePlaceholder: "Selecciona el tipus de sala",
-      dateRange: "Rang de dates preferit",
+      dateRange: "Interval de dates preferit",
       dateRangePlaceholder: "p. ex. setembre de 2026",
       expectedAudience: "Públic previst",
       expectedAudiencePlaceholder: "p. ex. 150 visitants",
@@ -261,7 +261,7 @@ export const ca: TranslationOverride = {
       message: "Detalls de la consulta",
       messagePlaceholder:
         "Explica'ns què t'agradaria acollir, qualsevol història local de les Brigades Internacionals, idees de programa i quin suport necessites.",
-      submit: "Enviar consulta d'acollida",
+      submit: "Enviar consulta d'amfitrions",
       required: "obligatori",
     },
     venueTypes: [
@@ -279,7 +279,7 @@ export const ca: TranslationOverride = {
     heroSubtitle:
       "Un resum del que implica acollir una parada de la gira. Els termes finals s'acorden individualment amb cada sala.",
     intro:
-      "Aquestes condicions donen als socis una idea del que cal per acollir l'exposició. Res d'això és un contracte fix: cada parada es confirma mitjançant acord per escrit.",
+      "Aquestes condicions donen als col·laboradors una idea del que cal per acollir l'exposició. Res d'això és un contracte fix: cada parada es confirma mitjançant acord per escrit.",
     sections: [
       {
         heading: "Espai",
@@ -291,11 +291,11 @@ export const ca: TranslationOverride = {
       },
       {
         heading: "Col·laboració local",
-        body: "S'anima les sales a afegir història local de les Brigades Internacionals, tallers, música en directe, poesia i artistes antifeixistes locals. El projecte pot ajudar a connectar-te amb socis regionals.",
+        body: "S'anima els amfitrions a afegir història local de les Brigades Internacionals, tallers, música en directe, poesia i artistes antifeixistes locals. El projecte pot ajudar a connectar-te amb col·laboradors regionals.",
       },
       {
         heading: "Cura i assegurança",
-        body: "Es demana a les sales que ofereixin un espai segur i adequat davant el clima i una supervisió raonable durant l'horari d'obertura. Els acords d'assegurança i manipulació es pacten per sala.",
+        body: "Es demana als espais que ofereixin un lloc segur i adequat a les condicions meteorològiques, així com una supervisió raonable durant l'horari d'obertura. Les condicions d'assegurança i manipulació s'acorden per a cada emplaçament.",
       },
       {
         heading: "Costos",
@@ -353,7 +353,7 @@ export const ca: TranslationOverride = {
         title: "Participa",
         items: {
           contribute: { label: "Contribuir amb obra", note: "Envia material de vista prèvia mitjançant un enllaç segur." },
-          host: { label: "Acollir l'exposició", note: "Porta una parada de la gira a la teva sala." },
+          host: { label: "Acollir l'exposició", note: "Porta una parada de la gira al teu espai." },
         },
       },
     },
