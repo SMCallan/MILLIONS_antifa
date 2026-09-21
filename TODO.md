@@ -34,11 +34,10 @@ existing R2 / D1 / Turnstile / magic-link submission flow was kept intact.
       Files: `src/i18n/ca.ts`, `es.ts`, `de.ts`, `sv.ts`, `nl.ts`, `fr.ts`.
       English source of truth: `src/i18n/en.ts`. Anything a translator leaves
       out automatically falls back to English (by design).
-- [ ] **Confirm the production domain.** It is currently set to
-      `https://www.millionwords.net` in `astro.config.mjs` (`site`) — this drives
-      the `canonical` and `hreflang` tags. Cross-check against
-      `wrangler.jsonc` (`PUBLIC_SITE_URL` = `millions-antifa.pages.dev`) and
-      `src/data/site.ts` (`url`). Make all three agree with the real domain.
+- [x] **Confirm the production domain.** `https://millionwords.net`, with
+      `www` redirecting to it. `astro.config.mjs` (`site`, which drives the
+      `canonical` and `hreflang` tags), `wrangler.jsonc` (`PUBLIC_SITE_URL`)
+      and `src/data/site.ts` (`url`) all agree.
 - [ ] **Cloudflare bindings & secrets are set for the deploy environment**
       (per `README.md`): `SUBMISSIONS` (R2), `SUBMISSIONS_DB` (D1),
       `MAGIC_LINK_SECRET`, `PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`.

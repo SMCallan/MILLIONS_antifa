@@ -4,8 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   // Production origin, used for canonical and hreflang alternate URLs.
-  // TODO: confirm the final production domain before launch.
-  site: "https://www.millionwords.net",
+  // www.millionwords.net redirects here, so the bare domain is canonical.
+  site: "https://millionwords.net",
   integrations: [react()],
   i18n: {
     defaultLocale: "en",

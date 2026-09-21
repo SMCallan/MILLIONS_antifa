@@ -43,10 +43,16 @@ const pageTitle = title === t.meta.siteName ? title : `${title} | ${t.meta.siteN
 // actually have localized mirrors; the English-only functional pages get a
 // self-canonical without alternates.
 const logicalPath = getLogicalPath(Astro.url.pathname);
-const abs = (path: string) => (Astro.site ? new URL(path, Astro.site).href : path);
-const canonicalHref = abs(localizePath(logicalPath, lang));
+// Pages build as /path/index.html and Cloudflare serves them at /path/,
+// redirecting /path there, so canonical URLs carry the trailing slash. The
+// 404 pages are single files and keep theirs as they are.
+const pageUrl = (path: string) => {
+  const slashed = path.endsWith("/") || logicalPath === "/404" ? path : `${path}/`;
+  return Astro.site ? new URL(slashed, Astro.site).href : slashed;
+};
+const canonicalHref = pageUrl(localizePath(logicalPath, lang));
 const alternates = isLocalizedPath(Astro.url.pathname)
-  ? languageCodes.map((code) => ({ code, href: abs(localizePath(logicalPath, code)) }))
+  ? languageCodes.map((code) => ({ code, href: pageUrl(localizePath(logicalPath, code)) }))
   : [];
 ---
 
@@ -67,7 +73,7 @@ const alternates = isLocalizedPath(Astro.url.pathname)
     {alternates.map(({ code, href }) => <link rel="alternate" hreflang={code} href={href} />)}
     {
       alternates.length > 0 && (
-        <link rel="alternate" hreflang="x-default" href={abs(localizePath(logicalPath, defaultLang))} />
+        <link rel="alternate" hreflang="x-default" href={pageUrl(localizePath(logicalPath, defaultLang))} />
       )
     }
     <title>{pageTitle}</title>
