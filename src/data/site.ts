@@ -33,8 +33,8 @@ export const moreInfoNav: NavItem[] = [
   { key: "donate", href: donateUrl },
   { key: "host", href: "/host" },
   { key: "gallery", href: "/gallery" },
-  { key: "collaborators", href: "/collaborators" },
   { key: "links", href: "/links" },
+  { key: "collaborators", href: "/collaborators" },
 ];
 
 // Links page. `key` indexes into the `links.groups` section of the i18n
