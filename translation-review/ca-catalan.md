@@ -1,7 +1,7 @@
 # Catalan (català) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-09-13.
+Generated 2026-09-21.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -157,7 +157,7 @@ Things worth watching for:
 ### comingSoon
 
 - **English:** Coming soon
-- **Catalan:** Ben aviat
+- **Catalan:** Properament
 
 ### close
 
@@ -396,7 +396,7 @@ Things worth watching for:
 ### heroSubtitle
 
 - **English:** The tour is in collaboration with Artists across the world, Schools, Art Colleges, Trade Unions, Arts Venues, International Brigade groups, Poets, Radical Choirs, and Solidarity Campaign groups all building toward the Solidarity Park Festival in Catalunya May 2027.
-- **Catalan:** La gira es fa en col·laboració amb artistes de tot el món, escoles, escoles d’art, sindicats, sales d’art, grups de les Brigades Internacionals, poetes, corals reivindicatives i grups de campanyes solidàries, tots avançant cap al Festival Solidarity Park a Catalunya el maig de 2027.
+- **Catalan:** La gira es fa en col·laboració amb artistes de tot el món, escoles, escoles d’art, sindicats, espais d’art, grups de les Brigades Internacionals, poetes, corals reivindicatives i grups de campanyes solidàries, tots avançant cap al Festival Solidarity Park a Catalunya el maig de 2027.
 
 ### heroPrimaryCta
 
@@ -518,7 +518,7 @@ Things worth watching for:
 ### sections[4] › body
 
 - **English:** Established international artists have also been invited to exhibit paintings, sculptures, performances, and multimedia pieces inspired by the exhibition title and the work of the Artists' International Association of the 1930s.
-- **Catalan:** També s’ha convidat artistes internacionals consagrats a exposar pintures, escultures, performances i peces multimèdia inspirades en el títol de l’exposició i en l’obra de l’Artists’ International Association dels anys trenta.
+- **Catalan:** També s’ha convidat artistes internacionals de trajectòria consolidada a exposar pintures, escultures, performances i peces multimèdia inspirades en el títol de l’exposició i en l’obra de l’Artists’ International Association dels anys trenta.
 
 ### sections[5] › heading
 
@@ -595,17 +595,17 @@ Things worth watching for:
 ### guidelines[2]
 
 - **English:** Artists, poets, film-makers, animators, sculptors, painters and community contributors are all welcome to send work or links by email.
-- **Catalan:** Artistes, poetes, cineastes, animadors, escultors, pintors i participants de la comunitat podeu enviar obra o enllaços per correu electrònic.
+- **Catalan:** Artistes, poetes, cineastes, animadors, escultors, pintors i participants de la comunitat són benvinguts a enviar obra o enllaços per correu electrònic.
 
 ### guidelines[3]
 
 - **English:** Send images and audio as JPG, PNG, WebP, PDF, MP3, M4A or WAV. Share video, and anything large, as a link.
-- **Catalan:** Envia imatges i àudio en JPG, PNG, WebP, PDF, MP3, M4A o WAV. Comparteix el vídeo, i qualsevol fitxer gran, com a enllaç.
+- **Catalan:** Envia imatges i àudio en JPG, PNG, WebP, PDF, MP3, M4A o WAV. Comparteix vídeos, i qualsevol fitxer gran, com a enllaç.
 
 ### guidelines[4]
 
 - **English:** Keep attachments under roughly 20MB in total and send a link for anything bigger. Shortlisted artists may be asked separately for production-ready originals.
-- **Catalan:** Mantén els adjunts per sota d’uns 20 MB en total i envia un enllaç per a qualsevol cosa més gran. Als artistes seleccionats se’ls poden demanar a part els originals llestos per a producció.
+- **Catalan:** Mantén els adjunts per sota d’uns 20 MB en total i envia un enllaç per a qualsevol cosa més gran. Als artistes seleccionats se’ls poden demanar a part els originals llestos per a la producció.
 
 ### guidelines[5]
 
@@ -637,12 +637,12 @@ Things worth watching for:
 ### sections[1] › body
 
 - **English:** Images and documents as JPG, PNG, WebP or PDF. Audio as MP3, M4A or WAV. Send video, or anything large, as a link — Vimeo, YouTube, Google Drive, Dropbox and WeTransfer all work.
-- **Catalan:** Imatges i documents en JPG, PNG, WebP o PDF. Àudio en MP3, M4A o WAV. Envia el vídeo, o qualsevol fitxer gran, com a enllaç: Vimeo, YouTube, Google Drive, Dropbox i WeTransfer funcionen tots.
+- **Catalan:** Imatges i documents en JPG, PNG, WebP o PDF. Àudio en MP3, M4A o WAV. Envia vídeos, o qualsevol fitxer gran, com a enllaç: Vimeo, YouTube, Google Drive, Dropbox i WeTransfer funcionen tots.
 
 ### sections[2] › heading
 
 - **English:** Keep attachments small, or send a link
-- **Catalan:** Adjunts petits, o millor un enllaç
+- **Catalan:** Mantingues els fitxers adjunts petits, o envia un enllaç
 
 ### sections[2] › body
 
@@ -657,7 +657,7 @@ Things worth watching for:
 ### sections[3] › body
 
 - **English:** Please do not attach layered, print-ready, audio or video masters, or archives such as ZIP. Send review-quality material first. If your work is shortlisted we will ask for production-ready originals separately.
-- **Catalan:** No adjuntis masters per capes, de preimpressió, d’àudio o de vídeo, ni arxius comprimits com ara ZIP. Envia primer material de qualitat de revisió. Si la teva obra queda seleccionada, et demanarem els originals llestos per a producció a part.
+- **Catalan:** Si us plau, no adjuntis fitxers per capes, originals preparats per a impressió, màsters d’àudio o de vídeo, ni arxius comprimits (com ara ZIP). Envia primer material amb qualitat de revisió. Si la teva obra és seleccionada, et demanarem per separat els originals llestos per a la producció.
 
 ### sections[4] › heading
 
@@ -667,7 +667,7 @@ Things worth watching for:
 ### sections[4] › body
 
 - **English:** What you send is used only to consider your work for the exhibition. Nothing is published automatically, and nothing is made public without your agreement.
-- **Catalan:** El que enviïs s’utilitza únicament per valorar la teva obra per a l’exposició. No es publica res automàticament ni es fa públic res sense el teu acord.
+- **Catalan:** El que enviïs s’utilitza únicament per valorar la teva obra per a l’exposició. No es publica res automàticament ni es fa públic res sense el teu consentiment.
 
 ### sections[5] › heading
 
@@ -759,7 +759,7 @@ Things worth watching for:
 ### ctaPending
 
 - **English:** Donation link coming soon.
-- **Catalan:** Enllaç de donació ben aviat.
+- **Catalan:** Enllaç de donació properament.
 
 ## Host page
 
@@ -786,7 +786,7 @@ Things worth watching for:
 ### proposalItems[2]
 
 - **English:** Where you are, and what kind of space it is — gallery, library, school, union hall, festival, or something else.
-- **Catalan:** On sou i quin tipus d’espai és: galeria, biblioteca, escola, local sindical, festival o un altre.
+- **Catalan:** On sou i quin tipus d’espai és: galeria, biblioteca, escola, local sindical, festival o altres.
 
 ### proposalItems[3]
 
@@ -811,7 +811,7 @@ Things worth watching for:
 ### proposalItems[7]
 
 - **English:** Any local International Brigades history, partners, or programme ideas you would like to include.
-- **Catalan:** Història local de les Brigades Internacionals, socis o idees de programació que vulguis incloure.
+- **Catalan:** Qualsevol informació sobre història local de les Brigades Internacionals, col·laboradors o idees de programació que vulguis incloure.
 
 ### revealTitle
 
@@ -846,7 +846,7 @@ Things worth watching for:
 ### formTitle
 
 - **English:** Host enquiry form
-- **Catalan:** Formulari de consulta per acollir
+- **Catalan:** Formulari de consulta per a amfitrions
 
 ### formDescription
 
@@ -911,7 +911,7 @@ Things worth watching for:
 ### fields › dateRange
 
 - **English:** Preferred date range
-- **Catalan:** Rang de dates preferit
+- **Catalan:** Interval de dates preferit
 
 ### fields › dateRangePlaceholder
 
@@ -951,7 +951,7 @@ Things worth watching for:
 ### fields › submit
 
 - **English:** Send host enquiry
-- **Catalan:** Enviar consulta d'acollida
+- **Catalan:** Enviar consulta d'amfitrions
 
 ### fields › required
 
@@ -1008,7 +1008,7 @@ Things worth watching for:
 ### intro
 
 - **English:** These conditions give partners a sense of what is needed to host the exhibition. Nothing here is a fixed contract — each stop is confirmed by written agreement.
-- **Catalan:** Aquestes condicions donen als socis una idea del que cal per acollir l'exposició. Res d'això és un contracte fix: cada parada es confirma mitjançant acord per escrit.
+- **Catalan:** Aquestes condicions donen als col·laboradors una idea del que cal per acollir l'exposició. Res d'això és un contracte fix: cada parada es confirma mitjançant acord per escrit.
 
 ### sections[1] › heading
 
@@ -1038,7 +1038,7 @@ Things worth watching for:
 ### sections[3] › body
 
 - **English:** Hosts are encouraged to add local International Brigades history, workshops, live music, poetry, and local anti-fascist artists. The project can help connect you with regional partners.
-- **Catalan:** S'anima les sales a afegir història local de les Brigades Internacionals, tallers, música en directe, poesia i artistes antifeixistes locals. El projecte pot ajudar a connectar-te amb socis regionals.
+- **Catalan:** S'anima els amfitrions a afegir història local de les Brigades Internacionals, tallers, música en directe, poesia i artistes antifeixistes locals. El projecte pot ajudar a connectar-te amb col·laboradors regionals.
 
 ### sections[4] › heading
 
@@ -1048,7 +1048,7 @@ Things worth watching for:
 ### sections[4] › body
 
 - **English:** Venues are asked to provide a secure, weather-appropriate space and reasonable supervision during opening hours. Insurance and handling arrangements are agreed per venue.
-- **Catalan:** Es demana a les sales que ofereixin un espai segur i adequat davant el clima i una supervisió raonable durant l'horari d'obertura. Els acords d'assegurança i manipulació es pacten per sala.
+- **Catalan:** Es demana als espais que ofereixin un lloc segur i adequat a les condicions meteorològiques, així com una supervisió raonable durant l'horari d'obertura. Les condicions d'assegurança i manipulació s'acorden per a cada emplaçament.
 
 ### sections[5] › heading
 
@@ -1241,7 +1241,7 @@ Things worth watching for:
 ### groups › getInvolved › items › host › note
 
 - **English:** Bring a stop on the tour to your venue.
-- **Catalan:** Porta una parada de la gira a la teva sala.
+- **Catalan:** Porta una parada de la gira al teu espai.
 
 ## footer
 

@@ -1,7 +1,7 @@
 # Translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-09-13.
+Generated 2026-09-21.
 
 One file per language. Each shows every piece of text on the site, with the
 English source above the current translation.
