@@ -51,17 +51,21 @@ const BOW_SVG = `
   <path d="M110 90c6-3 14-3 20 0" fill="none" stroke="#fff" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round"/>
 </svg>`;
 
-// The scissors cursor in two halves that pivot where the blades cross, (12, 12),
-// so they can snip. Each half is a dark outline under a white stroke.
+// The scissors cursor in two halves that pivot where the blades cross, so they
+// can snip. Each half is a dark outline under a white stroke. The 24-unit icon
+// sits 4 units inside a 32-unit box: at any angle every part stays within 13
+// units of the pivot, leaving room for the drop shadow too, because anything
+// outside the box gets clipped (Safari clips an element with a CSS filter to its
+// own box). The pivot is at (16, 16), which the CSS transform-origin matches.
 const cursorHalf = (ring: string, blade: string) => `
   <g stroke="#111" stroke-width="3.4">${ring}<path d="${blade}"/></g>
   <g stroke="#fff" stroke-width="1.7">${ring}<path d="${blade}"/></g>`;
 
 const CURSOR_SVG = `
-<svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <g class="ribbon-ceremony__cursor-half ribbon-ceremony__cursor-half--a">${cursorHalf("<circle cx='6' cy='6' r='3'/>", "M8.12 8.12 20 20")}</g>
-  <g class="ribbon-ceremony__cursor-half ribbon-ceremony__cursor-half--b">${cursorHalf("<circle cx='6' cy='18' r='3'/>", "M8.12 15.88 20 4")}</g>
-  <circle cx="12" cy="12" r="1" fill="#111"/>
+<svg viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <g class="ribbon-ceremony__cursor-half ribbon-ceremony__cursor-half--a">${cursorHalf("<circle cx='10' cy='10' r='3'/>", "M12.12 12.12 24 24")}</g>
+  <g class="ribbon-ceremony__cursor-half ribbon-ceremony__cursor-half--b">${cursorHalf("<circle cx='10' cy='22' r='3'/>", "M12.12 19.88 24 8")}</g>
+  <circle cx="16" cy="16" r="1" fill="#111"/>
 </svg>`;
 
 export function startRibbonCeremony({ label }: Options) {
@@ -266,7 +270,7 @@ function followingScissors(reducedMotion: boolean) {
   const draw = () => {
     targetTilt *= 0.88;
     tilt += (targetTilt - tilt) * 0.22;
-    el.style.transform = `translate(${x}px, ${y}px) rotate(${tilt.toFixed(2)}deg)`;
+    el.style.transform = `translate3d(${x}px, ${y}px, 0) rotate(${tilt.toFixed(2)}deg)`;
     frame = Math.abs(tilt) > 0.05 || Math.abs(targetTilt) > 0.05 ? requestAnimationFrame(draw) : 0;
   };
 
