@@ -44,6 +44,7 @@ export const es: TranslationOverride = {
     title: "Un millón de palabras contra el fascismo",
     subtitle: "Exposición itinerante europea del proyecto Solidarity Park.",
     artworkCredit: "Animación y logotipo: Roberto Ford",
+    cutRibbon: "Corta la cinta",
     lede: "Si una imagen vale más que mil palabras, ¿qué pueden crear mil artistas? Un millón de palabras, cada una desde una perspectiva única, formando una exposición itinerante internacional contra el fascismo.",
     primaryCta: "Fechas de la gira",
     secondaryCta: "Contribuir con obra",

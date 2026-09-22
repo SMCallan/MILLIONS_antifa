@@ -1,0 +1,249 @@
+/* Red ribbon ceremony (ribbon-ceremony.ts). Only loaded with ?ribbon. */
+
+.ribbon-ceremony {
+  --ribbon-height: clamp(3.5rem, 9vh, 5.75rem);
+  --bow-width: clamp(10rem, 24vw, 21rem);
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  overflow: hidden;
+  background: rgb(4 22 11 / 0.2);
+  cursor: var(--ribbon-cursor, crosshair);
+  touch-action: none;
+  transition: background-color 600ms ease;
+}
+
+.ribbon-ceremony.is-cut {
+  background: transparent;
+  pointer-events: none;
+}
+
+/* The whole ribbon is one button, split into two halves at the cut point. */
+.ribbon-ceremony__band {
+  --cut: 50%;
+  position: absolute;
+  inset-inline: 0;
+  top: 50%;
+  height: var(--ribbon-height);
+  translate: 0 -50%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: var(--ribbon-cursor, crosshair);
+  filter: drop-shadow(0 0.6rem 0.9rem rgb(0 0 0 / 0.3));
+}
+
+.ribbon-ceremony__band:focus {
+  outline: none;
+}
+
+.ribbon-ceremony__half {
+  position: absolute;
+  inset-block: 0;
+  background: linear-gradient(
+    180deg,
+    #4a0610 0%,
+    #8a0e21 9%,
+    #c4162e 26%,
+    #e3334a 40%,
+    #d2203a 50%,
+    #aa122a 70%,
+    #7e0c1e 88%,
+    #4a0610 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgb(255 180 190 / 0.28),
+    inset 0 -1px 0 rgb(0 0 0 / 0.3);
+}
+
+.ribbon-ceremony__half--left {
+  left: 0;
+  width: var(--cut);
+  transform-origin: 0 50%;
+}
+
+.ribbon-ceremony__half--right {
+  left: var(--cut);
+  right: 0;
+  transform-origin: 100% 50%;
+}
+
+/* Slanted ends where the scissors went through. */
+.is-cut .ribbon-ceremony__half--left {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 0.9rem) 100%, 0 100%);
+}
+
+.is-cut .ribbon-ceremony__half--right {
+  clip-path: polygon(0.9rem 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* A slow sheen travelling along the satin. */
+.ribbon-ceremony__band::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 20%, rgb(255 225 230 / 0.16) 50%, transparent 80%) no-repeat;
+  background-size: 40% 100%;
+  background-position: -70% 0;
+  animation: ribbon-sheen 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.is-cut .ribbon-ceremony__band::after {
+  display: none;
+}
+
+.ribbon-ceremony__bow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: var(--bow-width);
+  transform: translate(-50%, -49.5%);
+  cursor: var(--ribbon-cursor, crosshair);
+  filter: drop-shadow(0 0.5rem 0.8rem rgb(0 0 0 / 0.3));
+}
+
+.ribbon-ceremony__bow svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* The following scissors cursor (followingScissors in the script). While it is
+   active the real pointer is hidden everywhere, links included. */
+.ribbon-cursor-active,
+.ribbon-cursor-active * {
+  cursor: none !important;
+}
+
+.ribbon-ceremony__cursor {
+  /* 32 viewBox units at the same scale as the old 104px for 24, so the
+     scissors keep their size and gain room to swing and cast a shadow. */
+  --cursor-size: 139px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1002;
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  margin: calc(var(--cursor-size) / -2) 0 0 calc(var(--cursor-size) / -2);
+  overflow: visible;
+  pointer-events: none;
+  opacity: 0;
+  filter: drop-shadow(0 0.25rem 0.4rem rgb(0 0 0 / 0.35));
+  transition: opacity 150ms ease;
+  will-change: transform;
+}
+
+.ribbon-ceremony__cursor.is-visible {
+  opacity: 1;
+}
+
+.ribbon-ceremony__cursor.is-done {
+  opacity: 0;
+  transition-duration: 250ms;
+}
+
+.ribbon-ceremony__cursor svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.ribbon-ceremony__cursor-half {
+  transform-box: view-box;
+  transform-origin: 16px 16px;
+  transition: transform 160ms cubic-bezier(0.3, 0.7, 0.4, 1);
+}
+
+/* Snipping idly in the air... */
+.ribbon-ceremony__cursor-half--a {
+  animation: ribbon-cursor-snip-a 1.5s ease-in-out infinite;
+}
+
+.ribbon-ceremony__cursor-half--b {
+  animation: ribbon-cursor-snip-b 1.5s ease-in-out infinite;
+}
+
+/* ...wide open over the ribbon, ready to cut... */
+.is-ready .ribbon-ceremony__cursor-half--a {
+  animation: none;
+  transform: rotate(6deg);
+}
+
+.is-ready .ribbon-ceremony__cursor-half--b {
+  animation: none;
+  transform: rotate(-6deg);
+}
+
+/* ...and snapping shut on a press or the cut. */
+.is-shut .ribbon-ceremony__cursor-half--a {
+  animation: none;
+  transform: rotate(-40deg);
+  transition-duration: 70ms;
+}
+
+.is-shut .ribbon-ceremony__cursor-half--b {
+  animation: none;
+  transform: rotate(40deg);
+  transition-duration: 70ms;
+}
+
+.ribbon-ceremony__confetti {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+@keyframes ribbon-sheen {
+  0%,
+  25% {
+    background-position: -70% 0;
+  }
+  75%,
+  100% {
+    background-position: 170% 0;
+  }
+}
+
+@keyframes ribbon-cursor-snip-a {
+  0%,
+  60%,
+  100% {
+    transform: rotate(-8deg);
+  }
+  42% {
+    transform: rotate(-34deg);
+  }
+}
+
+@keyframes ribbon-cursor-snip-b {
+  0%,
+  60%,
+  100% {
+    transform: rotate(8deg);
+  }
+  42% {
+    transform: rotate(34deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ribbon-ceremony__band::after {
+    animation: none;
+  }
+
+  .ribbon-ceremony__cursor-half--a {
+    animation: none;
+    transform: rotate(-8deg);
+  }
+
+  .ribbon-ceremony__cursor-half--b {
+    animation: none;
+    transform: rotate(8deg);
+  }
+}
