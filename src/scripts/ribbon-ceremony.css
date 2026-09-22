@@ -8,6 +8,7 @@
   z-index: 1000;
   overflow: hidden;
   background: rgb(4 22 11 / 0.2);
+  cursor: var(--ribbon-cursor, crosshair);
   touch-action: none;
   transition: background-color 600ms ease;
 }
@@ -108,57 +109,6 @@
   height: auto;
 }
 
-/* Scissors beside the bow's tails, angled up at the ribbon and snipping to
-   invite the cut. Clicking them cuts too. */
-.ribbon-ceremony__scissors {
-  position: absolute;
-  left: calc(50% + var(--bow-width) * 0.36);
-  top: calc(50% + var(--ribbon-height) / 2 + 0.75rem);
-  width: clamp(5.5rem, 9vw, 9rem);
-  translate: -50% 0;
-  rotate: -28deg;
-  cursor: var(--ribbon-cursor, crosshair);
-  filter: drop-shadow(0 0.4rem 0.6rem rgb(0 0 0 / 0.35));
-  transition: opacity 300ms ease 150ms;
-}
-
-.ribbon-ceremony__scissors svg {
-  display: block;
-  width: 100%;
-  height: auto;
-  overflow: visible;
-}
-
-.ribbon-ceremony__blade {
-  transform-box: view-box;
-  transform-origin: 60px 104px;
-  transition: transform 120ms ease-in;
-}
-
-.ribbon-ceremony__blade--a {
-  animation: ribbon-snip-a 2.2s ease-in-out infinite;
-}
-
-.ribbon-ceremony__blade--b {
-  animation: ribbon-snip-b 2.2s ease-in-out infinite;
-}
-
-.ribbon-ceremony__band:focus-visible ~ .ribbon-ceremony__scissors {
-  outline: 3px solid var(--signal-blue);
-  outline-offset: 6px;
-  border-radius: 0.5rem;
-}
-
-/* On the cut the blades close and the scissors fade. */
-.is-cut .ribbon-ceremony__blade {
-  animation: none;
-  transform: rotate(0deg);
-}
-
-.is-cut .ribbon-ceremony__scissors {
-  opacity: 0;
-}
-
 .ribbon-ceremony__confetti {
   position: fixed;
   inset: 0;
@@ -179,45 +129,8 @@
   }
 }
 
-@keyframes ribbon-snip-a {
-  0%,
-  55%,
-  100% {
-    transform: rotate(-16deg);
-  }
-  68% {
-    transform: rotate(-1deg);
-  }
-  80% {
-    transform: rotate(-16deg);
-  }
-}
-
-@keyframes ribbon-snip-b {
-  0%,
-  55%,
-  100% {
-    transform: rotate(16deg);
-  }
-  68% {
-    transform: rotate(1deg);
-  }
-  80% {
-    transform: rotate(16deg);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .ribbon-ceremony__band::after,
-  .ribbon-ceremony__blade {
+  .ribbon-ceremony__band::after {
     animation: none;
-  }
-
-  .ribbon-ceremony__blade--a {
-    transform: rotate(-16deg);
-  }
-
-  .ribbon-ceremony__blade--b {
-    transform: rotate(16deg);
   }
 }

@@ -123,39 +123,6 @@ const BOW_SVG = `
   <path d="M180 126C192 121 208 121 220 126 216 140 216 162 220 176 208 182 192 182 180 176 184 162 184 140 180 126Z" fill="none" stroke="#5c0914" stroke-opacity="0.35" stroke-width="1"/>
 </svg>`;
 
-// Ceremonial scissors pointing up at the ribbon: steel blades, dark handles.
-// Each half pivots on the screw at (60, 104) so CSS can snip them open and shut.
-const SCISSORS_HALF = `
-  <path fill="url(#sc-steel)" d="M60 110 55 40C54 22 56 12 60 2 63 14 65 30 65 56L64 110Z"/>
-  <path d="M60.5 8C62.5 22 63.5 42 63.5 100" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1.2"/>
-  <path fill="url(#sc-handle)" fill-rule="evenodd" d="M58 100 66 104 78 146C96 146 108 160 106 178 104 196 86 206 70 200 54 194 50 176 58 162L66 150ZM72 164C62 168 62 186 72 190 84 194 94 184 92 172 90 162 80 160 72 164Z"/>
-  <path d="M82 150C96 152 104 164 102 178" fill="none" stroke="#fff" stroke-opacity="0.18" stroke-width="2" stroke-linecap="round"/>`;
-
-const SCISSORS_SVG = `
-<svg viewBox="0 0 120 210" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="sc-steel" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7d8691"/>
-      <stop offset="0.45" stop-color="#e9edf1"/>
-      <stop offset="0.55" stop-color="#ffffff"/>
-      <stop offset="0.78" stop-color="#b3bbc4"/>
-      <stop offset="1" stop-color="#65707c"/>
-    </linearGradient>
-    <linearGradient id="sc-handle" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#46464d"/>
-      <stop offset="1" stop-color="#101012"/>
-    </linearGradient>
-    <radialGradient id="sc-screw" cx="0.4" cy="0.35" r="0.7">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#8e959d"/>
-    </radialGradient>
-  </defs>
-  <g class="ribbon-ceremony__blade ribbon-ceremony__blade--a">${SCISSORS_HALF}</g>
-  <g class="ribbon-ceremony__blade ribbon-ceremony__blade--b"><g transform="translate(120 0) scale(-1 1)">${SCISSORS_HALF}</g></g>
-  <circle cx="60" cy="104" r="6" fill="url(#sc-screw)" stroke="#5a6068" stroke-width="0.8"/>
-  <circle cx="60" cy="104" r="1.6" fill="#5a6068"/>
-</svg>`;
-
 export function startRibbonCeremony({ label }: Options) {
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -171,14 +138,12 @@ export function startRibbonCeremony({ label }: Options) {
       <span class="ribbon-ceremony__half ribbon-ceremony__half--left"></span>
       <span class="ribbon-ceremony__half ribbon-ceremony__half--right"></span>
     </button>
-    <div class="ribbon-ceremony__bow" aria-hidden="true">${BOW_SVG}</div>
-    <div class="ribbon-ceremony__scissors" aria-hidden="true">${SCISSORS_SVG}</div>`;
+    <div class="ribbon-ceremony__bow" aria-hidden="true">${BOW_SVG}</div>`;
 
   const band = overlay.querySelector<HTMLButtonElement>(".ribbon-ceremony__band")!;
   const [leftHalf, rightHalf] = overlay.querySelectorAll<HTMLElement>(".ribbon-ceremony__half");
   const bow = overlay.querySelector<HTMLElement>(".ribbon-ceremony__bow")!;
-  const scissors = overlay.querySelector<HTMLElement>(".ribbon-ceremony__scissors")!;
-  // The label is spoken rather than shown: the scissors say it visually.
+  // The label is spoken rather than shown: the scissors cursor says it visually.
   band.setAttribute("aria-label", label);
 
   document.body.append(overlay);
@@ -272,7 +237,6 @@ export function startRibbonCeremony({ label }: Options) {
 
   band.addEventListener("click", onClick);
   bow.addEventListener("click", onCentreClick);
-  scissors.addEventListener("click", onCentreClick);
   overlay.addEventListener("pointerdown", onPointerDown);
   overlay.addEventListener("pointermove", onPointerMove);
   window.addEventListener("pointerup", onPointerUp);
@@ -281,7 +245,6 @@ export function startRibbonCeremony({ label }: Options) {
   function removeListeners() {
     band.removeEventListener("click", onClick);
     bow.removeEventListener("click", onCentreClick);
-    scissors.removeEventListener("click", onCentreClick);
     overlay.removeEventListener("pointerdown", onPointerDown);
     overlay.removeEventListener("pointermove", onPointerMove);
     window.removeEventListener("pointerup", onPointerUp);
@@ -333,12 +296,13 @@ function dropRibbonFromAddress() {
 }
 
 function scissorsCursor() {
-  // White scissors with a dark outline, so the cursor reads on the red ribbon.
+  // Large white scissors with a dark outline, so the cursor reads on the red
+  // ribbon from across a room. Browsers ignore cursors over 128px.
   const svg =
-    "<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke-linecap='round' stroke-linejoin='round'>" +
+    "<svg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 24 24' fill='none' stroke-linecap='round' stroke-linejoin='round'>" +
     `<g stroke='#111' stroke-width='4'>${SCISSORS_PATHS}</g>` +
     `<g stroke='#fff' stroke-width='2'>${SCISSORS_PATHS}</g></svg>`;
-  return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 24 24, crosshair`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 48 48, crosshair`;
 }
 
 type Piece = {
