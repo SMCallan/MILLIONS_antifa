@@ -2,7 +2,7 @@
 
 .ribbon-ceremony {
   --ribbon-height: clamp(3.5rem, 9vh, 5.75rem);
-  --bow-width: clamp(10rem, 24vw, 21rem);
+  --bow-width: clamp(11.5rem, 29vw, 26rem);
   position: fixed;
   inset: 0;
   z-index: 1000;
@@ -39,18 +39,20 @@
 .ribbon-ceremony__half {
   position: absolute;
   inset-block: 0;
-  background:
-    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.04) 0 2px, transparent 2px 5px),
-    linear-gradient(
-      180deg,
-      #6d0010 0%,
-      #b3071f 13%,
-      #e11d38 30%,
-      #ff5a6e 43%,
-      #e11d38 56%,
-      #b3071f 80%,
-      #6d0010 100%
-    );
+  background: linear-gradient(
+    180deg,
+    #4a0610 0%,
+    #8a0e21 9%,
+    #c4162e 26%,
+    #e3334a 40%,
+    #d2203a 50%,
+    #aa122a 70%,
+    #7e0c1e 88%,
+    #4a0610 100%
+  );
+  box-shadow:
+    inset 0 1px 0 rgb(255 180 190 / 0.28),
+    inset 0 -1px 0 rgb(0 0 0 / 0.3);
 }
 
 .ribbon-ceremony__half--left {
@@ -79,10 +81,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(100deg, transparent 30%, rgb(255 255 255 / 0.3) 50%, transparent 70%) no-repeat;
+  background: linear-gradient(100deg, transparent 20%, rgb(255 225 230 / 0.16) 50%, transparent 80%) no-repeat;
   background-size: 40% 100%;
   background-position: -70% 0;
-  animation: ribbon-sheen 3.4s ease-in-out infinite;
+  animation: ribbon-sheen 4.5s ease-in-out infinite;
   pointer-events: none;
 }
 
@@ -95,7 +97,7 @@
   left: 50%;
   top: 50%;
   width: var(--bow-width);
-  transform: translate(-50%, -49.5%);
+  transform: translate(-50%, -45.5%);
   cursor: var(--ribbon-cursor, crosshair);
   filter: drop-shadow(0 0.5rem 0.8rem rgb(0 0 0 / 0.3));
 }
@@ -106,42 +108,55 @@
   height: auto;
 }
 
-.ribbon-ceremony__hint {
+/* Scissors beside the bow's tails, angled up at the ribbon and snipping to
+   invite the cut. Clicking them cuts too. */
+.ribbon-ceremony__scissors {
   position: absolute;
-  left: 50%;
-  top: calc(50% + var(--bow-width) * 0.46 + 1.25rem);
+  left: calc(50% + var(--bow-width) * 0.36);
+  top: calc(50% + var(--ribbon-height) / 2 + 0.75rem);
+  width: clamp(5.5rem, 9vw, 9rem);
   translate: -50% 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  margin: 0;
-  padding: 0.7rem 1.1rem;
-  border: 2px solid var(--foreground);
-  background: var(--background);
-  color: var(--foreground);
-  box-shadow: 0.35rem 0.35rem 0 var(--signal-blue);
-  font-size: 0.8rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  white-space: nowrap;
-  pointer-events: none;
-  animation: ribbon-hint 2.4s ease-in-out infinite;
+  rotate: -28deg;
+  cursor: var(--ribbon-cursor, crosshair);
+  filter: drop-shadow(0 0.4rem 0.6rem rgb(0 0 0 / 0.35));
+  transition: opacity 300ms ease 150ms;
 }
 
-.ribbon-ceremony__hint svg {
-  width: 1.1rem;
-  height: 1.1rem;
+.ribbon-ceremony__scissors svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
 
-.ribbon-ceremony__band:focus-visible ~ .ribbon-ceremony__hint {
+.ribbon-ceremony__blade {
+  transform-box: view-box;
+  transform-origin: 60px 104px;
+  transition: transform 120ms ease-in;
+}
+
+.ribbon-ceremony__blade--a {
+  animation: ribbon-snip-a 2.2s ease-in-out infinite;
+}
+
+.ribbon-ceremony__blade--b {
+  animation: ribbon-snip-b 2.2s ease-in-out infinite;
+}
+
+.ribbon-ceremony__band:focus-visible ~ .ribbon-ceremony__scissors {
   outline: 3px solid var(--signal-blue);
-  outline-offset: 3px;
+  outline-offset: 6px;
+  border-radius: 0.5rem;
 }
 
-.is-cut .ribbon-ceremony__hint {
+/* On the cut the blades close and the scissors fade. */
+.is-cut .ribbon-ceremony__blade {
+  animation: none;
+  transform: rotate(0deg);
+}
+
+.is-cut .ribbon-ceremony__scissors {
   opacity: 0;
-  transition: opacity 200ms ease;
 }
 
 .ribbon-ceremony__confetti {
@@ -164,19 +179,45 @@
   }
 }
 
-@keyframes ribbon-hint {
+@keyframes ribbon-snip-a {
   0%,
+  55%,
   100% {
-    transform: translateY(0);
+    transform: rotate(-16deg);
   }
-  50% {
-    transform: translateY(-4px);
+  68% {
+    transform: rotate(-1deg);
+  }
+  80% {
+    transform: rotate(-16deg);
+  }
+}
+
+@keyframes ribbon-snip-b {
+  0%,
+  55%,
+  100% {
+    transform: rotate(16deg);
+  }
+  68% {
+    transform: rotate(1deg);
+  }
+  80% {
+    transform: rotate(16deg);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .ribbon-ceremony__band::after,
-  .ribbon-ceremony__hint {
+  .ribbon-ceremony__blade {
     animation: none;
+  }
+
+  .ribbon-ceremony__blade--a {
+    transform: rotate(-16deg);
+  }
+
+  .ribbon-ceremony__blade--b {
+    transform: rotate(16deg);
   }
 }

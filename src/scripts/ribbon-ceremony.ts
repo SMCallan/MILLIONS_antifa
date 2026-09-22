@@ -24,29 +24,136 @@ const SCISSORS_PATHS =
   "<circle cx='6' cy='6' r='3'/><circle cx='6' cy='18' r='3'/>" +
   "<path d='M20 4 8.12 15.88M14.47 14.48 20 20M8.12 8.12 12 12'/>";
 
+// A satin bow: folded loops with their openings, a gathered knot, and tails
+// with V-cut ends. Its knot sits at 45.5% of the height, on the ribbon's centre.
 const BOW_SVG = `
-<svg viewBox="0 0 240 210" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 400 330" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="rb-satin" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ff5a6e"/>
-      <stop offset="0.45" stop-color="#e11d38"/>
-      <stop offset="1" stop-color="#8f0017"/>
+    <filter id="rb-blur2" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2"/></filter>
+    <filter id="rb-blur5" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+    <linearGradient id="rb-loop" gradientUnits="userSpaceOnUse" x1="188" y1="150" x2="32" y2="112">
+      <stop offset="0" stop-color="#4f0711"/>
+      <stop offset="0.22" stop-color="#8a0e22"/>
+      <stop offset="0.6" stop-color="#c9192f"/>
+      <stop offset="0.9" stop-color="#b3132a"/>
+      <stop offset="1" stop-color="#7a0c1c"/>
     </linearGradient>
-    <linearGradient id="rb-deep" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#c3122c"/>
-      <stop offset="1" stop-color="#6d0010"/>
+    <linearGradient id="rb-loop-shade" gradientUnits="userSpaceOnUse" x1="0" y1="80" x2="0" y2="178">
+      <stop offset="0" stop-color="#ff8f9c" stop-opacity="0.18"/>
+      <stop offset="0.45" stop-color="#ff8f9c" stop-opacity="0"/>
+      <stop offset="0.7" stop-color="#1e0004" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#1e0004" stop-opacity="0.45"/>
     </linearGradient>
+    <linearGradient id="rb-hole" gradientUnits="userSpaceOnUse" x1="64" y1="138" x2="168" y2="152">
+      <stop offset="0" stop-color="#240206"/>
+      <stop offset="0.6" stop-color="#4a0610"/>
+      <stop offset="1" stop-color="#6e0b19"/>
+    </linearGradient>
+    <linearGradient id="rb-hole-top" gradientUnits="userSpaceOnUse" x1="0" y1="124" x2="0" y2="160">
+      <stop offset="0" stop-color="#120002" stop-opacity="0.7"/>
+      <stop offset="0.6" stop-color="#120002" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="rb-tail-across" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#650a17"/>
+      <stop offset="0.4" stop-color="#bd152d"/>
+      <stop offset="0.56" stop-color="#df2d46"/>
+      <stop offset="1" stop-color="#730c1b"/>
+    </linearGradient>
+    <linearGradient id="rb-tail-along" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e0004" stop-opacity="0.7"/>
+      <stop offset="0.3" stop-color="#1e0004" stop-opacity="0"/>
+      <stop offset="0.85" stop-color="#1e0004" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1e0004" stop-opacity="0.3"/>
+    </linearGradient>
+    <linearGradient id="rb-knot-across" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f0711"/>
+      <stop offset="0.28" stop-color="#b3132a"/>
+      <stop offset="0.5" stop-color="#e8384f"/>
+      <stop offset="0.72" stop-color="#b3132a"/>
+      <stop offset="1" stop-color="#4f0711"/>
+    </linearGradient>
+    <linearGradient id="rb-knot-ends" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e0004" stop-opacity="0.55"/>
+      <stop offset="0.22" stop-color="#1e0004" stop-opacity="0"/>
+      <stop offset="0.78" stop-color="#1e0004" stop-opacity="0"/>
+      <stop offset="1" stop-color="#1e0004" stop-opacity="0.6"/>
+    </linearGradient>
+
+    <path id="rb-loop-outline" d="M186 138C164 116 132 84 98 76 70 70 44 78 36 100 30 118 32 142 44 156 60 172 94 178 130 176 154 175 172 170 186 164Z"/>
+    <clipPath id="rb-loop-clip"><use href="#rb-loop-outline"/></clipPath>
+    <clipPath id="rb-tail-clip"><use href="#rb-tail-outline"/></clipPath>
+    <path id="rb-tail-outline" d="M186 166C180 196 162 226 150 252 140 274 132 288 124 302L146 292 154 316C164 290 176 266 184 242 194 214 202 192 206 172Z"/>
+
+    <g id="rb-loop-shape">
+      <use href="#rb-loop-outline" fill="url(#rb-loop)"/>
+      <use href="#rb-loop-outline" fill="url(#rb-loop-shade)"/>
+      <g clip-path="url(#rb-loop-clip)">
+      <path d="M184 140C168 124 148 108 124 100" fill="none" stroke="#1e0004" stroke-opacity="0.3" stroke-width="3" filter="url(#rb-blur2)"/>
+      <path d="M184 158C166 164 146 168 122 169" fill="none" stroke="#1e0004" stroke-opacity="0.25" stroke-width="3" filter="url(#rb-blur2)"/>
+      <path d="M176 134C154 112 124 92 96 88 74 86 56 95 46 110" fill="none" stroke="#ff9aa8" stroke-opacity="0.38" stroke-width="11" stroke-linecap="round" filter="url(#rb-blur5)"/>
+      <path d="M170 128C150 108 124 90 98 84" fill="none" stroke="#ffe3e7" stroke-opacity="0.3" stroke-width="3" stroke-linecap="round" filter="url(#rb-blur2)"/>
+      <path d="M72 163C102 172 140 170 176 161" fill="none" stroke="#ff8a97" stroke-opacity="0.22" stroke-width="7" stroke-linecap="round" filter="url(#rb-blur5)"/>
+      <path fill="url(#rb-hole)" d="M166 152C140 140 104 126 78 126 62 126 58 136 68 144 90 158 130 160 166 154Z"/>
+      <path fill="url(#rb-hole-top)" d="M166 152C140 140 104 126 78 126 62 126 58 136 68 144 90 158 130 160 166 154Z"/>
+      <path d="M70 144C92 156 128 158 162 154" fill="none" stroke="#ff7486" stroke-opacity="0.35" stroke-width="3" filter="url(#rb-blur2)"/>
+      </g>
+      <path clip-path="url(#rb-loop-clip)" d="M42 102C34 118 36 138 48 154" fill="none" stroke="#2a0006" stroke-opacity="0.4" stroke-width="4" filter="url(#rb-blur2)"/>
+      <use href="#rb-loop-outline" fill="none" stroke="#5c0914" stroke-opacity="0.3" stroke-width="1"/>
+    </g>
+
+    <g id="rb-tail-shape">
+      <use href="#rb-tail-outline" fill="url(#rb-tail-across)"/>
+      <use href="#rb-tail-outline" fill="url(#rb-tail-along)"/>
+      <path clip-path="url(#rb-tail-clip)" d="M195 182C188 212 172 240 162 262 154 280 146 292 140 302" fill="none" stroke="#ffc9d0" stroke-opacity="0.3" stroke-width="5" stroke-linecap="round" filter="url(#rb-blur2)"/>
+      <use href="#rb-tail-outline" fill="none" stroke="#5c0914" stroke-opacity="0.3" stroke-width="1"/>
+    </g>
   </defs>
-  <g stroke="#5c000d" stroke-opacity="0.55" stroke-width="1.5" stroke-linejoin="round">
-    <path fill="url(#rb-deep)" d="M112 108 70 196l16-10 10 18 30-88Z"/>
-    <path fill="url(#rb-deep)" d="M128 108l42 88-16-10-10 18-30-88Z"/>
-    <path fill="url(#rb-satin)" d="M120 100C96 66 64 40 34 46 10 51 8 86 22 108c16 24 62 16 98-4Z"/>
-    <path fill="url(#rb-deep)" d="M120 102c-24-10-50-14-70-8 16 10 46 14 70 12Z"/>
-    <path fill="url(#rb-satin)" d="M120 100c24-34 56-60 86-54 24 5 26 40 12 62-16 24-62 16-98-4Z"/>
-    <path fill="url(#rb-deep)" d="M120 102c24-10 50-14 70-8-16 10-46 14-70 12Z"/>
-    <rect x="103" y="84" width="34" height="40" rx="11" fill="url(#rb-satin)"/>
-  </g>
-  <path d="M110 90c6-3 14-3 20 0" fill="none" stroke="#fff" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round"/>
+
+  <use href="#rb-tail-shape"/>
+  <use href="#rb-tail-shape" transform="translate(400 0) scale(-1 1) rotate(-6 200 165)"/>
+
+  <use href="#rb-loop-shape"/>
+  <use href="#rb-loop-shape" transform="translate(400 0) scale(-1 1) rotate(3 186 151)"/>
+
+  <path id="rb-knot" fill="url(#rb-knot-across)" d="M180 126C192 121 208 121 220 126 216 140 216 162 220 176 208 182 192 182 180 176 184 162 184 140 180 126Z"/>
+  <path fill="url(#rb-knot-ends)" d="M180 126C192 121 208 121 220 126 216 140 216 162 220 176 208 182 192 182 180 176 184 162 184 140 180 126Z"/>
+  <path d="M185 137C194 141 206 141 215 137M185 166C194 162 206 162 215 166" fill="none" stroke="#1e0004" stroke-opacity="0.35" stroke-width="1.6" filter="url(#rb-blur2)"/>
+  <path d="M200 128C201 144 201 160 200 175" fill="none" stroke="#ffe3e7" stroke-opacity="0.45" stroke-width="5" stroke-linecap="round" filter="url(#rb-blur2)"/>
+  <path d="M180 126C192 121 208 121 220 126 216 140 216 162 220 176 208 182 192 182 180 176 184 162 184 140 180 126Z" fill="none" stroke="#5c0914" stroke-opacity="0.35" stroke-width="1"/>
+</svg>`;
+
+// Ceremonial scissors pointing up at the ribbon: steel blades, dark handles.
+// Each half pivots on the screw at (60, 104) so CSS can snip them open and shut.
+const SCISSORS_HALF = `
+  <path fill="url(#sc-steel)" d="M60 110 55 40C54 22 56 12 60 2 63 14 65 30 65 56L64 110Z"/>
+  <path d="M60.5 8C62.5 22 63.5 42 63.5 100" fill="none" stroke="#fff" stroke-opacity="0.7" stroke-width="1.2"/>
+  <path fill="url(#sc-handle)" fill-rule="evenodd" d="M58 100 66 104 78 146C96 146 108 160 106 178 104 196 86 206 70 200 54 194 50 176 58 162L66 150ZM72 164C62 168 62 186 72 190 84 194 94 184 92 172 90 162 80 160 72 164Z"/>
+  <path d="M82 150C96 152 104 164 102 178" fill="none" stroke="#fff" stroke-opacity="0.18" stroke-width="2" stroke-linecap="round"/>`;
+
+const SCISSORS_SVG = `
+<svg viewBox="0 0 120 210" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sc-steel" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7d8691"/>
+      <stop offset="0.45" stop-color="#e9edf1"/>
+      <stop offset="0.55" stop-color="#ffffff"/>
+      <stop offset="0.78" stop-color="#b3bbc4"/>
+      <stop offset="1" stop-color="#65707c"/>
+    </linearGradient>
+    <linearGradient id="sc-handle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#46464d"/>
+      <stop offset="1" stop-color="#101012"/>
+    </linearGradient>
+    <radialGradient id="sc-screw" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#8e959d"/>
+    </radialGradient>
+  </defs>
+  <g class="ribbon-ceremony__blade ribbon-ceremony__blade--a">${SCISSORS_HALF}</g>
+  <g class="ribbon-ceremony__blade ribbon-ceremony__blade--b"><g transform="translate(120 0) scale(-1 1)">${SCISSORS_HALF}</g></g>
+  <circle cx="60" cy="104" r="6" fill="url(#sc-screw)" stroke="#5a6068" stroke-width="0.8"/>
+  <circle cx="60" cy="104" r="1.6" fill="#5a6068"/>
 </svg>`;
 
 export function startRibbonCeremony({ label }: Options) {
@@ -65,18 +172,14 @@ export function startRibbonCeremony({ label }: Options) {
       <span class="ribbon-ceremony__half ribbon-ceremony__half--right"></span>
     </button>
     <div class="ribbon-ceremony__bow" aria-hidden="true">${BOW_SVG}</div>
-    <p class="ribbon-ceremony__hint" aria-hidden="true">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round">${SCISSORS_PATHS}</svg>
-      <span></span>
-    </p>`;
+    <div class="ribbon-ceremony__scissors" aria-hidden="true">${SCISSORS_SVG}</div>`;
 
   const band = overlay.querySelector<HTMLButtonElement>(".ribbon-ceremony__band")!;
   const [leftHalf, rightHalf] = overlay.querySelectorAll<HTMLElement>(".ribbon-ceremony__half");
   const bow = overlay.querySelector<HTMLElement>(".ribbon-ceremony__bow")!;
-  const hint = overlay.querySelector<HTMLElement>(".ribbon-ceremony__hint")!;
+  const scissors = overlay.querySelector<HTMLElement>(".ribbon-ceremony__scissors")!;
+  // The label is spoken rather than shown: the scissors say it visually.
   band.setAttribute("aria-label", label);
-  hint.querySelector("span")!.textContent = label;
 
   document.body.append(overlay);
   band.focus({ preventScroll: true });
@@ -115,7 +218,7 @@ export function startRibbonCeremony({ label }: Options) {
       swing(rightHalf, -88);
       bow.animate(
         [
-          { transform: "translate(-50%, -49.5%) rotate(0deg)", opacity: 1 },
+          { transform: "translate(-50%, -45.5%) rotate(0deg)", opacity: 1 },
           { transform: "translate(-50%, 70vh) rotate(24deg)", opacity: 0 },
         ],
         drop,
@@ -140,7 +243,7 @@ export function startRibbonCeremony({ label }: Options) {
     return rect.left + rect.width / 2;
   };
   const onClick = (event: MouseEvent) => cutAt(event.detail === 0 ? bandCentreX() : event.clientX);
-  const onBowClick = () => cutAt(bandCentreX());
+  const onCentreClick = () => cutAt(bandCentreX());
 
   // Dragging across the ribbon cuts it where the stroke crossed its centre line.
   let last: { x: number; y: number } | null = null;
@@ -168,7 +271,8 @@ export function startRibbonCeremony({ label }: Options) {
   };
 
   band.addEventListener("click", onClick);
-  bow.addEventListener("click", onBowClick);
+  bow.addEventListener("click", onCentreClick);
+  scissors.addEventListener("click", onCentreClick);
   overlay.addEventListener("pointerdown", onPointerDown);
   overlay.addEventListener("pointermove", onPointerMove);
   window.addEventListener("pointerup", onPointerUp);
@@ -176,7 +280,8 @@ export function startRibbonCeremony({ label }: Options) {
 
   function removeListeners() {
     band.removeEventListener("click", onClick);
-    bow.removeEventListener("click", onBowClick);
+    bow.removeEventListener("click", onCentreClick);
+    scissors.removeEventListener("click", onCentreClick);
     overlay.removeEventListener("pointerdown", onPointerDown);
     overlay.removeEventListener("pointermove", onPointerMove);
     window.removeEventListener("pointerup", onPointerUp);
@@ -230,10 +335,10 @@ function dropRibbonFromAddress() {
 function scissorsCursor() {
   // White scissors with a dark outline, so the cursor reads on the red ribbon.
   const svg =
-    "<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke-linecap='round' stroke-linejoin='round'>" +
+    "<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 24 24' fill='none' stroke-linecap='round' stroke-linejoin='round'>" +
     `<g stroke='#111' stroke-width='4'>${SCISSORS_PATHS}</g>` +
     `<g stroke='#fff' stroke-width='2'>${SCISSORS_PATHS}</g></svg>`;
-  return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 16 16, crosshair`;
+  return `url("data:image/svg+xml,${encodeURIComponent(svg)}") 24 24, crosshair`;
 }
 
 type Piece = {
