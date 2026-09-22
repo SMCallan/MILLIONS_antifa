@@ -1,112 +1,81 @@
-# Launch checklist — template redesign + multilingual site
+# Site checklist
 
-This list covers what the team should review before pushing the redesigned,
-multilingual site to production. Items are grouped by priority.
-
-Context: the site was restructured to match the new template (flag language
-switcher, logo-left / title-right hero, "Tour dates" + "More information" nav)
-and given functional i18n for 7 languages (en, ca, es, de, sv, nl, fr). The
-existing R2 / D1 / Turnstile / magic-link submission flow was kept intact.
+The site is live at https://millionwords.net (`www` redirects to it). This is
+what is left, grouped by who needs to act.
 
 ---
 
-## 0. Client direction (July 2026) — simplified interim site
+## 1. Content — project team
 
-- [ ] **Homepage is now a single non-scrolling screen** (logo top-left, language
-      flags, title, MENU / TOUR actions, animation panel) per the client sketch.
-      The animation is the placeholder JS shader in
-      `src/components/HomeAnimation.tsx` — **swap in the commissioned animation
-      loop** there when the client supplies it.
-- [ ] **All tour dates are shown as "TBC"** and collaborators / statuses /
-      break rows were removed pending the client's final decisions
-      (`src/data/site.ts` `tourDates`; the localized "TBC" label is
-      `tourDates.tbc` in the dictionaries).
-- [ ] **Page copy was trimmed to stay descriptive and open-ended** (no fixed
-      room sizes, event formats, or anniversary dates on Tour/Host pages). The
-      client will write the final copy before launch — re-check translations
-      after that lands.
+- [ ] **Gallery.** Replace the placeholder tiles in
+      `src/components/pages/Gallery.astro` with confirmed works. Contributions
+      sent by email are reviewed privately and are never published here
+      automatically.
+- [ ] **Tour data.** Confirm dates, venues and spellings in `src/data/site.ts`:
+      `tourDates` (four stops have dates, the rest show "TBC") and
+      `artistCommissions`.
+- [ ] **Copy sign-off.** Confirm the drafted wording on Concept, Gallery, Links
+      and the Contribute / Host conditions, especially the rights, consent and
+      retention language. Re-check the translations after any change.
+- [ ] **Placeholder email.** `src/data/site.ts` `email` is still
+      `bookings@example.org`. Nothing renders it any more: set the real address
+      or remove the field.
+- [ ] **Contact address (optional).** The email reveal returns `CONTACT_EMAIL`
+      when it is set on the Pages project, otherwise the fallback in
+      `functions/api/contact-email.ts`.
 
-## 1. Blockers — do before launch
+## 2. Translations
 
-- [ ] **Native review of all translations.** The 6 non-English locale files are
-      machine-assisted and must be proofread by native speakers before launch —
-      the political/historical wording matters for an anti-fascist exhibition.
-      Files: `src/i18n/ca.ts`, `es.ts`, `de.ts`, `sv.ts`, `nl.ts`, `fr.ts`.
-      English source of truth: `src/i18n/en.ts`. Anything a translator leaves
-      out automatically falls back to English (by design).
-- [x] **Confirm the production domain.** `https://millionwords.net`, with
-      `www` redirecting to it. `astro.config.mjs` (`site`, which drives the
-      `canonical` and `hreflang` tags), `wrangler.jsonc` (`PUBLIC_SITE_URL`)
-      and `src/data/site.ts` (`url`) all agree.
-- [ ] **Cloudflare bindings & secrets are set for the deploy environment**
-      (per `README.md`): `SUBMISSIONS` (R2), `SUBMISSIONS_DB` (D1),
-      `MAGIC_LINK_SECRET`, `PUBLIC_TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`.
-      Apply D1 migrations (`wrangler d1 migrations apply ... --remote`).
-- [ ] **Protect `/admin/*` with Cloudflare Access** before going live (per
-      `README.md`). The reviewer page and its API must not be public.
-- [ ] **Implement the magic-link email adapter** in `functions/api/_email.ts`
-      (currently a stub — production fails closed and no link is sent). Contribution
-      links won't reach artists until this is done.
+- [ ] **Catalan open questions.** Resolve the "Needs a decision" and
+      "Follow-ups" lists in PR #22: commissioned vs selected, curated vs
+      selected, the headline in English, "la paraula dita", the sala/espai and
+      socis/col·laboradors terms, "Trieu l'idioma", and the two 404 strings the
+      reviewer has not seen. The other five locales had native review in
+      September 2026.
 
-## 2. Content to finalise
+## 3. QA by hand
 
-- [ ] **Real contact email.** `src/data/site.ts` `email` is still
-      `bookings@example.org` (placeholder). Used by the Donate page mailto and
-      as the project contact.
-- [ ] **Donate: add the real payment link.** The page currently shows a
-      "coming soon" notice + a mailto fallback. Wire up the payment provider and
-      update `donate.ctaButton` / remove `donate.ctaPending` in `src/i18n/en.ts`
-      (and translations).
-- [ ] **Gallery: replace placeholder tiles** in
-      `src/components/pages/Gallery.astro` with real works once confirmed.
-      (Note: contributions submitted via the secure link are reviewed privately
-      and are NOT auto-published here.)
-- [ ] **Links: add real URLs.** `links.groups[].items` in the locale files are
-      descriptive placeholders with no destinations yet. Add `href`s and render
-      them as real links in `src/components/pages/Links.astro`.
-- [ ] **Draft copy review.** Concept, Donate, Gallery, Links, and the two
-      Conditions pages (Contribute / Host) contain drafted copy — have the
-      project team confirm wording, especially the legal/rights/consent and
-      retention language on the Conditions pages.
-- [ ] **Verify tour data** in `src/data/site.ts` (`tourDates`,
-      `artistCommissions`) — dates, venues, collaborators, spellings.
-- [ ] **Logo / moving graphic.** The template calls for a "moving graphic
-      (Robert Ford)". The hero currently uses the static `million-words-logo.png`.
-      Swap in an animated asset if desired (the hero already supports it via the
-      `logo` prop / left panel).
+- [ ] Click through all 7 languages on every page; the switcher should keep you
+      on the same page.
+- [ ] Keyboard-test the header "More information" dropdown and the full-screen
+      menu, including Escape to close and focus returning to the button.
+- [ ] Check mobile and tablet layouts. Known quirk: around 340 px wide,
+      "Collaborators" in the full-screen menu squeezes its number column and
+      covers the arrow.
+- [ ] Share a page link somewhere that shows previews (or use a link-preview
+      debugger) and check the card image and title.
 
-## 3. Decisions for the team
+## 4. Infrastructure
 
-- [ ] **Should the functional pages be localized?** `/submit`, `/booking`,
-      `/submit/access`, `/admin` are intentionally English-only to avoid
-      disturbing the working forms and their many validation/status states. From
-      those pages the language flags send non-English visitors to that locale's
-      home (`/es/`, `/ca/`, …) rather than a missing translated form. If full
-      localization is wanted, the form field labels + `data-form-status` messages
-      + the `functions/` redirect targets all need translating. Strings for the
-      form labels already exist in the locale files (`host.fields`, `contribute.*`).
-
-## 4. SEO / infra polish
-
-- [ ] **Add a sitemap** (`@astrojs/sitemap`) once the domain is final — it will
-      pick up the localized routes and the `hreflang` alternates already emitted.
-- [ ] **Add an Open Graph / social share image.** Only `favicon.svg` exists today;
-      `og:image` is not set in `src/layouts/Layout.astro`.
-- [ ] **Verify `canonical` + `hreflang`** render with the correct absolute domain
-      after the domain is confirmed (localized pages emit a full alternate set +
-      `x-default`; English-only pages are self-canonical with no alternates).
-
-## 5. QA before push
-
-- [ ] Click through all 7 languages on every marketing page; confirm the switch
-      keeps you on the same page and the chrome + content are translated.
-- [ ] Keyboard-test the "More information" dropdown (open/close, Escape, focus).
-- [ ] Submit the Host enquiry form and request a contribution link end-to-end in
-      a preview environment with Turnstile + R2 + D1 configured.
-- [ ] Check responsive layout (mobile/tablet) for the split hero and nav.
-- [ ] Run `npm run check` (0 errors expected) and `npm run build` before deploy.
+- [ ] **Retire the old Pages project** `millions-antifa`
+      (millions-antifa.pages.dev). It still builds from this repository but can
+      no longer reveal the contact email, because its Turnstile secret belongs
+      to the old widget.
+- [ ] **`npm run deploy:pages`** still passes `--project-name millions-antifa`,
+      and the README still suggests that name. Update both once the old project
+      is gone.
 
 ---
+
+### Done in September 2026
+
+- Production domain `millionwords.net`; `site`, `url` and `PUBLIC_SITE_URL`
+  agree, and canonical / hreflang URLs carry the trailing slash Pages serves.
+- Sitemap (`sitemap-index.xml` via `@astrojs/sitemap`, with hreflang
+  alternates, 404 pages excluded) and `robots.txt` pointing at it.
+- Social share card `public/og-image.jpg` (1200×630) with `og:` and
+  `twitter:card` tags.
+- Turnstile widget and secret for the millionwords.net Pages project.
+- The commissioned home film replaced the placeholder animation.
+- Links page has real, checked destinations; Donate goes straight to the
+  Chuffed campaign.
+- Native review applied to all six non-English locales.
+- Astro 7 / Vite 8 / Wrangler 4.136; `npm audit` clean.
+
+The earlier checklist also covered an artwork-upload flow (R2, D1, magic-link
+email, `/admin`, `/submit`, `/booking`). That flow was replaced by the
+email-reveal contact gate, so those items no longer apply; the old list is in
+git history.
 
 ### Notes for reviewers
 
