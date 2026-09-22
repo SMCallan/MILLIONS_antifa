@@ -44,6 +44,7 @@ export const ca: TranslationOverride = {
     title: "Un milió de paraules contra el feixisme",
     subtitle: "Exposició itinerant europea del projecte Solidarity Park.",
     artworkCredit: "Animació i logotip: Roberto Ford",
+    cutRibbon: "Talla la cinta",
     lede: "Si una imatge diu mil paraules, què creen mil artistes? Un milió de paraules, cadascuna des d'una perspectiva única, que formen una exposició itinerant internacional contra el feixisme.",
     primaryCta: "Dates de la gira",
     secondaryCta: "Contribuir amb obra",

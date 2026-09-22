@@ -44,6 +44,7 @@ export const nl: TranslationOverride = {
     title: "Een miljoen woorden tegen het fascisme",
     subtitle: "Europese reizende tentoonstelling van het project Solidarity Park.",
     artworkCredit: "Animatie en logo: Roberto Ford",
+    cutRibbon: "Knip het lint door",
     lede: "Als een beeld meer zegt dan duizend woorden, wat maken dan duizend kunstenaars? Een miljoen woorden, elk vanuit een uniek perspectief, samen een internationale reizende tentoonstelling tegen het fascisme.",
     primaryCta: "Tourdata",
     secondaryCta: "Kunstwerk bijdragen",
