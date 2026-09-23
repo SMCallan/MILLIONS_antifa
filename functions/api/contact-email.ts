@@ -8,7 +8,7 @@ import { validateTurnstile } from "./_turnstile";
 // Set CONTACT_EMAIL in the Pages project to keep the address out of this
 // (public) repository as well. The fallback exists so the page still works
 // before that variable is configured.
-const FALLBACK_CONTACT_EMAIL = "millionwordssaf@gmail.com";
+const FALLBACK_CONTACT_EMAIL = "millionwordsaf@gmail.com";
 
 export async function onRequestPost({ request, env }: PagesContext) {
   let formData: FormData;
