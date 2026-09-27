@@ -44,10 +44,10 @@ const formatPlace = (stop: TourStop) =>
       <p class="mt-5 text-sm leading-7 text-muted-foreground">{t.tourDates.routeBody}</p>
     </div>
 
-    <ol class="border-t-2 border-foreground">
+    <ol class="border-t-2 border-foreground sm:grid sm:grid-cols-[4rem_max-content_1fr]">
       {
         tourDates.map((event, index) => (
-          <li class="group grid gap-3 border-b border-foreground/25 py-5 transition-colors hover:bg-card sm:grid-cols-[4rem_9rem_1fr] sm:items-center sm:gap-5 sm:px-4 sm:py-6">
+          <li class="group grid gap-3 border-b border-foreground/25 py-5 transition-colors hover:bg-card sm:col-span-3 sm:grid-cols-subgrid sm:items-center sm:gap-5 sm:px-4 sm:py-6">
             <span class="display-type text-3xl tabular-nums text-muted-foreground/55 sm:text-4xl">
               {String(index + 1).padStart(2, "0")}
             </span>
@@ -56,7 +56,7 @@ const formatPlace = (stop: TourStop) =>
                 {t.tourDates.stop}
               </p>
               <p class:list={[
-                "mt-1 inline-block px-2 py-1 text-xs font-black uppercase tracking-[0.12em]",
+                "mt-1 inline-block whitespace-nowrap px-2 py-1 text-xs font-black uppercase tracking-[0.12em]",
                 event.dates
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-muted-foreground",
