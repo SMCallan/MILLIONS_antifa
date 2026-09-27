@@ -1,7 +1,7 @@
 # Spanish (español) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-09-21.
+Generated 2026-09-27.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**237 strings.** 228 differ from the English; 9 are identical (see the end of this file).
+**238 strings.** 229 differ from the English; 9 are identical (see the end of this file).
 
 ---
 
@@ -203,8 +203,13 @@ Things worth watching for:
 
 ### artworkCredit
 
-- **English:** Animation & logo: Roberto Ford
-- **Spanish:** Animación y logotipo: Roberto Ford
+- **English:** Animation & logo: Robert Ford
+- **Spanish:** Animación y logotipo: Robert Ford
+
+### cutRibbon
+
+- **English:** Cut the ribbon
+- **Spanish:** Corta la cinta
 
 ### lede
 
