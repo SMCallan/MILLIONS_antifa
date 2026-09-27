@@ -43,7 +43,7 @@ export const de: TranslationOverride = {
   hero: {
     title: "Eine Million Worte gegen Faschismus",
     subtitle: "Europäische Wanderausstellung des Projekts Solidarity Park.",
-    artworkCredit: "Animation und Logo: Roberto Ford",
+    artworkCredit: "Animation und Logo: Robert Ford",
     cutRibbon: "Band durchschneiden",
     lede: "Wenn ein Bild tausend Worte sagt, was schaffen dann tausend Künstler*innen? Eine Million Worte, jedes aus einer einzigartigen Perspektive, die zu einer internationalen Wanderausstellung gegen Faschismus werden.",
     primaryCta: "Tourdaten",

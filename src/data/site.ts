@@ -113,15 +113,25 @@ export const tourDates: TourStop[] = [
   },
   { places: ["Midlands"], region: "England" },
   { places: ["London", "South East"], region: "UK" },
-  { places: ["Leeuwarden"], region: "Nederland" },
+  {
+    places: ["Leeuwarden"],
+    region: "Nederland",
+    dates: { start: "2027-04-02", end: "2027-04-06" },
+    venue: "OSG Piter Jelles",
+  },
   { places: ["Stockholm"], region: "Sverige" },
-  { places: ["Köln"], region: "Deutschland" },
+  {
+    places: ["Köln"],
+    region: "Deutschland",
+    dates: { start: "2027-04-22", end: "2027-04-27" },
+    venue: "Bunker K101, Körnerstraße 101, 50823 Ehrenfeld",
+  },
   { places: ["Toulouse"], region: "France" },
   {
     places: ["Malgrat de Mar"],
     region: "Catalunya",
     dates: { start: "2027-05-26", end: "2027-05-30" },
-    venue: "Festival Solidarity Park — Arxiu Municipal, Carrer de Mar",
+    venue: "Festival Solidarity Park",
   },
   { places: ["Hull"], venue: "Hull Art School" },
 ];

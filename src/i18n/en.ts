@@ -52,7 +52,7 @@ export const en = {
   hero: {
     title: "A Million Words Against Fascism",
     subtitle: "European touring exhibition from the Solidarity Park project.",
-    artworkCredit: "Animation & logo: Roberto Ford",
+    artworkCredit: "Animation & logo: Robert Ford",
     // Label for the ribbon shown when the home page is opened with ?ribbon.
     cutRibbon: "Cut the ribbon",
     lede: "If a picture tells a thousand words, what do a thousand artists create? A million words, each told from a unique perspective, forming an international touring exhibition against fascism.",

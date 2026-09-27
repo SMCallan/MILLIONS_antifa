@@ -1,7 +1,7 @@
 # Dutch (Nederlands) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-09-21.
+Generated 2026-09-27.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**237 strings.** 222 differ from the English; 15 are identical (see the end of this file).
+**238 strings.** 223 differ from the English; 15 are identical (see the end of this file).
 
 ---
 
@@ -208,8 +208,13 @@ Things worth watching for:
 
 ### artworkCredit
 
-- **English:** Animation & logo: Roberto Ford
-- **Dutch:** Animatie en logo: Roberto Ford
+- **English:** Animation & logo: Robert Ford
+- **Dutch:** Animatie en logo: Robert Ford
+
+### cutRibbon
+
+- **English:** Cut the ribbon
+- **Dutch:** Knip het lint door
 
 ### lede
 

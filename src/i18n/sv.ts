@@ -43,7 +43,7 @@ export const sv: TranslationOverride = {
   hero: {
     title: "En miljon ord mot fascismen",
     subtitle: "Europeisk vandringsutställning från projektet Solidarity Park.",
-    artworkCredit: "Animation och logotyp: Roberto Ford",
+    artworkCredit: "Animation och logotyp: Robert Ford",
     cutRibbon: "Klipp bandet",
     lede: "Om en bild säger tusen ord, vad skapar då tusen konstnärer? En miljon ord, vart och ett ur ett unikt perspektiv, som tillsammans bildar en internationell vandringsutställning mot fascismen.",
     primaryCta: "Turnédatum",
