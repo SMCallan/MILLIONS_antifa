@@ -117,7 +117,6 @@ export const tourDates: TourStop[] = [
     places: ["Leeuwarden"],
     region: "Nederland",
     dates: { start: "2027-04-02", end: "2027-04-06" },
-    venue: "OSG Piter Jelles",
   },
   { places: ["Stockholm"], region: "Sverige" },
   {
