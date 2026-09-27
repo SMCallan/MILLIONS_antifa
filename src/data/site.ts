@@ -97,7 +97,11 @@ export type TourStop = {
 };
 
 export const tourDates: TourStop[] = [
-  { places: ["Hull"], dates: { start: "2026-12-01", end: "2026-12-17" } },
+  {
+    places: ["Hull"],
+    dates: { start: "2026-12-01", end: "2026-12-17" },
+    venue: "Hull History Centre, Worship Street, Hull, HU2 8BG",
+  },
   {
     places: ["Dundee"],
     region: "Scotland",
