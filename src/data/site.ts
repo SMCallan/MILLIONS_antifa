@@ -105,7 +105,7 @@ export const tourDates: TourStop[] = [
   {
     places: ["Dundee"],
     region: "Scotland",
-    dates: { start: "2027-01-29", end: "2027-01-31" },
+    dates: { start: "2027-01-09", end: "2027-01-17" },
     venue: "Generator Projects, Units 25–26, Mid Wynd Industrial Estate, Dundee, DD1 4JG",
   },
   { places: ["Sunderland"] },
