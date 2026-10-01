@@ -362,5 +362,6 @@ export const de: TranslationOverride = {
   footer: {
     tagline: "Europäische Wanderausstellung des Projekts Solidarity Park.",
     navTitle: "Entdecken",
+    siteCreatedBy: "Website erstellt von",
   },
 };

@@ -1,7 +1,7 @@
 # Catalan (català) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-09-27.
+Generated 2026-10-01.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**238 strings.** 228 differ from the English; 10 are identical (see the end of this file).
+**239 strings.** 229 differ from the English; 10 are identical (see the end of this file).
 
 ---
 
@@ -1259,6 +1259,11 @@ Things worth watching for:
 
 - **English:** Explore
 - **Catalan:** Explorar
+
+### siteCreatedBy
+
+- **English:** Site created by
+- **Catalan:** Web creada per
 
 ---
 
