@@ -1,7 +1,5 @@
 ---
-import { ArrowUpRight } from "lucide-react";
-
-import { footerNav, site } from "@/data/site";
+import { footerNav } from "@/data/site";
 import { getLangFromUrl, localizePath, useTranslations } from "@/i18n";
 
 const lang = getLangFromUrl(Astro.url);
@@ -53,15 +51,17 @@ const year = new Date().getFullYear();
   <div class="border-t border-background/18">
     <div class="container-page flex flex-col gap-3 py-5 text-[0.62rem] font-bold uppercase tracking-[0.12em] text-background/45 sm:flex-row sm:items-center sm:justify-between">
       <p>© {year} {t.meta.siteName}</p>
-      <a
-        href={site.url}
-        class="inline-flex items-center gap-1.5 transition-colors hover:text-background"
-        target="_blank"
-        rel="noreferrer"
-      >
-        {site.url.replace("https://", "")}
-        <ArrowUpRight className="size-3" aria-hidden="true" />
-      </a>
+      {/* Maker's credit in askcal.co.uk's own brand colours, matching its other
+          sites. The brand stays lower case; 2026 is the year the site was made. */}
+      <p class="normal-case tracking-normal text-[0.72rem] font-medium text-background/60">
+        {t.footer.siteCreatedBy}{" "}
+        <a
+          href="https://www.askcal.co.uk/"
+          target="_blank"
+          rel="noopener"
+          class="inline-block bg-[#f4fa63] px-1.5 py-0.5 font-bold text-[#2848dd] transition-colors hover:text-[#131b34] focus-visible:outline-[#2848dd]"
+        >askcal.co.uk</a>{" "}· 2026
+      </p>
     </div>
   </div>
 </footer>

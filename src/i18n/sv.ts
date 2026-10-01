@@ -362,5 +362,6 @@ export const sv: TranslationOverride = {
   footer: {
     tagline: "Europeisk vandringsutställning från projektet Solidarity Park.",
     navTitle: "Utforska",
+    siteCreatedBy: "Webbplats skapad av",
   },
 };

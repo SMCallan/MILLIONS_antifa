@@ -362,5 +362,6 @@ export const nl: TranslationOverride = {
   footer: {
     tagline: "Europese reizende tentoonstelling van het project Solidarity Park.",
     navTitle: "Ontdekken",
+    siteCreatedBy: "Website gemaakt door",
   },
 };

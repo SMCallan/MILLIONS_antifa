@@ -362,5 +362,6 @@ export const fr: TranslationOverride = {
   footer: {
     tagline: "Exposition itinérante européenne du projet Solidarity Park.",
     navTitle: "Explorer",
+    siteCreatedBy: "Site créé par",
   },
 };

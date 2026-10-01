@@ -389,6 +389,7 @@ export const en = {
   footer: {
     tagline: "European touring exhibition from the Solidarity Park project.",
     navTitle: "Explore",
+    siteCreatedBy: "Site created by",
   },
 };
 
