@@ -1,7 +1,7 @@
 # French (français) — translation check
 
 **A Million Words Against Fascism** — millions-antifa.pages.dev
-Generated 2026-10-01.
+Generated 2026-09-27.
 
 These translations were produced by an AI assistant and have **not** been
 checked by a native speaker. That is what this document is for.
@@ -20,7 +20,7 @@ Things worth watching for:
 - **"Solidarity Park" is intentionally left in English** everywhere, as the
   organisation's name. Flag it if that reads badly in context.
 
-**246 strings.** 224 differ from the English; 22 are identical (see the end of this file).
+**238 strings.** 224 differ from the English; 14 are identical (see the end of this file).
 
 ---
 
@@ -1111,54 +1111,6 @@ Things worth watching for:
 - **English:** Contribute artwork
 - **French:** Proposez une œuvre
 
-### images › liberty-rising
-
-- **English:** Poster of a woman in red breaking her chains and reaching for the sun, as a crowd climbs over a toppled stone marked “Liberty”.
-- **French:** Poster of a woman in red breaking her chains and reaching for the sun, as a crowd climbs over a toppled stone marked “Liberty”.
-- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
-
-### images › tree-of-life
-
-- **English:** Mosaic of a tree of life with a white dove in its branches, rising from old gravestones above a sunlit harbour, inside a patterned border.
-- **French:** Mosaic of a tree of life with a white dove in its branches, rising from old gravestones above a sunlit harbour, inside a patterned border.
-- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
-
-### images › rebel
-
-- **English:** The word “Rebel” in black ink brush strokes with splatter, on cream paper.
-- **French:** The word “Rebel” in black ink brush strokes with splatter, on cream paper.
-- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
-
-### images › fat-cats
-
-- **English:** Black-and-white cartoon of two fat cats in suits among sacks of money in an office tower. One asks “Do you think we have enough yet?” and the other replies “No, not by half.”
-- **French:** Black-and-white cartoon of two fat cats in suits among sacks of money in an office tower. One asks “Do you think we have enough yet?” and the other replies “No, not by half.”
-- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
-
-### images › cubist-portrait
-
-- **English:** Cubist portrait of a man smoking a pipe, built from angular planes of brown, blue and cream.
-- **French:** Cubist portrait of a man smoking a pipe, built from angular planes of brown, blue and cream.
-- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
-
-### images › uplifted-spirit
-
-- **English:** A figure in a red scarf holds a greyhound and releases white doves towards the sun, among books and flowers, with a protest and a city by the water behind.
-- **French:** A figure in a red scarf holds a greyhound and releases white doves towards the sun, among books and flowers, with a protest and a city by the water behind.
-- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
-
-### images › we-love-our-nhs
-
-- **English:** Rainbow poster reading “NHS – We love our NHS” above a row of health workers.
-- **French:** Rainbow poster reading “NHS – We love our NHS” above a row of health workers.
-- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
-
-### images › united-we-are-powerful
-
-- **English:** Poster of a crowd raising their fists beneath a banner reading “United we are powerful”, with a dove and a sunburst.
-- **French:** Poster of a crowd raising their fists beneath a banner reading “United we are powerful”, with a dove and a sunburst.
-- ⚠️ _Identical to the English. Either untranslated, or a name that should stay._
-
 ## Collaborators page
 
 ### heroTitle
@@ -1328,14 +1280,6 @@ English name. Others may simply never have been translated. Worth a look:
 - Home page — body › stats[3] › value
 - Home page — body › installationBadge
 - Tour dates page › pause
-- Gallery page › images › liberty-rising
-- Gallery page › images › tree-of-life
-- Gallery page › images › rebel
-- Gallery page › images › fat-cats
-- Gallery page › images › cubist-portrait
-- Gallery page › images › uplifted-spirit
-- Gallery page › images › we-love-our-nhs
-- Gallery page › images › united-we-are-powerful
 - Links page › groups › project › items › association › label
 - Links page › groups › project › items › sunderland › label
 - Links page › groups › memory › items › ibmt › label
