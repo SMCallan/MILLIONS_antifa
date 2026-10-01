@@ -336,6 +336,22 @@ export const en = {
     placeholderBody:
       "As young artists' works and commissioned pieces are confirmed for the tour, a selection will be shown here. Contributions submitted through the secure link are reviewed privately and are not published automatically.",
     contributeCta: "Contribute artwork",
+    // Descriptions for screen readers, keyed like galleryImages in src/data/site.ts.
+    images: {
+      "liberty-rising":
+        "Poster of a woman in red breaking her chains and reaching for the sun, as a crowd climbs over a toppled stone marked “Liberty”.",
+      "tree-of-life":
+        "Mosaic of a tree of life with a white dove in its branches, rising from old gravestones above a sunlit harbour, inside a patterned border.",
+      rebel: "The word “Rebel” in black ink brush strokes with splatter, on cream paper.",
+      "fat-cats":
+        "Black-and-white cartoon of two fat cats in suits among sacks of money in an office tower. One asks “Do you think we have enough yet?” and the other replies “No, not by half.”",
+      "cubist-portrait": "Cubist portrait of a man smoking a pipe, built from angular planes of brown, blue and cream.",
+      "uplifted-spirit":
+        "A figure in a red scarf holds a greyhound and releases white doves towards the sun, among books and flowers, with a protest and a city by the water behind.",
+      "we-love-our-nhs": "Rainbow poster reading “NHS – We love our NHS” above a row of health workers.",
+      "united-we-are-powerful":
+        "Poster of a crowd raising their fists beneath a banner reading “United we are powerful”, with a dove and a sunburst.",
+    } as Record<string, string>,
   },
 
   collaborators: {
