@@ -80,23 +80,6 @@ export const footerNav: NavItem[] = [
   ...moreInfoNav,
 ];
 
-// Gallery images, shown as placeholders until confirmed works replace them.
-// Each is in public/gallery/ as `${key}-800.webp` and `${key}-${width}.webp`,
-// where width is the full size (at most 1200px). `key` also indexes the
-// `gallery.images` descriptions in the dictionaries.
-export type GalleryImage = { key: string; width: number; height: number };
-
-export const galleryImages: GalleryImage[] = [
-  { key: "liberty-rising", width: 1122, height: 1402 },
-  { key: "tree-of-life", width: 1122, height: 1402 },
-  { key: "rebel", width: 1122, height: 1402 },
-  { key: "fat-cats", width: 1200, height: 900 },
-  { key: "cubist-portrait", width: 1200, height: 1097 },
-  { key: "uplifted-spirit", width: 1200, height: 1200 },
-  { key: "we-love-our-nhs", width: 1200, height: 800 },
-  { key: "united-we-are-powerful", width: 1200, height: 1000 },
-];
-
 // Planned route for the touring exhibition. Dates and venues are shown when
 // confirmed; stops without either remain visibly marked TBC.
 //
