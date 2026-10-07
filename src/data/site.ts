@@ -108,7 +108,11 @@ export const tourDates: TourStop[] = [
     dates: { start: "2027-01-09", end: "2027-01-17" },
     venue: "Generator Projects, Units 25–26, Mid Wynd Industrial Estate, Dundee, DD1 4JG",
   },
-  { places: ["Sunderland"] },
+  {
+    places: ["Sunderland"],
+    dates: { start: "2027-01-21", end: "2027-01-28" },
+    venue: "Sunderland College, Bede Campus",
+  },
   {
     places: ["Pontypridd"],
     region: "South Wales",
